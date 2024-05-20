@@ -32,13 +32,12 @@ Includes necessary files and features for proper template functioning.
 5. **Click** on the new menu item "Theme Settings" for better control of theme
 
 ## License
-Distributed under the MIT License. See [LICENSE](https://github.com/rucilos/wpde/blob/master/LICENSE) for more information.
+Distributed under the **MIT License**. See [LICENSE](https://github.com/rucilos/wpde/blob/master/LICENSE) for more information.
 
 ## Credits
 Created by [Jindřich Ručil](https://jindrichrucil.com)
 
 ## Changelog
 
-**1.0.0**
 See [CHANGELOG](https://github.com/rucilos/wpde/blob/master/changelog.md) for more information.
 
