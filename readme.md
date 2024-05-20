@@ -10,10 +10,10 @@ Includes necessary files and features for proper template functioning.
 - Light/Dark mode
 - SASS
 - Bootstrap 5
-- [Bootstrap 5 Navbar Walker](https://github.com/AlexWebLab/bootstrap-5-wordpress-navbar-walker){:target="_blank"}
+- [Bootstrap 5 Navbar Walker](https://github.com/AlexWebLab/bootstrap-5-wordpress-navbar-walker)
 - Bootstrap 5 Pagination
 - Bootstrap Icons
-- [CookieConsent](https://github.com/orestbida/cookieconsent){:target="_blank"}
+- [CookieConsent](https://github.com/orestbida/cookieconsent)
 - Magnific popup
 - Webpack
 - Prettier
@@ -42,18 +42,18 @@ Includes necessary files and features for proper template functioning.
 3. **Is WPDE compatible with the latest version of WordPress?**  
    Yes, WPDE is tested up to the latest version of WordPress.
 
-- **Can I customize the theme using SCSS?**  
-   Absolutely! WPDE includes SCSS files for easy customization.
+- Can I customize the theme using SCSS?
+**Absolutely! WPDE includes SCSS files for easy customization.** 
 
-5. **Do I need to configure Webpack?**  
-   No, there is no need to configure Webpack. Everything is set up with default configurations and is ready to use.
+5. Do I need to configure Webpack?
+**No, there is no need to configure Webpack. Everything is set up with default configurations and is ready to use.**
 
 ## License
-Distributed under the MIT License. See [LICENSE](https://github.com/rucilos/wpde/blob/master/LICENSE){:target="_blank"} for more information.
+Distributed under the MIT License. See [LICENSE](https://github.com/rucilos/wpde/blob/master/LICENSE) for more information.
 
 ## Credits
 Created by
-[Visit author website](https://jindrichrucil.com/){:target="_blank"}
+[Visit author website](https://jindrichrucil.com/)
 
 ## Changelog
 
