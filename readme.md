@@ -34,7 +34,7 @@ Includes necessary files and features for proper template functioning.
 ## Frequently Asked Questions
 
 **What kind of support do you provide?**  
-   While direct support is not provided, you can find many helpful resources and community forums online to assist with any issues you may encounter.
+While direct support is not provided, you can find many helpful resources and community forums online to assist with any issues you may encounter.
 
 **How can I switch between Light and Dark mode?**  
    The theme includes a built-in switcher for Light and Dark mode that can be easily accessed from the theme's interface.
