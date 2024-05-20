@@ -56,5 +56,5 @@ Created by [Jindřich Ručil](https://jindrichrucil.com). Visit the author's web
 
 ## Changelog
 
-1.0.0
+**1.0.0**
 *Release Date 1st January 2024*
