@@ -1,0 +1,19 @@
+// Modal header title
+.pm__title {
+    display: unset !important;
+
+    small {
+        display: block;
+        margin-top: 0.5em;
+        font-weight: 300;
+    }
+}
+
+// Modal show overlay
+#cc-main .pm-overlay {
+    backdrop-filter: blur(3px) !important;
+}
+
+#cc-main .pm__section-desc p {
+    display: block;
+}

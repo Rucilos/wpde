@@ -1,0 +1,8 @@
+.form-control,
+.form-select {
+
+    &:focus {
+        border-color: transparent;
+        outline-offset: 2px;
+    }
+}

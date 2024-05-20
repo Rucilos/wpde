@@ -1,0 +1,51 @@
+{
+    "name": "wpde",
+    "version": "1.0.0",
+    "author": "Jindřich Ručil",
+    "license": "GPL-3.0-or-later",
+    "description": "WordPress Development Environment (WPDE) is a fantastic starting point for creating a WordPress template. Includes necessary files and features for proper template functioning. As well, contains Bootstrap, Bootstrap Icons, Webpack, Prettier, Magnific Popup, and .editorconfig, all essential for efficient template development. This template is licensed under GPLv3. WPDE was crafted by Jindřich Ručil. If you feel inclined to show appreciation to the author, please keep this copyright notice. Thank you, and happy coding!",
+    "keywords": [
+        "wpde",
+        "wp",
+        "wordpress",
+        "development",
+        "environment",
+        "theme",
+        "template",
+        "responsive",
+        "light",
+        "dark",
+        "bootstrap",
+        "webpack",
+        "css-loader",
+        "sass-loader",
+        "minifying",
+        "prettier",
+        "magnificpopup"
+    ],
+    "main": "index.js",
+    "devDependencies": {
+        "css-loader": "^7.1.1",
+        "ignore-emit-webpack-plugin": "^2.0.6",
+        "mini-css-extract-plugin": "^2.9.0",
+        "prettier": "^3.2.5",
+        "rimraf": "^5.0.7",
+        "sass": "^1.77.1",
+        "sass-loader": "^14.2.1",
+        "webpack": "^5.91.0",
+        "webpack-cli": "^5.1.4"
+    },
+    "dependencies": {
+        "@prettier/plugin-php": "^0.22.2",
+        "bootstrap": "5.3.3"
+    },
+    "scripts": {
+        "start": "webpack",
+        "format": "prettier --write .",
+        "clear": "rimraf ./dist/js && rimraf ./dist/css && rimraf ./dist/html"
+    },
+    "repository": {
+        "type": "git",
+        "url": ""
+    }
+}
