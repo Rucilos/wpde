@@ -52,8 +52,7 @@ Includes necessary files and features for proper template functioning.
 Distributed under the MIT License. See [LICENSE](https://github.com/rucilos/wpde/blob/master/LICENSE) for more information.
 
 ## Credits
-Created by
-[Visit author website](https://jindrichrucil.com/)
+Created by [Jindřich Ručil](https://jindrichrucil.com). Visit the author's website for more information.
 
 ## Changelog
 
