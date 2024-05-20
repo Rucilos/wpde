@@ -8,7 +8,7 @@ Includes necessary files and features for proper template functioning.
 Check out the template [WPDE](https://jindrichrucil.com/wpde)
 
 
-## Features
+## Key Features
 
 - Responsive
 - Light/Dark mode with WPDE toggler
@@ -19,6 +19,8 @@ Check out the template [WPDE](https://jindrichrucil.com/wpde)
 - [Bootstrap Icons](https://icons.getbootstrap.com/)
 - [CookieConsent](https://github.com/orestbida/cookieconsent)
 - Magnific popup
+
+## Dev Features
 - [Webpack](https://webpack.js.org/)
 - Prettier
 
