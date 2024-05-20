@@ -37,7 +37,7 @@ Includes necessary files and features for proper template functioning.
    While direct support is not provided, you can find many helpful resources and community forums online to assist with any issues you may encounter.
 
 How can I switch between Light and Dark mode?
-   The theme includes a built-in switcher for Light and Dark mode that can be easily accessed from the theme's interface.
+   **The theme includes a built-in switcher for Light and Dark mode that can be easily accessed from the theme's interface.**
 
 3. **Is WPDE compatible with the latest version of WordPress?**  
    Yes, WPDE is tested up to the latest version of WordPress.
