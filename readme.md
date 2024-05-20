@@ -11,15 +11,15 @@ Check out the template [WPDE](https://jindrichrucil.com/wpde)
 ## Features
 
 - Responsive
-- Light/Dark mode
-- SASS
-- Bootstrap 5
+- Light/Dark mode with WPDE toggler
+- [SASS](https://sass-lang.com/)
+- [Bootstrap 5](https://getbootstrap.com/)
 - [Bootstrap 5 Navbar Walker](https://github.com/AlexWebLab/bootstrap-5-wordpress-navbar-walker)
-- Bootstrap 5 Pagination
-- Bootstrap Icons
+- WPDE Bootstrap 5 Pagination
+- [Bootstrap Icons](https://icons.getbootstrap.com/)
 - [CookieConsent](https://github.com/orestbida/cookieconsent)
 - Magnific popup
-- Webpack
+- [Webpack](https://webpack.js.org/)
 - Prettier
 
 ## Requirements
