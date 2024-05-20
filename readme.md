@@ -10,10 +10,10 @@ Includes necessary files and features for proper template functioning.
 - Light/Dark mode
 - SASS
 - Bootstrap 5
-- [Bootstrap 5 Navbar Walker](https://github.com/AlexWebLab/bootstrap-5-wordpress-navbar-walker)
+- [Bootstrap 5 Navbar Walker](https://github.com/AlexWebLab/bootstrap-5-wordpress-navbar-walker){:target="_blank"}
 - Bootstrap 5 Pagination
 - Bootstrap Icons
-- [CookieConsent](https://github.com/orestbida/cookieconsent)
+- [CookieConsent](https://github.com/orestbida/cookieconsent){:target="_blank"}
 - Magnific popup
 - Webpack
 - Prettier
@@ -49,11 +49,11 @@ Includes necessary files and features for proper template functioning.
    No, there is no need to configure Webpack. Everything is set up with default configurations and is ready to use.
 
 ## License
-Distributed under the MIT License. See [LICENSE](https://github.com/rucilos/wpde/blob/master/LICENSE) for more information.
+Distributed under the MIT License. See [LICENSE](https://github.com/rucilos/wpde/blob/master/LICENSE){:target="_blank"} for more information.
 
 ## Credits
 Created by
-[Visit author website](https://jindrichrucil.com/)
+[Visit author website](https://jindrichrucil.com/){:target="_blank"}
 
 ## Changelog
 
