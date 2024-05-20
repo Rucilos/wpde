@@ -625,15 +625,18 @@ class WPDE {
      * This method checks if the required plugin is active.
      * If it's active, it returns true; otherwise, it returns false.
      *
+     * @param bool $pro Whether to check for ACF PRO version.
+     *                  If true, it checks for ACF_PRO class existence; otherwise, it checks for any ACF class existence.
+     *
      * @access public
-     * @return void
+     * @return bool
      * @since  1.0.0
      */
-    public function is_acf() {
-        if (class_exists('ACF_PRO')) {
-            return true;
+    public function is_acf($pro = false) {
+        if ($pro) {
+            return class_exists('ACF_PRO');
         } else {
-            return false;
+            return class_exists('ACF');
         }
     }
 
