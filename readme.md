@@ -5,7 +5,7 @@ Includes necessary files and features for proper template functioning.
 ![WPDE - Cover](img/cover.png)
 
 ## Demo
-Check out the [WPDE](https://jindrichrucil.com/wpde)
+Check out the template [WPDE](https://jindrichrucil.com/wpde)
 
 
 ## Features
