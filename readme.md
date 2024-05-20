@@ -20,8 +20,8 @@ Includes necessary files and features for proper template functioning.
 
 ## Requirements
 
-WordPress: 6.0 or higher
-PHP: 7.0 or higher
+- **WordPress:** 6.0 or higher
+- **PHP:** 7.0 or higher
 
 ## Installation
 
