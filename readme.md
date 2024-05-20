@@ -42,7 +42,7 @@ Includes necessary files and features for proper template functioning.
 3. **Is WPDE compatible with the latest version of WordPress?**  
    Yes, WPDE is tested up to the latest version of WordPress.
 
-4. **Can I customize the theme using SCSS?**  
+- **Can I customize the theme using SCSS?**  
    Absolutely! WPDE includes SCSS files for easy customization.
 
 5. **Do I need to configure Webpack?**  
