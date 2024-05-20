@@ -40,4 +40,5 @@ Created by [Jindřich Ručil](https://jindrichrucil.com)
 ## Changelog
 
 **1.0.0**
-Release Date 1st January 2024
+See [CHANGELOG](https://github.com/rucilos/wpde/blob/master/changelog.md) for more information.
+
