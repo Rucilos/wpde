@@ -36,17 +36,17 @@ Includes necessary files and features for proper template functioning.
 **What kind of support do you provide?**  
    While direct support is not provided, you can find many helpful resources and community forums online to assist with any issues you may encounter.
 
-How can I switch between Light and Dark mode?
-   **The theme includes a built-in switcher for Light and Dark mode that can be easily accessed from the theme's interface.**
+**How can I switch between Light and Dark mode?**  
+   The theme includes a built-in switcher for Light and Dark mode that can be easily accessed from the theme's interface.
 
 3. **Is WPDE compatible with the latest version of WordPress?**  
    Yes, WPDE is tested up to the latest version of WordPress.
 
-- Can I customize the theme using SCSS?
-**Absolutely! WPDE includes SCSS files for easy customization.** 
+- **Can I customize the theme using SCSS?**  
+   Absolutely! WPDE includes SCSS files for easy customization.
 
-5. Do I need to configure Webpack?
-**No, there is no need to configure Webpack. Everything is set up with default configurations and is ready to use.**
+5. **Do I need to configure Webpack?**  
+   No, there is no need to configure Webpack. Everything is set up with default configurations and is ready to use.
 
 ## License
 Distributed under the MIT License. See [LICENSE](https://github.com/rucilos/wpde/blob/master/LICENSE) for more information.
