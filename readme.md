@@ -31,28 +31,11 @@ Includes necessary files and features for proper template functioning.
 4. **Visit** Appearance > Themes > Search for WPDE > Activate
 5. **Click** on the new menu item "Theme Settings" for better control of theme
 
-## Frequently Asked Questions
-
-**What kind of support do you provide?**  
-While direct support is not provided, you can find many helpful resources and community forums online to assist with any issues you may encounter.
-
-**How can I switch between Light and Dark mode?**  
-   The theme includes a built-in switcher for Light and Dark mode that can be easily accessed from the theme's interface.
-
-**Is WPDE compatible with the latest version of WordPress?**  
-   Yes, WPDE is tested up to the latest version of WordPress.
-
-**Can I customize the theme using SCSS?**  
-   Absolutely! WPDE includes SCSS files for easy customization.
-
-**Do I need to configure Webpack?**  
-   No, there is no need to configure Webpack. Everything is set up with default configurations and is ready to use.
-
 ## License
 Distributed under the MIT License. See [LICENSE](https://github.com/rucilos/wpde/blob/master/LICENSE) for more information.
 
 ## Credits
-Created by [Jindřich Ručil](https://jindrichrucil.com). Visit the author's website for more information.
+Created by [Jindřich Ručil](https://jindrichrucil.com)
 
 ## Changelog
 
