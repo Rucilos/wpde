@@ -10,16 +10,18 @@ Includes necessary files and features for proper template functioning.
 - Light/Dark mode
 - SASS
 - Bootstrap 5
-- [Bootstrap Navbar Walker](https://github.com/AlexWebLab/bootstrap-5-wordpress-navbar-walker)
+- [Bootstrap 5 Navbar Walker](https://github.com/AlexWebLab/bootstrap-5-wordpress-navbar-walker)
+- Bootstrap 5 Pagination
 - Bootstrap Icons
+- [CookieConsent](https://github.com/orestbida/cookieconsent)
 - Magnific popup
 - Webpack
 - Prettier
 
 ## Requirements
 
-**WordPress:** 6.0 or higher
-**PHP:** 7.0 or higher
+WordPress: 6.0 or higher
+PHP: 7.0 or higher
 
 ## Installation
 

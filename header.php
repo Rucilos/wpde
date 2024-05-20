@@ -23,8 +23,6 @@ ini_set('display_errors', '1');
 
 <body <?php body_class(); ?> id="#home">
 
-<?php get_template_part('template-parts/alert', 'acf'); ?>
-
 <?php get_template_part('template-parts/base', 'navbar'); ?>
 
 <?php //get_template_part('template-parts/component', 'carousel'); ?>

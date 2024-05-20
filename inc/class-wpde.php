@@ -638,25 +638,6 @@ class WPDE {
     }
 
     /**
-     * Displays a notice for the inactive ACF PRO plugin.
-     *
-     * This method displays a notice in the WordPress administration.
-     * If the required plugins are not active.
-     * Additionally, you can use it in other places.
-     *
-     * @access public
-     * @return void
-     * @since  1.0.0
-     */
-    public function acf_notice() {
-        $html = '<div class="notice notice-error">';
-            $html .= '<p class="m-0"><strong>WordPress Developer Environment ("WPDE")</strong>' . ' ' . __('requires the', 'wpde') . ' ' . '<strong>Advanced Custom Fields PRO</strong>' . ' ' . __('plugin to be installed and active!', 'wpde') . '</p>';
-        $html .= '</div>';
-
-        echo $html;
-    } // END acf_notice()
-
-    /**
      * Checks if the current page is a WPDE (WordPress Development Environment) page.
      *
      * This function determines whether the current page is part of the WordPress Development Environment (WPDE)

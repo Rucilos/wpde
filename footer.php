@@ -14,7 +14,6 @@
 get_template_part('template-parts/base', 'footer'); 
 get_template_part('template-parts/modal', 'search'); 
 wp_footer(); 
-get_template_part('template-parts/alert', 'acf'); 
 ?>
 </body>
 </html>
