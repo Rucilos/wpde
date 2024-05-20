@@ -14,15 +14,17 @@ Check out the template [WPDE](https://jindrichrucil.com/wpde)
 - Light/Dark mode with WPDE toggler
 - [SASS](https://sass-lang.com/)
 - [Bootstrap 5](https://getbootstrap.com/)
-- [Bootstrap 5 Navbar Walker](https://github.com/AlexWebLab/bootstrap-5-wordpress-navbar-walker)
+
+## Includes
 - WPDE Bootstrap 5 Pagination
+- [Bootstrap 5 Navbar Walker](https://github.com/AlexWebLab/bootstrap-5-wordpress-navbar-walker)
 - [Bootstrap Icons](https://icons.getbootstrap.com/)
 - [CookieConsent](https://github.com/orestbida/cookieconsent)
-- Magnific popup
+- [Magnific popup](https://dimsemenov.com/plugins/magnific-popup/)
 
 ## Dev Features
 - [Webpack](https://webpack.js.org/)
-- Prettier
+- [Prettier](https://prettier.io/)
 
 ## Requirements
 
