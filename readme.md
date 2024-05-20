@@ -1,13 +1,52 @@
-**Contributors:** Jindřich Ručil  
-**Donate link:** [https://jindrichrucil.com](https://jindrichrucil.com)  
-**Requires at least:** 6.0  
-**Tested up to:** 6.5.3  
-**Requires PHP:** 7.4  
-**Stable tag:** 1.0.0  
-**License:** GPLv3  
-**License URI:** [https://www.gnu.org/licenses/gpl-3.0.html](https://www.gnu.org/licenses/gpl-3.0.html)  
-**Tags:** wpde, wp, wordpress, development, environment, theme, template, responsive, light, dark, bootstrap, webpack, prettier, magnificpopup  
-**Text Domain:** wpde  
+## WordPress Development Environment ("WPDE")
+WordPress Development Environment ("WPDE") is a fantastic starting point for creating a WordPress template.  
+Includes necessary files and features for proper template functioning.  
+
+![Alternativní text](img/cover.png)
+
+# Your Project Name or Plugin Name
+
+## Contributors
+- Jindřich Ručil
+
+## Donate Link
+[Jindřich Ručil](https://jindrichrucil.com)
+
+## Requires at least
+- WordPress: 6.0
+
+## Tested up to
+WordPress: 6.5.3
+
+## Requires PHP
+- PHP: 7.4
+
+## Stable Tag
+Version: 1.0.0
+
+## Tags
+- wpde
+- wp
+- wordpress
+- development
+- environment
+- theme
+- template
+- responsive
+- light
+- dark
+- bootstrap
+- webpack
+- css-loader
+- sass-loader
+- mini-css-extract-plugin
+- prettier
+- magnificpopup
+- editorconfig
+
+## Text Domain
+wpde
+
 
 WordPress Development Environment ("WPDE") is a fantastic starting point for creating a WordPress template. Includes necessary files and features for proper template functioning. As well, contains Bootstrap, Bootstrap Icons, Webpack, Prettier, Magnific Popup, and .editorconfig, all essential for efficient template development. This template is licensed under GPLv3 and was crafted by Jindřich Ručil. If you feel inclined to show appreciation to the author, please keep this copyright notice. Thank you, and happy coding!
 
@@ -26,34 +65,22 @@ Thank you, and happy coding!
 
 - Responsive
 - Light/Dark mode
-- SCSS
+- SASS
 - Bootstrap
 - Bootstrap Icons
 - Magnific popup
 - Webpack
 - Prettier
 
-## Links
+## Requirements
 
-- [Website](https://jindrichrucil.com/)
 
 ## Installation
-
-### Install from WordPress with repository
-
-1. **Visit** Themes > Add new
-2. **Search** for "WPDE"
-3. **Install and Activate**
-4. **Click** on the new menu item "Theme Settings" for better control of theme
-
-### Manual install
-
-1. **Visit** [https://jindrichrucil.com/](https://jindrichrucil.com/)
-2. **Download** "WPDE"
-3. **Extract** "wpde.zip"
-4. **Upload** "wpde" folder to /wp-content/themes/
-5. **Visit** Appearance > Themes > Search for WPDE > Activate
-6. **Click** on the new menu item "Theme Settings" for better control of theme
+1. **Download** "WPDE"
+2. **Extract** "wpde.zip"
+3. **Upload** "wpde" folder to /wp-content/themes/
+4. **Visit** Appearance > Themes > Search for WPDE > Activate
+5. **Click** on the new menu item "Theme Settings" for better control of theme
 
 ## Frequently Asked Questions
 
@@ -74,9 +101,14 @@ Thank you, and happy coding!
 
 ## Screenshots
 
+## License
+Distributed under the MIT License. See [LICENSE](https://github.com/rucilos/wpde/blob/master/LICENSE) for more information.
+
+## Credits
+Created by
+[Visit author website](https://jindrichrucil.com/)
+
 ## Changelog
 
 ### 1.0.0
 *Release Date 1st January 2024*
-
-- WPDE

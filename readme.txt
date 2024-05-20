@@ -7,7 +7,7 @@ Requires PHP: 7.4
 Stable tag: 1.0.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
-Tags: wpde, wp, wordpress, development, environment, theme, template, responsive, light, dark, bootstrap, webpack, prettier,  magnificpopup
+Tags: wpde, wp, wordpress, development, environment, theme, template, responsive, light, dark, bootstrap, webpack, css-loader, sass-loader, mini-css-extract-plugin, prettier,  magnificpopup, editorconfig
 Text Domain: wpde  
 
 WordPress Development Environment ("WPDE") is a fantastic starting point for creating a WordPress template. Includes necessary files and features for proper template functioning. As well, contains Bootstrap, Bootstrap Icons, Webpack, Prettier, Magnific Popup, and .editorconfig, all essential for efficient template development. This template is licensed under GPLv3 and was crafted by Jindřich Ručil. If you feel inclined to show appreciation to the author, please keep this copyright notice. Thank you, and happy coding!
