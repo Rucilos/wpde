@@ -5,11 +5,12 @@ Includes necessary files and features for proper template functioning.
 ![WPDE - Cover](img/cover.png)
 
 ## Demo
-Check out the template [WPDE](https://wpde.jindrichrucil.com/)
+Check out the [WPDE](https://wpde.jindrichrucil.com/) template 
 
 ## Key Elements
 - Responsive
-- Light/Dark mode with WPDE toggler
+- Light/Dark mode
+- [Light/Dark mode](https://github.com/rucilos/wpde/blob/master/src/js/public.js#L74) mode with toggler
 
 ## Features
 - [Bootstrap 5 Pagination](https://github.com/rucilos/wpde/blob/master/inc/class-wpde.php#L663)
