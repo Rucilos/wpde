@@ -284,6 +284,9 @@ class WPDE {
         wp_register_script($this->_token . $this->defer, esc_url($this->dist_url) . 'js/public' . $this->script_suffix . '.js', ['jquery'], $this->_version, true);
         wp_enqueue_script($this->_token . $this->defer);
 
+        wp_register_script($this->_token . '-cc' . $this->defer, esc_url($this->dist_url) . 'js/cc' . $this->script_suffix . '.js', ['jquery'], $this->_version, true);
+        wp_enqueue_script($this->_token . $this->defer);
+
         wp_localize_script($this->_token . $this->defer, $this->_token, [
             'dir' => get_template_directory_uri() . '/',
             'home_url' => home_url(),
