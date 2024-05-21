@@ -12,17 +12,17 @@ Check out the template [WPDE](https://jindrichrucil.com/wpde)
 
 - Responsive
 - Light/Dark mode with WPDE toggler
-- [SASS](https://sass-lang.com/)
-- [Bootstrap 5](https://getbootstrap.com/)
 
-## Includes
-- WPDE Bootstrap 5 Pagination
+## Libraries
+- [Bootstrap 5](https://getbootstrap.com/)
 - [Bootstrap 5 Navbar Walker](https://github.com/AlexWebLab/bootstrap-5-wordpress-navbar-walker)
 - [Bootstrap Icons](https://icons.getbootstrap.com/)
+- WPDE Bootstrap 5 Pagination
 - [CookieConsent](https://github.com/orestbida/cookieconsent)
 - [Magnific popup](https://dimsemenov.com/plugins/magnific-popup/)
 
 ## Dev Features
+- [SASS](https://sass-lang.com/)
 - [Webpack](https://webpack.js.org/)
 - [Prettier](https://prettier.io/)
 
