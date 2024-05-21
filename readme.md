@@ -5,11 +5,10 @@ Includes necessary files and features for proper template functioning.
 ![WPDE - Cover](img/cover.png)
 
 ## Demo
-Check out the template [WPDE](https://jindrichrucil.com/wpde)
+Check out the template [WPDE](https://wpde.jindrichrucil.com/)
 
 
 ## Key Features
-
 - Responsive
 - Light/Dark mode with WPDE toggler
 
@@ -17,7 +16,8 @@ Check out the template [WPDE](https://jindrichrucil.com/wpde)
 - [Bootstrap 5](https://getbootstrap.com/)
 - [Bootstrap 5 Navbar Walker](https://github.com/AlexWebLab/bootstrap-5-wordpress-navbar-walker)
 - [Bootstrap Icons](https://icons.getbootstrap.com/)
-- WPDE Bootstrap 5 Pagination
+- [Bootstrap Icons](https://icons.getbootstrap.com/)
+- [Bootstrap 5 Pagination](https://github.com/rucilos/wpde/blob/master/inc/class-wpde.php#L50)
 - [CookieConsent](https://github.com/orestbida/cookieconsent)
 - [Magnific popup](https://dimsemenov.com/plugins/magnific-popup/)
 
@@ -27,12 +27,10 @@ Check out the template [WPDE](https://jindrichrucil.com/wpde)
 - [Prettier](https://prettier.io/)
 
 ## Requirements
-
 - **WordPress:** 6.0 or higher
 - **PHP:** 7.0 or higher
 
 ## Installation
-
 ### Install from WordPress 
 1. **Download** "WPDE"
 2. **Visit** Appearance > Themes > Add New Theme > Upload Theme > wpde.zip > Install Now > Activate
@@ -51,6 +49,5 @@ Distributed under the **MIT** License. See [LICENSE](https://github.com/rucilos/
 © 2024 Created by [Jindřich Ručil](https://jindrichrucil.com)
 
 ## Changelog
-
 See [CHANGELOG](https://github.com/rucilos/wpde/blob/master/changelog.md) for more information.
 
