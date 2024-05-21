@@ -7,15 +7,15 @@ Includes necessary files and features for proper template functioning.
 ## Demo
 Check out the template [WPDE](https://wpde.jindrichrucil.com/)
 
-## Key Features
+## Key Elements
 - Responsive
 - Light/Dark mode with WPDE toggler
 
-## Custom features
+## Features
 - [Bootstrap 5 Pagination](https://github.com/rucilos/wpde/blob/master/inc/class-wpde.php#L663)
 - [Breadcrumbs](https://github.com/rucilos/wpde/blob/master/inc/class-wpde.php#L724)
 
-## 3rd party libraries
+## Libraries
 - [Bootstrap 5](https://getbootstrap.com/)
 - [Bootstrap 5 Navbar Walker](https://github.com/AlexWebLab/bootstrap-5-wordpress-navbar-walker)
 - [Bootstrap Icons](https://icons.getbootstrap.com/)
