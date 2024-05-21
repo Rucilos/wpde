@@ -7,7 +7,7 @@
 			<img src="<?php echo get_template_directory_uri(); ?>/img/default-thumbnail.webp" alt="Default Thumbnail" class="img-fluid" />
 		<?php } ?>
 		<div class="card-body">
-			<h5 class="card-title"><?php the_title(); ?></h5>
+			<h5 class="card-title"><?php echo get_the_title(); ?></h5>
 			<p class="card-text"><?php echo wp_trim_words(get_the_excerpt(), 10, ' ...'); ?></p>
 			<p class="card-text">
 				<small class="text-body-secondary">

@@ -14,5 +14,6 @@
 get_header();
 get_template_part('template-parts/component', 'carousel');
 get_template_part('template-parts/section', 'icons');
+
 get_footer();
 

@@ -84,11 +84,8 @@
 					<li class="me-3"><a class="nav-link" href="#!" data-fontsize="lg">A</a></li>
 				</ul>
 
-				<select class="form-select" name="wpde-theme" style="max-width: 150px;">
-					<option value="auto">Auto mode</option>
-					<option value="light">Light mode</option>
-					<option value="dark">Dark mode</option>
-				</select>
+				<?php get_template_part('template-parts/theme', 'toggler'); ?>
+
 				</div>
 			</div>
 		</div>

@@ -188,7 +188,9 @@ class WPDE {
         add_action('admin_menu', [$this, 'add_options_page']);
         add_action('wp_before_admin_bar_render', [$this, 'add_adminbar_tabs'], 999);
         add_action('admin_head', [$this, 'add_help_tabs']);
-        add_action('wp_dashboard_setup', [$this, 'dashboard_metaboxes']);
+        if($this->is_acf()) {
+            add_action('wp_dashboard_setup', [$this, 'add_dashboard_metabox']);
+        }
         add_action('dashboard_glance_items', [$this, 'post_types_metaboxes']);
         add_action('pre_user_query', [$this, 'exclude_users']);
     } // END __construct()
@@ -457,7 +459,7 @@ class WPDE {
      * @return  void
      */
     public function add_options_page() {
-        if(WPDE()->is_acf()) {
+        if($this->is_acf()) {
             $parent = acf_add_options_page([
                 'page_title' => 'WordPress - Development Environment ("WPDE")' . ' - ' . __('Theme Settings', 'wpde'),
                 'menu_title' => __('Theme Settings', 'wpde'),
@@ -485,13 +487,13 @@ class WPDE {
         global $wp_admin_bar;
         global $template;
 
-        if(WPDE()->is_acf()) {
+        if($this->is_acf()) {
             $wp_admin_bar->add_node([
                 'id' => $this->_token,
                 'title' => "<span class='ab-icon'></span><span class='ab-label'>" . __("Theme Settings", "wpde") . "</span>",
                 'href' => $this->settings_url,
             ]);
-        } elseif(!WPDE()->is_acf() && !is_admin()) {
+        } elseif(!$this->is_acf() && !is_admin()) {
             $wp_admin_bar->add_node([
                 'id' => $this->_token,
                 'title' => "<span class='ab-icon'></span><span class='ab-label'>WPDE</span>",
@@ -529,11 +531,12 @@ class WPDE {
         $screen = get_current_screen();
 
         $content  = '<p><strong>WordPress - Development Environment ("WPDE") v' . esc_html($this->_version) . '</strong></p>';
-        $content .= '<p><a href="' . esc_url($this->settings_url) . '" class="apiru-link">' . __('Theme Settings Settings', 'wpde') . '</a></p>';
-        $content .= '<p>' . __("WordPress - Development Environment (\"WPDE\") is a fantastic starting point for creating a WordPress template. Includes necessary files and features for proper template functioning. As well, contains Bootstrap, Bootstrap Icons, Webpack, Prettier, Magnific Popup, and .editorconfig, all essential for efficient template development. This template is licensed under GPLv3.", 'wpde') . '</p>';
-        $content .= '<p>' . __('WPDE was crafted by', 'wpde') . ' ' . '<strong>Jindřich Ručil</strong></p>';
-        $content .= '<p><strong>' . __('If you feel inclined to show appreciation to the author, please keep this copyright notice.', 'wpde') . '</strong></p>';
-        $content .= '<p>' . __('Thank you, and happy coding!', 'wpde') . '</p>';
+        $content .= '<p>';
+            $content .= '<a href="' . esc_url($this->settings_url) . '" class="apiru-link">' . __('Theme Settings', 'wpde') . '</a>';
+            $content .= ' &#8212; ';
+            $content .= '<a href="' . esc_url($this->settings_url) . '" class="apiru-link">' . __('GitHub', 'wpde') . '</a>';
+        $content .= '</p>';
+        $content .= '<p>' . __("WordPress - Development Environment (\"WPDE\") is a fantastic starting point for creating a WordPress template. Includes necessary files and features for proper template functioning.", 'wpde') . '</p>';
 
         $screen->add_help_tab([
             'id' => $this->_token,
@@ -549,25 +552,22 @@ class WPDE {
      *
      * This method adds a custom metabox to the WordPress dashboard.
      * It includes a link to a document specified in the theme options.
-     * Additionally, it removes metaboxes from the dashboard.
      *
      * @return string Empty string.
      * @access public
      * @since  1.0.0
      */
-    public function dashboard_metaboxes() {
+    public function add_dashboard_metabox() {
         
-        add_meta_box($this->_token . '-dashboard-metabox', 'WordPress Development Environment', 'wpde_dashoard_metabox', 'dashboard', 'side', 'high');
+        add_meta_box($this->_token . '-dashboard-metabox', __('Documentation', 'wpde'), 'wpde_dashoard_metabox', 'dashboard', 'side', 'high');
         
         function wpde_dashoard_metabox() {
 
             $html = '<div class="main">';
-            if(WPDE()->is_acf()) {
-                $file = get_field('docs', 'option');
-
-                if ($file) {
-                    $html .= '<a href="' . esc_url($file['url']) . '">' . esc_html($file['filename']) . '</a>';
-                }
+            
+            $file = get_field('docs', 'option');
+            if ($file) {
+                $html .= '<a href="' . esc_url($file['url']) . '">' . esc_html($file['filename']) . '</a>';
             }
 
             $html .= '</div>';
@@ -575,9 +575,7 @@ class WPDE {
             echo $html;
         } // END wpde_dashoard_metabox()
 
-        remove_meta_box('dashboard_primary', 'dashboard', 'side');
-        remove_meta_box('wpseo-dashboard-overview', 'dashboard', 'side');
-    } // END dashboard_metaboxes()
+    } // END add_dashboard_metabox()
 
     /**
      * Removes metaboxes from specified post types.
@@ -744,7 +742,7 @@ class WPDE {
         ];
 
         // Start breadcrumb with a link to your homepage
-        echo '<nav id="' . $defaults['id'] . '" aria-label="breadcrumb" class="container mt-3 mb-5">';
+        echo '<nav id="' . $defaults['id'] . '" aria-label="breadcrumb" class="container mt-3">';
         echo '<ol class="breadcrumb mb/)">';
 
         // Creating home link

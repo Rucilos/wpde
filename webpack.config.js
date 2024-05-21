@@ -8,12 +8,13 @@ module.exports = {
     },
     mode: "production",
     entry: {
-        public: "./src/js/public.js",
         admin: "./src/js/admin.js",
+        cc: "./src/js/cc.js",
         login: "./src/js/login.js",
-        public_styles: "./src/sass/public.scss",
+        public: "./src/js/public.js",
         admin_styles: "./src/sass/admin.scss",
         login_styles: "./src/sass/login.scss",
+        public_styles: "./src/sass/public.scss",
     },
     output: {
         filename: "js/[name].min.js",

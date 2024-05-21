@@ -1,3 +1,19 @@
+.cc--lightmode {
+    --cc-btn-border-radius: 0.35em !important;
+    --cc-btn-gap: 8px !important;
+    --cc-btn-primary-bg: var(--bs-primary) !important;
+    --cc-btn-primary-hover-bg: rgba(var(--bs-primary-rgb), .9) !important;
+}
+
+.cc--darkmode {
+    --cc-btn-border-radius: 0.35em !important;
+    --cc-btn-gap: 8px !important;
+    --cc-btn-primary-bg: var(--bs-primary) !important;
+    --cc-btn-primary-hover-bg: rgba(var(--bs-primary-rgb), .8) !important;
+    --cc-btn-primary-color: var(--bs-light) !important;
+    --cc-btn-primary-hover-color: var(--bs-light) !important;
+}
+
 // Modal header title
 .pm__title {
     display: unset !important;

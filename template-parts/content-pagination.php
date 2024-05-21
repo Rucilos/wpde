@@ -10,7 +10,7 @@
 */
 ?>
 
-<?php the_posts_pagination([
+<?php WPDE()->pagination([
     // default: the_posts_pagination
     'end_size' => 3,
     'mid_size' => 3,
