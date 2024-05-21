@@ -45,7 +45,7 @@ Check out the template [WPDE](https://jindrichrucil.com/wpde)
 5. **Click** on the new menu item "Theme Settings" for better control of theme
 
 ## License
-Distributed under the **MIT License**. See [LICENSE](https://github.com/rucilos/wpde/blob/master/LICENSE) for more information.
+Distributed under the **MIT** License. See [LICENSE](https://github.com/rucilos/wpde/blob/master/LICENSE) for more information.
 
 ## Credits
 Created by [Jindřich Ručil](https://jindrichrucil.com)

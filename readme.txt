@@ -14,13 +14,7 @@ WordPress Development Environment ("WPDE") is a fantastic starting point for cre
 
 == Description ==
 WordPress Development Environment ("WPDE") is a fantastic starting point for creating a WordPress template. 
-Includes necessary files and features for proper template functioning. 
-As well, contains Bootstrap, Bootstrap Icons, Webpack, Prettier, Magnific Popup, and .editorconfig, all essential for efficient template development.
-This template is licensed under GPLv3 and created by Jindřich Ručil
-
-WPDE was crafted by Jindřich Ručil. 
-If you feel inclined to show appreciation to the author, please keep this copyright notice.
-Thank you, and happy coding!
+Includes necessary files and features for proper template functioning.
 
 = Features =
 

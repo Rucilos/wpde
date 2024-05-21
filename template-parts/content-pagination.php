@@ -9,11 +9,12 @@
 * @since 1.0.0
 */
 ?>
-<?php WPDE()->pagination([
+
+<?php the_posts_pagination([
     // default: the_posts_pagination
     'end_size' => 3,
     'mid_size' => 3,
-    'prev_text' => __('Předchozí', 'wpde'),
-    'next_text' => __('Následující', 'wpde'),
+    'prev_text' => __('Previous', 'wpde'),
+    'next_text' => __('Next', 'wpde'),
     'screen_reader_text' => '',
 ]);
