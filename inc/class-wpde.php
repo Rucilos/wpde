@@ -459,8 +459,8 @@ class WPDE {
     public function add_options_page() {
         if(WPDE()->is_acf()) {
             $parent = acf_add_options_page([
-                'page_title' => 'WordPress - Development Environment ("WPDE")' . ' - ' . __('Nastavení šablony', 'wpde'),
-                'menu_title' => __('Nastavení šablony', 'wpde'),
+                'page_title' => 'WordPress - Development Environment ("WPDE")' . ' - ' . __('Theme Settings', 'wpde'),
+                'menu_title' => __('Theme Settings', 'wpde'),
                 'menu_slug' => $this->_token,
                 'capability' => 'manage_options',
                 'icon_url' => 'dashicons-admin-settings',
@@ -488,7 +488,7 @@ class WPDE {
         if(WPDE()->is_acf()) {
             $wp_admin_bar->add_node([
                 'id' => $this->_token,
-                'title' => "<span class='ab-icon'></span><span class='ab-label'>" . __("Nastavení šablony", "wpde") . "</span>",
+                'title' => "<span class='ab-icon'></span><span class='ab-label'>" . __("Theme Settings", "wpde") . "</span>",
                 'href' => $this->settings_url,
             ]);
         } elseif(!WPDE()->is_acf() && !is_admin()) {
@@ -529,7 +529,7 @@ class WPDE {
         $screen = get_current_screen();
 
         $content  = '<p><strong>WordPress - Development Environment ("WPDE") v' . esc_html($this->_version) . '</strong></p>';
-        $content .= '<p><a href="' . esc_url($this->settings_url) . '" class="apiru-link">' . __('Nastavení šablony Settings', 'wpde') . '</a></p>';
+        $content .= '<p><a href="' . esc_url($this->settings_url) . '" class="apiru-link">' . __('Theme Settings Settings', 'wpde') . '</a></p>';
         $content .= '<p>' . __("WordPress - Development Environment (\"WPDE\") is a fantastic starting point for creating a WordPress template. Includes necessary files and features for proper template functioning. As well, contains Bootstrap, Bootstrap Icons, Webpack, Prettier, Magnific Popup, and .editorconfig, all essential for efficient template development. This template is licensed under GPLv3.", 'wpde') . '</p>';
         $content .= '<p>' . __('WPDE was crafted by', 'wpde') . ' ' . '<strong>Jindřich Ručil</strong></p>';
         $content .= '<p><strong>' . __('If you feel inclined to show appreciation to the author, please keep this copyright notice.', 'wpde') . '</strong></p>';
@@ -744,8 +744,8 @@ class WPDE {
         ];
 
         // Start breadcrumb with a link to your homepage
-        echo '<nav id="' . $defaults['id'] . '" aria-label="breadcrumb" class="container mt-2 mb-5">';
-        echo '<ol class="breadcrumb">';
+        echo '<nav id="' . $defaults['id'] . '" aria-label="breadcrumb" class="container mt-3 mb-5">';
+        echo '<ol class="breadcrumb mb/)">';
 
         // Creating home link
         echo "<li class='breadcrumb-item'><a href='" . get_home_url() . "'>" . $defaults['home'] . '</a></li>';

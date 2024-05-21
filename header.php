@@ -8,10 +8,8 @@
  * @author Jindřich Ručil
  * @since 1.0.0
  */
-
-error_reporting(E_ALL);
-ini_set('display_errors', '1');
 ?>
+<?php get_template_part('template-parts/php', 'debug'); ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> data-bs-theme="light" class="cc--lightmode">
 <head>
@@ -27,4 +25,7 @@ ini_set('display_errors', '1');
 
 <?php //get_template_part('template-parts/component', 'carousel'); ?>
 
-<?php WPDE()->breadcrumbs(); ?>
+<?php
+if(!is_404()) {
+    WPDE()->breadcrumbs(); 
+}

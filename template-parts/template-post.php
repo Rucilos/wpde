@@ -1,5 +1,5 @@
 <div class="container py-5">
-    <div class="row">
+    <div class="row row-gap-3">
         <?php
         if (have_posts()) {
             while (have_posts()) {

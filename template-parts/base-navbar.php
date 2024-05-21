@@ -1,13 +1,15 @@
+<?php if(!is_404()) { ?>
 <nav class="navbar navbar-expand-lg border-top border-bottom shadow-sm">
 	<div class="container">
-		<a class="navbar-brand" href="<?php echo home_url(); ?>">
+		<a class="navbar-brand d-flex align-items-center gap-1" href="<?php echo home_url(); ?>">
 			<?php
 			if(WPDE()->is_acf()) {
 				$image = get_field('logo', 'option');
 				$title = get_field('text_logo', 'option');
 				if (!empty($image)) { 
+					$image_width = get_field('logo_width', 'option') ? get_field('logo_width', 'option') : '100'; 
 			?>
-			<img src="<?php echo esc_url($image['url']); ?>" alt="Logo" width="40" height="auto"/>
+			<img src="<?php echo esc_url($image['url']); ?>" alt="Logo" width="<?php echo $image_width; ?>" height="auto"/>
 			<?php 
 				} 
 				if (!empty($title)) { 
@@ -43,7 +45,8 @@
 		?>
 		</div>
 		<div class="d-none d-lg-flex ms-3">
-			<a href="#" class="btn btn-primary"><?php _e('Zaregistrujte se', 'wpde'); ?></a>
+			<a href="#" class="btn btn-primary"><?php _e('Sign up', 'wpde'); ?></a>
 		</div>
 	</div>
 </nav>
+<?php } ?>

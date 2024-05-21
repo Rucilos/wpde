@@ -1,16 +1,17 @@
 :root, 
 html[data-bs-theme="light"],
 .cc--lightmode {
-
+/*
     .nav-link {
         --bs-nav-link-color: var(--bs-black);
         --bs-nav-link-hover-color: var(--bs-primary);
         --bs-navbar-active-color: var(--bs-primary);
         --bs-nav-link-font-weight: 400;
     }
+
     --bs-link-color-rgb: var(--bs-primary-rgb);
     --bs-link-hover-color-rgb: var(--bs-primary-rgb);
-
+*/
     --cc-btn-border-radius: 0.35em !important;
     --cc-btn-gap: 8px !important;
     --cc-btn-primary-bg: var(--bs-primary) !important;
@@ -19,6 +20,17 @@ html[data-bs-theme="light"],
 
 html[data-bs-theme="dark"],
 .cc--darkmode {
+    /*
+    .nav-link {
+        --bs-nav-link-color: var(--bs-black);
+        --bs-nav-link-hover-color: var(--bs-primary);
+        --bs-navbar-active-color: var(--bs-primary);
+        --bs-nav-link-font-weight: 400;
+    }
+    
+    --bs-link-color-rgb: var(--bs-primary-rgb);
+    --bs-link-hover-color-rgb: var(--bs-primary-rgb);
+*/
     --cc-btn-border-radius: 0.35em !important;
     --cc-btn-gap: 8px !important;
     --cc-btn-primary-bg: var(--bs-primary) !important;

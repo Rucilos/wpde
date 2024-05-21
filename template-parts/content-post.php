@@ -1,5 +1,5 @@
 <a href="<?php the_permalink(); ?>" class="link-underline link-underline-opacity-0">
-	<div class="card h-100 shadow border-0 mb-3">
+	<div class="card h-100 shadow border-0">
 		<?php if (has_post_thumbnail()) {
       		the_post_thumbnail('medium', ['class' => 'card-img-top']);
 		} else {

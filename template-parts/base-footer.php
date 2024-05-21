@@ -1,3 +1,4 @@
+<?php if(!is_404()) { ?>
 <footer>
 	<div class="container-fluid bg-body-secondary pt-5 mt-3">
 		<div class="container">
@@ -78,9 +79,9 @@
 					<li class="ms-3"><a href="#"><i class="bi bi-envelope-fill"></i></a></li>
 					<li class="ms-3"><a href="#"><i class="bi bi-telephone-fill"></i></a></li>
 
-					<li class="ms-3"><a class="nav-link" href="#!" data-fontsize="sm"><small>A</small></a></li>
+					<li class="ms-3"><a class="nav-link" href="#!" data-fontsize="sm">A</a></li>
 					<li class="mx-2"><a class="nav-link text-primary" href="#!" data-fontsize="default">A</a></li>
-					<li class="me-3"><a class="nav-link fs-5" href="#!" data-fontsize="lg">A</a></li>
+					<li class="me-3"><a class="nav-link" href="#!" data-fontsize="lg">A</a></li>
 				</ul>
 
 				<select class="form-select" name="wpde-theme" style="max-width: 150px;">
@@ -93,3 +94,4 @@
 		</div>
 	</div>
 </footer>
+<?php } ?>

@@ -4,10 +4,11 @@
         if (have_posts()) {
             while (have_posts()) {
                 the_post();
-                echo '<div class="col-md-3">';
+				if (has_post_thumbnail()) {
+					the_post_thumbnail('medium', ['class' => 'card-img-top']);
+			  	} 
 				echo get_the_title();		
 				the_content();		
-                echo '</div>';
             }
             wp_reset_postdata();
         } else {
