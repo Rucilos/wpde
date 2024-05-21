@@ -21,7 +21,7 @@ Check out the template [WPDE](https://jindrichrucil.com/wpde)
 - [CookieConsent](https://github.com/orestbida/cookieconsent)
 - [Magnific popup](https://dimsemenov.com/plugins/magnific-popup/)
 
-## Dev Features
+## Development Tools
 - [SASS](https://sass-lang.com/)
 - [Webpack](https://webpack.js.org/)
 - [Prettier](https://prettier.io/)
