@@ -48,7 +48,7 @@ Check out the template [WPDE](https://jindrichrucil.com/wpde)
 Distributed under the **MIT** License. See [LICENSE](https://github.com/rucilos/wpde/blob/master/LICENSE) for more information.
 
 ## Credits
-© 2024 - present Created by [Jindřich Ručil](https://jindrichrucil.com)
+© 2024 Created by [Jindřich Ručil](https://jindrichrucil.com)
 
 ## Changelog
 
