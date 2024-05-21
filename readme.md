@@ -10,13 +10,13 @@ Check out the template [WPDE](https://wpde.jindrichrucil.com/)
 ## Key Features
 - Responsive
 - Light/Dark mode with WPDE toggler
-- [Breadcrumb](https://github.com/rucilos/wpde/blob/master/inc/class-wpde.php#L724)
+- [Breadcrumbs](https://github.com/rucilos/wpde/blob/master/inc/class-wpde.php#L724)
 
 ## Libraries
 - [Bootstrap 5](https://getbootstrap.com/)
 - [Bootstrap 5 Navbar Walker](https://github.com/AlexWebLab/bootstrap-5-wordpress-navbar-walker)
-- [Bootstrap Icons](https://icons.getbootstrap.com/)
 - [Bootstrap 5 Pagination](https://github.com/rucilos/wpde/blob/master/inc/class-wpde.php#L663)
+- [Bootstrap Icons](https://icons.getbootstrap.com/)
 - [CookieConsent](https://github.com/orestbida/cookieconsent)
 - [Magnific popup](https://dimsemenov.com/plugins/magnific-popup/)
 
