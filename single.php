@@ -15,11 +15,11 @@
 <div class="container py-5">
     <div class="row">
 		<?php while (have_posts()) {
-      the_post(); ?>
+            the_post(); ?>
 
             <div class="col-lg-12">     
                 <?php if (has_post_thumbnail()) {
-                    the_post_thumbnail('thumbnail', ['class' => 'img-fluid']);
+                    the_post_thumbnail('large', ['class' => 'img-fluid']);
                 } ?>
                 <h3><?php the_title(); ?></h3>
                 <?php the_content(); ?>
@@ -50,7 +50,8 @@
             <?php if (comments_open() || get_comments_number()) {
                 comments_template();
             }
-  } ?>
+        } 
+        ?>
     </div>
 </div>
 

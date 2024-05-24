@@ -1,8 +1,10 @@
-.form-control,
-.form-select {
+.input-group {
 
-    &:focus {
-        border-color: transparent;
-        outline-offset: 2px;
+    .form-control,
+    .form-select {
+
+        &:focus {
+            box-shadow: none;
+        }
     }
 }

@@ -155,11 +155,6 @@ class WPDE {
 
         register_activation_hook($this->file, [$this, 'install']);
 
-        // Check ACF
-        if(!$this->is_acf()) {
-            add_action('admin_notices', [$this, 'acf_notice']);
-        }
-
         // Load async or defer
         add_filter('script_loader_tag', [$this, 'add_asyncdefer_attr'], 10, 2);
         add_filter('style_loader_tag', [$this, 'add_defer_attr'], 10, 2);
@@ -633,12 +628,8 @@ class WPDE {
      * @return bool
      * @since  1.0.0
      */
-    public function is_acf($pro = false) {
-        if ($pro) {
-            return class_exists('ACF_PRO');
-        } else {
-            return class_exists('ACF');
-        }
+    public function is_acf() {
+        return class_exists('ACF_PRO');
     }
 
     /**
@@ -745,8 +736,8 @@ class WPDE {
         ];
 
         // Start breadcrumb with a link to your homepage
-        echo '<nav id="' . $defaults['id'] . '" aria-label="breadcrumb" class="container mt-3">';
-        echo '<ol class="breadcrumb mb/)">';
+        echo '<nav id="' . $defaults['id'] . '" aria-label="breadcrumb" class="container">';
+        echo '<ol class="breadcrumb mb-0 mt-3">';
 
         // Creating home link
         echo "<li class='breadcrumb-item'><a href='" . get_home_url() . "'>" . $defaults['home'] . '</a></li>';

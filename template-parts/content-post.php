@@ -8,7 +8,7 @@
 		<?php } ?>
 		<div class="card-body">
 			<h5 class="card-title"><?php echo get_the_title(); ?></h5>
-			<p class="card-text"><?php echo wp_trim_words(get_the_excerpt(), 10, ' ...'); ?></p>
+			<small class="card-text d-block"><?php echo wp_trim_words(get_the_excerpt(), 10, ' ...'); ?></small>
 			<p class="card-text">
 				<small class="text-body-secondary">
 					<?php

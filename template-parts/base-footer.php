@@ -1,5 +1,5 @@
 <?php if(!is_404()) { ?>
-<footer>
+<footer class="footer">
 	<div class="container-fluid bg-body-secondary pt-5 mt-3">
 		<div class="container">
 			<div class="row">
