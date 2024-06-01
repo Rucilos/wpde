@@ -1,0 +1,7 @@
+.card {
+    transition: box-shadow .2s ease-out;
+    
+    &:hover {
+        box-shadow: var(--wpde-box-shadow-lg) !important;
+    }
+}

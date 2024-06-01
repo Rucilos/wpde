@@ -1,5 +1,5 @@
 <?php if(!is_404()) { ?>
-<nav class="navbar navbar-expand-lg border-top border-bottom shadow-sm">
+<nav class="navbar navbar-expand-lg border-bottom shadow-sm">
 	<div class="container">
 		<a class="navbar-brand d-flex align-items-center gap-1" href="<?php echo home_url(); ?>">
 			<?php

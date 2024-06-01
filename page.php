@@ -21,6 +21,9 @@
             if(is_page('contacts')) {
                 get_template_part('template-parts/form', 'contact');
             }
+            if(is_page('sign-in')) {
+                get_template_part('template-parts/form', 'login');
+            }
         }
         wp_reset_postdata();
     ?>

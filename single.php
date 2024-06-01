@@ -13,15 +13,15 @@
 <?php get_header(); ?>
 
 <div class="container py-5">
-    <div class="row">
+    <div class="row justify-content-center">
 		<?php while (have_posts()) {
             the_post(); ?>
 
-            <div class="col-lg-12">     
+            <div class="col-lg-10">     
+                <h1><?php the_title(); ?></h3>
                 <?php if (has_post_thumbnail()) {
-                    the_post_thumbnail('large', ['class' => 'img-fluid']);
+                    the_post_thumbnail('large', ['class' => 'img-fluid mb-5 shadow rounded-4']);
                 } ?>
-                <h3><?php the_title(); ?></h3>
                 <?php the_content(); ?>
             </div>
     
@@ -42,7 +42,7 @@
                 ?> 
                 </div>
                 <div>
-                    <small class="d-block"><strong><?php _e('Související příspěvky:', 'apiru'); ?></strong></small>
+                    <h6 class="mb-1"><?php _e('Související příspěvky:', 'apiru'); ?></h6>
                     <small><?php previous_post_link('%link'); ?> / <?php next_post_link('%link'); ?></small> 
                 </div>
             </div>

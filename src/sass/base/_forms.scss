@@ -3,8 +3,8 @@
     .form-control,
     .form-select {
 
-        &:focus {
-            box-shadow: none;
+        &::placeholder {
+            font-size: 12px;
         }
     }
 }

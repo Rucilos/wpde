@@ -23,31 +23,7 @@
         if($('.wpcf7-submit').length) {
             $('.wpcf7-submit').addClass('btn btn-primary');
         }
-    })
-
-    // Set body font size based on data-fontsize attribute
-    $("[data-fontsize]").on("click", function () {
-        var fontsize = "";
-        
-        var fontsizeClass = $(this).data("fontsize");
-        switch (fontsizeClass) {
-            case "sm":
-                fontsize = "14px";
-                break;
-            case "default":
-                fontsize = "16px";
-                break;
-            case "lg":
-                fontsize = "18px";
-                break;
-            default:
-                fontsize = "16px"; 
-        }
-        
-        $("body").css("font-size", fontsize);
-        $(".nav-link").removeClass("text-primary");
-        $(this).addClass("text-primary");
-    });    
+    }) 
 
     // Headroom
     lastScroll = 0

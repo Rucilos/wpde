@@ -6,9 +6,7 @@
  * @author Jindřich Ručil
  * @since 1.0.0
  */
-?>
 
-<?php
 if (!defined('ABSPATH')) {
     exit();
 }
@@ -738,6 +736,7 @@ class WPDE {
         // Start breadcrumb with a link to your homepage
         echo '<nav id="' . $defaults['id'] . '" aria-label="breadcrumb" class="container">';
         echo '<ol class="breadcrumb mb-0 mt-3">';
+        echo '<small class="d-flex">';
 
         // Creating home link
         echo "<li class='breadcrumb-item'><a href='" . get_home_url() . "'>" . $defaults['home'] . '</a></li>';
@@ -899,6 +898,7 @@ class WPDE {
         }
 
         // End breadcrumbs
+        echo '</small>';
         echo '</ol>';
         echo '</nav>';
     }

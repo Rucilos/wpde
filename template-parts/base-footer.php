@@ -1,6 +1,6 @@
 <?php if(!is_404()) { ?>
 <footer class="footer">
-	<div class="container-fluid bg-body-secondary pt-5 mt-3">
+	<div class="container-fluid pt-5 mt-3">
 		<div class="container">
 			<div class="row">
 				<div class="col-6 col-md-2 mb-3">
@@ -65,27 +65,20 @@
 				<div>
 				<small>© <?php echo date('Y'); ?> WPDE, Inc. All rights reserved.</small>
 				</div>
-				<div class="d-flex align-items-center">
-
-				<ul class="list-unstyled d-flex align-items-center flex-wrap flex-md-nowrap mb-0">
-					<li class="ms-3"><a href="#"><i class="bi bi-facebook"></i></a></li>
-					<li class="ms-3"><a href="#"><i class="bi bi-instagram"></i></a></li>
-					<li class="ms-3"><a href="#"><i class="bi bi-twitter-x"></i></a></li>
-					<li class="ms-3"><a href="#"><i class="bi bi-youtube"></i></a></li>
-					<li class="ms-3"><a href="#"><i class="bi bi-tiktok"></i></a></li>
-					<li class="ms-3"><a href="#"><i class="bi bi-linkedin"></i></a></li>
-					<li class="ms-3"><a href="#"><i class="bi bi-threads"></i></a></li>
-					<li class="ms-3"><a href="#"><i class="bi bi-github"></i></a></li>
-					<li class="ms-3"><a href="#"><i class="bi bi-envelope-fill"></i></a></li>
-					<li class="ms-3"><a href="#"><i class="bi bi-telephone-fill"></i></a></li>
-
-					<li class="ms-3"><a class="nav-link" href="#!" data-fontsize="sm">A</a></li>
-					<li class="mx-2"><a class="nav-link text-primary" href="#!" data-fontsize="default">A</a></li>
-					<li class="me-3"><a class="nav-link" href="#!" data-fontsize="lg">A</a></li>
-				</ul>
-
-				<?php get_template_part('template-parts/theme', 'toggler'); ?>
-
+				<div class="d-flex align-items-center gap-3">
+					<ul class="list-unstyled d-flex align-items-center flex-wrap flex-md-nowrap mb-0">
+						<li class="me-3"><a href="#"><i class="bi bi-facebook"></i></a></li>
+						<li class="me-3"><a href="#"><i class="bi bi-instagram"></i></a></li>
+						<li class="me-3"><a href="#"><i class="bi bi-twitter-x"></i></a></li>
+						<li class="me-3"><a href="#"><i class="bi bi-youtube"></i></a></li>
+						<li class="me-3"><a href="#"><i class="bi bi-tiktok"></i></a></li>
+						<li class="me-3"><a href="#"><i class="bi bi-linkedin"></i></a></li>
+						<li class="me-3"><a href="#"><i class="bi bi-threads"></i></a></li>
+						<li class="me-3"><a href="#"><i class="bi bi-github"></i></a></li>
+						<li class="me-3"><a href="#"><i class="bi bi-envelope-fill"></i></a></li>
+						<li class="me-3"><a href="#"><i class="bi bi-telephone-fill"></i></a></li>
+					</ul>
+					<?php get_template_part('template-parts/theme', 'toggler'); ?>
 				</div>
 			</div>
 		</div>
