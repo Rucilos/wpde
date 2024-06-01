@@ -8,7 +8,9 @@
  * @author Jindřich Ručil
  * @since 1.0.0
  */
+?>
 
+<?php
 require_once 'inc/class-wpde.php';
 
 /**

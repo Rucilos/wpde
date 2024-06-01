@@ -22,7 +22,10 @@
         })
         if($('.wpcf7-submit').length) {
             $('.wpcf7-submit').addClass('btn btn-primary');
-        }
+            }
+        $('#user_login').removeClass('input').addClass('form-control');
+        $('#user_pass').removeClass('input').addClass('form-control');
+        $('#wp-submit').removeClass('button button-primary').addClass('btn btn-primary');
     }) 
 
     // Headroom

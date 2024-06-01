@@ -10,11 +10,11 @@
  */
 ?>
 
-<?php get_header(); ?>
+<?php 
+get_header();
 
-<?php if (have_posts()) { ?>
-<div class="container py-5">
-    <?php
+if (have_posts()) { 
+   
         while (have_posts()) {
             the_post();
             get_template_part('template-parts/content', 'page');
@@ -26,8 +26,7 @@
             }
         }
         wp_reset_postdata();
-    ?>
-</div>
-<?php } ?>
+ 
+} 
 
-<?php get_footer(); ?>
+get_footer();

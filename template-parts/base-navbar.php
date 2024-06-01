@@ -1,4 +1,4 @@
-<?php if(!is_404()) { ?>
+<?php if(!is_404() && !is_page('sign-in')) { ?>
 <nav class="navbar navbar-expand-lg border-bottom shadow-sm">
 	<div class="container">
 		<a class="navbar-brand d-flex align-items-center gap-1" href="<?php echo home_url(); ?>">
@@ -45,7 +45,7 @@
 		?>
 		</div>
 		<div class="d-none d-lg-flex ms-3">
-			<a href="#" class="btn btn-primary"><?php _e('Sign up', 'wpde'); ?></a>
+			<a href="<?php echo home_url() . '/sign-in'; ?>" class="btn btn-primary"><?php _e('Sign in', 'wpde'); ?></a>
 		</div>
 	</div>
 </nav>

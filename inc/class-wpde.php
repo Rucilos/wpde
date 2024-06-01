@@ -6,7 +6,9 @@
  * @author Jindřich Ručil
  * @since 1.0.0
  */
+?>
 
+<?php
 if (!defined('ABSPATH')) {
     exit();
 }
@@ -690,10 +692,10 @@ class WPDE {
             $end = min($total_posts, $current_page * $posts_per_page);
 
 
-            $html = '<div class="d-flex justify-content-between my-4 pt-3 border-top">';
-                $html .= '<p class="text-muted">Showing ' . $start . ' to ' . $end . ' of ' . $total_posts . ' results</p>'; 
+            $html = '<div class="d-flex align-items-center justify-content-between my-4 pt-3 border-top">';
+                $html .= '<small>' . __('Showing', 'textovadomena') . ' ' . $start . ' ' . __('to', 'textovadomena') . ' ' . $end . ' ' . __('of', 'textovadomena') . ' ' . $total_posts . ' ' . __('results', 'textovadomena') . '</small>';
                 $html .= '<nav aria-label="Pagination">';
-                    $html .= '<ul class="pagination">';
+                    $html .= '<ul class="pagination mb-0">';
 
                         foreach ($links as $link) {
                             if (strpos($link, 'current') !== false) {
@@ -721,7 +723,7 @@ class WPDE {
      * @access public
      */
     public function breadcrumbs() {
-        if (is_front_page()) {
+        if (is_front_page() || is_404() || is_page('sign-in')) {
             return;
         }
 
@@ -736,7 +738,6 @@ class WPDE {
         // Start breadcrumb with a link to your homepage
         echo '<nav id="' . $defaults['id'] . '" aria-label="breadcrumb" class="container">';
         echo '<ol class="breadcrumb mb-0 mt-3">';
-        echo '<small class="d-flex">';
 
         // Creating home link
         echo "<li class='breadcrumb-item'><a href='" . get_home_url() . "'>" . $defaults['home'] . '</a></li>';
@@ -898,7 +899,6 @@ class WPDE {
         }
 
         // End breadcrumbs
-        echo '</small>';
         echo '</ol>';
         echo '</nav>';
     }

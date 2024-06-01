@@ -1,4 +1,4 @@
-<?php if(!is_404()) { ?>
+<?php if(!is_404() && !is_page('sign-in')) { ?>
 <footer class="footer">
 	<div class="container-fluid pt-5 mt-3">
 		<div class="container">
