@@ -10,7 +10,7 @@
  */
 ?>
 
-<form action="<?php echo home_url('/'); ?>" class="ml-auto"  role="search" autocomplete="off" style="max-width: 250px;"> 
+<form action="<?php echo home_url('/'); ?>" class="ml-auto"  role="search" autocomplete="off"> 
     <div class="input-group mx-lg-2 shadow-sm">
         <input class="form-control" id="search" name="s" type="text" placeholder="<?php _e('Find anything...', 'wpde'); ?>" aria-label="<?php _e('Find anything...', 'wpde'); ?>" value="<?php echo get_search_query(); ?>">
             <div class="input-group-append">

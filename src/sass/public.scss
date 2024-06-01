@@ -4,31 +4,15 @@
  * Author (c) 2024 Jindrich Rucil
  * Released under the GPLv3 license
  */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-@import "utils/_bootstrap";
-@import "utils/_variables";
-@import "utils/_mixins";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import 'utils/_bootstrap';
 
-@import "layout/_base";
-@import "layout/_breadcrumbs";
-@import "layout/_footer";
-@import "layout/_carousel";
-@import "layout/_navbar";
-@import "layout/_pagination";
-@import "layout/_typography";
+@import 'layout/_carousel';
+@import 'layout/_navbar';
 
-@import "base/_alerts";
-@import "base/_backgrounds";
-@import "base/_borders";
-@import "base/_buttons";
-@import "base/_cards";
-@import "base/_forms";
-@import "base/_modals";
-@import "base/_tables";
+@import 'base/_forms';
 
-@import "components/_cookies";
-@import "components/_recaptcha";
-@import "components/_wpadminbar";
+@import 'components/_cookies';
+@import 'components/_recaptcha';
 
-@import "admin";
-
+@import 'admin';

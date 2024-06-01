@@ -1,198 +1,204 @@
 // 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
-@import "~bootstrap/scss/functions";
+@import '~bootstrap/scss/functions';
 
 // 2. Include any default variable overrides here
 $prefix: wpde-;
 
-$enable-caret:                	true;
-$enable-rounded:              	true;
-$enable-shadows:              	false;
-$enable-gradients:            	false;
-$enable-transitions:          	true;
-$enable-reduced-motion:       	true;
-$enable-smooth-scroll:        	true;
-$enable-grid-classes:         	true;
-$enable-container-classes:    	true;
-$enable-button-pointers:      	true;
-$enable-rfs:                  	true;
-$enable-validation-icons:     	true;
-$enable-negative-margins:     	true;
-$enable-deprecation-messages: 	true;
-$enable-important-utilities:  	true;
-$enable-dark-mode:            	true;
-$color-mode-type:             	data; // 'data' or 'media-query'
+$enable-caret: true;
+$enable-rounded: true;
+$enable-shadows: false;
+$enable-gradients: false;
+$enable-transitions: true;
+$enable-reduced-motion: true;
+$enable-smooth-scroll: true;
+$enable-grid-classes: true;
+$enable-container-classes: true;
+$enable-button-pointers: true;
+$enable-rfs: true;
+$enable-validation-icons: true;
+$enable-negative-margins: true;
+$enable-deprecation-messages: true;
+$enable-important-utilities: true;
+$enable-dark-mode: true;
+$color-mode-type: data; // 'data' or 'media-query'
 
-$white:    					  #fff;
-$gray-50:  					  #f8fafc; // #f8f9fa
-$gray-100: 					  #f1f5f9; // #e9ecef
-$gray-200: 					  #e2e8f0; // #dee2e6
-$gray-300: 					  #cbd5e1; // #f8f9fa
-$gray-400: 					  #94a3b8; // #ced4da
-$gray-500: 					  #64748b; // #adb5bd
-$gray-600: 					  #475569; // #6c757d
-$gray-700: 					  #334155; // #495057
-$gray-800: 					  #1e293b; // #343a40
-$gray-900: 					  #0f172a; // #212529
-$gray-950: 					  #020617;
-$black:    					  #000;
+$white: #fff;
+$gray-50: #f8fafc; // #f8f9fa
+$gray-100: #f1f5f9; // #e9ecef
+$gray-200: #e2e8f0; // #dee2e6
+$gray-300: #cbd5e1; // #f8f9fa
+$gray-400: #94a3b8; // #ced4da
+$gray-500: #64748b; // #adb5bd
+$gray-600: #475569; // #6c757d
+$gray-700: #334155; // #495057
+$gray-800: #1e293b; // #343a40
+$gray-900: #0f172a; // #212529
+$gray-950: #020617;
+$black: #000;
 
 $grays: (
-  	"50":  					    $gray-50,
-  	"100": 					    $gray-100,
-  	"200": 					    $gray-200,
-  	"300": 					    $gray-300,
-  	"400": 					    $gray-400,
-  	"500": 					    $gray-500,
-  	"600": 					    $gray-600,
-  	"700": 					    $gray-700,
-  	"800": 					    $gray-800,
-  	"900": 					    $gray-900,
-  	"950": 					    $gray-950
+    '50': $gray-50,
+    '100': $gray-100,
+    '200': $gray-200,
+    '300': $gray-300,
+    '400': $gray-400,
+    '500': $gray-500,
+    '600': $gray-600,
+    '700': $gray-700,
+    '800': $gray-800,
+    '900': $gray-900,
+    '950': $gray-950,
 );
 
-$spacer: 						1rem; // 1rem
+$spacer: 1rem; // 1rem
 
 $spacers: (
-  0: 							0,
-  1: 							$spacer * .25,
-  2: 							$spacer * .5,
-  3: 							$spacer,
-  4: 							$spacer * 1.5,
-  5: 							$spacer * 3,
-  6: 							$spacer * 4,
-  7: 							$spacer * 5,
-  8: 							$spacer * 6,
-  9: 							$spacer * 7,
-  10: 							$spacer * 8,
+    0: 0,
+    1: $spacer * 0.25,
+    2: $spacer * 0.5,
+    3: $spacer,
+    4: $spacer * 1.5,
+    5: $spacer * 3,
 );
 
-$font-family-base: 			  	'Montserrat', sans-serif;
-$font-size-base: 			  	1rem; // 1rem
-$line-height-base: 			  	1.5; // 1.5
-$small-font-size: 			  	.875em; // .875em
+$font-family-base: 'Inter', sans-serif;
+$font-size-base: 1rem; // 1rem
+$line-height-base: 1.5; // 1.5
+$small-font-size: 0.875em; // .875em
 
-$h1-font-size:                	$font-size-base * 2.5; // 2.5
-$h2-font-size:                	$font-size-base * 2; // 2
-$h3-font-size:                	$font-size-base * 1.75; // 1.75
-$h4-font-size:                	$font-size-base * 1.5; // 1.5
-$h5-font-size:                	$font-size-base * 1.25; // 1.25
-$h6-font-size:                	$font-size-base; // 0
+$h1-font-size: $font-size-base * 2.5; // 2.5
+$h2-font-size: $font-size-base * 2; // 2
+$h3-font-size: $font-size-base * 1.75; // 1.75
+$h4-font-size: $font-size-base * 1.5; // 1.5
+$h5-font-size: $font-size-base * 1.25; // 1.25
+$h6-font-size: $font-size-base; // 0
 
-$headings-margin-bottom: 	  	$spacer * 1; // $spacer * .5;
-$headings-font-family: 		  	"Open Sans", sans-serif; // null
-$headings-font-style: 		  	normal; // normal
-$headings-font-weight: 	  	  	600; // 500
-$headings-line-height: 		  	1.2; // 1.2
-$headings-color: 			  	$black; // inherit
-$headings-color-dark:           $white; // inherit
+$headings-margin-bottom: $spacer * 1; // $spacer * .5;
+$headings-font-family: null; // null
+$headings-font-style: normal; // normal
+$headings-font-weight: 600; // 500
+$headings-line-height: 1.2; // 1.2
+$headings-color: $black; // inherit
+$headings-color-dark: $white; // inherit
 
-$breadcrumb-font-size:          $small-font-size; // null
-$breadcrumb-divider:            quote("/");
+$breadcrumb-font-size: $small-font-size; // null
+$breadcrumb-divider: quote('/');
 
-$nav-link-font-color: 			red; // var(--wpde-navbar-color);
-$nav-link-font-size: 			$small-font-size; // null
-$nav-link-font-weight: 			500; // null
+$nav-link-font-size: $small-font-size; // null
+$nav-link-font-weight: 500; // null
 
-$pagination-font-size:          $small-font-size; // $font-size-base
+$pagination-font-size: $small-font-size; // $font-size-base
 
-$transition-base:             	all .2s ease-in-out; // all .2s ease-in-out;
+$transition-base: all 0.2s ease-in-out; // all .2s ease-in-out;
 
-$border-radius:               	.375rem; // .375rem;
+$border-radius: 0.375rem; // .375rem;
 
-$input-btn-padding-y:         	.375rem; //.375rem
-$input-btn-padding-x:         	.75rem; //.75rem
+$input-btn-padding-y: 0.375rem; //.375rem
+$input-btn-padding-x: 0.75rem; //.75rem
 
-$blue:   					  #0d6efd; // #0d6efd
-$indigo:  					  #6610f2; // #6610f2
-$purple:  					  #6f42c1; // #6f42c1
-$pink:    					  #d63384; // #d63384
-$red:     					  #ef4444; // #dc3545
-$orange:  					  #fb923c; // #fd7e14
-$yellow:  					  #fbbf24; // #ffc107
-$green:   					  #4ade80; // #198754
-$teal:    					  #20c997; // #20c997
-$cyan:    					  #0dcaf0; // #0dcaf0
+$blue: #0d6efd; // #0d6efd
+$indigo: #6610f2; // #6610f2
+$purple: #6f42c1; // #6f42c1
+$pink: #d63384; // #d63384
+$red: #ef4444; // #dc3545
+$orange: #fb923c; // #fd7e14
+$yellow: #fbbf24; // #ffc107
+$green: #4ade80; // #198754
+$teal: #20c997; // #20c997
+$cyan: #0dcaf0; // #0dcaf0
 
-$blue-rgb:   				    79, 70, 229;
-$component-active-bg: 			$blue;
+$blue-rgb: 79, 70, 229;
+$component-active-bg: $blue;
 
-$focus-ring-width:      		.25rem; // .25rem
-$focus-ring-opacity:    		.25; // .25
-$focus-ring-color:      		rgba($blue, $focus-ring-opacity);
-$focus-ring-blur:       		0;
-$focus-ring-box-shadow: 		0 0 $focus-ring-blur $focus-ring-width $focus-ring-color;
+$focus-ring-width: 0.25rem; // .25rem
+$focus-ring-opacity: 0.25; // .25
+$focus-ring-color: rgba($blue, $focus-ring-opacity);
+$focus-ring-blur: 0;
+$focus-ring-box-shadow: 0 0 $focus-ring-blur $focus-ring-width $focus-ring-color;
 
 // 3. Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
-@import "~bootstrap/scss/variables";
-@import "~bootstrap/scss/variables-dark";
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/variables-dark';
 
 $theme-colors: (
-	"primary":    				$primary, // primary
-	"secondary":  				$secondary, // secondary
-	"success":    				$success, // success
-	"info":       				$info, // info
-	"warning":    				$warning, // warning
-	"danger":     				$danger, // danger
-	"light":      				$light, // light
-	"dark":       				$dark // dark
+    'primary': $primary,
+    // primary
+    'secondary': $secondary,
+    // secondary
+    'success': $success,
+    // success
+    'info': $info,
+    // info
+    'warning': $warning,
+    // warning
+    'danger': $danger,
+    // danger
+    'light': $light,
+    // light
+    'dark': $dark // dark,
 );
 
-$body-bg: 						$white; // $white
-$body-secondary-bg: 			$gray-100; // $gray-200
-$body-color:               		$gray-900; // $gray-900
+$body-bg: $white; // $white
+$body-secondary-bg: $gray-100; // $gray-200
+$body-color: $gray-900; // $gray-900
 
-$body-bg-dark: 					$gray-950; // $gray-900
-$body-secondary-bg-dark: 		$gray-900; // $gray-800
-$body-color-dark:               $gray-400; // $gray-300
+$body-bg-dark: $gray-950; // $gray-900
+$body-secondary-bg-dark: $gray-900; // $gray-800
+$body-color-dark: $gray-400; // $gray-300
 
-$border-color: 					$gray-200; // $gray-400
-$border-color-dark: 			$gray-800; // $gray-700
+$border-color: $gray-200; // $gray-400
+$border-color-dark: $gray-800; // $gray-700
 
-$box-shadow:                  rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
-$box-shadow-sm:               rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
-$box-shadow-lg:               rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+$box-shadow:
+    rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+$box-shadow-sm: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+$box-shadow-lg:
+    rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 
 // 7. Include remainder of required parts
-@import "~bootstrap/scss/maps";
-@import "~bootstrap/scss/mixins";
-@import "~bootstrap/scss/root";
+@import '~bootstrap/scss/maps';
+@import '~bootstrap/scss/mixins';
+@import '~bootstrap/scss/root';
 
 // 8. Optionally include any other parts as needed
-@import "~bootstrap/scss/utilities";
-@import "~bootstrap/scss/reboot";
-@import "~bootstrap/scss/type";
-@import "~bootstrap/scss/images";
-@import "~bootstrap/scss/containers";
-@import "~bootstrap/scss/grid";
-@import "~bootstrap/scss/helpers";
+@import '~bootstrap/scss/utilities';
+@import '~bootstrap/scss/reboot';
+@import '~bootstrap/scss/type';
+@import '~bootstrap/scss/images';
+@import '~bootstrap/scss/containers';
+@import '~bootstrap/scss/grid';
+@import '~bootstrap/scss/helpers';
 
-@import "~bootstrap/scss/alert";
-@import "~bootstrap/scss/breadcrumb";
-@import "~bootstrap/scss/buttons";
-@import "~bootstrap/scss/card";
-@import "~bootstrap/scss/carousel";
-@import "~bootstrap/scss/close";
-@import "~bootstrap/scss/containers";
-@import "~bootstrap/scss/dropdown";
-@import "~bootstrap/scss/forms";
-@import "~bootstrap/scss/modal";
-@import "~bootstrap/scss/nav";
-@import "~bootstrap/scss/navbar";
-@import "~bootstrap/scss/pagination";
-@import "~bootstrap/scss/tables";
-@import "~bootstrap/scss/type";
-@import "~bootstrap/scss/transitions";
+@import '~bootstrap/scss/alert';
+@import '~bootstrap/scss/breadcrumb';
+@import '~bootstrap/scss/buttons';
+@import '~bootstrap/scss/card';
+@import '~bootstrap/scss/carousel';
+@import '~bootstrap/scss/close';
+@import '~bootstrap/scss/containers';
+@import '~bootstrap/scss/dropdown';
+@import '~bootstrap/scss/forms';
+@import '~bootstrap/scss/modal';
+@import '~bootstrap/scss/nav';
+@import '~bootstrap/scss/navbar';
+@import '~bootstrap/scss/pagination';
+@import '~bootstrap/scss/tables';
+@import '~bootstrap/scss/type';
+@import '~bootstrap/scss/transitions';
 
 // 9. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
-@import "~bootstrap/scss/utilities/api";
+@import '~bootstrap/scss/utilities/api';
 
 // 10. Include any variable overrides here
-:root, [data-bs-theme="light"] {
-	--wpde-link-color-rgb: var($blue-rgb) !important;
-	--wpde-link-hover-color-rgb: var($blue-rgb) !important;
+:root,
+[data-bs-theme='light'] {
+    //--wpde-link-color-rgb: var($blue-rgb) !important;
+    //--wpde-link-hover-color-rgb: var($blue-rgb) !important;
 }
 
-[data-bs-theme="dark"] {
-	--wpde-link-color-rgb: var($blue-rgb) !important;
-	--wpde-link-hover-color-rgb: var($blue-rgb) !important;
+[data-bs-theme='dark'] {
+    //--wpde-link-color-rgb: var($blue-rgb) !important;
+    //--wpde-link-hover-color-rgb: var($blue-rgb) !important;
 }

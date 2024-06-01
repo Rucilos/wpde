@@ -25,6 +25,8 @@
 
 <?php get_template_part('template-parts/base', 'navbar'); ?>
 
-<?php //get_template_part('template-parts/component', 'carousel'); ?>
+<?php
+//get_template_part('template-parts/component', 'carousel');
+?>
 
 <?php WPDE()->breadcrumbs(); ?>

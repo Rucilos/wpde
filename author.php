@@ -12,6 +12,6 @@
 
 <?php
 get_header();
-get_template_part('template-parts/template', 'post');
+get_template_part('template-parts/template', get_post_type());
 get_footer();
 

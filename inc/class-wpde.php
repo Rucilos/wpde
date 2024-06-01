@@ -129,7 +129,7 @@ class WPDE {
      *
      * Initializes the theme object with the specified file and version.
      * This constructor sets up various properties and hooks for the theme.
-     * 
+     *
      * @param  string $file    File constructor
      * @param  string $version Theme version
      * @access public
@@ -183,7 +183,7 @@ class WPDE {
         add_action('admin_menu', [$this, 'add_options_page']);
         add_action('wp_before_admin_bar_render', [$this, 'add_adminbar_tabs'], 999);
         add_action('admin_head', [$this, 'add_help_tabs']);
-        if($this->is_acf()) {
+        if ($this->is_acf()) {
             add_action('wp_dashboard_setup', [$this, 'add_dashboard_metabox']);
         }
         add_action('dashboard_glance_items', [$this, 'post_types_metaboxes']);
@@ -251,9 +251,6 @@ class WPDE {
 
         wp_register_style($this->_token . '-c' . $this->onload, esc_url($this->cdn) . 'vanilla-cookieconsent@3.0.1/dist/' . 'cookieconsent' . $this->script_suffix . '.css', [], $this->_version);
         wp_enqueue_style($this->_token . '-c' . $this->onload);
-
-        wp_register_style($this->_token . '-icons' . $this->onload, esc_url($this->cdn) . 'bootstrap-icons@1.11.3/font/' . 'bootstrap-icons' . $this->script_suffix . '.css', [], $this->_version);
-        wp_enqueue_style($this->_token . '-icons' . $this->onload);
     } // END enqueue_styles ()
 
     /**
@@ -276,6 +273,9 @@ class WPDE {
         wp_register_script($this->_token . '-mfp' . $this->defer, esc_url($this->cdn) . 'magnific-popup@1.1.0/dist/' . 'jquery.magnific-popup' . $this->script_suffix . '.js', ['jquery'], $this->_version, true);
         wp_enqueue_script($this->_token . '-mfp' . $this->defer);
 
+        wp_register_script($this->_token . '-icons' . $this->defer, esc_url($this->cdn) . '@fortawesome/fontawesome-free@6.5.2/js/' . 'all' . $this->script_suffix . '.js', ['jquery'], $this->_version, true);
+        wp_enqueue_script($this->_token . '-icons' . $this->defer);
+
         wp_register_script($this->_token . $this->defer, esc_url($this->dist_url) . 'js/public' . $this->script_suffix . '.js', ['jquery'], $this->_version, true);
         wp_enqueue_script($this->_token . $this->defer);
 
@@ -283,8 +283,7 @@ class WPDE {
         wp_enqueue_script($this->_token . $this->defer);
 
         wp_localize_script($this->_token . $this->defer, $this->_token, [
-            'dir' => get_template_directory_uri() . '/',
-            'home_url' => home_url(),
+            // code goes here
         ]);
     } // END enqueue_scripts()
 
@@ -405,9 +404,9 @@ class WPDE {
     /**
      * Theme setup.
      *
-     * This method initializes various theme supports and features, 
+     * This method initializes various theme supports and features,
      * which are essential components for the proper functioning of the theme.
-     * 
+     *
      *
      * @access public
      * @return void
@@ -457,7 +456,7 @@ class WPDE {
      * @return  void
      */
     public function add_options_page() {
-        if($this->is_acf()) {
+        if ($this->is_acf()) {
             $parent = acf_add_options_page([
                 'page_title' => 'WordPress - Development Environment ("WPDE")' . ' - ' . __('Theme Settings', 'wpde'),
                 'menu_title' => __('Theme Settings', 'wpde'),
@@ -485,19 +484,19 @@ class WPDE {
         global $wp_admin_bar;
         global $template;
 
-        if($this->is_acf()) {
+        if ($this->is_acf()) {
             $wp_admin_bar->add_node([
                 'id' => $this->_token,
-                'title' => "<span class='ab-icon'></span><span class='ab-label'>" . __("Theme Settings", "wpde") . "</span>",
+                'title' => "<span class='ab-icon'></span><span class='ab-label'>" . __('Theme Settings', 'wpde') . '</span>',
                 'href' => $this->settings_url,
             ]);
-        } elseif(!$this->is_acf() && !is_admin()) {
+        } elseif (!$this->is_acf() && !is_admin()) {
             $wp_admin_bar->add_node([
                 'id' => $this->_token,
                 'title' => "<span class='ab-icon'></span><span class='ab-label'>WPDE</span>",
                 'href' => false,
             ]);
-        } 
+        }
 
         if (!is_admin()) {
             $wp_admin_bar->add_node([
@@ -528,11 +527,11 @@ class WPDE {
     public function add_help_tabs() {
         $screen = get_current_screen();
 
-        $content  = '<p><strong>WordPress - Development Environment ("WPDE") v' . esc_html($this->_version) . '</strong></p>';
+        $content = '<p><strong>WordPress - Development Environment ("WPDE") v' . esc_html($this->_version) . '</strong></p>';
         $content .= '<p>';
-            $content .= '<a href="' . esc_url($this->settings_url) . '" class="apiru-link">' . __('Theme Settings', 'wpde') . '</a>';
-            $content .= ' &#8212; ';
-            $content .= '<a href="' . esc_url($this->settings_url) . '" class="apiru-link">' . __('GitHub', 'wpde') . '</a>';
+        $content .= '<a href="' . esc_url($this->settings_url) . '" class="apiru-link">' . __('Theme Settings', 'wpde') . '</a>';
+        $content .= ' &#8212; ';
+        $content .= '<a href="' . esc_url($this->settings_url) . '" class="apiru-link">' . __('GitHub', 'wpde') . '</a>';
         $content .= '</p>';
         $content .= '<p>' . __("WordPress - Development Environment (\"WPDE\") is a fantastic starting point for creating a WordPress template. Includes necessary files and features for proper template functioning.", 'wpde') . '</p>';
 
@@ -556,13 +555,11 @@ class WPDE {
      * @since  1.0.0
      */
     public function add_dashboard_metabox() {
-        
         add_meta_box($this->_token . '-dashboard-metabox', __('Documentation', 'wpde'), 'wpde_dashoard_metabox', 'dashboard', 'side', 'high');
-        
-        function wpde_dashoard_metabox() {
 
+        function wpde_dashoard_metabox() {
             $html = '<div class="main">';
-            
+
             $file = get_field('docs', 'option');
             if ($file) {
                 $html .= '<a href="' . esc_url($file['url']) . '">' . esc_html($file['filename']) . '</a>';
@@ -572,7 +569,6 @@ class WPDE {
 
             echo $html;
         } // END wpde_dashoard_metabox()
-
     } // END add_dashboard_metabox()
 
     /**
@@ -597,7 +593,7 @@ class WPDE {
      *
      * This function modifies the search query to exclude a user with a specific username,
      * typically used to hide the user from search results.
-     * 
+     *
      * @param  $user_search The WP_User_Query object representing the user search.
      * @return void
      * @access public
@@ -656,7 +652,7 @@ class WPDE {
      * Load pagination with Bootstrap 5 styles.
      *
      * This function generates pagination links with Bootstrap 5 styles.
-     * It extends the default WordPress pagination and displays the pagination links along with information 
+     * It extends the default WordPress pagination and displays the pagination links along with information
      * about the number of results being shown on the current page out of total results.
      *
      * @param   array $args {
@@ -691,22 +687,21 @@ class WPDE {
             $start = ($current_page - 1) * $posts_per_page + 1;
             $end = min($total_posts, $current_page * $posts_per_page);
 
-
             $html = '<div class="d-flex align-items-center justify-content-between my-4 pt-3 border-top">';
-                $html .= '<small>' . __('Showing', 'textovadomena') . ' ' . $start . ' ' . __('to', 'textovadomena') . ' ' . $end . ' ' . __('of', 'textovadomena') . ' ' . $total_posts . ' ' . __('results', 'textovadomena') . '</small>';
-                $html .= '<nav aria-label="Pagination">';
-                    $html .= '<ul class="pagination mb-0">';
+            $html .= '<small>' . __('Showing', 'textovadomena') . ' ' . $start . ' ' . __('to', 'textovadomena') . ' ' . $end . ' ' . __('of', 'textovadomena') . ' ' . $total_posts . ' ' . __('results', 'textovadomena') . '</small>';
+            $html .= '<nav aria-label="Pagination">';
+            $html .= '<ul class="pagination mb-0">';
 
-                        foreach ($links as $link) {
-                            if (strpos($link, 'current') !== false) {
-                                $html .= "<li class='page-item active' aria-current='page'>" . str_replace('page-numbers', 'page-link', $link) . '</li>';
-                            } else {
-                                $html .= "<li class='page-item'>" . str_replace('page-numbers', 'page-link', $link) . '</li>';
-                            }
-                        }
+            foreach ($links as $link) {
+                if (strpos($link, 'current') !== false) {
+                    $html .= "<li class='page-item active' aria-current='page'>" . str_replace('page-numbers', 'page-link', $link) . '</li>';
+                } else {
+                    $html .= "<li class='page-item'>" . str_replace('page-numbers', 'page-link', $link) . '</li>';
+                }
+            }
 
-                    $html .= '</ul>';
-                $html .= '</nav>';
+            $html .= '</ul>';
+            $html .= '</nav>';
             $html .= '</div>';
 
             echo $html;
@@ -731,7 +726,7 @@ class WPDE {
         $custom_taxonomy = '';
 
         $defaults = [
-            'home' => '<i class="fa-solid fa-house"></i>' . esc_html(__('Úvod', 'wpde')),
+            'home' => esc_html(__('Úvod', 'wpde')),
             'id' => $this->_token . '-breadcrumbs',
         ];
 

@@ -15,7 +15,7 @@
 <div class="container py-5">
     <div class="row justify-content-center">
 		<?php while (have_posts()) {
-            the_post(); ?>
+      the_post(); ?>
 
             <div class="col-lg-10">     
                 <h1><?php the_title(); ?></h3>
@@ -50,8 +50,7 @@
             <?php if (comments_open() || get_comments_number()) {
                 comments_template();
             }
-        } 
-        ?>
+  } ?>
     </div>
 </div>
 

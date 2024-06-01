@@ -1,24 +1,24 @@
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const IgnoreEmitPlugin = require('ignore-emit-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const IgnoreEmitPlugin = require('ignore-emit-webpack-plugin')
 
 module.exports = {
     watch: true,
     watchOptions: {
         ignored: /node_modules/,
     },
-    mode: "production",
+    mode: 'production',
     entry: {
-        admin: "./src/js/admin.js",
-        cc: "./src/js/cc.js",
-        login: "./src/js/login.js",
-        public: "./src/js/public.js",
-        admin_styles: "./src/sass/admin.scss",
-        login_styles: "./src/sass/login.scss",
-        public_styles: "./src/sass/public.scss",
+        admin: './src/js/admin.js',
+        cc: './src/js/cc.js',
+        login: './src/js/login.js',
+        public: './src/js/public.js',
+        admin_styles: './src/sass/admin.scss',
+        login_styles: './src/sass/login.scss',
+        public_styles: './src/sass/public.scss',
     },
     output: {
-        filename: "js/[name].min.js",
-        path: __dirname + "/dist",
+        filename: 'js/[name].min.js',
+        path: __dirname + '/dist',
     },
     module: {
         rules: [
@@ -27,18 +27,15 @@ module.exports = {
                 use: [
                     MiniCssExtractPlugin.loader,
                     {
-                        loader: "css-loader",
+                        loader: 'css-loader',
                         options: {
                             modules: false,
                         },
                     },
-                    { loader: "sass-loader" },
+                    { loader: 'sass-loader' },
                 ],
             },
         ],
     },
-    plugins: [
-        new MiniCssExtractPlugin({ filename: 'css/[name].min.css' }),
-        new IgnoreEmitPlugin(['public_styles.min.js', 'admin_styles.min.js', 'login_styles.min.js'])
-    ],
+    plugins: [new MiniCssExtractPlugin({ filename: 'css/[name].min.css' }), new IgnoreEmitPlugin(['public_styles.min.js', 'admin_styles.min.js', 'login_styles.min.js'])],
 }

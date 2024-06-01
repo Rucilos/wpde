@@ -1,10 +1,10 @@
-<div class="input-group shadow-sm" id="theme-toggler" style="max-width: 200px;">
-	<div class="input-group-prepend">
-		<button class="input-group-text border-end-0 rounded-end-0" type="submit"><i class="bi bi-circle-half"></i></button>
-	</div>
-	<select class="form-select" name="wpde-theme">
-		<option value="auto">Auto</option>
-		<option value="light">Light</option>
-		<option value="dark">Dark</option>
-	</select>
+<div class="dropdown border rounded-2" id="wpde-theme">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+  <i class="fa-solid fa-circle-half-stroke me-1"></i> Auto
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item active" href="#!" data-value="auto"><i class="fa-solid fa-circle-half-stroke me-1"></i> Auto</a></li>
+    <li><a class="dropdown-item" href="#!" data-value="light"><i class="fa-solid fa-sun me-1"></i> <?php _e('Light', 'wpde'); ?></a></li>
+    <li><a class="dropdown-item" href="#!" data-value="dark"><i class="fa-solid fa-moon mx-1"></i> <?php _e('Dark', 'wpde'); ?></a></li>
+  </ul>
 </div>
