@@ -649,6 +649,39 @@ class WPDE {
     } // END is_wpde()
 
     /**
+     * Retrieves user information based on the provided user ID.
+     *
+     * This function fetches details such as user's full name, avatar, and job title based on the given user ID.
+     * If the user's first and last names are available, it constructs the full name. Otherwise, it uses the user's
+     * nicename. If the WordPress Development Environment (WPDE) plugin is active and Advanced Custom Fields (ACF) is
+     * enabled, it retrieves additional information such as the user's avatar and job title.
+     *
+     * @param int $user_id The ID of the user.
+     * @return array An array containing user information including name, avatar, and job title.
+     * @access public
+     * @since  1.0.0
+     */
+    public function get_user($user_id) {
+        $user_details = [];
+
+        $user_first_name = get_the_author_meta('first_name', $user_id);
+        $user_last_name = get_the_author_meta('last_name', $user_id);
+
+        if (!empty($user_first_name) || !empty($user_last_name)) {
+            $user_details['name'] = $user_first_name . ' ' . $user_last_name;
+        } else {
+            $user_details['name'] = get_the_author_meta('user_nicename', $user_id);
+        }
+
+        if (function_exists('get_field')) {
+            $user_details['avatar'] = get_field('user_avatar', 'user_' . $user_id);
+            $user_details['job'] = get_field('user_job', 'user_' . $user_id);
+        }
+
+        return $user_details;
+    } // END get_userinfo()
+
+    /**
      * Load pagination with Bootstrap 5 styles.
      *
      * This function generates pagination links with Bootstrap 5 styles.

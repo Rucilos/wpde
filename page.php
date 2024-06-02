@@ -16,11 +16,7 @@ get_header();
 if (have_posts()) {
     while (have_posts()) {
         the_post();
-        if (is_page('sign-in')) {
-            get_template_part('template-parts/form', 'login');
-        } else {
-            get_template_part('template-parts/content', 'page');
-        }
+        get_template_part('template-parts/content', 'page');
     }
     wp_reset_postdata();
 }

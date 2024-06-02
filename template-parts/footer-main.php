@@ -1,5 +1,5 @@
 <footer>
-	<div class="container-fluid">
+	<div class="container-fluid px-0">
 		<div class="container">
 			<div class="d-flex flex-column flex-sm-row justify-content-start justify-content-md-between align-items-center py-4 mt-4 border-top">
 				<div>

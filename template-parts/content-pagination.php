@@ -10,8 +10,8 @@
 */
 ?>
 
-<?php WPDE()->pagination([
-    // the_posts_pagination() or WPDE()->pagination()
+<?php 
+WPDE()->pagination([ // the_posts_pagination() or WPDE()->pagination()
     'end_size' => 3,
     'mid_size' => 3,
     'prev_text' => '<i class="fa-solid fa-angle-left"></i>',

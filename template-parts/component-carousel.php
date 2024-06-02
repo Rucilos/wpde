@@ -1,4 +1,4 @@
-<?php if (WPDE()->is_acf()) { ?>
+<?php if (function_exists('get_sub_field')) { ?>
 <?php if (have_rows('carousel', 'option')) { ?>
 <div id="carouselExampleCaptions" class="carousel slide m-3 m-md-5">
   <div class="carousel-indicators">

@@ -23,7 +23,8 @@
 
 <body <?php body_class(); ?> id="#home">
 
-<?php if (!is_404() && !is_page('sign-in')) {
+<?php 
+if (!is_404() && !is_page('sign-in')) {
     get_template_part('template-parts/navbar', 'main');
     get_template_part('template-parts/navbar', 'bottom');
 }

@@ -2,6 +2,5 @@
     "tabWidth": 4,
     "printWidth": 500,
     "semi": false,
-    "singleQuote": true,
-    "braceStyle": "1tbs"
+    "singleQuote": true
 }
