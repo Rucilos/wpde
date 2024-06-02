@@ -442,7 +442,7 @@ class WPDE {
         ]);
 
         // Register bootstrap navwalker
-        require_once get_template_directory() . '/inc/class-bootstrap-navwalker.php';
+        require_once get_template_directory() . '/inc/class-bootstrap-nav-walker.php';
     } // END theme_setup()
 
     /**
@@ -670,8 +670,8 @@ class WPDE {
     public function pagination($args = []) {
         $defaults = [
             'mid_size' => 2,
-            'prev_text' => __('Předchozí', 'wpde'),
-            'next_text' => __('Následující', 'wpde'),
+            'prev_text' => __('Previous', 'wpde'),
+            'next_text' => __('Next', 'wpde'),
             'type' => 'array',
         ];
 
@@ -688,7 +688,7 @@ class WPDE {
             $end = min($total_posts, $current_page * $posts_per_page);
 
             $html = '<div class="d-flex align-items-center justify-content-between my-4 pt-3 border-top">';
-            $html .= '<small>' . __('Showing', 'textovadomena') . ' ' . $start . ' ' . __('to', 'textovadomena') . ' ' . $end . ' ' . __('of', 'textovadomena') . ' ' . $total_posts . ' ' . __('results', 'textovadomena') . '</small>';
+            $html .= '<small class="text-muted">' . __('Showing', 'wpde') . ' ' . $start . ' ' . __('to', 'wpde') . ' ' . $end . ' ' . __('of', 'wpde') . ' ' . $total_posts . ' ' . __('results', 'wpde') . '</small>';
             $html .= '<nav aria-label="Pagination">';
             $html .= '<ul class="pagination mb-0">';
 
@@ -718,7 +718,7 @@ class WPDE {
      * @access public
      */
     public function breadcrumbs() {
-        if (is_front_page() || is_404() || is_page('sign-in')) {
+        if (is_front_page()) {
             return;
         }
 
@@ -731,8 +731,8 @@ class WPDE {
         ];
 
         // Start breadcrumb with a link to your homepage
-        echo '<nav id="' . $defaults['id'] . '" aria-label="breadcrumb" class="container">';
-        echo '<ol class="breadcrumb mb-0 mt-3">';
+        echo '<nav id="' . $defaults['id'] . '" aria-label="breadcrumb" class="d-none d-md-flex">';
+        echo '<ul class="breadcrumb mb-0">';
 
         // Creating home link
         echo "<li class='breadcrumb-item'><a href='" . get_home_url() . "'>" . $defaults['home'] . '</a></li>';
@@ -894,7 +894,7 @@ class WPDE {
         }
 
         // End breadcrumbs
-        echo '</ol>';
+        echo '</ul>';
         echo '</nav>';
     }
 

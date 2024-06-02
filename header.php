@@ -23,10 +23,8 @@
 
 <body <?php body_class(); ?> id="#home">
 
-<?php get_template_part('template-parts/base', 'navbar'); ?>
-
-<?php
-//get_template_part('template-parts/component', 'carousel');
+<?php if (!is_404() && !is_page('sign-in')) {
+    get_template_part('template-parts/navbar', 'main');
+    get_template_part('template-parts/navbar', 'bottom');
+}
 ?>
-
-<?php WPDE()->breadcrumbs(); ?>

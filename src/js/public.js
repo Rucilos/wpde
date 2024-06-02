@@ -25,7 +25,7 @@
         }
         $('label[for=user_login], label[for="user_pass"]').addClass('d-block mb-2')
         $('#user_login, #user_pass').removeClass('input').addClass('form-control')
-        $('#wp-submit').removeClass('button button-primary').addClass('btn btn-primary mt-3 px-5')
+        $('#wp-submit').removeClass('button button-primary').addClass('btn btn-primary mt-3 mb-5 px-5')
     })
 
     // Headroom
@@ -55,9 +55,9 @@
         var toggler = $('#wpde-theme')
 
         if (theme !== null) {
-            $('.dropdown-menu li a').removeClass('active')
+            toggler.find('.dropdown-menu li a').removeClass('active')
         }
-        $('.dropdown-menu li a[data-value="' + theme + '"]').addClass('active')
+        toggler.find('.dropdown-menu li a[data-value="' + theme + '"]').addClass('active')
 
         if (theme === 'auto' || theme === null) {
             if (window.matchMedia('(prefers-color-scheme: dark)').matches) {

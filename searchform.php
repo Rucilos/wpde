@@ -10,11 +10,11 @@
  */
 ?>
 
-<form action="<?php echo home_url('/'); ?>" class="ml-auto"  role="search" autocomplete="off"> 
-    <div class="input-group mx-lg-2 shadow-sm">
-        <input class="form-control" id="search" name="s" type="text" placeholder="<?php _e('Find anything...', 'wpde'); ?>" aria-label="<?php _e('Find anything...', 'wpde'); ?>" value="<?php echo get_search_query(); ?>">
-            <div class="input-group-append">
-                <button class="input-group-text border-start-0 rounded-start-0" type="submit"><i class="bi bi-search"></i></button>
-            </div>
-    </div>
+<form action="<?php echo home_url('/'); ?>" role="search" autocomplete="off" class="position-relative"> 
+    <div class="input-group d-block">
+        <div class="icon">
+            <span><i class="fa-solid fa-magnifying-glass"></i></span>
+            <input class="form-control mx-lg-2 ps-5" id="search" name="s" type="text" placeholder="<?php _e('Find anything...', 'wpde'); ?>" aria-label="<?php _e('Find anything...', 'wpde'); ?>" value="<?php echo get_search_query(); ?>">
+		</div>
+	</div>
 </form>

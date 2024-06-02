@@ -14,7 +14,7 @@
     // the_posts_pagination() or WPDE()->pagination()
     'end_size' => 3,
     'mid_size' => 3,
-    'prev_text' => __('Previous', 'wpde'),
-    'next_text' => __('Next', 'wpde'),
+    'prev_text' => '<i class="fa-solid fa-angle-left"></i>',
+    'next_text' => '<i class="fa-solid fa-angle-right"></i>',
     'screen_reader_text' => '',
 ]);

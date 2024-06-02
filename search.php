@@ -12,6 +12,36 @@
 
 <?php
 get_header();
-get_template_part('template-parts/template', 'post');
-get_footer();
+$search_query = get_search_query();
+?>
+
+<div class="container py-5">
+    <div class="pb-5 mb-5 border-bottom">
+        <small class="text-primary"><strong><?php _e('Search results', 'wpde'); ?></strong></small>	
+        <h1 class="mb-2"><?php printf(__('Content matching your query: "%s"', 'wpde'), esc_html($search_query)); ?></h1>
+        <p class="text-muted"><?php _e('Explore our latest articles and resources matching your search query.', 'wpde'); ?></p>
+	</div>
+    <div class="row row-gap-5">
+        <?php 
+        if (have_posts()) { 
+            while (have_posts()) {
+                the_post();
+                echo '<div class="col-md-4">';
+                get_template_part('template-parts/content', 'post');
+                echo '</div>';
+            }
+            wp_reset_postdata();
+            get_template_part('template-parts/content', 'pagination');
+        } else { 
+            $html  = '<div class="col-lg-12">';
+            $html .= '<p class="text-danger mb-0">' . __('Sorry, no data was found matching your search terms. Please try again with different keywords.', 'wpde') . '</p>';
+            $html .= '</div>';
+
+            echo $html;
+        } 
+        ?>
+    </div>
+</div>
+
+<?php get_footer(); ?>
 

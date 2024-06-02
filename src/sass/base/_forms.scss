@@ -1,8 +1,16 @@
-.input-group {
-    .form-control,
-    .form-select {
-        &::placeholder {
-            font-size: 12px;
-        }
+.form-control,
+.form-select {
+    &::placeholder {
+        font-size: 14px;
     }
+}
+
+.navbar .icon span {
+    left: 25px;
+}
+
+.icon span {
+    position: absolute;
+    top: 7px;
+    left: 15px;
 }

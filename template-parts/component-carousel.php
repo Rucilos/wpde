@@ -1,6 +1,6 @@
 <?php if (WPDE()->is_acf()) { ?>
 <?php if (have_rows('carousel', 'option')) { ?>
-<div id="carouselExampleCaptions" class="carousel slide mb-5">
+<div id="carouselExampleCaptions" class="carousel slide m-3 m-md-5">
   <div class="carousel-indicators">
     <?php
     $slide_index = 0;
@@ -11,7 +11,7 @@
     }
     ?>
   </div>
-  <div class="carousel-inner">
+  <div class="carousel-inner rounded-4 shadow-lg">
     <?php
     $slide_index = 0;
     while (have_rows('carousel', 'option')) {
@@ -32,9 +32,7 @@
     }
     ?>
   </div>
-  <?php if ($slide_index > 1) {<?php
-      // Show controls only if there are multiple slides
-      ?>
+  <?php if ($slide_index > 1) { ?>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>

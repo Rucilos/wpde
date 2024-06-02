@@ -16,12 +16,10 @@ get_header();
 if (have_posts()) {
     while (have_posts()) {
         the_post();
-        get_template_part('template-parts/content', 'page');
-        if (is_page('contacts')) {
-            get_template_part('template-parts/form', 'contact');
-        }
         if (is_page('sign-in')) {
             get_template_part('template-parts/form', 'login');
+        } else {
+            get_template_part('template-parts/content', 'page');
         }
     }
     wp_reset_postdata();
