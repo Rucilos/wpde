@@ -6,8 +6,8 @@ $prefix: wpde-;
 
 $enable-caret: true;
 $enable-rounded: true;
-$enable-shadows: true;
-$enable-gradients: true;
+$enable-shadows: false;
+$enable-gradients: false;
 $enable-transitions: true;
 $enable-reduced-motion: true;
 $enable-smooth-scroll: true;
@@ -93,6 +93,8 @@ $nav-link-font-weight: 500; // null
 
 // Pagination
 $pagination-font-size: $small-font-size; // $font-size-base
+$pagination-color: $black;
+$pagination-hover-color: $black;
 
 // Transition
 $transition-base: all 0.2s ease-in-out; // all .2s ease-in-out;
@@ -109,10 +111,10 @@ $blue: #0d6efd; // #0d6efd
 $indigo: #6610f2; // #6610f2
 $purple: #6f42c1; // #6f42c1
 $pink: #d63384; // #d63384
-$red: #dc3545; // #dc3545
-$orange: #fd7e14; // #fd7e14
-$yellow: #ffc107; // #ffc107
-$green: #198754; // #198754
+$red: #ef4444; // #dc3545
+$orange: #fb923c; // #fd7e14
+$yellow: #fbbf24; // #ffc107
+$green: #4ade80; // #198754
 $teal: #20c997; // #20c997
 $cyan: #0dcaf0; // #0dcaf0
 
@@ -156,7 +158,9 @@ $border-color-dark: $gray-900; // $gray-700
 
 // Links
 $link-color: $indigo;
+$link-hover-color: shift-color($link-color, $link-shade-percentage);
 $link-color-dark: tint-color($indigo, 40%);
+$link-hover-color-dark: shift-color($link-color-dark, -$link-shade-percentage);
 
 // 7. Include remainder of required parts
 @import '~bootstrap/scss/maps';

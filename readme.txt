@@ -1,4 +1,4 @@
-=== Apiru ===       
+=== WPDE ===       
 Contributors: Jindřich Ručil
 Donate link: https://jindrichrucil.com
 Requires at least: 6.0

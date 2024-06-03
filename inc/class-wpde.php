@@ -280,7 +280,7 @@ class WPDE {
         wp_enqueue_script($this->_token . $this->defer);
 
         wp_register_script($this->_token . '-cc' . $this->defer, esc_url($this->dist_url) . 'js/cc' . $this->script_suffix . '.js', ['jquery'], $this->_version, true);
-        wp_enqueue_script($this->_token . $this->defer);
+        wp_enqueue_script($this->_token . '-cc' . $this->defer);
 
         wp_localize_script($this->_token . $this->defer, $this->_token, [
             // code goes here
@@ -365,7 +365,7 @@ class WPDE {
      * @since 1.0.0
      */
     public function public_body_classes($classes) {
-        $classes[] = $this->_token . '-public';
+        $classes[] = 'h-full' . ' ' . $this->_token . '-public';
         return $classes;
     } // END public_body_class()
 
@@ -529,9 +529,9 @@ class WPDE {
 
         $content = '<p><strong>WordPress - Development Environment ("WPDE") v' . esc_html($this->_version) . '</strong></p>';
         $content .= '<p>';
-        $content .= '<a href="' . esc_url($this->settings_url) . '" class="apiru-link">' . __('Theme Settings', 'wpde') . '</a>';
+        $content .= '<a href="' . esc_url($this->settings_url) . '">' . __('Theme Settings', 'wpde') . '</a>';
         $content .= ' &#8212; ';
-        $content .= '<a href="' . esc_url($this->settings_url) . '" class="apiru-link">' . __('GitHub', 'wpde') . '</a>';
+        $content .= '<a href="' . esc_url($this->settings_url) . '">' . __('GitHub', 'wpde') . '</a>';
         $content .= '</p>';
         $content .= '<p>' . __("WordPress - Development Environment (\"WPDE\") is a fantastic starting point for creating a WordPress template. Includes necessary files and features for proper template functioning.", 'wpde') . '</p>';
 
@@ -723,7 +723,7 @@ class WPDE {
             $html = '<div class="d-flex align-items-center justify-content-between my-4 pt-3 border-top">';
             $html .= '<small class="text-muted">' . __('Showing', 'wpde') . ' ' . $start . ' ' . __('to', 'wpde') . ' ' . $end . ' ' . __('of', 'wpde') . ' ' . $total_posts . ' ' . __('results', 'wpde') . '</small>';
             $html .= '<nav aria-label="Pagination">';
-            $html .= '<ul class="pagination mb-0">';
+            $html .= '<ul class="pagination shadow-sm mb-0">';
 
             foreach ($links as $link) {
                 if (strpos($link, 'current') !== false) {
@@ -1008,5 +1008,5 @@ class WPDE {
         //phpcs:ignore
         update_option($this->_token . '_version', $this->_version);
     } // END _log_version_number()
-} // END Apiru::
+} // END WPDE::
 

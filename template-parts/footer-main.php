@@ -12,6 +12,7 @@
 					<li><a href="#" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
 					<li><a href="#" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
 					<li><a href="#" target="_blank"><i class="fa-brands fa-tiktok"></i></a></li>
+					<li><a href="#!" class="nav-link" onclick="CookieConsent.showPreferences(); return false;"><small><?php _e('Privacy settings', 'wpde'); ?></small></a></li>
 					</ul>
 					<?php get_template_part('template-parts/theme', 'toggler'); ?>
 				</div>

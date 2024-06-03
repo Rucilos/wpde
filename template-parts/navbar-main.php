@@ -1,16 +1,16 @@
-<nav class="navbar navbar-expand-lg border-bottom shadow-sm fixed-top">
-	<div class="container">
+<nav class="navbar navbar-expand-lg fixed-top">
+	<div class="container border-bottom">
 		<a class="navbar-brand d-flex align-items-center gap-1" href="<?php echo home_url(); ?>">
         <?php 
         if (function_exists('get_field')) {
             $image = get_field('logo', 'option');
             $title = get_field('text_logo', 'option');
             if (!empty($image)) {
-                $image_width = get_field('logo_width', 'option') ? get_field('logo_width', 'option') : '100'; ?>
-                    <img src="<?php echo esc_url($image['url']); ?>" alt="Logo" width="<?php echo $image_width; ?>" height="auto"/>
-                    <?php
-            }
-            if (!empty($title)) {
+                $image_width = get_field('logo_width', 'option') ? get_field('logo_width', 'option') : '100'; 
+            ?>
+                <img src="<?php echo esc_url($image['url']); ?>" alt="Logo" width="<?php echo $image_width; ?>" height="auto"/>
+            <?php
+            } elseif(!empty($title)) {
                 echo $title;
             } else {
                 echo get_bloginfo('name');
@@ -53,7 +53,10 @@
                     <a href="https://github.com/Rucilos/wpde" target="_blank" class="ms-3"><i class="fa-brands fa-github fa-lg"></i></a>
                 </li>
                 <li class="nav-item">
-                    <a href="https://github.com/Rucilos/wpde" target="_blank" class="btn btn-primary rounded-0 ms-3"><i class="fa-solid fa-envelope fa-lg me-1"></i> <?php _e('Contact us', 'wpde'); ?></a>
+                    <a href="https://github.com/Rucilos/wpde" target="_blank" class="btn btn-dark ms-3">
+                        <?php _e('Contact us', 'wpde'); ?>
+                        <i class="fa-solid fa-arrow-right ms-1"></i> 
+                    </a>
                 </li>
             </ul>
         </div>

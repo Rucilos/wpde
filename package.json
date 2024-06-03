@@ -36,6 +36,7 @@
         "rimraf": "^5.0.7",
         "sass": "^1.77.1",
         "sass-loader": "^14.2.1",
+        "tailwindcss": "^3.4.3",
         "webpack": "^5.91.0",
         "webpack-cli": "^5.1.4"
     },
@@ -45,7 +46,8 @@
     "scripts": {
         "start": "webpack",
         "format": "prettier --write .",
-        "clear": "rimraf ./dist/js && rimraf ./dist/css && rimraf ./dist/html"
+        "clear": "rimraf ./dist/js && rimraf ./dist/css && rimraf ./dist/html",
+        "tailwind": "npx tailwindcss -i ./src/sass/tailwind.css -o ./dist/css/tailwind.min.css --watch"
     },
     "repository": {
         "type": "git",

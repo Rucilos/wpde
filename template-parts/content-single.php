@@ -30,7 +30,7 @@
     $u_modified_time = get_the_modified_time('U');
     if ($u_modified_time >= $u_time + 86400) {
         $html = "<small class='d-block'><strong>Poslední aktualizace:</strong></small>";
-        $html .= '<small>' . the_modified_time('F jS, Y') . '</small>';
+        $html .= '<small>' . get_the_modified_time('F jS, Y') . '</small>';
         echo $html;
     } else {
         $html = "<small class='d-block'><strong>Publikováno:</strong></small>";
@@ -40,7 +40,7 @@
     ?> 
     </div>
     <div>
-        <h6 class="mb-1"><?php _e('Související příspěvky:', 'apiru'); ?></h6>
+        <small class="d-block"><strong><?php _e('Související příspěvky:', 'wpde'); ?></strong></small>
         <small><?php previous_post_link('%link'); ?> / <?php next_post_link('%link'); ?></small> 
     </div>
 </div>

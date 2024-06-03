@@ -13,7 +13,7 @@
 <?php get_template_part('template-parts/php', 'debug'); ?>
 
 <!DOCTYPE html>
-<html <?php language_attributes(); ?> data-bs-theme="light" class="cc--lightmode">
+<html <?php language_attributes(); ?> data-bs-theme="light" class="h-full cc--lightmode">
 <head>
 	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
