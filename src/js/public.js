@@ -67,7 +67,7 @@
                 $('html').attr('data-bs-theme', 'light')
                 $('body').removeClass('cc--darkmode').addClass('cc--lightmode')
             }
-            $(toggler).find('.dropdown-toggle').html('<i class="fa-solid fa-circle-half-stroke mx-1"></i> Auto')
+            $(toggler).find('.dropdown-toggle').html('<i class="fa-solid fa-circle-half-stroke mx-1"></i>')
             if (theme === null) {
                 localStorage.setItem('theme', 'auto')
             }
@@ -76,13 +76,13 @@
         if (theme === 'light') {
             $('html').attr('data-bs-theme', 'light')
             $('body').removeClass('cc--darkmode').addClass('cc--lightmode')
-            $(toggler).find('.dropdown-toggle').html('<i class="fa-solid fa-sun mx-1"></i> Light')
+            $(toggler).find('.dropdown-toggle').html('<i class="fa-solid fa-sun mx-1"></i>')
         }
 
         if (theme === 'dark') {
             $('html').attr('data-bs-theme', 'dark')
             $('body').removeClass('cc--lightmode').addClass('cc--darkmode')
-            $(toggler).find('.dropdown-toggle').html('<i class="fa-solid fa-moon mx-1"></i> Dark')
+            $(toggler).find('.dropdown-toggle').html('<i class="fa-solid fa-moon mx-1"></i>')
         }
 
         toggler.find('.dropdown-menu li a').click(function () {
@@ -99,17 +99,17 @@
                     $('html').attr('data-bs-theme', 'light')
                     $('body').removeClass('cc--darkmode').addClass('cc--lightmode')
                 }
-                $(toggler).find('.dropdown-toggle').html('<i class="fa-solid fa-circle-half-stroke mx-1"></i> Auto')
+                $(toggler).find('.dropdown-toggle').html('<i class="fa-solid fa-circle-half-stroke mx-1"></i>')
                 localStorage.setItem('theme', 'auto')
             } else if (selectedValue === 'light') {
                 $('html').attr('data-bs-theme', 'light')
                 $('body').removeClass('cc--darkmode').addClass('cc--lightmode')
-                $(toggler).find('.dropdown-toggle').html('<i class="fa-solid fa-sun mx-1"></i> Light')
+                $(toggler).find('.dropdown-toggle').html('<i class="fa-solid fa-sun mx-1"></i>')
                 localStorage.setItem('theme', 'light')
             } else if (selectedValue === 'dark') {
                 $('html').attr('data-bs-theme', 'dark')
                 $('body').removeClass('cc--lightmode').addClass('cc--darkmode')
-                $(toggler).find('.dropdown-toggle').html('<i class="fa-solid fa-moon mx-1"></i> Dark')
+                $(toggler).find('.dropdown-toggle').html('<i class="fa-solid fa-moon mx-1"></i>')
                 localStorage.setItem('theme', 'dark')
             }
         })

@@ -1,6 +1,6 @@
-<div class="dropdown border rounded-2" id="wpde-theme">
+<div class="dropdown" id="wpde-theme">
 	<button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-		<i class="fa-solid fa-circle-half-stroke me-1"></i> Auto
+		<i class="fa-solid fa-circle-half-stroke me-1"></i> <span class="visually-hidden">Auto</span>
 	</button>
 	<ul class="dropdown-menu">
 		<li><a class="dropdown-item active" href="#!" data-value="auto"><i class="fa-solid fa-circle-half-stroke me-1"></i> Auto</a></li>

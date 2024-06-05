@@ -7,14 +7,19 @@
 				</div>
 				<div class="d-flex align-items-center gap-4">
 					<ul class="list-unstyled d-flex align-items-center flex-wrap flex-md-nowrap column-gap-3 mb-0">
-					<li><a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
-					<li><a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
-					<li><a href="#" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
-					<li><a href="#" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
-					<li><a href="#" target="_blank"><i class="fa-brands fa-tiktok"></i></a></li>
-					<li><a href="#!" class="nav-link" onclick="CookieConsent.showPreferences(); return false;"><small><?php _e('Privacy settings', 'wpde'); ?></small></a></li>
+						<li>
+							<a href="#!" class="nav-link" onclick="CookieConsent.showPreferences(); return false;">
+								<small><?php _e('Privacy policy', 'wpde'); ?></small>
+							</a>
+						</li>
+						<li>
+						<a href="#!" class="nav-link" onclick="CookieConsent.showPreferences(); return false;">
+								<small><?php _e('Privacy settings', 'wpde'); ?></small>
+							</a>
+						</li>
 					</ul>
-					<?php get_template_part('template-parts/theme', 'toggler'); ?>
+					<?php get_template_part('template-parts/social', 'media'); ?>
+
 				</div>
 			</div>
 		</div>

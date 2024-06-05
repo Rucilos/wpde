@@ -44,10 +44,3 @@
         <small><?php previous_post_link('%link'); ?> / <?php next_post_link('%link'); ?></small> 
     </div>
 </div>
-
-<?php 
-if (comments_open() || get_comments_number()) {
-    comments_template();
-}
-?>
-

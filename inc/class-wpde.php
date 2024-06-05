@@ -441,6 +441,9 @@ class WPDE {
             'menu-5' => esc_html__('Footer 4', 'wpde'),
         ]);
 
+        // Register custom image sizes
+        add_image_size('header', 1920, 500, true); 
+
         // Register bootstrap navwalker
         require_once get_template_directory() . '/inc/class-bootstrap-nav-walker.php';
     } // END theme_setup()

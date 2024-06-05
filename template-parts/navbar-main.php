@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg fixed-top">
-	<div class="container border-bottom">
+	<div class="container pb-2 border-bottom">
 		<a class="navbar-brand d-flex align-items-center gap-1" href="<?php echo home_url(); ?>">
         <?php 
         if (function_exists('get_field')) {
@@ -43,18 +43,22 @@
             'walker' => new bootstrap_5_wp_nav_menu_walker(),
         ]); 
         ?>
+        <ul class="navbar-nav align-items-center">
+                <li class="nav-item">
+                    <?php get_template_part('template-parts/theme', 'toggler'); ?>
+                </li>
+            </ul>
 		</div>
 		<div class="d-none d-lg-flex ms-3">
             <ul class="navbar-nav border-start align-items-center ps-3">
                 <li class="nav-item">
-                    <a href="https://linkedin.com/" target="_blank" class="ms-3"><i class="fa-brands fa-linkedin fa-lg"></i></a>
+                    <a href="#" class="nav-link">
+                        <?php _e('Contacts', 'wpde'); ?>
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a href="https://github.com/Rucilos/wpde" target="_blank" class="ms-3"><i class="fa-brands fa-github fa-lg"></i></a>
-                </li>
-                <li class="nav-item">
-                    <a href="https://github.com/Rucilos/wpde" target="_blank" class="btn btn-dark ms-3">
-                        <?php _e('Contact us', 'wpde'); ?>
+                    <a href="https://github.com/Rucilos/wpde" class="btn btn-primary ms-3">
+                        <?php _e('Get full access', 'wpde'); ?>
                         <i class="fa-solid fa-arrow-right ms-1"></i> 
                     </a>
                 </li>

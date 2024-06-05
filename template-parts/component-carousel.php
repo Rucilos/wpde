@@ -18,11 +18,12 @@
 
         the_row();
         $image = get_sub_field('image');
+		$image_size = wp_get_attachment_image_url($image['ID'], 'header'); 
         $label = get_sub_field('slide_label');
         $content = get_sub_field('slide_content');
         ?>
     <div class="carousel-item <?php echo $slide_index == 0 ? 'active' : ''; ?>">
-      <img src="<?php echo esc_url($image['url']); ?>" class="d-block w-100" alt="<?php echo esc_attr($label); ?>">
+    <img src="<?php echo esc_url($image_size); ?>" class="d-block w-100" alt="<?php echo esc_attr($label); ?>">
       <div class="carousel-caption d-none d-md-block">
         <h5><?php echo esc_html($label); ?></h5>
         <p><?php echo esc_html($content); ?></p>

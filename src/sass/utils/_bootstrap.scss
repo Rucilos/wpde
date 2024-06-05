@@ -119,12 +119,12 @@ $teal: #20c997; // #20c997
 $cyan: #0dcaf0; // #0dcaf0
 
 // Active components color
-$component-active-bg: $indigo;
+$component-active-bg: $blue;
 
 // Focus ring
-$focus-ring-width: 0.2rem; // .25rem
-$focus-ring-opacity: 0.35; // .25
-$focus-ring-color: rgba($indigo, $focus-ring-opacity);
+$focus-ring-width: 0.15rem; // .25rem
+$focus-ring-opacity: 0.75; // .25
+$focus-ring-color: rgba($blue, $focus-ring-opacity);
 $focus-ring-blur: 0;
 $focus-ring-box-shadow: 0 0 $focus-ring-blur $focus-ring-width $focus-ring-color;
 
@@ -134,7 +134,7 @@ $focus-ring-box-shadow: 0 0 $focus-ring-blur $focus-ring-width $focus-ring-color
 
 // Theme colors map
 $theme-colors: (
-    'primary': $indigo,
+    'primary': $blue,
     'secondary': $secondary,
     'success': $success,
     'info': $info,
@@ -157,9 +157,9 @@ $border-color: $gray-200; // $gray-400
 $border-color-dark: $gray-900; // $gray-700
 
 // Links
-$link-color: $indigo;
+$link-color: $blue;
 $link-hover-color: shift-color($link-color, $link-shade-percentage);
-$link-color-dark: tint-color($indigo, 40%);
+$link-color-dark: tint-color($blue, 40%);
 $link-hover-color-dark: shift-color($link-color-dark, -$link-shade-percentage);
 
 // 7. Include remainder of required parts
