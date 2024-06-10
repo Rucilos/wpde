@@ -12,15 +12,17 @@ Check out the [WPDE](https://wpde.jindrichrucil.com/) template
 ## Features
 -   Breadcrumbs 
 ```php 
+// Show breadcrumbs
 <?php WPDE()->breadcrumbs(); ?>
 ```
 -   Bootstrap 5 Pagination
 ```php 
+// Show pagination
 <?php WPDE()->pagination(); ?>
 ```
 -   Light/Dark mode with toggler
 ```php 
-// Call theme toggler
+// Show theme toggler
 <?php WPDE()->theme(); ?>
 ```
 
