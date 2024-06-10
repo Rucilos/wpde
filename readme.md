@@ -95,7 +95,7 @@ See [CHANGELOG](https://github.com/rucilos/wpde/blob/master/changelog.md) for mo
 
 ## Screenshots
 
-![WPDE - Cover](cover.png)
+![WPDE - Cover](/.github/cover.png)
 ![WPDE - Cover](cover.png)
 ![WPDE - Cover](cover.png)
 ![WPDE - Cover](cover.png)
