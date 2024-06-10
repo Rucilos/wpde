@@ -96,7 +96,13 @@ See [CHANGELOG](https://github.com/rucilos/wpde/blob/master/changelog.md) for mo
 ## Screenshots
 
 ![WPDE - Screenshot 1](/.github/screen-1.png)
+
 ![WPDE - Screenshot 2](/.github/screen-2.png)
+
 ![WPDE - Screenshot 3](/.github/screen-3.png)
+
+404
 ![WPDE - Screenshot 4](/.github/screen-4.png)
+
+
 ![WPDE - Screenshot 5](/.github/screen-5.png)
