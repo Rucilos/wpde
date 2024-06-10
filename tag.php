@@ -17,14 +17,14 @@
         <div class="pb-5 mb-4 border-bottom">
             <small class="text-primary">
                 <strong>
-                    <?php _e('Category', 'wpde'); ?>
+                    <?php _e('Tag', 'wpde'); ?>
                 </strong>
             </small>	
             <h1 class="mb-2">
-                <?php echo single_cat_title('', false); ?>
+                <?php echo single_tag_title('', false); ?>
             </h1>
             <p class="mb-0 text-muted">
-                <?php echo strip_tags(category_description()); ?>
+                <?php echo strip_tags(tag_description()); ?>
             </p>
         </div>
         <div class="row row-gap-5">

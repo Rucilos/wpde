@@ -686,6 +686,31 @@ class WPDE {
     } // END get_userinfo()
 
     /**
+     * Generate theme selector dropdown with Bootstrap 5 styles.
+     *
+     * This function generates a dropdown menu for selecting themes with Bootstrap 5 styles.
+     * It provides options for selecting different themes such as Auto, Light, and Dark.
+     *
+     * @return void
+     * @access public
+     * @since 1.0.0
+     */
+    public function theme() {
+        $html = '<div class="dropdown d-flex align-items-center justify-content-center" id="wpde-theme">';
+            $html .= '<button class="navbar-toggler d-flex border-0 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">';
+                $html .= '<i class="fa-solid fa-circle-half-stroke me-1"></i> <span class="visually-hidden">Auto</span>';
+            $html .= '</button>';
+            $html .= '<ul class="dropdown-menu">';
+                $html .= '<li><a class="dropdown-item active" href="#!" data-value="auto"><i class="fa-solid fa-circle-half-stroke me-1"></i> Auto</a></li>';
+                $html .= '<li><a class="dropdown-item" href="#!" data-value="light"><i class="fa-solid fa-sun me-1"></i> ' . __('Light', 'wpde') . '</a></li>';
+                $html .= '<li><a class="dropdown-item" href="#!" data-value="dark"><i class="fa-solid fa-moon mx-1"></i> ' . __('Dark', 'wpde') . '</a></li>';
+            $html .= '</ul>';
+        $html .= '</div>';
+    
+        echo $html;
+    } // END theme()    
+
+    /**
      * Load pagination with Bootstrap 5 styles.
      *
      * This function generates pagination links with Bootstrap 5 styles.

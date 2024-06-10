@@ -17,14 +17,17 @@
         <div class="pb-5 mb-4 border-bottom">
             <small class="text-primary">
                 <strong>
-                    <?php _e('Category', 'wpde'); ?>
+                    <?php _e('Archive', 'wpde'); ?>
                 </strong>
             </small>	
             <h1 class="mb-2">
-                <?php echo single_cat_title('', false); ?>
+                <?php
+                    $current_term = get_queried_object();
+                    echo $current_term->name;
+                ?>
             </h1>
             <p class="mb-0 text-muted">
-                <?php echo strip_tags(category_description()); ?>
+                <?php echo strip_tags(term_description()); ?>
             </p>
         </div>
         <div class="row row-gap-5">

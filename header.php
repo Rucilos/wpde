@@ -9,9 +9,6 @@
  * @since 1.0.0
  */
 ?>
-
-<?php get_template_part('template-parts/php', 'debug'); ?>
-
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> data-bs-theme="light" class="cc--lightmode">
 <head>

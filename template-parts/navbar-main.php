@@ -24,7 +24,7 @@
             <?php 
             /*
             if(wp_is_mobile()) {
-                get_template_part('template-parts/theme', 'toggler'); 
+                WPDE()->theme();
             }*/
             ?>
 			<button class="navbar-toggler border-0" type="button" data-bs-toggle="modal" data-bs-target="#modal-searchform">
@@ -53,7 +53,7 @@
             <li class="nav-item">
                 <?php 
                 if(!wp_is_mobile()) {
-                    get_template_part('template-parts/theme', 'toggler'); 
+                    WPDE()->theme();
                 }
                 ?>
             </li>
