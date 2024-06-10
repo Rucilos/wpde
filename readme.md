@@ -92,3 +92,11 @@ Distributed under the **MIT** License. See [LICENSE](https://github.com/rucilos/
 ## Changelog
 
 See [CHANGELOG](https://github.com/rucilos/wpde/blob/master/changelog.md) for more information.
+
+## Screenshots
+
+![WPDE - Cover](cover.png)
+![WPDE - Cover](cover.png)
+![WPDE - Cover](cover.png)
+![WPDE - Cover](cover.png)
+![WPDE - Cover](cover.png)
