@@ -12,7 +12,7 @@ Check out the [WPDE](https://wpde.jindrichrucil.com/) template
 ## Features
 -   Breadcrumbs 
 ```php 
-WPDE()->breadcrumbs(); 
+<?php WPDE()->breadcrumbs(); ?>
 ```
 -   Bootstrap 5 Pagination
 ```php 
