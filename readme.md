@@ -54,18 +54,15 @@ Check out the [WPDE](https://wpde.jindrichrucil.com/) template
 3. **Visit** Appearance > Themes > Search for WPDE > Activate
 4. **Click** on the new menu item "Theme Settings" for better control of theme
 
-```javascript
-// A smart toggle switch that stores its value in localStorage and has automatic detection
-const toggleSwitch = document.querySelector('#theme-toggle');
-const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+```sh
+# Install dependencies
+npm install
 
-if (currentTheme) {
-  document.documentElement.setAttribute('data-theme', currentTheme);
+# Run the development server
+npm run start
 
-  if (currentTheme === 'dark') {
-    toggleSwitch.checked = true;
-  }
-}
+# Build for production
+npm run build
 ```
 
 ## Commands
