@@ -16,11 +16,11 @@ Check out the [WPDE](https://wpde.jindrichrucil.com/) template
 ```
 -   Bootstrap 5 Pagination
 ```php 
-WPDE()->pagination(); 
+<?php WPDE()->pagination(); ?>
 ```
 -   Light/Dark mode with toggler
 ```php 
-WPDE()->theme(); 
+<?php WPDE()->theme(); ?>
 ```
 
 ```javascript 
