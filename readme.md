@@ -20,6 +20,7 @@ Check out the [WPDE](https://wpde.jindrichrucil.com/) template
 ```
 -   Light/Dark mode with toggler
 ```php 
+// Call theme toggler
 <?php WPDE()->theme(); ?>
 ```
 
