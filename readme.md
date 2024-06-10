@@ -66,22 +66,7 @@ if (currentTheme) {
     toggleSwitch.checked = true;
   }
 }
-
-toggleSwitch.addEventListener('change', function () {
-  if (this.checked) {
-    document.documentElement.setAttribute('data-theme', 'dark');
-    localStorage.setItem('theme', 'dark');
-  } else {
-    document.documentElement.setAttribute('data-theme', 'light');
-    localStorage.setItem('theme', 'light');
-  }
-});
-
-window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-  const newColorScheme = e.matches ? "dark" : "light";
-  document.documentElement.setAttribute('data-theme', newColorScheme);
-  localStorage.setItem('theme', newColorScheme);
-});
+```
 
 ## Commands
 
