@@ -16,7 +16,10 @@ Check out the [WPDE](https://wpde.jindrichrucil.com/) template
 
 ## Features
 
--   Breadcrumbs ```php WPDE()->breadcrumbs(); ```
+-   Breadcrumbs 
+```php 
+WPDE()->breadcrumbs(); 
+```
 -   Custom Bootstrap 5 Pagination
 
 
@@ -37,13 +40,13 @@ Check out the [WPDE](https://wpde.jindrichrucil.com/) template
 ## Commands
 
 ```sh
-# Bundles the application using Webpack
+# Bundles the application
 npm run start
 
-# Formats the codebase using Prettier
+# Formats the codebase
 npm run format
 
-# Deletes the JavaScripts and CSS from dist folder
+# Deletes the build JavaScript and CSS files
 npm run clear
 ```
 
