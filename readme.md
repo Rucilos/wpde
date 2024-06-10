@@ -54,6 +54,39 @@ Check out the [WPDE](https://wpde.jindrichrucil.com/) template
 3. **Visit** Appearance > Themes > Search for WPDE > Activate
 4. **Click** on the new menu item "Theme Settings" for better control of theme
 
+```javascript
+// A smart toggle switch that stores its value in localStorage and has automatic detection
+const toggleSwitch = document.querySelector('#theme-toggle');
+const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+
+if (currentTheme) {
+  document.documentElement.setAttribute('data-theme', currentTheme);
+
+  if (currentTheme === 'dark') {
+    toggleSwitch.checked = true;
+  }
+}
+
+toggleSwitch.addEventListener('change', function () {
+  if (this.checked) {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    localStorage.setItem('theme', 'dark');
+  } else {
+    document.documentElement.setAttribute('data-theme', 'light');
+    localStorage.setItem('theme', 'light');
+  }
+});
+
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+  const newColorScheme = e.matches ? "dark" : "light";
+  document.documentElement.setAttribute('data-theme', newColorScheme);
+  localStorage.setItem('theme', newColorScheme);
+});
+
+## Commands
+
+© 2024 Created by [Jindřich Ručil](https://jindrichrucil.com)
+
 ## License
 
 Distributed under the **MIT** License. See [LICENSE](https://github.com/rucilos/wpde/blob/master/LICENSE) for more information.
