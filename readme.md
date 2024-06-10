@@ -13,15 +13,19 @@ Check out the [WPDE](https://wpde.jindrichrucil.com/) template
 
 -   Responsive
 -   Light/Dark mode with toggler
-
+```php 
+WPDE()->theme(); 
+```
 ## Features
 
 -   Breadcrumbs 
 ```php 
 WPDE()->breadcrumbs(); 
 ```
--   Custom Bootstrap 5 Pagination
-
+-   Bootstrap 5 Pagination
+```php 
+WPDE()->pagination(); 
+```
 
 ## Libraries
 
