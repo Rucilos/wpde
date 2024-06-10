@@ -95,14 +95,36 @@ See [CHANGELOG](https://github.com/rucilos/wpde/blob/master/changelog.md) for mo
 
 ## Screenshots
 
+### Light
+
+Front Page
 ![WPDE - Screenshot 1](/.github/screen-1.png)
 
+Blog page
 ![WPDE - Screenshot 2](/.github/screen-2.png)
 
+404 Error page
 ![WPDE - Screenshot 3](/.github/screen-3.png)
 
-404
+Search page
 ![WPDE - Screenshot 4](/.github/screen-4.png)
 
+Contacts page
+![WPDE - Screenshot 5](/.github/screen-5.png)
 
+### Dark
+
+Front Page
+![WPDE - Screenshot 1](/.github/screen-1.png)
+
+Blog page
+![WPDE - Screenshot 2](/.github/screen-2.png)
+
+404 Error page
+![WPDE - Screenshot 3](/.github/screen-3.png)
+
+Search page
+![WPDE - Screenshot 4](/.github/screen-4.png)
+
+Contacts page
 ![WPDE - Screenshot 5](/.github/screen-5.png)
