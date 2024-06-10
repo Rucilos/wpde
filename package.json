@@ -46,8 +46,7 @@
     "scripts": {
         "start": "webpack",
         "format": "prettier --write .",
-        "clear": "rimraf ./dist/js && rimraf ./dist/css && rimraf ./dist/html",
-        "tailwind": "npx tailwindcss -i ./src/sass/tailwind.css -o ./dist/css/tailwind.min.css --watch"
+        "clear": "rimraf ./dist/js && rimraf ./dist/css && rimraf ./dist/html"
     },
     "repository": {
         "type": "git",

@@ -55,14 +55,14 @@ Check out the [WPDE](https://wpde.jindrichrucil.com/) template
 4. **Click** on the new menu item "Theme Settings" for better control of theme
 
 ```sh
-# Install dependencies
-npm install
-
-# Run the development server
+# Bundles the application using Webpack
 npm run start
 
-# Build for production
-npm run build
+# Formats the codebase using Prettier
+npm run format
+
+# Deletes the JavaScripts and CSS from dist folder
+npm run clear
 ```
 
 ## Commands
