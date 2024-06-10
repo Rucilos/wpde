@@ -9,13 +9,6 @@ Includes necessary files and features for proper template functioning.
 
 Check out the [WPDE](https://wpde.jindrichrucil.com/) template
 
-## Key Elements
-
--   Responsive
--   Light/Dark mode with toggler
-```php 
-WPDE()->theme(); 
-```
 ## Features
 
 -   Breadcrumbs 
@@ -25,6 +18,10 @@ WPDE()->breadcrumbs();
 -   Bootstrap 5 Pagination
 ```php 
 WPDE()->pagination(); 
+```
+-   Light/Dark mode with toggler
+```php 
+WPDE()->theme(); 
 ```
 
 ## Libraries
