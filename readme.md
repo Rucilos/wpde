@@ -16,7 +16,7 @@ Check out the [WPDE](https://wpde.jindrichrucil.com/) template
 
 ## Features
 
--   Custom Breadcrumbs
+-   Breadcrumbs ```php WPDE()->breadcrumbs(); ```
 -   Custom Bootstrap 5 Pagination
 
 
@@ -33,6 +33,19 @@ Check out the [WPDE](https://wpde.jindrichrucil.com/) template
 -   [SASS](https://sass-lang.com/)
 -   [Webpack](https://webpack.js.org/)
 -   [Prettier](https://prettier.io/)
+
+## Commands
+
+```sh
+# Bundles the application using Webpack
+npm run start
+
+# Formats the codebase using Prettier
+npm run format
+
+# Deletes the JavaScripts and CSS from dist folder
+npm run clear
+```
 
 ## Requirements
 
@@ -53,21 +66,6 @@ Check out the [WPDE](https://wpde.jindrichrucil.com/) template
 2. **Extract & Upload** "wpde" folder to /wp-content/themes/
 3. **Visit** Appearance > Themes > Search for WPDE > Activate
 4. **Click** on the new menu item "Theme Settings" for better control of theme
-
-```sh
-# Bundles the application using Webpack
-npm run start
-
-# Formats the codebase using Prettier
-npm run format
-
-# Deletes the JavaScripts and CSS from dist folder
-npm run clear
-```
-
-## Commands
-
-© 2024 Created by [Jindřich Ručil](https://jindrichrucil.com)
 
 ## License
 
