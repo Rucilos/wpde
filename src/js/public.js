@@ -20,13 +20,19 @@
                 },
             },
         })
+
         if ($('.wpcf7-submit').length) {
             $('.wpcf7-submit').addClass('btn btn-primary')
         }
+
         $('label[for=user_login], label[for="user_pass"]').addClass('d-block mb-2')
         $('#user_login, #user_pass').removeClass('input').addClass('form-control')
         $('#wp-submit').removeClass('button button-primary').addClass('btn btn-primary mt-3 mb-5 px-5')
-    })
+
+        $('.navbar-toggler').on('click', function() {
+            $(this).find('#navbar-toggler-icon').toggleClass('fa-bars fa-xmark');
+        });
+    });
 
     // Headroom
     lastScroll = 0

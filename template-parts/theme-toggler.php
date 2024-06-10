@@ -1,5 +1,5 @@
-<div class="dropdown" id="wpde-theme">
-	<button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+<div class="dropdown d-flex align-items-center justify-content-center" id="wpde-theme">
+	<button class="navbar-toggler d-flex border-0 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
 		<i class="fa-solid fa-circle-half-stroke me-1"></i> <span class="visually-hidden">Auto</span>
 	</button>
 	<ul class="dropdown-menu">

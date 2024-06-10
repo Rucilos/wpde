@@ -9,12 +9,12 @@
 					<ul class="list-unstyled d-flex align-items-center flex-wrap flex-md-nowrap column-gap-3 mb-0">
 						<li>
 							<a href="#!" class="nav-link" onclick="CookieConsent.showPreferences(); return false;">
-								<small><?php _e('Privacy policy', 'wpde'); ?></small>
+								<small><?php _e('Privacy settings', 'wpde'); ?></small>
 							</a>
 						</li>
 						<li>
-						<a href="#!" class="nav-link" onclick="CookieConsent.showPreferences(); return false;">
-								<small><?php _e('Privacy settings', 'wpde'); ?></small>
+							<a href="<?php echo get_permalink(3); ?>" class="nav-link">
+								<small><?php echo get_the_title(3); ?></small>
 							</a>
 						</li>
 					</ul>

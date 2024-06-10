@@ -365,7 +365,7 @@ class WPDE {
      * @since 1.0.0
      */
     public function public_body_classes($classes) {
-        $classes[] = 'h-full' . ' ' . $this->_token . '-public';
+        $classes[] = $this->_token . '-public';
         return $classes;
     } // END public_body_class()
 
@@ -442,7 +442,8 @@ class WPDE {
         ]);
 
         // Register custom image sizes
-        add_image_size('header', 1920, 500, true); 
+        add_image_size('header', 1920, 550, true); 
+        add_image_size('header-sm', 500, 250, true); 
 
         // Register bootstrap navwalker
         require_once get_template_directory() . '/inc/class-bootstrap-nav-walker.php';
@@ -762,7 +763,7 @@ class WPDE {
         $custom_taxonomy = '';
 
         $defaults = [
-            'home' => esc_html(__('Úvod', 'wpde')),
+            'home' => esc_html(__('Home', 'wpde')),
             'id' => $this->_token . '-breadcrumbs',
         ];
 
@@ -923,7 +924,7 @@ class WPDE {
 
             // Search
         } elseif (is_search()) {
-            echo "<li class='breadcrumb-item'>Výsledky vyhledávání pro: <strong>" . get_search_query() . '</strong></li>';
+            echo "<li class='breadcrumb-item'>" . __('Search results for:', 'wpde') . " " . "<strong>" . get_search_query() . '</strong></li>';
             // 404
         } elseif (is_404()) {
             echo "<li class='breadcrumb-item'>" . 'Error 404' . '</li>';

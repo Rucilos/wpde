@@ -4,7 +4,7 @@
 // 2. Include any default variable overrides here
 $prefix: wpde-;
 
-$enable-caret: true;
+$enable-caret: false;
 $enable-rounded: true;
 $enable-shadows: false;
 $enable-gradients: false;
@@ -93,8 +93,9 @@ $nav-link-font-weight: 500; // null
 
 // Pagination
 $pagination-font-size: $small-font-size; // $font-size-base
-$pagination-color: $black;
-$pagination-hover-color: $black;
+$pagination-color: inherit; // var(--#{$prefix}link-color)
+$pagination-hover-color: inherit; // var(--#{$prefix}link-hover-color)
+$pagination-focus-box-shadow: transparent; // $focus-ring-box-shadow
 
 // Transition
 $transition-base: all 0.2s ease-in-out; // all .2s ease-in-out;

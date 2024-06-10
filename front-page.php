@@ -25,10 +25,10 @@ get_template_part('template-parts/section', 'icons');
                 </strong>
             </small>    
             <h1 class="mb-2">
-                <?php echo single_cat_title('', false); ?>
+                <?php _e('News', 'wpde'); ?>
             </h1>
             <p class="mb-0 text-muted">
-                <?php echo strip_tags(category_description()); ?>
+                <?php _e('Explore our latest articles and resources in this category.', 'wpde'); ?>
             </p>
         </div>
         <div class="row row-gap-5">
@@ -36,7 +36,7 @@ get_template_part('template-parts/section', 'icons');
             $args = array(
                 'post_type' => 'post',
                 'posts_per_page' => 3,
-                'category_name' => single_cat_title('', false), // Or you can use 'cat' => get_queried_object_id()
+                'cat' => get_queried_object_id(),
                 'orderby' => 'date',
                 'order' => 'DESC'
             );
@@ -50,7 +50,6 @@ get_template_part('template-parts/section', 'icons');
                     echo '</div>';
                 }
                 wp_reset_postdata();
-                get_template_part('template-parts/content', 'pagination');
             } else {
                 echo '<div class="col-lg-12">';
                 echo '<p class="text-danger mb-0">' . __('Sorry, no data was found in this category.', 'wpde') . '</p>';

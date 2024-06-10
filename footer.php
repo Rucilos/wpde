@@ -12,7 +12,6 @@
 
 <?php
 if (!is_404() && !is_page('sign-in')) {
-    get_template_part('template-parts/footer', 'top');
     get_template_part('template-parts/footer', 'main');
 }
 get_template_part('template-parts/modal', 'search');

@@ -20,12 +20,18 @@
         } 
         ?>
 		</a>
-		<div class="d-flex ms-auto">
+		<div class="d-lg-none d-flex ms-auto">
+            <?php 
+            /*
+            if(wp_is_mobile()) {
+                get_template_part('template-parts/theme', 'toggler'); 
+            }*/
+            ?>
 			<button class="navbar-toggler border-0" type="button" data-bs-toggle="modal" data-bs-target="#modal-searchform">
-			<i class="fa-solid fa-magnifying-glass"></i>
+			    <i class="fa-solid fa-magnifying-glass"></i>
 			</button>
-			<button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
+			<button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation" style="width: 46px;">
+                <i id="navbar-toggler-icon" class="fa-solid fa-bars fa-lg"></i>
 			</button>
 		</div>
 		<div class="d-none d-lg-block">
@@ -43,21 +49,25 @@
             'walker' => new bootstrap_5_wp_nav_menu_walker(),
         ]); 
         ?>
-        <ul class="navbar-nav align-items-center">
-                <li class="nav-item">
-                    <?php get_template_part('template-parts/theme', 'toggler'); ?>
-                </li>
-            </ul>
+        <ul class="navbar-nav align-items-center justify-content-start">
+            <li class="nav-item">
+                <?php 
+                if(!wp_is_mobile()) {
+                    get_template_part('template-parts/theme', 'toggler'); 
+                }
+                ?>
+            </li>
+        </ul>
 		</div>
-		<div class="d-none d-lg-flex ms-3">
+		<div class="d-none d-lg-flex ms-1">
             <ul class="navbar-nav border-start align-items-center ps-3">
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <?php _e('Contacts', 'wpde'); ?>
+                    <a href="<?php echo get_permalink(2); ?>" class="nav-link">
+						<?php echo get_the_title(2); ?>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="https://github.com/Rucilos/wpde" class="btn btn-primary ms-3">
+                <li class="nav-item ms-3">
+                    <a href="https://github.com/Rucilos/wpde" class="btn btn-primary">
                         <?php _e('Get full access', 'wpde'); ?>
                         <i class="fa-solid fa-arrow-right ms-1"></i> 
                     </a>
