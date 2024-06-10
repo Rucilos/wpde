@@ -9,6 +9,11 @@ Includes necessary files and features for proper template functioning.
 
 Check out the [WPDE](https://wpde.jindrichrucil.com/) template
 
+## Overview
+-   Responsive
+-   Light/Dark mode
+-   Accessibility
+
 ## Features
 
 -   Breadcrumbs 
@@ -26,17 +31,17 @@ WPDE()->theme();
 
 ## Libraries
 
-[Bootstrap 5](https://getbootstrap.com/)
-[Bootstrap 5 Navbar Walker](https://github.com/AlexWebLab/bootstrap-5-wordpress-navbar-walker)
+-   [Bootstrap 5](https://getbootstrap.com/)
+-   [Bootstrap 5 Navbar Walker](https://github.com/AlexWebLab/bootstrap-5-wordpress-navbar-walker)
 -   [Bootstrap Icons](https://icons.getbootstrap.com/)
 -   [CookieConsent](https://github.com/orestbida/cookieconsent)
 -   [Magnific popup](https://dimsemenov.com/plugins/magnific-popup/)
 
 ## Development Tools
 
-[SASS](https://sass-lang.com/)
-[Webpack](https://webpack.js.org/)
-[Prettier](https://prettier.io/)
+-   [SASS](https://sass-lang.com/)
+-   [Webpack](https://webpack.js.org/)
+-   [Prettier](https://prettier.io/)
 
 ## Commands
 
