@@ -12,13 +12,13 @@ Check out the [WPDE](https://wpde.jindrichrucil.com/) template
 ## Key Elements
 
 -   Responsive
--   Light/Dark mode
--   [Light/Dark mode](https://github.com/rucilos/wpde/blob/master/src/js/public.js#L74) mode with toggler
+-   Light/Dark mode with toggler
 
 ## Features
 
--   [Bootstrap 5 Pagination](https://github.com/rucilos/wpde/blob/master/inc/class-wpde.php#L663)
--   [Breadcrumbs](https://github.com/rucilos/wpde/blob/master/inc/class-wpde.php#L724)
+-   Custom Breadcrumbs
+-   Custom Bootstrap 5 Pagination
+
 
 ## Libraries
 
