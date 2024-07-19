@@ -84,39 +84,3 @@ Distributed under the **MIT** License. See [LICENSE](https://github.com/rucilos/
 ## Changelog
 
 See [CHANGELOG](https://github.com/rucilos/wpde/blob/master/changelog.md) for more information.
-
-## Screenshots
-
-### Light
-
-Front Page
-![WPDE - Screenshot 1](/.github/light/screen-1.png)
-
-Blog page
-![WPDE - Screenshot 2](/.github/light/screen-2.png)
-
-404 Error page
-![WPDE - Screenshot 3](/.github/light/screen-3.png)
-
-Search page
-![WPDE - Screenshot 4](/.github/light/screen-4.png)
-
-Contacts page
-![WPDE - Screenshot 5](/.github/light/screen-5.png)
-
-### Dark
-
-Front Page
-![WPDE - Screenshot 1](/.github/dark/screen-1.png)
-
-Blog page
-![WPDE - Screenshot 2](/.github/dark/screen-2.png)
-
-404 Error page
-![WPDE - Screenshot 3](/.github/dark/screen-3.png)
-
-Search page
-![WPDE - Screenshot 4](/.github/dark/screen-4.png)
-
-Contacts page
-![WPDE - Screenshot 5](/.github/dark/screen-5.png)
