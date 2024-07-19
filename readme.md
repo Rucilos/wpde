@@ -26,19 +26,11 @@ Check out the [WPDE](https://wpde.jindrichrucil.com/) template
 <?php WPDE()->theme(); ?>
 ```
 
-```javascript 
-// How to get current theme?
-console.log(localStorage.getItem('theme')) 
-
-// How to clear localStorage?
-localStorage.clear()
-```
-
 ## Libraries
 
--   [Bootstrap 5](https://getbootstrap.com/)
--   [Bootstrap 5 Navbar Walker](https://github.com/AlexWebLab/bootstrap-5-wordpress-navbar-walker)
--   [Font Awesome 6](https://fontawesome.com/)
+-   [Bootstrap](https://getbootstrap.com/)
+-   [Bootstrap Navbar Walker](https://github.com/AlexWebLab/bootstrap-5-wordpress-navbar-walker)
+-   [Font Awesome](https://fontawesome.com/)
 -   [Cookie Consent](https://github.com/orestbida/cookieconsent)
 -   [Magnific popup](https://dimsemenov.com/plugins/magnific-popup/)
 
@@ -98,33 +90,33 @@ See [CHANGELOG](https://github.com/rucilos/wpde/blob/master/changelog.md) for mo
 ### Light
 
 Front Page
-![WPDE - Screenshot 1](/.github/screen-1.png)
+![WPDE - Screenshot 1](/.github/light/screen-1.png)
 
 Blog page
-![WPDE - Screenshot 2](/.github/screen-2.png)
+![WPDE - Screenshot 2](/.github/light/screen-2.png)
 
 404 Error page
-![WPDE - Screenshot 3](/.github/screen-3.png)
+![WPDE - Screenshot 3](/.github/light/screen-3.png)
 
 Search page
-![WPDE - Screenshot 4](/.github/screen-4.png)
+![WPDE - Screenshot 4](/.github/light/screen-4.png)
 
 Contacts page
-![WPDE - Screenshot 5](/.github/screen-5.png)
+![WPDE - Screenshot 5](/.github/light/screen-5.png)
 
 ### Dark
 
 Front Page
-![WPDE - Screenshot 1](/.github/screen-1.png)
+![WPDE - Screenshot 1](/.github/dark/screen-1.png)
 
 Blog page
-![WPDE - Screenshot 2](/.github/screen-2.png)
+![WPDE - Screenshot 2](/.github/dark/screen-2.png)
 
 404 Error page
-![WPDE - Screenshot 3](/.github/screen-3.png)
+![WPDE - Screenshot 3](/.github/dark/screen-3.png)
 
 Search page
-![WPDE - Screenshot 4](/.github/screen-4.png)
+![WPDE - Screenshot 4](/.github/dark/screen-4.png)
 
 Contacts page
-![WPDE - Screenshot 5](/.github/screen-5.png)
+![WPDE - Screenshot 5](/.github/dark/screen-5.png)

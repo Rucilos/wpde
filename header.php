@@ -9,6 +9,14 @@
  * @since 1.0.0
  */
 ?>
+<?php
+// Zobrazování všech chyb
+error_reporting(E_ALL);
+
+// Zajištění, že se chyby zobrazí na obrazovce
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> data-bs-theme="light" class="cc--lightmode">
 <head>

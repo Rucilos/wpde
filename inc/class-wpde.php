@@ -450,7 +450,7 @@ class WPDE {
     } // END theme_setup()
 
     /**
-     * Adds admin options page.
+     * Add admin options page.
      *
      * This method adds an admin options page to the WordPress admin area.
      * If the Advanced Custom Fields plugin is available, it creates a options page for theme options.
@@ -473,7 +473,7 @@ class WPDE {
     }
 
     /**
-     * Adds admin bar tabs.
+     * Add admin bar tabs.
      *
      * This method adds custom tabs to the WordPress admin bar.
      * It includes a link to the template settings.
@@ -564,10 +564,7 @@ class WPDE {
         function wpde_dashoard_metabox() {
             $html = '<div class="main">';
 
-            $file = get_field('docs', 'option');
-            if ($file) {
-                $html .= '<a href="' . esc_url($file['url']) . '">' . esc_html($file['filename']) . '</a>';
-            }
+         
 
             $html .= '</div>';
 

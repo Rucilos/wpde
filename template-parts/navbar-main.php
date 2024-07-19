@@ -22,10 +22,9 @@
 		</a>
 		<div class="d-lg-none d-flex ms-auto">
             <?php 
-            /*
             if(wp_is_mobile()) {
                 WPDE()->theme();
-            }*/
+            }
             ?>
 			<button class="navbar-toggler border-0" type="button" data-bs-toggle="modal" data-bs-target="#modal-searchform">
 			    <i class="fa-solid fa-magnifying-glass"></i>
