@@ -11,12 +11,12 @@
 - 📜 **[DOCS]** - Updated the installation guide
 - 🔄 **[REFACTOR]** - Refactored the user profile component
 
-## Version 1.5.0 (Fri, July 19 2024)
+## Version 1.6.0 (Fri, July 19 2024)
 
 - 🆕 **[NEW]** - Integrated [Cookie Consent](https://github.com/orestbida/cookieconsent)
-- 🆕 **[NEW]** - Added `cc.js`
+- 🆕 **[NEW]** - Added `cc.js` with config file for CookieConsent
 
-## Version 1.4.0 (Fri, July 19 2024)
+## Version 1.5.0 (Fri, July 19 2024)
 
 - 🆕 **[NEW]** - Added [Bootstrap](https://getbootstrap.com/)
 - 🆕 **[NEW]** - Added [Bootstrap Navbar Walker](https://github.com/AlexWebLab/bootstrap-5-wordpress-navbar-walker)
@@ -26,7 +26,7 @@
 - 🆕 **[NEW]** - Added `WPDE_Post_Type` class
 - 🆕 **[NEW]** - Added `WPDE_Post_Taxonomy` class
 - 🚀 **[IMPROVEMENT]** - Updated `functions.php` reflect `WPDE_Post_Type` and `WPDE_Post_Type_Taxonomy` class
-- 🚀 **[IMPROVEMENT]** - Updated `class-wpde.php` reflect `WPDE_Post_Type` and `WPDE_Post_Type_Taxonomy` class
+- 🚀 **[IMPROVEMENT]** - Updated main class `WPDE` reflect `WPDE_Post_Type` and `WPDE_Post_Type_Taxonomy` class
 
 ## Version 1.3.0 (Fri, July 19 2024)
 
