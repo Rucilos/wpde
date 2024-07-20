@@ -92,7 +92,7 @@
 - 🆕 **[NEW]** - Settings fields for better control of theme!
 - 🆕 **[NEW]** - Grid system
 - 🆕 **[NEW]** - Gallery section
-- ✅ [FIX] - 88+ bugs fixed
+- ✅ **[FIX]** - 88+ bugs fixed
 - ❌ **[REMOVE]** - safsdfs
 - 🚀 **[IMPROVEMENT]** - Enhanced performance of the grid system
 - ⚠️ **[SECURITY]** - Fixed a vulnerability in the authentication module
@@ -101,4 +101,5 @@
 
 ## Version 1.0.0 (Fri, May 24 2024)
 
+- 🆕 **[NEW]** - Basic file structure
 - Initial public release
