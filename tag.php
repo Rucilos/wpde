@@ -32,7 +32,9 @@
             if (have_posts()) {
                 while (have_posts()) {
                     the_post();
-                    $grid = get_field('grid_tag') ? get_field('grid_tag') : 4;
+                    $grid = get_field('grid_tag');
+                    $grid = !empty($grid) ? $grid : 4;
+
                     echo '<div class="col-md-' . $grid . '">';
                         get_template_part('template-parts/content', 'post');
                     echo '</div>';

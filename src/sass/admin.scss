@@ -29,3 +29,38 @@ body.wp-admin #wpadminbar {
         opacity: 1;
     }
 }
+
+.wpde-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    padding: 8px 20px;
+    margin-left: -20px;
+    border-bottom: 1px solid #d5d9dd;
+
+    .navbar-brand {
+        display: flex;
+    }
+
+    .navbar-collapse {
+        display: flex;
+        align-items: center;
+        margin: 0;
+
+        li {
+            margin: 0 6px;
+
+            a {
+                padding: 5px 8px;
+                font-size: 14px;
+                font-weight: 500;
+                text-decoration: none;
+
+                &.button {
+                    padding: 0 8px;
+                }
+            }
+        }
+    }
+}

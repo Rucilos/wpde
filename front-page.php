@@ -10,9 +10,11 @@
 */
 ?>
 
+<?php get_header(); ?>
+
 <?php
-get_header();
-get_template_part('template-parts/component', 'carousel');
+get_template_part('template-parts/section', 'header');
+//get_template_part('template-parts/component', 'carousel');
 get_template_part('template-parts/section', 'icons');
 get_template_part('template-parts/section', 'gallery');
 ?>

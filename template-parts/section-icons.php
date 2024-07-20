@@ -9,7 +9,7 @@
                 ?>
 
                 <?php if ( !empty($section_title) || !empty($section_subtitle) || !empty($section_description) ) { ?>
-                    <div class="pb-5 mb-5 border-bottom">
+                    <div class="pb-5 mb-5 border-bottom text-center">
                         <small class="text-primary"><strong><?php echo $section_title; ?></strong></small>	
                         <h1 class="mb-2"><?php echo $section_subtitle; ?></h1>
                         <p class="text-muted"><?php echo $section_description; ?></p>
@@ -18,7 +18,9 @@
 
                 <div class="row">
                     <?php 
-                    $grid = get_field('icons_grid', 'option') ? get_field('icons_grid', 'option') : 3;
+                    $grid = get_field('icons_grid', 'option');
+                    $grid = !empty($grid) ? $grid : 3;
+                    
                     while (have_rows('icons', 'option')) {
 
                         the_row();
@@ -27,12 +29,12 @@
                         $description = get_sub_field('description');
                         $image = get_sub_field('image');
                         ?>
-                        <div class="col-md-<?php echo $grid; ?>">
+                        <div class="col-md-<?php echo $grid; ?> text-center">
                             <?php if (!empty($image)) { ?>
                                 <img class="mb-3" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" width="35px" height="auto" />
                             <?php } ?>
                             <h6 class="mb-0"><?php echo $title; ?></h6>
-                            <p><?php echo $description; ?></p>
+                            <p class="mx-3"><?php echo $description; ?></p>
                         </div>
                     <?php
                     } ?>

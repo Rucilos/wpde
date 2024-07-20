@@ -181,6 +181,7 @@ class WPDE {
 
         // Load admin components
         add_action('admin_menu', [$this, 'add_options_page']);
+        add_action('admin_head', [$this, 'add_admin_navbar']);
         add_action('wp_before_admin_bar_render', [$this, 'add_adminbar_tabs'], 999);
         add_action('admin_head', [$this, 'add_help_tabs']);
         if ($this->is_acf()) {
@@ -461,7 +462,7 @@ class WPDE {
     public function add_options_page() {
         if ($this->is_acf()) {
             $parent = acf_add_options_page([
-                'page_title' => 'WordPress Development Environment (WPDE)' . ' - ' . __('General', 'wpde'),
+                'page_title' => '',
                 'menu_title' => __('Theme Settings', 'wpde'),
                 'menu_slug' => $this->_token,
                 'capability' => 'manage_options',
@@ -470,6 +471,38 @@ class WPDE {
             ]);        
         }
     } // END add_options_page
+
+    /**
+     * Add admin navbar.
+     *
+     * This method adds a custom navbar to the WordPress admin area.
+     * It is displayed when the current screen matches the top-level admin page associated with the plugin's unique token.
+     * The navbar is designed to enhance the admin interface with additional navigation options.
+     *
+     * @access  public
+     * @since   1.0.0
+     * @return  void
+     */
+    public function add_admin_navbar() {
+        $screen = get_current_screen();
+        if ( $screen->id === 'toplevel_page_' . WPDE()->_token ) {
+    
+            $html  = '<nav id="' . WPDE()->_token . '-navbar" class="' . WPDE()->_token . '-navbar">';
+    
+                $html .= '<a href="admin.php?page=' . WPDE()->_token . '" class="navbar-brand">';
+                    $html .= '<img src="https://cdn.df-barber.cz/apiru/brands/primary.svg" width="100px" height="auto" alt="WPDE - Logo">';
+                $html .= '</a>';
+    
+                $html .= '<ul class="navbar-collapse">';
+                    $html .= '<li><a href="">Website</a></li>';
+                    $html .= '<li><a href="" class="button">GitHub</a></li>';
+                $html .= '</ul>';
+    
+            $html .= '</nav>';
+    
+            echo $html;
+        }
+    }
 
     /**
      * Add admin bar tabs.

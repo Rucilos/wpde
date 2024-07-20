@@ -3,4 +3,54 @@
  * https://jindrichrucil.com
  * Author (c) 2024 Jindrich Rucil
  * Released under the MIT license
- */#wpadminbar #wp-admin-bar-wpde .ab-icon:before{content:"";width:18px !important;height:18px !important;display:block !important;margin:auto !important;top:2px !important}html{margin-top:0 !important}body.wp-admin #wpadminbar{opacity:1}#wpadminbar{opacity:.25;transition:opacity .2s ease-in}#wpadminbar:hover{opacity:1}
+ */
+#wpadminbar #wp-admin-bar-wpde .ab-icon:before {
+    content: '';
+    width: 18px !important;
+    height: 18px !important;
+    display: block !important;
+    margin: auto !important;
+    top: 2px !important;
+}
+html {
+    margin-top: 0 !important;
+}
+body.wp-admin #wpadminbar {
+    opacity: 1;
+}
+#wpadminbar {
+    opacity: 0.25;
+    transition: opacity 0.2s ease-in;
+}
+#wpadminbar:hover {
+    opacity: 1;
+}
+.wpde-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 8px 20px;
+    margin-left: -20px;
+    border-bottom: 1px solid #d5d9dd;
+}
+.wpde-navbar .navbar-brand {
+    display: flex;
+}
+.wpde-navbar .navbar-collapse {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+.wpde-navbar .navbar-collapse li {
+    margin: 0 6px;
+}
+.wpde-navbar .navbar-collapse li a {
+    padding: 5px 8px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+}
+.wpde-navbar .navbar-collapse li a.button {
+    padding: 0 8px;
+}

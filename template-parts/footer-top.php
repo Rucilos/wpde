@@ -2,20 +2,30 @@
 	<div class="container">
 		<div class="row">
 		<div class="col-md-4 mb-3">
-				<form>
-					<h5>Subscribe to our newsletter</h5>
-					<p>Monthly digest of what's new and exciting from us.</p>
-					<div class="d-flex flex-column flex-sm-row w-100 gap-2">
-						<label for="newsletter1" class="visually-hidden">Email address</label>
-						<div class="input-group d-block">
-							<div class="icon">
-								<span><i class="fa-solid fa-magnifying-glass text-muted"></i></span>
-								<input type="text" class="form-control ps-5" placeholder="Email address">
-							</div>
-						</div>
-						<button class="btn btn-primary" type="button">Subscribe</button>
-					</div>
-				</form>
+			<a class="d-block mb-2" href="<?php echo home_url(); ?>">
+			<?php 
+			if (function_exists('get_field')) {
+				$image = get_field('logo', 'option');
+				$title = get_field('logo_text', 'option');
+				if (!empty($image)) {
+					$image_width = get_field('logo_width', 'option') ? get_field('logo_width', 'option') : '100'; 
+				?>
+					<img src="<?php echo esc_url($image['url']); ?>" alt="Logo" width="<?php echo $image_width; ?>" height="auto"/>
+				<?php
+				} elseif(!empty($title)) {
+					echo $title;
+				} else {
+					echo get_bloginfo('name');
+				}
+			} else {
+				echo get_bloginfo('name');
+			} 
+			?>
+			</a>
+			<p class="mb-1 text-muted"><small><?php _e('Designed and built with all the love in the world by the Bootstrap team with the help of our contributors.', 'wpde'); ?></small></p>
+			<p class="mb-1 text-muted"><small><?php _e('Code licensed under', 'wpde'); ?> MIT</small></p>
+			<p class="mb-1 text-muted"><small><?php _e('Currently', 'wpde'); ?> v<?php echo WPDE()->_version; ?></small></p>
+		</small>
 			</div>
 
 			<div class="col-md-2 offset-md-2 mb-3">

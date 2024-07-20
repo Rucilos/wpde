@@ -16,14 +16,16 @@
                     </div>
                 <?php } ?>
 
-                <div class="row mfp-init">
+                <div class="row g-3 mfp-init">
                 <?php 
                 $images = get_field('gallery', 'option');
-                $grid = get_field('gallery_grid', 'option') ? get_field('gallery_grid', 'option') : 3;
+                $grid = get_field('gallery_grid', 'option');
+                $grid = !empty($grid) ? $grid : 3;
+                
                 if( $images ) { ?>
                     <?php foreach( $images as $image ) { ?>
-                            <a class="col-lg-<?php echo $grid; ?> mfp-item" href="<?php echo esc_url($image['url']); ?>">
-                                <img class="img-fluid" src="<?php echo esc_url($image['sizes']['thumbnail']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                            <a class="col-md-<?php echo $grid; ?> mfp-item" href="<?php echo esc_url($image['url']); ?>">
+                                <img class="img-fluid rounded-4" src="<?php echo esc_url($image['sizes']['large']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
                             </a>
                     <?php } ?>
                 <?php } ?>
