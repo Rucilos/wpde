@@ -28,12 +28,12 @@
 ## Version 1.1.0 (Fri, July 19 2024)
 
 - 🆕 **[NEW]** - Added `Webpack` with config file `webpack.config.js`
-- 🆕 **[NEW]** - SASS support
+- 🆕 **[NEW]** - Added `SASS` support
 - 🆕 **[NEW]** - Added NPM command `npm run start` which will start Webpack
 
 ## Version 1.0.1 (Fri, July 19 2024)
 
-- ✅ **[FIX]** - 16+ bugs fixed
+- ✅ **[FIX]** - All identified bugs have been fixed
 
 ## Version 1.0.0 (Fri, May 24 2024)
 
