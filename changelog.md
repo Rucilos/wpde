@@ -11,88 +11,27 @@
 - 📜 **[DOCS]** - Updated the installation guide
 - 🔄 **[REFACTOR]** - Refactored the user profile component
 
-## Version 1.1.1 (Fri, July 16 2024)
-
-- [NEW] - Settings UI
-- [NEW] - Settings fields for better control of theme!
-- [NEW] - Grid system
-- [NEW] - Gallery section
-- [FIX] - 88+ bugs fixed
-
-## Version 1.1.0 (Fri, July 13 2024)
-
-- [NEW] - Settings UI
-- [NEW] - Settings fields for better control of theme!
-- [NEW] - Grid system
-- [NEW] - Gallery section
-- [FIX] - 88+ bugs fixed
-
-## Version 1.0.9 (Fri, July 6 2024)
-
-- [NEW] - Settings UI
-- [NEW] - Settings fields for better control of theme!
-- [NEW] - Grid system
-- [NEW] - Gallery section
-- [FIX] - 88+ bugs fixed
-
-## Version 1.0.8 (Fri, July 19 2024)
-
-- [NEW] - Settings UI
-- [NEW] - Settings fields for better control of theme!
-- [NEW] - Grid system
-- [NEW] - Gallery section
-- [FIX] - 88+ bugs fixed
-
-## Version 1.0.7 (Fri, July 19 2024)
-
-- [NEW] - Settings UI
-- [NEW] - Settings fields for better control of theme!
-- [NEW] - Grid system
-- [NEW] - Gallery section
-- [FIX] - 88+ bugs fixed
-
-## Version 1.0.6 (Fri, July 19 2024)
-
-- [NEW] - Settings UI
-- [NEW] - Settings fields for better control of theme!
-- [NEW] - Grid system
-- [NEW] - Gallery section
-- [FIX] - 88+ bugs fixed
-
 ## Version 1.0.5 (Fri, July 19 2024)
 
-- [NEW] - Settings UI
-- [NEW] - Settings fields for better control of theme!
-- [NEW] - Grid system
-- [NEW] - Gallery section
-- [FIX] - 88+ bugs fixed
+- 🆕 **[NEW]** - Settings UI
 
 ## Version 1.0.4 (Fri, July 19 2024)
 
 - 🆕 **[NEW]** - Settings UI
-- 🆕 **[NEW]** - Settings fields for better control of theme!
-- 🆕 **[NEW]** - Grid system
-- 🆕 **[NEW]** - Gallery section
-- ✅ **[FIX]** - 88+ bugs fixed
-- ❌ **[REMOVE]** - safsdfs
-- 🚀 **[IMPROVEMENT]** - Enhanced performance of the grid system
-- ⚠️ **[SECURITY]** - Fixed a vulnerability in the authentication module
-- 📜 **[DOCS]** - Updated the installation guide
-- 🔄 **[REFACTOR]** - Refactored the user profile component
 
-## Version 1.0.3 (Fri, July 19 2024)
+## Version 1.2.0 (Fri, July 19 2024)
 
-- [NEW] - Settings UI
-- [NEW] - Settings fields for better control of theme!
-- [NEW] - Grid system
-- [NEW] - Gallery section
-- [FIX] - 88+ bugs fixed
+- 🆕 **[NEW]** - Added `Prettier` with config file .prettierrc
+- 🆕 **[NEW]** - Added `.editorconfig`
 
 ## Version 1.1.0 (Fri, July 19 2024)
 
-- [NEW] - Gallery section
-- 🆕 **[NEW]** - Webpack
+- 🆕 **[NEW]** - Webpack with config file webpack.config.js
 - 🆕 **[NEW]** - SASS support
+- 🆕 **[NEW]** - NPM command npm run start which will start webpack and compiling/watching SASS,CSS,
+
+        "start": "webpack",
+        "format": "prettier --write .",
 
 ## Version 1.0.1 (Fri, July 19 2024)
 
@@ -110,8 +49,5 @@
 ## Version 1.0.0 (Fri, May 24 2024)
 
 - 🆕 **[NEW]** - Basic file structure
-- 📜 **[DOCS]** - Added readme.txt
-- 📜 **[DOCS]** - Added readme.md
-- 📜 **[DOCS]** - Added LICENSE
-- 📜 **[DOCS]** - Added changelog.md
+- 📜 **[DOCS]** - Updated the readme.txt, readme.md, LICENSE
 - ✅ **[INIT]** - Public release
