@@ -23,17 +23,17 @@ npm run clear
 
 ## Libraries
 
-- Bootstrap
-- Bootstrap Navbar Walker
-- Font Awesome
-- Cookie Consent
-- Magnific popup
+-   Bootstrap
+-   Bootstrap Navbar Walker
+-   Font Awesome
+-   Cookie Consent
+-   Magnific popup
 
 ## Development Tools
 
-- SASS
-- Webpack
-- Prettier
+-   SASS
+-   Webpack
+-   Prettier
 
 ## Features
 

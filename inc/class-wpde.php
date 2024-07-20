@@ -897,7 +897,7 @@ class WPDE {
 
         // Start breadcrumb with a link to your homepage
         echo '<nav id="' . $defaults['id'] . '" aria-label="breadcrumb" class="d-none d-md-flex">';
-        echo '<ul class="breadcrumb mb-0 mt-3">';
+        echo '<ul class="breadcrumb mb-0">';
 
         // Creating home link
         echo "<li class='breadcrumb-item'><a href='" . get_home_url() . "'>" . $defaults['home'] . '</a></li>';

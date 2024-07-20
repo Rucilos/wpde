@@ -197,3 +197,13 @@ $link-hover-color-dark: shift-color($link-color-dark, -$link-shade-percentage);
 
 // 9. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
 @import '~bootstrap/scss/utilities/api';
+
+// 10. Custom variables
+:root,
+[data-bs-theme='light'] {
+    --#{$prefix}body-bg-blur-rgb: rgba(255, 255, 255, 0.55);
+}
+
+[data-bs-theme='dark'] {
+    --#{$prefix}body-bg-blur-rgb: rgba(2, 6, 23, 0.85);
+}

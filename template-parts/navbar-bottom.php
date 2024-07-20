@@ -1,20 +1,20 @@
 <div class="container-fluid px-0">
     <div class="container">
-        <div class="d-flex align-items-center justify-content-between">
+        <div class="d-flex align-items-center justify-content-between mt-3">
             <div>
                 <?php WPDE()->breadcrumbs(); ?>
             </div>
             <?php 
-            $email = get_field('email');
-            $phone = get_field('phone');
+            $email = get_field('email', 'option');
+            $phone = get_field('phone', 'option');
             ?>
             <?php if ( !empty($email) && !empty($phone) ) { ?>
             <ul class="navbar-nav list-unstyled d-flex flex-row align-items-center justify-content-end flex-wrap flex-md-nowrap column-gap-3 mb-0">
-                <?php if ( !is_empty($email) ) { ?>
+                <?php if ( !empty($email) ) { ?>
                     <li class="nav-item">
-                        <a href="mailto:<?php echo esc_attr($mail); ?>" class="link-underline link-underline-opacity-0">
+                        <a href="mailto:<?php echo esc_attr($email); ?>" class="link-underline link-underline-opacity-0">
                             <i class="fa-solid fa-envelope me-1"></i>
-                            <small><?php echo esc_html($mail); ?></small>
+                            <small><?php echo esc_html($email); ?></small>
                         </a>
                     </li>
                 <?php } ?>
