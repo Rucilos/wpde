@@ -21,11 +21,16 @@
 - 🆕 **[NEW]** - Added [Bootstrap](https://getbootstrap.com/)
 - 🆕 **[NEW]** - Added [Bootstrap Navbar Walker](https://github.com/AlexWebLab/bootstrap-5-wordpress-navbar-walker)
 
+## Version 1.4.0 (Fri, July 19 2024)
+
+- 🆕 **[NEW]** - Added `WPDE_Post_Type` class
+- 🆕 **[NEW]** - Added `WPDE_Post_Taxonomy` class
+- 🚀 **[IMPROVEMENT]** - Updated `functions.php` and `class-wpde.php` reflect `WPDE_Post_Type` and `WPDE_Post_Type_Taxonomy` class
+
 ## Version 1.3.0 (Fri, July 19 2024)
 
 - 🆕 **[NEW]** - Added `WPDE` main class
 - 🚀 **[IMPROVEMENT]** - Updated `functions.php` reflect `WPDE` class
-- 🚀 **[IMPROVEMENT]** - Updated `404.php`
 
 ## Version 1.2.0 (Fri, July 19 2024)
 
