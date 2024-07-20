@@ -27,7 +27,3 @@ if (!is_404() && !is_page('sign-in')) {
     get_template_part('template-parts/navbar', 'bottom');
 }
 ?>
-
-<div class="acf bg-danger">
-    dsadadada
-</div>
