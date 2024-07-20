@@ -23,16 +23,13 @@
 
 - 🆕 **[NEW]** - Added `Prettier` with config file `.prettierrc`
 - 🆕 **[NEW]** - Added `.editorconfig`
-- 🆕 **[NEW]** - Added NPM command `npm run start` which will start Prettier
+- 🆕 **[NEW]** - Added NPM command `npm run format` which will start Prettier
 
 ## Version 1.1.0 (Fri, July 19 2024)
 
 - 🆕 **[NEW]** - Added `Webpack` with config file `webpack.config.js`
 - 🆕 **[NEW]** - SASS support
 - 🆕 **[NEW]** - Added NPM command `npm run start` which will start Webpack
-
-        "start": "webpack",
-        "format": "prettier --write .",
 
 ## Version 1.0.1 (Fri, July 19 2024)
 
