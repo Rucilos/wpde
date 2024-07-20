@@ -102,4 +102,4 @@
 ## Version 1.0.0 (Fri, May 24 2024)
 
 - 🆕 **[NEW]** - Basic file structure
-- Initial public release
+- ✅ **[INIT]** - Initial public release
