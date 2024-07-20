@@ -110,7 +110,6 @@
 - 🔄 **[REFACTOR]** - Refactored the user profile component
 
 🆕 **[NEW]** - Settings UI
-
 🆕 **[NEW]** - Settings fields for better control of theme!
 
 🆕 **[NEW]** - Grid system
