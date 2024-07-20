@@ -8,6 +8,33 @@ WordPress Development Environment (WPDE) is a fantastic starting point for creat
 
 Check out the [WPDE](https://wpde.jindrichrucil.com/) template
 
+## Commands
+
+```sh
+# Bundles the application
+npm run start
+
+# Formats the codebase
+npm run format
+
+# Deletes the build JavaScript and CSS files
+npm run clear
+```
+
+## Libraries
+
+- Bootstrap
+- Bootstrap Navbar Walker
+- Font Awesome
+- Cookie Consent
+- Magnific popup
+
+## Development Tools
+
+- SASS
+- Webpack
+- Prettier
+
 ## Features
 
 ```php
@@ -46,33 +73,6 @@ WPDE()->register_taxonomy(
     'events' // Associated post type
 );
 ?>
-```
-
-## Libraries
-
-- Bootstrap
-- Bootstrap Navbar Walker
-- Font Awesome
-- Cookie Consent
-- Magnific popup
-
-## Development Tools
-
-- SASS
-- Webpack
-- Prettier
-
-## Commands
-
-```sh
-# Bundles the application
-npm run start
-
-# Formats the codebase
-npm run format
-
-# Deletes the build JavaScript and CSS files
-npm run clear
 ```
 
 ## Requirements
