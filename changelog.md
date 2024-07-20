@@ -11,15 +11,18 @@
 - 📜 **[DOCS]** - Updated the installation guide
 - 🔄 **[REFACTOR]** - Refactored the user profile component
 
+
+
 ## Version 1.6.0 (Fri, July 19 2024)
-
-- 🆕 **[NEW]** - Integrated [Cookie Consent](https://github.com/orestbida/cookieconsent)
-- 🆕 **[NEW]** - Added `cc.js` with config file for CookieConsent
-
-## Version 1.5.0 (Fri, July 19 2024)
 
 - 🆕 **[NEW]** - Added [Bootstrap](https://getbootstrap.com/)
 - 🆕 **[NEW]** - Added [Bootstrap Navbar Walker](https://github.com/AlexWebLab/bootstrap-5-wordpress-navbar-walker)
+- 🚀 **[IMPROVEMENT]** - Updated `theme_setup()` reflect `bootstrap_5_wp_nav_menu_walker` class
+
+## Version 1.5.0 (Fri, July 19 2024)
+
+- 🆕 **[NEW]** - Integrated [Cookie Consent](https://github.com/orestbida/cookieconsent)
+- 🆕 **[NEW]** - Added `cc.js` with config file for CookieConsent
 
 ## Version 1.4.0 (Fri, July 19 2024)
 
