@@ -12,15 +12,28 @@
 
 <?php
 if (!is_404()) {
-    get_template_part('template-parts/footer', 'top');
-    get_template_part('template-parts/footer', 'main');
+    $footer = get_field('footer', 'option');
+    switch ($footer) {
+        case 'Simple':
+            get_template_part('template-parts/footer', 'main');
+            break;
+        case 'Advanced':
+            get_template_part('template-parts/footer', 'top');
+            get_template_part('template-parts/footer', 'main');
+            break;
+        default:
+            get_template_part('template-parts/footer', 'main');
+            break;
+    }
 }
 
 $search_form = get_field('search_form', 'option');
 if (empty($search_form)) {
     get_template_part('template-parts/modal', 'search');
 }
-wp_footer();
 ?>
+
+<?php wp_footer(); ?>
+
 </body>
 </html>

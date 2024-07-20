@@ -1,19 +1,26 @@
 <?php
 $navbar = get_field('navbar', 'option'); 
-if(empty($navbar) || $navbar === 'Static') {
-    $navbar_class = '';
-    $helper = '';
-}
-if ($navbar === 'Fixed') {
-    $navbar_class = 'position-fixed top-0 start-0 end-0';
-    $helper = '<div class="w-100" style="height: 63px;"></div>';
-}
-if ($navbar === 'Headroom') {
-    $navbar_class = 'position-fixed top-0 start-0 end-0 headroom';
-    $helper = '<div class="w-100" style="height: 63px;"></div>';
+
+switch ($navbar) {
+    case 'Fixed':
+        $navbar_class = 'position-fixed top-0 start-0 end-0';
+        $helper_div = true;
+        break;
+    case 'Headroom':
+        $navbar_class = 'position-fixed top-0 start-0 end-0 headroom';
+        $helper_div = true;
+        break;
+    case '':
+    case 'Static':
+    default:
+        $navbar_class = '';
+        $helper_div = false;
+        break;
 }
 
-echo $helper;
+if($helper_div) {
+    echo '<div class="w-100" style="height: 64px;"></div>';
+}
 ?>
 <nav class="navbar navbar-expand-lg bg-navbar border-bottom z-3 <?php echo $navbar_class; ?>">
 	<div class="container">

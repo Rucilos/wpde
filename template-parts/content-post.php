@@ -17,7 +17,7 @@
 				if (has_category() && !is_search()) {
 					$categories = get_the_category();
 					foreach ($categories as $category) {
-						echo '<small class="text-muted"><strong>' . esc_html($category->name) . '</strong></small>';
+						echo '<small class="text-primary"><strong>' . esc_html($category->name) . '</strong></small>';
 					}
 				} 
 				?>
