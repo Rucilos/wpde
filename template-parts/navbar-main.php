@@ -19,22 +19,18 @@ echo $helper;
 	<div class="container">
 		<a class="navbar-brand d-flex align-items-center gap-1" href="<?php echo home_url(); ?>">
         <?php 
-        if (function_exists('get_field')) {
-            $image = get_field('logo', 'option');
-            $title = get_field('logo_text', 'option');
-            if (!empty($image)) {
-                $image_width = get_field('logo_width', 'option') ? get_field('logo_width', 'option') : '100'; 
-            ?>
-                <img src="<?php echo esc_url($image['url']); ?>" alt="Logo" width="<?php echo $image_width; ?>" height="auto"/>
-            <?php
-            } elseif(!empty($title)) {
-                echo $title;
-            } else {
-                echo get_bloginfo('name');
-            }
+        $image = get_field('logo', 'option');
+        $title = get_field('logo_text', 'option');
+        if (!empty($image)) {
+            $image_width = get_field('logo_width', 'option') ? get_field('logo_width', 'option') : '100'; 
+        ?>
+            <img src="<?php echo esc_url($image['url']); ?>" alt="Logo" width="<?php echo $image_width; ?>" height="auto"/>
+        <?php
+        } elseif(!empty($title)) {
+            echo $title;
         } else {
             echo get_bloginfo('name');
-        } 
+        }
         ?>
 		</a>
 		<div class="d-lg-none d-flex ms-auto">

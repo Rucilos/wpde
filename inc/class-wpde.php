@@ -145,7 +145,7 @@ class WPDE {
 
         $this->file = $file;
         $this->dist_url = get_template_directory_uri() . '/dist/';
-        $this->settings_url = admin_url() . 'themes.php?page=' . $this->_token;
+        $this->settings_url = admin_url() . 'admin.php?page=' . $this->_token;
 
         $this->cdn = 'https://cdn.jsdelivr.net/npm/';
 
@@ -197,16 +197,23 @@ class WPDE {
         add_action('pre_user_query', [$this, 'exclude_users']);
     } // END __construct()
 
-
-
+    /**
+     * Display a notice in the WordPress admin area.
+     *
+     * This method displays an admin notice to indicate that the ACF PRO plugin is required
+     * for the theme to function correctly.
+     *
+     * @access  public
+     * @since   1.0.0
+     * @return  void
+     */
     public function acf_notice() {
         $html = '<div class="notice notice-error is-dismissible">';
-        $html .= '<p><strong>Notice:</strong> The <a href="https://www.google.com/search?q=WordPress+Development+Environment+WPDE" target="_blank" rel="noopener noreferrer"><strong>WordPress Development Environment (WPDE)</strong></a> theme requires the <a href="https://www.google.com/search?q=ACF+PRO" target="_blank" rel="noopener noreferrer"><strong>ACF PRO</strong></a> plugin to function properly. Please activate the plugin to ensure all features work as intended.</p>';
+            $html .= '<p><strong>Notice:</strong> The <a href="https://github.com/Rucilos/wpde/" target="_blank" rel="noopener noreferrer"><strong>WordPress Development Environment (WPDE)</strong></a> theme requires the <a href="https://www.google.com/search?q=ACF+PRO" target="_blank" rel="noopener noreferrer"><strong>ACF PRO</strong></a> plugin to function properly. Please activate the plugin to ensure all features work as intended.</p>';
         $html .= '</div>';
         
         echo $html;
     }
-    
 
 	/**
 	 * Register post type function.
@@ -556,8 +563,8 @@ class WPDE {
                 $html .= '</a>';
     
                 $html .= '<ul class="navbar-collapse">';
-                    $html .= '<li><a href="">Website</a></li>';
-                    $html .= '<li><a href="" class="button">GitHub</a></li>';
+                    $html .= '<li><a href="https://jindrichrucil.com">Website</a></li>';
+                    $html .= '<li><a href="https://github.com/Rucilos/wpde/" class="button">GitHub</a></li>';
                 $html .= '</ul>';
     
             $html .= '</nav>';
@@ -566,33 +573,31 @@ class WPDE {
         }
     }
 
-
     /**
-     * Add admin navbar.
+     * Modify the admin footer text.
      *
-     * This method adds a custom navbar to the WordPress admin area.
-     * It is displayed when the current screen matches the top-level admin page associated with the plugin's unique token.
-     * The navbar is designed to enhance the admin interface with additional navigation options.
+     * This method allows you to append or modify the content of the WordPress admin footer text.
+     * You can use this to include additional messages or links relevant to the plugin.
      *
      * @access  public
      * @since   1.0.0
+     * @param   string $text The existing footer text.
      * @return  void
      */
     public function admin_footer_text($text) {
         echo $text . ' ' . __('Thank you for choosing', 'wpde') . ' <a href="https://github.com/Rucilos/wpde/" target="_blank">WPDE</a>.';
     }
-
-    /**
-     * Add admin navbar.
-     *
-     * This method adds a custom navbar to the WordPress admin area.
-     * It is displayed when the current screen matches the top-level admin page associated with the plugin's unique token.
-     * The navbar is designed to enhance the admin interface with additional navigation options.
-     *
-     * @access  public
-     * @since   1.0.0
-     * @return  void
-     */
+   
+   /**
+    * Display custom version information in the admin footer.
+    *
+    * This method outputs custom version information in the WordPress admin footer.
+    * It includes the WordPress version and the plugin's version.
+    *
+    * @access  public
+    * @since   1.0.0
+    * @return  string A formatted string with version information.
+    */
     public function admin_footer_version() {
         $wp_version = get_bloginfo('version');
         return 'WP ' . $wp_version . ' | WPDE ' . $this->_version;
@@ -619,12 +624,6 @@ class WPDE {
                 'id' => $this->_token,
                 'title' => "<span class='ab-icon'></span><span class='ab-label'>" . __('Theme Settings', 'wpde') . '</span>',
                 'href' => $this->settings_url,
-            ]);
-        } elseif (!$this->is_acf() && !is_admin()) {
-            $wp_admin_bar->add_node([
-                'id' => $this->_token,
-                'title' => "<span class='ab-icon'></span><span class='ab-label'>WPDE</span>",
-                'href' => false,
             ]);
         }
 
