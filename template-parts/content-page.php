@@ -15,12 +15,27 @@
             <?php echo get_the_excerpt(); ?>
         </p>
 	</div>
-    <?php 
-    if(is_page('contacts')) {
-        $contact_form = get_field('contact_form', 'option');
-        if(empty($contact_form)) {
-            echo do_shortcode('[contact-form-7 id="2455da2" title="Contact form 1"]');
-        }
+    <?php if(is_page('contacts')) { ?>
+        <div class="row">
+            <div class="col-md-6">
+            <?php
+            $contact_form = get_field('contact_form', 'option');
+            $map = get_field('map', 'option');
+            $map_link = get_field('map_link', 'option');
+            if(empty($contact_form)) {
+                echo do_shortcode('[contact-form-7 id="2455da2" title="Contact form 1"]');
+            }
+            ?>
+            </div>
+            <div class="col-md-6">
+            <?php
+            if(empty($map)) {
+            echo '<iframe src="' . $map_link . '" width="100%" height="350" class="rounded-4" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>';
+            }
+            ?>
+            </div>
+        </div>
+    <?php
     } else {
         the_content(); 
     }

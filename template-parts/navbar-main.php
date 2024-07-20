@@ -15,7 +15,7 @@ if ($navbar === 'Headroom') {
 
 echo $helper;
 ?>
-<nav class="navbar navbar-expand-lg bg-body border-bottom <?php echo $navbar_class; ?>">
+<nav class="navbar navbar-expand-lg bg-body border-bottom z-3 <?php echo $navbar_class; ?>">
 	<div class="container">
 		<a class="navbar-brand d-flex align-items-center gap-1" href="<?php echo home_url(); ?>">
         <?php 

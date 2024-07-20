@@ -21,8 +21,8 @@ Includes responsive and accessibility design, necessary files, and features for 
 * Responsive
 * Light/Dark mode
 * SASS
-* Bootstrap 5
-* Font Awesome 6
+* Bootstrap 
+* Font Awesome 
 * Magnific popup
 * Webpack
 * Prettier
@@ -38,7 +38,7 @@ Includes responsive and accessibility design, necessary files, and features for 
 1. **Visit** Themes > Add new
 2. **Search** for "WPDE"
 3. **Install and Activate**
-4. **Click** on the new menu item "Theme Settings" for better control of theme
+4. **Click** on the new menu item "Theme Settings" for better control over the theme
 
 ** Manual install **
 
@@ -47,7 +47,7 @@ Includes responsive and accessibility design, necessary files, and features for 
 3. **Extract** "wpde.zip"
 4. **Upload** "wpde" folder to /wp-content/themes/
 5. **Visit** Appearance > Themes > Search for WPDE > Activate
-6. **Click** on the new menu item "Theme Settings" for better control of theme
+6. **Click** on the new menu item "Theme Settings" for better control over the theme
 
 == Frequently Asked Questions ==
 1. **What kind of support do you provide?**

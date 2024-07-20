@@ -22,11 +22,13 @@
 						$image_size_custom = wp_is_mobile() ? 'header-sm' : 'header';
 						$image_size = wp_get_attachment_image_url($image['ID'], $image_size_custom); 
 						$alt = get_post_meta($image['ID'], '_wp_attachment_image_alt', true);
+						$title = get_sub_field('title');
 						$description = get_sub_field('description');
 					?>
 					<div class="carousel-item <?php echo $slide_index == 0 ? 'active' : ''; ?>">
 						<img src="<?php echo esc_url($image_size); ?>" class="d-block w-100" alt="<?php echo esc_attr($alt); ?>">
 						<div class="carousel-caption d-none d-md-block">
+							<h1 class="text-white"><?php echo esc_html($title); ?></h1>
 							<small class="text-white"><?php echo esc_html($description); ?></small>
 						</div>
 					</div>
