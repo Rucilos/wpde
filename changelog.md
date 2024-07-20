@@ -88,10 +88,11 @@
 - [NEW] - Gallery section
 - [FIX] - 88+ bugs fixed
 
-## Version 1.0.2 (Fri, July 19 2024)
+## Version 1.1.0 (Fri, July 19 2024)
 
 - [NEW] - Gallery section
-- [FIX] - 88+ bugs fixed
+- 🆕 **[NEW]** - Webpack
+- 🆕 **[NEW]** - SASS support
 
 ## Version 1.0.1 (Fri, July 19 2024)
 
