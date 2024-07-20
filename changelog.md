@@ -15,20 +15,20 @@
 
 - 🆕 **[NEW]** - Settings UI
 
-## Version 1.0.4 (Fri, July 19 2024)
+## Version 1.3.0 (Fri, July 19 2024)
 
-- 🆕 **[NEW]** - Settings UI
+- 🆕 **[NEW]** - Integrated [Cookie Consent](https://github.com/orestbida/cookieconsent)
 
 ## Version 1.2.0 (Fri, July 19 2024)
 
 - 🆕 **[NEW]** - Added `Prettier` with config file `.prettierrc`
-- 🆕 **[NEW]** - Added `.editorconfig`
 - 🆕 **[NEW]** - Added NPM command `npm run format` which will start Prettier
+- 🆕 **[NEW]** - Added `.editorconfig`
 
 ## Version 1.1.0 (Fri, July 19 2024)
 
 - 🆕 **[NEW]** - Added `Webpack` with config file `webpack.config.js`
-- 🆕 **[NEW]** - Added `SASS` support
+- 🆕 **[NEW]** - Added `Sass` support
 - 🆕 **[NEW]** - Added NPM command `npm run start` which will start Webpack
 
 ## Version 1.0.1 (Fri, July 19 2024)
