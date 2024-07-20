@@ -10,10 +10,10 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Tags: wpde, wordpress, wp, dev, development, environment, env, template, theme, responsive, light, dark, bootstrap, fontawesome, webpack, sass, cookieconsent, prettier, magnificpopup, editorconfig
 Text Domain: wpde  
 
-WordPress Development Environment ("WPDE") is a fantastic starting point for creating a WordPress template. Includes responsive and accessibility design, necessary files, and features for proper template functioning.
+WordPress Development Environment (WPDE) is a fantastic starting point for creating a WordPress template. Includes responsive and accessibility design, necessary files, and features for proper template functioning.
 
 == Description ==
-WordPress Development Environment ("WPDE") is a fantastic starting point for creating a WordPress template.  
+WordPress Development Environment (WPDE) is a fantastic starting point for creating a WordPress template.  
 Includes responsive and accessibility design, necessary files, and features for proper template functioning.
 
 = Features =

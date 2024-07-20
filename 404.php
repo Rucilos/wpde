@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#front-page-display
  *
- * @package WordPress Development Environment ("WPDE")
+ * @package WordPress Development Environment (WPDE)
  * @author Jindřich Ručil
  * @since 1.0.0
  */

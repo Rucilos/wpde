@@ -2,7 +2,7 @@
 /**
  * The main class of WPDE.
  *
- * @package WordPress Development Environment ("WPDE")
+ * @package WordPress Development Environment (WPDE)
  * @author Jindřich Ručil
  * @since 1.0.0
  */
@@ -15,7 +15,7 @@ if (!defined('ABSPATH')) {
 
 class WPDE {
     /**
-     * The single instance of WordPress Development Environment ("WPDE").
+     * The single instance of WordPress Development Environment (WPDE).
      *
      * @var     object
      * @access  private
@@ -186,7 +186,6 @@ class WPDE {
         if ($this->is_acf()) {
             add_action('wp_dashboard_setup', [$this, 'add_dashboard_metabox']);
         }
-        add_action('dashboard_glance_items', [$this, 'post_types_metaboxes']);
         add_action('pre_user_query', [$this, 'exclude_users']);
     } // END __construct()
 
@@ -462,15 +461,15 @@ class WPDE {
     public function add_options_page() {
         if ($this->is_acf()) {
             $parent = acf_add_options_page([
-                'page_title' => 'WordPress - Development Environment ("WPDE")' . ' - ' . __('Theme Settings', 'wpde'),
+                'page_title' => 'WordPress Development Environment (WPDE)' . ' - ' . __('General', 'wpde'),
                 'menu_title' => __('Theme Settings', 'wpde'),
                 'menu_slug' => $this->_token,
                 'capability' => 'manage_options',
                 'icon_url' => 'dashicons-admin-settings',
                 'position' => 9999,
-            ]);
+            ]);        
         }
-    }
+    } // END add_options_page
 
     /**
      * Add admin bar tabs.
@@ -522,7 +521,7 @@ class WPDE {
      * Adds admin help tabs.
      *
      * This method adds custom help tabs to the current screen in the WordPress admin area.
-     * It provides information about the WordPress Development Environment ("WPDE").
+     * It provides information about the WordPress Development Environment (WPDE).
      *
      * @access public
      * @return array Empty array.
@@ -531,13 +530,13 @@ class WPDE {
     public function add_help_tabs() {
         $screen = get_current_screen();
 
-        $content = '<p><strong>WordPress - Development Environment ("WPDE") v' . esc_html($this->_version) . '</strong></p>';
+        $content = '<p><strong>WordPress Development Environment (WPDE) v' . esc_html($this->_version) . '</strong></p>';
         $content .= '<p>';
         $content .= '<a href="' . esc_url($this->settings_url) . '">' . __('Theme Settings', 'wpde') . '</a>';
         $content .= ' &#8212; ';
         $content .= '<a href="' . esc_url($this->settings_url) . '">' . __('GitHub', 'wpde') . '</a>';
         $content .= '</p>';
-        $content .= '<p>' . __("WordPress - Development Environment (\"WPDE\") is a fantastic starting point for creating a WordPress template. Includes necessary files and features for proper template functioning.", 'wpde') . '</p>';
+        $content .= '<p>' . __("WordPress Development Environment (WPDE) is a fantastic starting point for creating a WordPress template. Includes necessary files and features for proper template functioning.", 'wpde') . '</p>';
 
         $screen->add_help_tab([
             'id' => $this->_token,
@@ -559,35 +558,16 @@ class WPDE {
      * @since  1.0.0
      */
     public function add_dashboard_metabox() {
-        add_meta_box($this->_token . '-dashboard-metabox', __('Documentation', 'wpde'), 'wpde_dashoard_metabox', 'dashboard', 'side', 'high');
+        add_meta_box($this->_token . '-dashboard-metabox', __('WordPress Development Environment (WPDE)', 'wpde'), 'wpde_dashoard_metabox', 'dashboard', 'side', 'high');
 
         function wpde_dashoard_metabox() {
             $html = '<div class="main">';
 
-         
-
             $html .= '</div>';
-
+            
             echo $html;
         } // END wpde_dashoard_metabox()
     } // END add_dashboard_metabox()
-
-    /**
-     * Removes metaboxes from specified post types.
-     *
-     * This method removes the metaboxes from all public post types.
-     * It is typically used to customize the editing interface by removing unnecessary metaboxes.
-     *
-     * @return string Empty string.
-     * @access public
-     * @since  1.0.0
-     */
-    public function post_types_metaboxes() {
-        $post_types = get_post_types(['public' => true], 'names');
-        foreach ($post_types as $post_type) {
-            remove_meta_box('aam-access-manager', $post_type, 'advanced');
-        }
-    }
 
     /**
      * Exclude certain users from a search query.
@@ -694,7 +674,7 @@ class WPDE {
      */
     public function theme() {
         $html = '<div class="dropdown d-flex align-items-center justify-content-center" id="wpde-theme">';
-            $html .= '<button class="navbar-toggler d-flex border-0 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">';
+            $html .= '<button class="navbar-toggler d-flex border-0 dropdown-toggle pe-lg-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">';
                 $html .= '<i class="fa-solid fa-circle-half-stroke me-1"></i> <span class="visually-hidden">Auto</span>';
             $html .= '</button>';
             $html .= '<ul class="dropdown-menu">';
@@ -749,7 +729,7 @@ class WPDE {
             $html = '<div class="d-flex align-items-center justify-content-between my-4 pt-3 border-top">';
             $html .= '<small class="text-muted">' . __('Showing', 'wpde') . ' ' . $start . ' ' . __('to', 'wpde') . ' ' . $end . ' ' . __('of', 'wpde') . ' ' . $total_posts . ' ' . __('results', 'wpde') . '</small>';
             $html .= '<nav aria-label="Pagination">';
-            $html .= '<ul class="pagination shadow-sm mb-0">';
+            $html .= '<ul class="pagination mb-0">';
 
             foreach ($links as $link) {
                 if (strpos($link, 'current') !== false) {
@@ -791,7 +771,7 @@ class WPDE {
 
         // Start breadcrumb with a link to your homepage
         echo '<nav id="' . $defaults['id'] . '" aria-label="breadcrumb" class="d-none d-md-flex">';
-        echo '<ul class="breadcrumb mb-0">';
+        echo '<ul class="breadcrumb mb-0 mt-3">';
 
         // Creating home link
         echo "<li class='breadcrumb-item'><a href='" . get_home_url() . "'>" . $defaults['home'] . '</a></li>';
@@ -989,7 +969,7 @@ class WPDE {
      * @since 1.0.0
      */
     public function __clone() {
-        _doing_it_wrong(__FUNCTION__, esc_html(__('Cloning of WPDE is forbidden')), esc_attr($this->_version));
+        _doing_it_wrong(__FUNCTION__, esc_html(__('Cloning of WordPress Development Environment (WPDE) is forbidden')), esc_attr($this->_version));
     } // END __clone()
 
     /**
@@ -1003,7 +983,7 @@ class WPDE {
      * @since 1.0.0
      */
     public function __wakeup() {
-        _doing_it_wrong(__FUNCTION__, esc_html(__('Unserializing instances of WPDE is forbidden')), esc_attr($this->_version));
+        _doing_it_wrong(__FUNCTION__, esc_html(__('Unserializing instances of WordPress Development Environment (WPDE) is forbidden')), esc_attr($this->_version));
     } // END __wakeup()
 
     /**

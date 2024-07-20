@@ -1,10 +1,10 @@
 /*!
- * WordPress Development Environment ("WPDE") v1.0.0
+ * WordPress Development Environment (WPDE) v1.0.0
  * https://jindrichrucil.com
  * Author (c) 2024 Jindrich Rucil
  * Released under the MIT license
  */
-(function ($) {
+;(function ($) {
     // Enable bootstrap tooltips
     // Magnific Popup
     // CF7 Button
@@ -12,7 +12,8 @@
         $(window).on('load', function () {
             $('[data-toggle="tooltip"]').tooltip()
         })
-        $('.mfp-img').magnificPopup({
+        $('.mfp-init').magnificPopup({
+            delegate: '.mfp-item',
             type: 'image',
             mainClass: 'mfp-with-zoom',
             titleSrc: 'title',
@@ -35,31 +36,30 @@
         $('#user_login, #user_pass').removeClass('input').addClass('form-control')
         $('#wp-submit').removeClass('button button-primary').addClass('btn btn-primary mt-3 mb-5 px-5')
 
-        $('.navbar-toggler').on('click', function() {
-            $(this).find('#navbar-toggler-icon').toggleClass('fa-bars fa-xmark');
-        });
-    });
+        $('.navbar-toggler').on('click', function () {
+            $(this).find('#navbar-toggler-icon').toggleClass('fa-bars fa-xmark')
+        })
+    })
 
-    // Headroom
-    lastScroll = 0
+   // Headroom
+    let lastScroll = 0;
+    const $headroom = $('.headroom');
+
     $(window).on('scroll', function () {
-        var scroll = $(window).scrollTop()
+        const scroll = $(window).scrollTop();
 
-        if ($('.headroom')[0]) {
-            // Scroll 0
+        if ($headroom.length) {
             if (scroll <= 0) {
-                $('.navbar').removeClass('fixed-top').animate(100)
-                // Scroll up
-            } else if (lastScroll - scroll > 0) {
-                $('.navbar').addClass('fixed-top').animate(100)
-                // Scroll down
-            } else if (lastScroll - scroll < 0) {
-                $('.navbar').removeClass('fixed-top').animate(100)
+                $headroom.removeClass('d-none').addClass('d-block');
+            } else if (scroll < lastScroll) {
+                $headroom.addClass('d-block').removeClass('d-none');
+            } else {
+                $headroom.addClass('d-none').removeClass('d-block');
             }
         }
 
-        lastScroll = scroll
-    })
+        lastScroll = scroll;
+    });
 
     // Theme
     $(function () {

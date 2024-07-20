@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#author-display
  *
- * @package WordPress Development Environment ("WPDE")
+ * @package WordPress Development Environment (WPDE)
  * @author Jindřich Ručil
  * @since 1.0.0
  */
@@ -17,7 +17,7 @@ $user_id = get_query_var('author');
 $user_details = WPDE()->get_user($user_id);
 ?>
 
-<div class="container-fluid px-0 py-5">
+<div class="container-fluid px-0 py-6">
     <div class="container">
         <div class="pb-5 mb-4 border-bottom">
             <small class="text-primary">

@@ -6,7 +6,7 @@
  * 
  * @link https://github.com/AlexWebLab/bootstrap-5-wordpress-navbar-walker
  *
- * @package WordPress Development Environment ("WPDE")
+ * @package WordPress Development Environment (WPDE)
  * @since 1.0.0
  */
 ?>

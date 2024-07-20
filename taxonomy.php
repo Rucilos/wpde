@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#custom-taxonomies
  *
- * @package WordPress Development Environment ("WPDE")
+ * @package WordPress Development Environment (WPDE)
  * @author Jindřich Ručil
  * @since 1.0.0
  */
@@ -12,7 +12,7 @@
 
 <?php get_header(); ?>
 
-<div class="container px-0 py-5">
+<div class="container px-0 py-6">
     <div class="container">
         <div class="pb-5 mb-4 border-bottom">
             <small class="text-primary">
@@ -35,15 +35,16 @@
             if (have_posts()) {
                 while (have_posts()) {
                     the_post();
-                    echo '<div class="col-md-4">';
-                    get_template_part('template-parts/content', 'post');
+                    $grid = get_field('grid_taxonomy') ? get_field('grid_taxonomy') : 4;
+                    echo '<div class="col-md-' . $grid . '">';
+                        get_template_part('template-parts/content', 'post');
                     echo '</div>';
                 }
                 wp_reset_postdata();
                 get_template_part('template-parts/content', 'pagination');
             } else {
                 $html = '<div class="col-lg-12">';
-                $html .= '<p class="text-danger mb-0">' . __('Sorry, no data was found in this taxonomy.', 'wpde') . '</p>';
+                    $html .= '<p class="text-danger mb-0">' . __('Sorry, no data was found in this taxonomy.', 'wpde') . '</p>';
                 $html .= '</div>';
 
                 echo $html;

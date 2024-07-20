@@ -1,4 +1,4 @@
-<div class="container py-5">
+<div class="container py-6">
     <?php if (has_post_thumbnail()) {
         the_post_thumbnail('medium', ['class' => 'card-img-top']);
     } ?>
@@ -15,5 +15,14 @@
             <?php echo get_the_excerpt(); ?>
         </p>
 	</div>
-    <?php the_content(); ?>		
+    <?php 
+    if(is_page('contacts')) {
+        $contact_form = get_field('contact_form', 'option');
+        if(empty($contact_form)) {
+            echo do_shortcode('[contact-form-7 id="2455da2" title="Contact form 1"]');
+        }
+    } else {
+        the_content(); 
+    }
+    ?>		
 </div>

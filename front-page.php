@@ -4,7 +4,7 @@
 *
 * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#front-page-display
 *
-* @package WordPress Development Environment ("WPDE")
+* @package WordPress Development Environment (WPDE)
 * @author Jindřich Ručil
 * @since 1.0.0
 */
@@ -14,9 +14,10 @@
 get_header();
 get_template_part('template-parts/component', 'carousel');
 get_template_part('template-parts/section', 'icons');
+get_template_part('template-parts/section', 'gallery');
 ?>
 
-<div class="container-fluid px-0 py-5">
+<div class="container-fluid px-0 py-6">
     <div class="container">
         <div class="pb-5 mb-4 border-bottom">
             <small class="text-primary">
@@ -51,11 +52,11 @@ get_template_part('template-parts/section', 'icons');
                 }
                 wp_reset_postdata();
             } else {
-                echo '<div class="col-lg-12">';
-                echo '<p class="text-danger mb-0">' . __('Sorry, no data was found in this category.', 'wpde') . '</p>';
-                echo '</div>';
-            }
             ?>
+                <div class="col-lg-12">';
+                <p class="text-danger mb-0"><?php _e('Sorry, no data was found in this category.', 'wpde'); ?></p>
+                </div>
+            <?php } ?>
         </div>
     </div>
 </div>

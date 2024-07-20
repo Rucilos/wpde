@@ -1,13 +1,33 @@
 <div class="container-fluid px-0">
-    <div class="container mt-3">
+    <div class="container">
         <div class="d-flex align-items-center justify-content-between">
             <div>
                 <?php WPDE()->breadcrumbs(); ?>
             </div>
+            <?php 
+            $email = get_field('email');
+            $phone = get_field('phone');
+            ?>
+            <?php if ( !empty($email) && !empty($phone) ) { ?>
             <ul class="navbar-nav list-unstyled d-flex flex-row align-items-center justify-content-end flex-wrap flex-md-nowrap column-gap-3 mb-0">
-                <li class="nav-item"><a href="mailto:info@domain.com" class="link-underline link-underline-opacity-0"><i class="fa-solid fa-envelope me-1"></i><small>info@domain.com</small></a></li>
-                <li class="nav-item"><a href="tel:420 789 789 963" class="link-underline link-underline-opacity-0"><i class="fa-solid fa-phone-alt me-1"></i><small>+420 789 789 963</small></a></li>
+                <?php if ( !is_empty($email) ) { ?>
+                    <li class="nav-item">
+                        <a href="mailto:<?php echo esc_attr($mail); ?>" class="link-underline link-underline-opacity-0">
+                            <i class="fa-solid fa-envelope me-1"></i>
+                            <small><?php echo esc_html($mail); ?></small>
+                        </a>
+                    </li>
+                <?php } ?>
+                <?php if ( !empty($phone) ) { ?>
+                    <li class="nav-item">
+                        <a href="tel:<?php echo esc_attr($phone); ?>" class="link-underline link-underline-opacity-0">
+                            <i class="fa-solid fa-phone-alt me-1"></i>
+                            <small><?php echo esc_html($phone); ?></small>
+                        </a>
+                    </li>
+                <?php } ?>
             </ul>
+            <?php } ?>
         </div>
     </div>
 </div>

@@ -1,6 +1,6 @@
-## WordPress Development Environment ("WPDE")
+## WordPress Development Environment (WPDE)
 
-WordPress Development Environment ("WPDE") is a fantastic starting point for creating a WordPress template.  
+WordPress Development Environment (WPDE) is a fantastic starting point for creating a WordPress template.  
 Includes responsive and accessibility design, necessary files, and features for proper template functioning.
 
 ![WPDE - Cover](/.github/cover.png)
@@ -10,18 +10,24 @@ Includes responsive and accessibility design, necessary files, and features for 
 Check out the [WPDE](https://wpde.jindrichrucil.com/) template
 
 ## Features
--   Breadcrumbs 
-```php 
+
+-   Breadcrumbs
+
+```php
 // Show breadcrumbs
 <?php WPDE()->breadcrumbs(); ?>
 ```
+
 -   Bootstrap 5 Pagination
-```php 
+
+```php
 // Show pagination
 <?php WPDE()->pagination(); ?>
 ```
+
 -   Light/Dark mode toggler
-```php 
+
+```php
 // Show theme toggler
 <?php WPDE()->theme(); ?>
 ```

@@ -1,5 +1,5 @@
 /*!
- * WordPress Development Environment ("WPDE") v1.0.0
+ * WordPress Development Environment (WPDE) v1.0.0
  * https://jindrichrucil.com
  * Author (c) 2024 Jindrich Rucil
  * Released under the MIT license
@@ -22,7 +22,7 @@ body.wp-admin #wpadminbar {
 }
 
 #wpadminbar {
-    opacity: 0;
+    opacity: 0.25;
     transition: opacity 0.2s ease-in;
 
     &:hover {

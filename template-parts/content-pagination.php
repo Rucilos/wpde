@@ -4,7 +4,7 @@
 *
 * @link https://developer.wordpress.org/themes/functionality/pagination/
 *
-* @package WordPress Development Environment ("WPDE")
+* @package WordPress Development Environment (WPDE)
 * @author Jindřich Ručil
 * @since 1.0.0
 */

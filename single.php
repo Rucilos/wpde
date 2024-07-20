@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @package WordPress Development Environment ("WPDE")
+ * @package WordPress Development Environment (WPDE)
  * @author Jindřich Ručil
  * @since 1.0.0
  */
@@ -12,7 +12,7 @@
 
 <?php get_header(); ?>
 
-<div class="container py-5">
+<div class="container py-6">
     <div class="row justify-content-center">
 		<?php 
         if (have_posts()) {

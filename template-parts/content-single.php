@@ -17,7 +17,10 @@
     </div>
     <?php 
     if (has_post_thumbnail()) {
-        the_post_thumbnail('large', ['class' => 'img-fluid mb-5 shadow rounded-4']);
+        echo '<div class="text-center">';
+        the_post_thumbnail('header', ['class' => 'img-fluid mb-5 shadow rounded-4']);
+        echo '</div>';
+
     } 
     ?>
     <?php the_content(); ?>
