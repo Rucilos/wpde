@@ -1,6 +1,6 @@
 ## Version 1.0.1 (Fri, July 19 2024)
 
-- NEW! - Settings UI
+- [NEW!] - Settings UI
 - NEW! - Settings fields
 - NEW! - Grid system
 - NEW! - Gallery section
