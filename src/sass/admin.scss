@@ -41,6 +41,7 @@ body.wp-admin #wpadminbar {
 
     .navbar-brand {
         display: flex;
+        text-decoration: none;
     }
 
     .navbar-collapse {
@@ -63,4 +64,8 @@ body.wp-admin #wpadminbar {
             }
         }
     }
+}
+
+.acf-settings-wrap #poststuff {
+    padding-top: 30px;
 }

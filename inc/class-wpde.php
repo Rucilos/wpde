@@ -133,7 +133,7 @@ class WPDE {
      * @access public
      * @since 1.0.0
      */
-    public function __construct($file = '', $version = '1.0.0') {
+    public function __construct($file = '', $version = '1.6.3') {
         $this->_version = $version;
         $this->_token = 'wpde';
         $this->text_domain = 'wpde';
@@ -169,6 +169,11 @@ class WPDE {
         add_action('login_enqueue_scripts', [$this, 'login_enqueue_scripts'], 10, 1);
         add_action('login_enqueue_scripts', [$this, 'login_enqueue_styles'], 10, 1);
 
+        // ACF Notice
+        if (!$this->is_acf()) {
+            add_action('admin_notices', [$this, 'acf_notice']);
+        }
+
         // Initialize setup
         add_action('after_setup_theme', [$this, 'theme_setup']);
 
@@ -180,13 +185,28 @@ class WPDE {
         // Load admin components
         add_action('admin_menu', [$this, 'add_options_page']);
         add_action('admin_head', [$this, 'add_admin_navbar']);
+        if($this->is_wpde()) {
+            add_action('admin_footer_text', [$this, 'admin_footer_text'], 10, 1);
+            add_action('update_footer', [$this, 'admin_footer_version'], 9999, 1);
+        }
+
         add_action('wp_before_admin_bar_render', [$this, 'add_adminbar_tabs'], 999);
         add_action('admin_head', [$this, 'add_help_tabs']);
-        if ($this->is_acf()) {
-            add_action('wp_dashboard_setup', [$this, 'add_dashboard_metabox']);
-        }
+
+        add_action('wp_dashboard_setup', [$this, 'add_dashboard_metabox']);
         add_action('pre_user_query', [$this, 'exclude_users']);
     } // END __construct()
+
+
+
+    public function acf_notice() {
+        $html = '<div class="notice notice-error is-dismissible">';
+        $html .= '<p><strong>Notice:</strong> The <a href="https://www.google.com/search?q=WordPress+Development+Environment+WPDE" target="_blank" rel="noopener noreferrer"><strong>WordPress Development Environment (WPDE)</strong></a> theme requires the <a href="https://www.google.com/search?q=ACF+PRO" target="_blank" rel="noopener noreferrer"><strong>ACF PRO</strong></a> plugin to function properly. Please activate the plugin to ensure all features work as intended.</p>';
+        $html .= '</div>';
+        
+        echo $html;
+    }
+    
 
 	/**
 	 * Register post type function.
@@ -532,7 +552,7 @@ class WPDE {
             $html  = '<nav id="' . WPDE()->_token . '-navbar" class="' . WPDE()->_token . '-navbar">';
     
                 $html .= '<a href="admin.php?page=' . WPDE()->_token . '" class="navbar-brand">';
-                    $html .= '<img src="https://cdn.df-barber.cz/apiru/brands/primary.svg" width="100px" height="auto" alt="WPDE - Logo">';
+                    $html .= '<h1>WordPress Development Environment</h1>';
                 $html .= '</a>';
     
                 $html .= '<ul class="navbar-collapse">';
@@ -544,6 +564,38 @@ class WPDE {
     
             echo $html;
         }
+    }
+
+
+    /**
+     * Add admin navbar.
+     *
+     * This method adds a custom navbar to the WordPress admin area.
+     * It is displayed when the current screen matches the top-level admin page associated with the plugin's unique token.
+     * The navbar is designed to enhance the admin interface with additional navigation options.
+     *
+     * @access  public
+     * @since   1.0.0
+     * @return  void
+     */
+    public function admin_footer_text($text) {
+        echo $text . ' ' . __('Thank you for choosing', 'wpde') . ' <a href="https://github.com/Rucilos/wpde/" target="_blank">WPDE</a>.';
+    }
+
+    /**
+     * Add admin navbar.
+     *
+     * This method adds a custom navbar to the WordPress admin area.
+     * It is displayed when the current screen matches the top-level admin page associated with the plugin's unique token.
+     * The navbar is designed to enhance the admin interface with additional navigation options.
+     *
+     * @access  public
+     * @since   1.0.0
+     * @return  void
+     */
+    public function admin_footer_version() {
+        $wp_version = get_bloginfo('version');
+        return 'WP ' . $wp_version . ' | WPDE ' . $this->_version;
     }
 
     /**
@@ -681,7 +733,7 @@ class WPDE {
      * @since  1.0.0
      */
     public function is_acf() {
-        return class_exists('ACF_PRO');
+        return class_exists('acf_pro');
     }
 
     /**

@@ -6,7 +6,7 @@
 					<?php
 					$copyright = get_field('logo_text', 'option') ? get_field('logo_text', 'option') : bloginfo('name');
 					?>
-				<small class="text-muted">© <?php echo date('Y') . ' ' . $copyright . '. ' . __('All rights reserved.', 'wpde'); ?></small>
+				<small class="text-muted">© <?php echo date('Y ') . $copyright . '. ' . __('All rights reserved.', 'wpde'); ?></small>
 				</div>
 				<div class="d-flex align-items-center gap-4">
 					<ul class="list-unstyled d-flex align-items-center flex-wrap flex-md-nowrap column-gap-3 mb-0">
