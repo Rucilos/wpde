@@ -531,7 +531,7 @@ class WPDE {
     public function add_options_page() {
         if ($this->is_acf()) {
             $parent = acf_add_options_page([
-                'page_title' => '',
+                'page_title' => __('Theme Settings', 'wpde'),
                 'menu_title' => __('Theme Settings', 'wpde'),
                 'menu_slug' => $this->_token,
                 'capability' => 'manage_options',
