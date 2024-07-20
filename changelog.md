@@ -92,7 +92,8 @@
 - 🆕 **[NEW]** - Settings fields for better control of theme!
 - 🆕 **[NEW]** - Grid system
 - 🆕 **[NEW]** - Gallery section
-- ✅ **[FIX]** - 88+ bugs fixed
+- ✅ [FIX] - 88+ bugs fixed
+- ❌ **[REMOVE]** - safsdfs
 - 🚀 **[IMPROVEMENT]** - Enhanced performance of the grid system
 - ⚠️ **[SECURITY]** - Fixed a vulnerability in the authentication module
 - 📜 **[DOCS]** - Updated the installation guide
