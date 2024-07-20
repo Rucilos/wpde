@@ -6,9 +6,7 @@
  * @author Jindřich Ručil
  * @since 1.0.0
  */
-?>
 
-<?php
 if (!defined('ABSPATH')) {
     exit();
 }
@@ -189,6 +187,50 @@ class WPDE {
         }
         add_action('pre_user_query', [$this, 'exclude_users']);
     } // END __construct()
+
+	/**
+	 * Register post type function.
+	 *
+	 * @param string $post_type Post Type.
+	 * @param string $plural Plural Label.
+	 * @param string $single Single Label.
+	 * @param string $description Description.
+	 * @param array  $options Options array.
+	 *
+	 * @return bool|string|WPDE_Post_Type
+	 */
+	public function register_post_type( $post_type = '', $plural = '', $single = '', $description = '', $options = array() ) {
+
+		if ( ! $post_type || ! $plural || ! $single ) {
+			return false;
+		}
+
+		$post_type = new WPDE_Post_Type( $post_type, $plural, $single, $description, $options );
+
+		return $post_type;
+	}
+
+	/**
+	 * Wrapper function to register a new taxonomy.
+	 *
+	 * @param string $taxonomy Taxonomy.
+	 * @param string $plural Plural Label.
+	 * @param string $single Single Label.
+	 * @param array  $post_types Post types to register this taxonomy for.
+	 * @param array  $taxonomy_args Taxonomy arguments.
+	 *
+	 * @return bool|string|WPDE_Taxonomy
+	 */
+	public function register_taxonomy( $taxonomy = '', $plural = '', $single = '', $post_types = array(), $taxonomy_args = array() ) {
+
+		if ( ! $taxonomy || ! $plural || ! $single ) {
+			return false;
+		}
+
+		$taxonomy = new WPDE_Taxonomy( $taxonomy, $plural, $single, $post_types, $taxonomy_args );
+
+		return $taxonomy;
+	}
 
     /**
      * Add async or defer attributes to script enqueues.

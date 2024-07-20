@@ -14,37 +14,60 @@ Check out the [WPDE](https://wpde.jindrichrucil.com/) template
 -   Breadcrumbs
 
 ```php
-// Show breadcrumbs
+// Display breadcrumbs
 <?php WPDE()->breadcrumbs(); ?>
 ```
 
 -   Bootstrap 5 Pagination
 
 ```php
-// Show pagination
+// Display pagination
 <?php WPDE()->pagination(); ?>
 ```
 
 -   Light/Dark mode toggler
 
 ```php
-// Show theme toggler
+// Display a theme toggler
 <?php WPDE()->theme(); ?>
+```
+
+```php
+// Register a custom post type
+<?php
+WPDE()->register_post_type(
+    'events', // Post type key
+    __( 'Events', 'wpde' ), // Plural name
+    __( 'Event', 'wpde' ) // Singular name
+);
+?>
+```
+
+```php
+<?php
+// Register a custom taxonomy
+WPDE()->register_taxonomy(
+    'location', // Taxonomy key
+    __( 'Locations', 'wpde' ), // Plural name
+    __( 'Location', 'wpde' ), // Singular name
+    'events' // Associated post type
+);
+?>
 ```
 
 ## Libraries
 
--   [Bootstrap](https://getbootstrap.com/)
--   [Bootstrap Navbar Walker](https://github.com/AlexWebLab/bootstrap-5-wordpress-navbar-walker)
--   [Font Awesome](https://fontawesome.com/)
--   [Cookie Consent](https://github.com/orestbida/cookieconsent)
--   [Magnific popup](https://dimsemenov.com/plugins/magnific-popup/)
+- Bootstrap
+- Bootstrap Navbar Walker
+- Font Awesome
+- Cookie Consent
+- Magnific popup
 
 ## Development Tools
 
--   [SASS](https://sass-lang.com/)
--   [Webpack](https://webpack.js.org/)
--   [Prettier](https://prettier.io/)
+- SASS
+- Webpack
+- Prettier
 
 ## Commands
 
@@ -63,6 +86,7 @@ npm run clear
 
 -   **WordPress:** 6.0 or higher
 -   **PHP:** 7.0 or higher
+-   **ACF PRO:** 5.0 or higher
 
 ## Installation
 

@@ -12,6 +12,8 @@
 
 <?php
 require_once 'inc/class-wpde.php';
+require_once 'inc/class-wpde-post-type.php';
+require_once 'inc/class-wpde-taxonomy.php';
 
 /**
  * Returns the main instance of WPDE to prevent the need to use globals.
