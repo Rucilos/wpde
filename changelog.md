@@ -25,7 +25,8 @@
 
 - 🆕 **[NEW]** - Added `WPDE_Post_Type` class
 - 🆕 **[NEW]** - Added `WPDE_Post_Taxonomy` class
-- 🚀 **[IMPROVEMENT]** - Updated `functions.php` and `class-wpde.php` reflect `WPDE_Post_Type` and `WPDE_Post_Type_Taxonomy` class
+- 🚀 **[IMPROVEMENT]** - Updated `functions.php` reflect `WPDE_Post_Type` and `WPDE_Post_Type_Taxonomy` class
+- 🚀 **[IMPROVEMENT]** - Updated `class-wpde.php` reflect `WPDE_Post_Type` and `WPDE_Post_Type_Taxonomy` class
 
 ## Version 1.3.0 (Fri, July 19 2024)
 
