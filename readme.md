@@ -39,32 +39,29 @@ npm run clear
 
 ```php
 // Display breadcrumbs
-<?php WPDE()->breadcrumbs(); ?>
+WPDE()->breadcrumbs();
 ```
 
 ```php
 // Display pagination
-<?php WPDE()->pagination(); ?>
+WPDE()->pagination();
 ```
 
 ```php
 // Display a theme toggler
-<?php WPDE()->theme(); ?>
+WPDE()->theme();
 ```
 
 ```php
 // Register a custom post type
-<?php
 WPDE()->register_post_type(
     'events', // Post type key
     __( 'Events', 'wpde' ), // Plural name
     __( 'Event', 'wpde' ) // Singular name
 );
-?>
 ```
 
 ```php
-<?php
 // Register a custom taxonomy
 WPDE()->register_taxonomy(
     'location', // Taxonomy key
@@ -72,7 +69,6 @@ WPDE()->register_taxonomy(
     __( 'Location', 'wpde' ), // Singular name
     'events' // Associated post type
 );
-?>
 ```
 
 ## Requirements
