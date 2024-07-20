@@ -9,9 +9,11 @@
 - 🚀 **[IMPROVEMENT]** - Enhanced performance of the grid system
 - ⚠️ **[SECURITY]** - Fixed a vulnerability in the authentication module
 - 📜 **[DOCS]** - Updated the installation guide
-- 🔄 **[REFACTOR]** - Refactored the user profile component
 
+## Version 1.7.0 (Fri, July 19 2024)
 
+- 🆕 **[NEW]** - Added `Sass` files
+- 🚀 **[IMPROVEMENT]** - Updated `theme_setup()` reflect `bootstrap_5_wp_nav_menu_walker` class
 
 ## Version 1.6.0 (Fri, July 19 2024)
 
@@ -31,15 +33,15 @@
 - 🚀 **[IMPROVEMENT]** - Updated `functions.php` reflect `WPDE_Post_Type` and `WPDE_Post_Type_Taxonomy` class
 - 🚀 **[IMPROVEMENT]** - Updated main class `WPDE` reflect `WPDE_Post_Type` and `WPDE_Post_Type_Taxonomy` class
 
-## Version 1.3.0 (Fri, July 19 2024)
+## Version 1.3.0 (Fri, July 19, 2024)
 
 - 🆕 **[NEW]** - Added `WPDE` main class
-- 🚀 **[IMPROVEMENT]** - Updated `functions.php` reflect `WPDE` class
+- 🚀 **[IMPROVEMENT]** - Updated `functions.php` to reflect `WPDE` class
 
-## Version 1.2.0 (Fri, July 19 2024)
+## Version 1.2.0 (Fri, July 19, 2024)
 
-- 🆕 **[NEW]** - Added `Prettier` with config file `.prettierrc`
-- 🆕 **[NEW]** - Added NPM command `npm run format` which will start Prettier
+- 🆕 **[NEW]** - Added `Prettier` with configuration file `.prettierrc`
+- 🆕 **[NEW]** - Added NPM command `npm run format` to run Prettier
 - 🆕 **[NEW]** - Added `.editorconfig`
 
 ## Version 1.1.0 (Fri, July 19 2024)
