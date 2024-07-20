@@ -92,7 +92,7 @@
 - [NEW] - Settings fields for better control of theme!
 - [NEW] - Prettier with config file
 - [NEW] - Gallery section
-- <span style="color: green;">[FIX]</span> - 88+ bugs fixed
+- ✅ **[FIX]** - 88+ bugs fixed
 
 ## Version 1.0.0 (Fri, May 24 2024)
 
