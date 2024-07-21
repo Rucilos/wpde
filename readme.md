@@ -57,7 +57,11 @@ WPDE()->theme();
 WPDE()->register_post_type(
     'events', // Post type key
     __( 'Events', 'wpde' ), // Plural name
-    __( 'Event', 'wpde' ) // Singular name
+    __( 'Event', 'wpde' ), // Singular name
+    __( 'Custom post type "Events"', 'wpde' ), // Description
+    array(
+        'menu_icon' => 'dashicons-location', // Change the menu icon
+    )
 );
 ```
 
@@ -67,7 +71,10 @@ WPDE()->register_taxonomy(
     'location', // Taxonomy key
     __( 'Locations', 'wpde' ), // Plural name
     __( 'Location', 'wpde' ), // Singular name
-    'events' // Associated post type
+    'events', // Associated post type
+    array(
+        'menu_icon' => false, // Does not make the taxonomy available in the REST API.
+    )
 );
 ```
 

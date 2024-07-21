@@ -117,27 +117,27 @@ class WPDE_Post_Type {
 		//phpcs:enable
 
 		$args = array(
-			'labels'                => apply_filters( $this->post_type . '_labels', $labels ),
-			'description'           => $this->description,
-			'public'                => true,
-			'publicly_queryable'    => true,
-			'exclude_from_search'   => false,
-			'show_ui'               => true,
-			'show_in_menu'          => true,
-			'show_in_nav_menus'     => true,
-			'query_var'             => true,
-			'can_export'            => true,
-			'rewrite'               => true,
-			'capability_type'       => 'post',
-			'has_archive'           => true,
-			'hierarchical'          => true,
-			'show_in_rest'          => true,
-			'rest_base'             => $this->post_type,
-			'rest_controller_class' => 'WP_REST_Posts_Controller',
-			'supports'              => array( 'title', 'editor', 'excerpt', 'comments', 'thumbnail' ),
-			'menu_position'         => 5,
-			'menu_icon'             => 'dashicons-admin-post',
-		);
+			'labels'                => apply_filters( $this->post_type . '_labels', $labels ), // Filters and sets the labels for the custom post type.
+			'description'           => $this->description, // Sets a description for the custom post type.
+			'public'                => true, // The post type is public.
+			'publicly_queryable'    => true, // The post type can be queried publicly.
+			'exclude_from_search'   => false, // Includes the post type in search results.
+			'show_ui'               => true, // Shows the post type in the admin UI.
+			'show_in_menu'          => true, // Shows the post type in the admin menu.
+			'show_in_nav_menus'     => true, // The post type can be added to navigation menus.
+			'query_var'             => true, // Enables querying the post type with a query variable.
+			'can_export'            => true, // Allows the post type to be exportable.
+			'rewrite'               => true, // Enables URL rewriting for the post type.
+			'capability_type'       => 'post', // Uses the capabilities of a 'post' for this custom post type.
+			'has_archive'           => true, // Enables an archive page for the post type.
+			'hierarchical'          => true, // Allows the post type to be hierarchical (like pages).
+			'show_in_rest'          => true, // Makes the post type available in the REST API.
+			'rest_base'             => $this->post_type, // Sets the base URL for REST API requests.
+			'rest_controller_class' => 'WP_REST_Posts_Controller', // Uses the WP_REST_Posts_Controller class for REST API requests.
+			'supports'              => array( 'title', 'editor', 'excerpt', 'comments', 'thumbnail' ), // Supports specific features for the post type.
+			'menu_position'         => 5, // Sets the position of the post type in the admin menu.
+			'menu_icon'             => 'dashicons-admin-post', // Sets the icon for the post type in the admin menu.
+		);		
 
 		$args = array_merge( $args, $this->options );
 

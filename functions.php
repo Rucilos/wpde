@@ -30,4 +30,26 @@ function WPDE() {
     return $instance;
 } // END WPDE()
 
+// Register a custom post type
+WPDE()->register_post_type(
+    'events', // Post type key
+    __( 'Events', 'wpde' ), // Plural name
+    __( 'Event', 'wpde' ), // Singular name
+    __( 'Custom post type "Events"', 'wpde' ), // Description
+    array(
+        'menu_icon' => 'dashicons-location', // Change the menu icon
+    )
+);
+
+// Register a custom taxonomy
+WPDE()->register_taxonomy(
+    'location', // Taxonomy key
+    __( 'Locations', 'wpde' ), // Plural name
+    __( 'Location', 'wpde' ), // Singular name
+    'events', // Associated post type
+    array(
+        'menu_icon' => false, // Does not make the taxonomy available in the REST API.
+    )
+);
+
 WPDE();

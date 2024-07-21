@@ -118,24 +118,24 @@ class WPDE_Taxonomy {
 		);
 		//phpcs:enable
 		$args = array(
-			'label'                 => $this->plural,
-			'labels'                => apply_filters( $this->taxonomy . '_labels', $labels ),
-			'hierarchical'          => true,
-			'public'                => true,
-			'show_ui'               => true,
-			'show_in_nav_menus'     => true,
-			'show_tagcloud'         => true,
-			'meta_box_cb'           => null,
-			'show_admin_column'     => true,
-			'show_in_quick_edit'    => true,
-			'update_count_callback' => '',
-			'show_in_rest'          => true,
-			'rest_base'             => $this->taxonomy,
-			'rest_controller_class' => 'WP_REST_Terms_Controller',
-			'query_var'             => $this->taxonomy,
-			'rewrite'               => true,
-			'sort'                  => '',
-		);
+			'label'                 => $this->plural, // Sets the plural label for the taxonomy.
+			'labels'                => apply_filters( $this->taxonomy . '_labels', $labels ), // Filters and sets the labels for the taxonomy.
+			'hierarchical'          => true, // The taxonomy is hierarchical (like categories).
+			'public'                => true, // The taxonomy is public.
+			'show_ui'               => true, // Shows the taxonomy in the admin UI.
+			'show_in_nav_menus'     => true, // The taxonomy can be added to navigation menus.
+			'show_tagcloud'         => true, // Shows the taxonomy in tag clouds.
+			'meta_box_cb'           => null, // Sets a callback function for the meta box display, null for default.
+			'show_admin_column'     => true, // Shows the taxonomy in the admin columns.
+			'show_in_quick_edit'    => true, // Shows the taxonomy in the quick edit panel.
+			'update_count_callback' => '', // Callback function to update the count of terms in the taxonomy.
+			'show_in_rest'          => true, // Makes the taxonomy available in the REST API.
+			'rest_base'             => $this->taxonomy, // Sets the base URL for REST API requests.
+			'rest_controller_class' => 'WP_REST_Terms_Controller', // Uses the WP_REST_Terms_Controller class for REST API requests.
+			'query_var'             => $this->taxonomy, // Sets the query variable for the taxonomy.
+			'rewrite'               => true, // Enables URL rewriting for the taxonomy.
+			'sort'                  => '', // Allows sorting of terms in the taxonomy.
+		);		
 
 		$args = array_merge( $args, $this->taxonomy_args );
 
