@@ -559,7 +559,7 @@ class WPDE {
             $html  = '<nav id="' . WPDE()->_token . '-navbar" class="' . WPDE()->_token . '-navbar">';
     
                 $html .= '<a href="admin.php?page=' . WPDE()->_token . '" class="navbar-brand">';
-                    $html .= '<h1>WordPress Development Environment</h1>';
+                    $html .= 'WPDE';
                 $html .= '</a>';
     
                 $html .= '<ul class="navbar-collapse">';

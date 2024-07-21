@@ -44,7 +44,7 @@ $badge_link = get_field('header_badge_link', 'option');
                     $link_title = $link_btn['title'];
                     $link_target = $link_btn['target'] ? $link_btn['target'] : '_self';
                     ?>
-                    <a class="btn btn-primary me-3" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+                    <a class="btn btn-dark me-3" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
                 <?php } ?>
 
                 <?php

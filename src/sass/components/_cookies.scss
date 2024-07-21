@@ -1,12 +1,12 @@
 .cc--lightmode {
-    --cc-btn-border-radius: 0.35em !important;
+    --cc-btn-border-radius: var(--wpde-border-radius) !important;
     --cc-btn-gap: 8px !important;
     --cc-btn-primary-bg: var(--wpde-primary) !important;
     --cc-btn-primary-hover-bg: rgba(var(--wpde-primary-rgb), 0.9) !important;
 }
 
 .cc--darkmode {
-    --cc-btn-border-radius: 0.35em !important;
+    --cc-btn-border-radius: var(--wpde-border-radius) !important;
     --cc-btn-gap: 8px !important;
     --cc-btn-primary-bg: var(--wpde-primary) !important;
     --cc-btn-primary-hover-bg: rgba(var(--wpde-primary-rgb), 0.8) !important;

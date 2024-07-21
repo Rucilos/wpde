@@ -26,15 +26,15 @@ if($helper_div) {
 	<div class="container">
 		<a class="navbar-brand d-flex align-items-center gap-1" href="<?php echo home_url(); ?>">
         <?php 
-        $image = get_field('logo', 'option');
-        $title = get_field('logo_text', 'option');
-        if (!empty($image)) {
-            $image_width = get_field('logo_width', 'option') ? get_field('logo_width', 'option') : '100'; 
+        $logo = get_field('logo', 'option');
+        $logo_text = get_field('logo_text', 'option');
+        if (!empty($logo)) {
+            $logo_width = get_field('logo_width', 'option') ? get_field('logo_width', 'option') : '100'; 
         ?>
-            <img src="<?php echo esc_url($image['url']); ?>" alt="Logo" width="<?php echo $image_width; ?>" height="auto"/>
+            <img src="<?php echo esc_url($logo['url']); ?>" alt="Logo" width="<?php echo $logo_width; ?>" height="auto"/>
         <?php
-        } elseif(!empty($title)) {
-            echo $title;
+        } elseif(!empty($logo_text)) {
+            echo $logo_text;
         } else {
             echo get_bloginfo('name');
         }
@@ -113,7 +113,7 @@ if($helper_div) {
                 $link_target = $link2['target'] ? $link2['target'] : '_self';
                 ?>
                 <li class="nav-item ms-3">
-                    <a class="btn btn-primary" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
+                    <a class="btn btn-dark" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
                         <?php echo esc_html( $link_title ); ?>
                         <i class="fa-solid fa-arrow-right ms-1"></i> 
                     </a>

@@ -4,23 +4,24 @@
 		<div class="col-md-4 mb-3">
 			<a class="d-block mb-2" href="<?php echo home_url(); ?>">
 			<?php 
-			$image = get_field('logo', 'option');
-			$title = get_field('logo_text', 'option');
-			if (!empty($image)) {
-				$image_width = get_field('logo_width', 'option') ? get_field('logo_width', 'option') : '100'; 
+			$logo = get_field('logo', 'option');
+			$logo_text = get_field('logo_text', 'option');
+			if (!empty($logo)) {
+				$logo_width = get_field('logo_width', 'option') ? get_field('logo_width', 'option') : '100'; 
 			?>
-				<img src="<?php echo esc_url($image['url']); ?>" alt="Logo" width="<?php echo $image_width; ?>" height="auto"/>
+				<img src="<?php echo esc_url($logo['url']); ?>" alt="Logo" width="<?php echo $logo_width; ?>" height="auto"/>
 			<?php
 			} elseif(!empty($title)) {
-				echo $title;
+				echo $logo_text;
 			} else {
 				echo get_bloginfo('name');
 			}
 			?>
 			</a>
-			<p class="mb-1 text-muted"><small><?php _e('Designed and built with all the love in the world by the Bootstrap team with the help of our contributors.', 'wpde'); ?></small></p>
-			<p class="mb-1 text-muted"><small><?php _e('Code licensed under', 'wpde'); ?> MIT</small></p>
-			<p class="mb-1 text-muted"><small><?php _e('Currently', 'wpde'); ?> v<?php echo WPDE()->_version; ?></small></p>
+			<?php 
+				$footer_block = get_field('footer_block', 'option');
+				echo '<small class="text-muted">' . $footer_block . '</small>';
+			?>
 		</small>
 			</div>
 

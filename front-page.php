@@ -53,7 +53,7 @@ get_template_part('template-parts/section', 'gallery');
                 $categories = get_categories();
                 foreach ($categories as $category) {
                     $active_class = (isset($_GET['category']) && $_GET['category'] == $category->term_id) ? 'active' : '';
-                    echo '<li class="' . $active_class . '"><a href="' . add_query_arg('category', $category->term_id) . '#posts">' . esc_html($category->name) . '</a></li>';
+                    echo '<li class="' . $active_class . '"><a href="' . add_query_arg('category', $category->term_id) . '#posts"><small>' . esc_html($category->name) . '</small></a></li>';
                 }
                 ?>
             </ul>
