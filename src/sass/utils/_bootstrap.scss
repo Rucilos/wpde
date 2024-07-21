@@ -163,8 +163,9 @@ $focus-ring-opacity: 0.75; // 0.25
 @import '~bootstrap/scss/navbar';
 @import '~bootstrap/scss/pagination';
 @import '~bootstrap/scss/tables';
-@import '~bootstrap/scss/type';
+@import '~bootstrap/scss/toasts';
 @import '~bootstrap/scss/transitions';
+@import '~bootstrap/scss/type';
 
 // 9. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
 @import '~bootstrap/scss/utilities/api';

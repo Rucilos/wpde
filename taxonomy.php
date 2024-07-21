@@ -35,7 +35,7 @@
             if (have_posts()) {
                 while (have_posts()) {
                     the_post();
-                    $grid = get_field('grid_taxonomy');
+                    $grid = get_field('grid_taxonomy', 'option');
                     $grid = !empty($grid) ? $grid : 4;
 
                     echo '<div class="col-md-' . $grid . '">';

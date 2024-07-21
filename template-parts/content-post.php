@@ -1,6 +1,6 @@
 <a href="<?php the_permalink(); ?>" class="link-underline link-underline-opacity-0">
 	<div class="card h-100 border-0">
-		<div class="card-body">
+		<div class="card-body p-0">
 			<div class="d-flex align-items-center column-gap-4 mb-2">
 				<div class="mb-0">
 					<?php
