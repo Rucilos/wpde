@@ -47,7 +47,7 @@ get_template_part('template-parts/section', 'gallery');
         </div>
 
         <div class="mb-4">
-            <h2><?php _e('All Categories', 'wpde'); ?></h2>
+            <h3><?php _e('All Categories', 'wpde'); ?></h3>
             <ul class="list-unstyled d-flex gap-3">
                 <?php
                 $categories = get_categories();

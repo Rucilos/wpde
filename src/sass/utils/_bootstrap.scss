@@ -105,8 +105,8 @@ $breadcrumb-divider: quote('/'); // quote('/');
 $btn-font-weight: 500; // $font-weight-normal
 
 // Links
-$link-decoration: none; // underline
-$link-hover-decoration: underline; // null
+$link-decoration: underline; // underline
+$link-hover-decoration: none; // null
 
 // Nav link
 $nav-link-font-size: $small-font-size; // null
@@ -180,6 +180,15 @@ $focus-ring-opacity: 0.75; // 0.25
 
     .btn-dark {
         --wpde-btn-color: #{$gray-950};
-        --wpde-btn-bg: #{$gray-200};
+        --wpde-btn-bg: #{$gray-100};
+        --wpde-btn-border-color: #{$gray-100};
+
+        --wpde-btn-hover-color: #{$gray-950};
+        --wpde-btn-hover-bg: #{$gray-300};
+        --wpde-btn-hover-border-color: #{$gray-300};
+
+        --wpde-btn-active-color: #{$gray-950};
+        --wpde-btn-active-bg: #{$gray-100};
+        --wpde-btn-active-border-color: #{$gray-100};
     }
 }

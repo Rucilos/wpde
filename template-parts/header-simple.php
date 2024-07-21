@@ -14,7 +14,7 @@ $badge_link = get_field('header_badge_link', 'option');
         <div class="row justify-content-center align-items-center text-center">
             <div class="col-md-8">
                 <?php if (!empty($badge) || !empty($badge_link)) { ?>
-                <div class="py-1 px-3 mx-auto mb-2 rounded-4 border text-muted" style="max-width: max-content;">
+                <div class="py-1 px-3 mx-auto mb-3 rounded-4 border text-muted" style="max-width: max-content;">
                     <small>
                         <?php echo $badge; ?> 
                         <?php
@@ -44,7 +44,7 @@ $badge_link = get_field('header_badge_link', 'option');
                     $link_title = $link_btn['title'];
                     $link_target = $link_btn['target'] ? $link_btn['target'] : '_self';
                     ?>
-                    <a class="btn btn-dark me-3" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+                    <a class="btn btn-dark me-2" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
                 <?php } ?>
 
                 <?php
@@ -53,7 +53,7 @@ $badge_link = get_field('header_badge_link', 'option');
                     $link_title = $link['title'];
                     $link_target = $link['target'] ? $link['target'] : '_self';
                     ?>
-                    <a class="text-muted link-underline link-underline-opacity-0 fw-bold" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+                    <a class="btn" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
                 <?php } ?>
 
                 </div>

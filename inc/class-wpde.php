@@ -900,7 +900,7 @@ class WPDE {
         echo '<ul class="breadcrumb mb-0">';
 
         // Creating home link
-        echo "<li class='breadcrumb-item'><a href='" . get_home_url() . "'>" . $defaults['home'] . '</a></li>';
+        echo "<li class='breadcrumb-item'><a class='link-underline link-underline-opacity-0' href='" . get_home_url() . "'>" . $defaults['home'] . '</a></li>';
 
         // Single
         if (is_single()) {
@@ -910,7 +910,7 @@ class WPDE {
             if ($post_type != 'post') {
                 $post_type_object = get_post_type_object($post_type);
                 $post_type_link = get_post_type_archive_link($post_type);
-                echo "<li class='breadcrumb-item'><a href='" . $post_type_link . "'>" . $post_type_object->labels->name . '</a></li>';
+                echo "<li class='breadcrumb-item'><a class='link-underline link-underline-opacity-0' href='" . $post_type_link . "'>" . $post_type_object->labels->name . '</a></li>';
             }
 
             // Get categories
@@ -946,7 +946,7 @@ class WPDE {
                 echo $display_category;
                 echo "<li class='breadcrumb-item'>" . get_the_title() . '</li>';
             } elseif (!empty($cat_id)) {
-                echo "<li class='breadcrumb-item'><a href='" . $cat_link . "'>" . $cat_name . '</a></li>';
+                echo "<li class='breadcrumb-item'><a class='link-underline link-underline-opacity-0' href='" . $cat_link . "'>" . $cat_name . '</a></li>';
                 echo "<li class='breadcrumb-item'>" . get_the_title() . '</li>';
             } else {
                 echo '<li>' . get_the_title() . '</li>';
@@ -968,7 +968,7 @@ class WPDE {
                 if ($post_type != 'post') {
                     $post_type_object = get_post_type_object($post_type);
                     $post_type_link = get_post_type_archive_link($post_type);
-                    echo "<li class='breadcrumb-item'><a href='" . $post_type_link . "'>" . $post_type_object->labels->name . '</a></li>';
+                    echo "<li class='breadcrumb-item'><a class='link-underline link-underline-opacity-0' href='" . $post_type_link . "'>" . $post_type_object->labels->name . '</a></li>';
                 }
 
                 $custom_tax_name = get_queried_object()->name;
@@ -980,7 +980,7 @@ class WPDE {
                 if ($parent !== 0) {
                     $parent_category = get_category($parent);
                     $category_link = get_category_link($parent);
-                    echo "<li class='breadcrumb-item'><a href='" . esc_url($category_link) . "'>" . $parent_category->name . '</a></li>';
+                    echo "<li class='breadcrumb-item'><a class='link-underline link-underline-opacity-0' href='" . esc_url($category_link) . "'>" . $parent_category->name . '</a></li>';
                 }
                 echo "<li class='breadcrumb-item'>" . single_cat_title('', false) . '</li>';
 
@@ -998,15 +998,15 @@ class WPDE {
             } elseif (is_day()) {
                 // Day archive
                 // Year link
-                echo "<li><a href='" . get_year_link(get_the_time('Y')) . "'>" . get_the_time('Y') . ' Archiv</a></li>';
+                echo "<li><a class='link-underline link-underline-opacity-0' href='" . get_year_link(get_the_time('Y')) . "'>" . get_the_time('Y') . ' Archiv</a></li>';
                 // Month link
-                echo "<li><a href='" . get_month_link(get_the_time('Y'), get_the_time('m')) . "'>" . get_the_time('M') . ' Archiv</a></li>';
+                echo "<li><a class='link-underline link-underline-opacity-0' href='" . get_month_link(get_the_time('Y'), get_the_time('m')) . "'>" . get_the_time('M') . ' Archiv</a></li>';
                 // Day display
                 echo "<li class='breadcrumb-item'>" . get_the_time('jS') . ' ' . get_the_time('M') . ' Archiv</li>';
             } elseif (is_month()) {
                 // Month archive
                 // Year link
-                echo "<li class='breadcrumb-item'><a href='" . get_year_link(get_the_time('Y')) . "'>" . get_the_time('Y') . ' Archiv</a></li>';
+                echo "<li class='breadcrumb-item'><a class='link-underline link-underline-opacity-0' href='" . get_year_link(get_the_time('Y')) . "'>" . get_the_time('Y') . ' Archiv</a></li>';
                 // Month Display
                 echo "<li class='breadcrumb-item'>" . get_the_time('M') . ' Archiv</li>';
             } elseif (is_year()) {
@@ -1038,7 +1038,7 @@ class WPDE {
                     $parents = null;
                 }
                 foreach ($anc as $ancestor) {
-                    $parents .= "<li class='breadcrumb-item'><a href='" . get_permalink($ancestor) . "'>" . get_the_title($ancestor) . '</a></li>';
+                    $parents .= "<li class='breadcrumb-item'><a class='link-underline link-underline-opacity-0' href='" . get_permalink($ancestor) . "'>" . get_the_title($ancestor) . '</a></li>';
                 }
                 // Display parent pages
                 echo $parents;
