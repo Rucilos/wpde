@@ -82,7 +82,7 @@ WPDE()->register_taxonomy(
 
 -   **WordPress:** 6.0 or higher
 -   **PHP:** 7.0 or higher
--   **ACF PRO:** 5.0 or higher
+-   **ACF PRO:** 5.7.0 or higher
 
 ## Installation
 
