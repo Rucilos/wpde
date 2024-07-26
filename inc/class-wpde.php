@@ -532,8 +532,8 @@ class WPDE {
     public function add_options_page() {
         if ($this->is_acf()) {
             $parent = acf_add_options_page([
-                'page_title' => __('Theme Settings', 'wpde'),
-                'menu_title' => __('Theme Settings', 'wpde'),
+                'page_title' => 'WPDE',
+                'menu_title' => 'WPDE',
                 'menu_slug'  => $this->_token,
                 'capability' => 'manage_options',
                 'icon_url'   => 'dashicons-admin-settings',
@@ -624,7 +624,7 @@ class WPDE {
         if ($this->is_acf()) {
             $wp_admin_bar->add_node([
                 'id' => $this->_token,
-                'title' => "<span class='ab-icon'></span><span class='ab-label'>" . __('Theme Settings', 'wpde') . '</span>',
+                'title' => "<span class='ab-icon'></span><span class='ab-label'>" . __('WPDE', 'wpde') . '</span>',
                 'href' => $this->settings_url,
             ]);
         }
@@ -660,7 +660,7 @@ class WPDE {
 
         $content = '<p><strong>WordPress Development Environment (WPDE) v' . esc_html($this->_version) . '</strong></p>';
         $content .= '<p>';
-        $content .= '<a href="' . esc_url($this->settings_url) . '">' . __('Theme Settings', 'wpde') . '</a>';
+        $content .= '<a href="' . esc_url($this->settings_url) . '">' . __('WPDE', 'wpde') . '</a>';
         $content .= ' &#8212; ';
         $content .= '<a href="' . esc_url($this->settings_url) . '">' . __('GitHub', 'wpde') . '</a>';
         $content .= '</p>';

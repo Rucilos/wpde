@@ -22,10 +22,9 @@
 ## Version 1.6.0 (Fri, September 1 2024)
 
 -   🆕 **NEW** - Settings UI
--   🆕 **NEW** - Settings UI
--   🆕 **NEW** - Settings UI
--   🆕 **NEW** - Settings UI
--   🆕 **NEW** - Settings UI
+-   🆕 **NEW** - Header with reviews
+-   🆕 **NEW** - Logos section
+-   🆕 **NEW** - Posts section
 
 ## Version 1.5.0 (Fri, September 1 2024)
 
@@ -66,11 +65,9 @@
 
 ## Version 1.3.0 (Fri, September 1 2024)
 
--   🆕 **NEW** - Settings UI
--   🆕 **NEW** - Settings UI
--   🆕 **NEW** - Settings UI
--   🆕 **NEW** - Settings UI
--   🆕 **NEW** - Settings UI
+-   🆕 **NEW** - Bootstrap
+-   🆕 **NEW** - Bootstrap nav walker
+-   🆕 **NEW** - Font Awesome
 
 ## Version 1.2.4 (Fri, June 6 2024)
 
@@ -102,11 +99,11 @@
 
 ## Version 1.2.0 (Fri, September 1 2024)
 
--   🆕 **NEW** - Settings UI
--   🆕 **NEW** - Settings UI
--   🆕 **NEW** - Settings UI
--   🆕 **NEW** - Settings UI
--   🆕 **NEW** - Settings UI
+-   🆕 **NEW** - Webpack support
+-   🆕 **NEW** - Prettier support
+-   🆕 **NEW** - Sass support
+-   🆕 **NEW** - Lightbox support
+-   🆕 **NEW** - Editor config support
 
 ## Version 1.1.2 (Fri, June 6 2024)
 
@@ -124,11 +121,9 @@
 
 ## Version 1.1.0 (Fri, September 1 2024)
 
--   🆕 **NEW** - Settings UI
--   🆕 **NEW** - Settings UI
--   🆕 **NEW** - Settings UI
--   🆕 **NEW** - Settings UI
--   🆕 **NEW** - Settings UI
+-   🆕 **NEW** - Register post type
+-   🆕 **NEW** - Register taxonomy
+-   🆕 **NEW** - Cookie consent
 
 ## Version 1.0.6 (Fri, June 6 2024)
 
