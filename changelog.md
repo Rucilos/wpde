@@ -1,6 +1,6 @@
 ## Version 1.8.0 (Thu, July 26 2024)
 
--   🆕 ***NEW** - Number counter section
+-   🆕 **NEW** - Number counter section
 -   🆕 **NEW** - Reviews section
 
 ## Version 1.7.5 (Fri, July 22 2024)
