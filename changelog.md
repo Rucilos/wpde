@@ -1,10 +1,10 @@
 ## Version 1.1.0 (Fri, September 1 2024)
 
 -   🆕 **NEW** - Settings UI
--   ✅ **FIX** - Numerous bugs have been fixed.
--   🚀 **IMPROVEMENT** - Performance has been enhanced and code reviewed.
--   ⚠️ **SECURITY** - A vulnerability in some modules has been addressed.
--   📜 **DOCS** - Documentation has been updated.
+-   🆕 **NEW** - Settings UI
+-   🆕 **NEW** - Settings UI
+-   🆕 **NEW** - Settings UI
+-   🆕 **NEW** - Settings UI
 
 ## Version 1.0.2 (Fri, June 6 2024)
 
