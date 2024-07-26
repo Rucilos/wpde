@@ -2,9 +2,9 @@
 Contributors: Jindřich Ručil
 Donate link: https://jindrichrucil.com
 Requires at least: 6.0
-Tested up to: 6.5.3
+Tested up to: 6.6.1
 Requires PHP: 7.4
-Stable tag: 1.0.0
+Stable tag: 1.8.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Tags: wpde, wordpress, wp, dev, development, environment, env, template, theme, responsive, light, dark, bootstrap, fontawesome, webpack, sass, cookieconsent, prettier, magnificpopup, editorconfig
