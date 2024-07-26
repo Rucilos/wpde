@@ -94,7 +94,7 @@ WPDE()->register_taxonomy(
 
 ### Manual Install
 
-1. **Download** "WPDE"
+1. **Download** `wpde.zip`
 2. **Extract & Upload** "wpde" folder to /wp-content/themes/
 3. **Visit** Appearance > Themes > Search for WPDE > Activate
 4. **Click** on the new menu item "Theme Settings" for better control of theme
