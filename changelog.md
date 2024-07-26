@@ -129,8 +129,8 @@
 
 ## Version 1.1.0 (Tue, June 11 2024)
 
--   🆕 **NEW** - Register post type
--   🆕 **NEW** - Register taxonomy
+-   🆕 **NEW** - Method for registering custom post type.
+-   🆕 **NEW** - Method for registering custom taxonomy.
 -   🆕 **NEW** - Cookie consent
 
 ## Version 1.0.6 (Fri, July 19 2024)
