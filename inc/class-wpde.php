@@ -565,7 +565,10 @@ class WPDE {
                 $html .= '</a>';
     
                 $html .= '<ul class="navbar-collapse">';
-                    $html .= '<li class="nav-item"><a href="https://github.com/Rucilos/wpde/" class="' . WPDE()->_token . '-btn"><img src="'. get_template_directory_uri() .'/img/github.svg" class="ico" />GitHub</a></li>';
+                    $html .= '<li class="nav-item"><a href="https://github.com/Rucilos/wpde/" class="' . WPDE()->_token . '-btn"><img src="'. get_template_directory_uri() .'/img/github.svg" class="ico" /></a></li>';
+                    $html .= '<li class="nav-item"><a href="https://github.com/Rucilos/wpde/" class="' . WPDE()->_token . '-btn"><img src="'. get_template_directory_uri() .'/img/link.svg" class="ico" /></a></li>';
+                    $html .= '<li class="nav-item"><a href="https://github.com/Rucilos/wpde/" class="' . WPDE()->_token . '-btn"><img src="'. get_template_directory_uri() .'/img/download.svg" class="ico" /></a></li>';
+                    $html .= '<li class="nav-item"><a href="https://github.com/Rucilos/wpde/" class="' . WPDE()->_token . '-btn"><img src="'. get_template_directory_uri() .'/img/demo.svg" class="ico" /></a></li>';
                 $html .= '</ul>';
     
             $html .= '</nav>';
