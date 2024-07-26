@@ -1,6 +1,6 @@
 ## Version 1.8.0 (Thu, July 26 2024)
 
--   🆕 **NEW** - Counter section
+-   🆕 **NEW** - Number counter section
 -   🆕 **NEW** - Reviews section
 
 ## Version 1.7.5 (Fri, July 22 2024)
@@ -19,7 +19,7 @@
 
 ## Version 1.7.3 (Fri, July 22 2024)
 
--   ✅ **FIX** - Numerous bugs have been fixed.
+-   ✅ ***FIX*** - Numerous bugs have been fixed.
 -   🚀 **IMPROVEMENT** - Performance has been enhanced and code reviewed.
 -   ⚠️ **SECURITY** - A vulnerability in some modules has been addressed.
 -   📜 **DOCS** - Documentation has been updated.
