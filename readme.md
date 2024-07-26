@@ -88,15 +88,15 @@ WPDE()->register_taxonomy(
 
 ### Install from WordPress
 
-1. **Download** "WPDE"
-2. **Visit** Appearance > Themes > Add New Theme > Upload Theme > wpde.zip > Install Now > Activate
+1. **Download** `wpde.zip`
+2. **Visit** Appearance > Themes > Add New Theme > Upload Theme > `wpde.zip` > Install Now > Activate
 3. **Click** on the new menu item "Theme Settings" for better control of theme
 
 ### Manual Install
 
 1. **Download** `wpde.zip`
-2. **Extract & Upload** "wpde" folder to /wp-content/themes/
-3. **Visit** Appearance > Themes > Search for WPDE > Activate
+2. **Extract & Upload** `wpde` folder to /wp-content/themes/
+3. **Visit** Appearance > Themes > Search for `WPDE` > Activate
 4. **Click** on the new menu item "Theme Settings" for better control of theme
 
 ## License
