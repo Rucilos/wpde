@@ -25,7 +25,7 @@ require_once 'inc/class-wpde-taxonomy.php';
  * @since  1.0.0
  */
 function WPDE() {
-    $instance = WPDE::instance(__FILE__, '1.6.3');
+    $instance = WPDE::instance(__FILE__, '1.7.0');
 
     return $instance;
 } // END WPDE()
