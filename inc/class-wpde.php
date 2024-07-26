@@ -133,7 +133,7 @@ class WPDE {
      * @access public
      * @since 1.0.0
      */
-    public function __construct($file = '', $version = '1.7.0') {
+    public function __construct($file = '', $version = '1.8.0') {
         $this->_version = $version;
         $this->_token = 'wpde';
         $this->text_domain = 'wpde';

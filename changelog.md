@@ -1,3 +1,43 @@
+## Version 1.8.0 (Thu, July 26 2024)
+
+-   🆕 **NEW** - Counter section
+-   🆕 **NEW** - Reviews section
+
+## Version 1.7.5 (Fri, July 22 2024)
+
+-   ✅ **FIX** - Numerous bugs have been fixed.
+-   🚀 **IMPROVEMENT** - Performance has been enhanced and code reviewed.
+-   ⚠️ **SECURITY** - A vulnerability in some modules has been addressed.
+-   📜 **DOCS** - Documentation has been updated.
+
+## Version 1.7.4 (Fri, July 22 2024)
+
+-   ✅ **FIX** - Numerous bugs have been fixed.
+-   🚀 **IMPROVEMENT** - Performance has been enhanced and code reviewed.
+-   ⚠️ **SECURITY** - A vulnerability in some modules has been addressed.
+-   📜 **DOCS** - Documentation has been updated.
+
+## Version 1.7.3 (Fri, July 22 2024)
+
+-   ✅ **FIX** - Numerous bugs have been fixed.
+-   🚀 **IMPROVEMENT** - Performance has been enhanced and code reviewed.
+-   ⚠️ **SECURITY** - A vulnerability in some modules has been addressed.
+-   📜 **DOCS** - Documentation has been updated.
+
+## Version 1.7.2 (Mon, July 15 2024)
+
+-   ✅ **FIX** - Numerous bugs have been fixed.
+-   🚀 **IMPROVEMENT** - Performance has been enhanced and code reviewed.
+-   ⚠️ **SECURITY** - A vulnerability in some modules has been addressed.
+-   📜 **DOCS** - Documentation has been updated.
+
+## Version 1.7.1 (Tue, July 2 2024)
+
+-   ✅ **FIX** - Numerous bugs have been fixed.
+-   🚀 **IMPROVEMENT** - Performance has been enhanced and code reviewed.
+-   ⚠️ **SECURITY** - A vulnerability in some modules has been addressed.
+-   📜 **DOCS** - Documentation has been updated.
+
 ## Version 1.7.0 (Thu, July 26 2024)
 
 -   🆕 **NEW** - Settings UI
@@ -129,8 +169,8 @@
 
 ## Version 1.1.0 (Tue, June 11 2024)
 
--   🆕 **NEW** - Method for registering custom post type.
--   🆕 **NEW** - Method for registering custom taxonomy.
+-   🆕 **NEW** - Method for registering post type.
+-   🆕 **NEW** - Method for registering taxonomy.
 -   🆕 **NEW** - Cookie consent
 
 ## Version 1.0.6 (Fri, July 19 2024)
