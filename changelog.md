@@ -79,8 +79,7 @@
 
 -   🆕 **NEW** - 404 page
 -   🆕 **NEW** - Archive, author, category, search, tag, and taxonomy page template
--   🆕 **NEW** - Single post page
--   🆕 **NEW** - Single page template
+-   🆕 **NEW** - Single post/page template
 -   🆕 **NEW** - Footer
 -   🆕 **NEW** - Navbar
 

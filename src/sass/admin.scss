@@ -5,8 +5,18 @@
  * Released under the MIT license
  */
 :root {
-    --wpde-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
-    --wpde-dark: #3c434a;
+    --wpde-shadow: rgba(0, 0, 0, .1) 0px 1px 2px 0px;
+    --wpde-primary: #0ea5e9;
+    --wpde-white: #ffffff;
+    --wpde-border: #d5d9dd;
+    --wpde-nav-link: #0f172a;
+    --wpde-navbar-bg: #020617;
+    --wpde-success-bg: #edf7ef;
+    --wpde-success-color: #344054;
+    --wpde-success-border: #b6deb9;
+    --wpde-success-icon-bg: #2ecc71;
+    --wpde-notice-dismiss-color: #667085;
+    --wpde-notice-dismiss-hover-color: #3c434a;
 }
 
 // Adminbar item
@@ -29,8 +39,8 @@ body.wp-admin #wpadminbar {
 }
 
 #wpadminbar {
-    opacity: 0.25;
-    transition: opacity 0.2s ease-in;
+    opacity: .25;
+    transition: opacity .2s ease-in;
 
     &:hover {
         opacity: 1;
@@ -39,14 +49,19 @@ body.wp-admin #wpadminbar {
 
 // Options page
 .toplevel_page_wpde {
+    // Screen options btn
+    #show-settings-link {
+        display: none;
+    }
+
     // Navbar
     .wpde-navbar {
         position: relative;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        background: #ffffff;
-        padding: 8px 20px;
+        background: var(--wpde-white);
+        padding: 15px 20px;
         margin-left: -20px;
         box-shadow: var(--wpde-shadow);
         z-index: 1;
@@ -60,7 +75,7 @@ body.wp-admin #wpadminbar {
             text-decoration: none;
             font-size: 24px;
             font-weight: 700;
-            color: var(--wpde-dark);
+            color: var(--wpde-notice-dismiss-hover-color);
         }
 
         .navbar-collapse {
@@ -68,20 +83,53 @@ body.wp-admin #wpadminbar {
             align-items: center;
             margin: 0;
 
-            li {
+            .nav-item {
                 margin: 0 6px;
 
-                a {
-                    padding: 5px 8px;
-                    font-size: 14px;
-                    font-weight: 500;
-                    text-decoration: none;
+                &:last-child {
+                    margin-right: 0;
+                }
 
-                    &.button {
-                        padding: 0 8px;
+                .nav-link {
+                    display: flex;
+                    align-items: center;
+                    font-size: 14px;
+                    color: var(--wpde-nav-link);
+                    text-decoration: none;
+                    border-bottom: 2px solid transparent;
+
+                    &:hover {
+                        color: var(--wpde-primary);
                     }
                 }
             }
+        }
+    }
+
+    // Icons
+    .ico {
+        width: 16px;
+        height: auto;
+        margin-right: 6px;
+    }
+
+    // Buttons
+    .wpde-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 6px 20px;
+        border-radius: 25px;
+        border: 2px solid var(--wpde-border);
+        color: #1d65c1;
+        font-size: 15px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all .2 ease;
+
+        &:hover {
+            border-color: #1a67d3;
+            color: #1d65c1;
         }
     }
 
@@ -94,19 +142,20 @@ body.wp-admin #wpadminbar {
 
     // Success
     .notice-success {
-        background-color: #edf7ef;
-        border-color: #b6deb9;
+        background: var(--wpde-success-bg);
+        border-color: var(--wpde-success-border);
 
         p {
             display: flex;
             align-items: center;
+            color: var(--wpde-success-color);
 
             &:before {
                 content: '\f147';
                 font: normal 16px / 20px dashicons;
                 margin-right: 10px;
-                background-color: #2ecc71;
-                color: #fff;
+                background-color: var(--wpde-success-icon-bg);
+                color: var(--wpde-white);
                 padding: 0px;
                 height: 22px;
                 width: 22px;
@@ -126,44 +175,11 @@ body.wp-admin #wpadminbar {
         &:before {
             content: '\f335';
             font: normal 24px / 22px dashicons;
-            color: #667085;
+            color: var(--wpde-notice-dismiss-color);
         }
 
         &:hover:before {
-            color: var(--wpde-dark);
-        }
-    }
-
-    // Postbox
-    .postbox {
-        border-radius: 9px;
-        box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
-        border-color: #d5d9dd;
-
-        .postbox-header {
-            border-color: #d5d9dd;
-        }
-    }
-
-    // Postbox header
-    #poststuff h2 {
-        padding: 16px 12px;
-        font-size: 18px;
-    }
-
-    // Submit
-    #submitdiv {
-        border: 0;
-        box-shadow: none;
-
-        .postbox-header {
-            display: none;
-        }
-
-        #major-publishing-actions {
-            padding: 0;
-            border: 0;
-            background: #f0f0f1;
+            color: var(--wpde-notice-dismiss-hover-color);
         }
     }
 
@@ -171,4 +187,79 @@ body.wp-admin #wpadminbar {
     .wrap h1 {
         color: transparent;
     }
-}
+
+    // Postbox wrap
+    .poststuff {
+        position: relative;
+    }
+
+    // Submit postbox
+    #postbox-container-1 {
+        position: absolute;
+
+        .postbox {
+            margin-bottom: 0;
+            box-shadow: none;
+            border: 0;
+            background: transparent;
+
+            .postbox-header {
+                display: none;
+            }
+
+            #major-publishing-actions {
+                border: 0;
+                background: transparent;
+
+                .spinner {
+                    position: relative;
+                    z-index: 1;
+                    margin: 10px 5px;
+
+                    @media only screen and (max-width: 600px) {
+                        margin-bottom: 0;
+                        margin-top: -12px;
+                    }
+                }
+
+                .button {
+                    position: relative;
+                    margin-top: 2px;
+                    padding: 0 45px;
+                    font-size: 15px;
+                    font-weight: 600;
+                    color: var(--wpde-success-color);
+                    background-color: var(--wpde-success-bg);
+                    border-color: var(--wpde-success-border);
+                    z-index: 1;
+
+                    @media only screen and (max-width: 600px) {
+                        margin-top: -6px;
+                    }
+                }
+            }
+        }
+    }
+
+    // Main postbox
+    #postbox-container-2 {
+        .postbox {
+            border-radius: 9px;
+            box-shadow: var(--wpde-shadow);
+            border-color: var(--wpde-border);
+
+            .postbox-header {
+                border-color: var(--wpde-border);
+
+                h2 {
+                    font-size: 18px;
+                    padding: 16px 12px;
+                }
+
+                .handle-actions {
+                    display: none;
+                }
+            }
+        }
+    }
+} // END toplevel_page_wpde

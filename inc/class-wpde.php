@@ -561,12 +561,11 @@ class WPDE {
             $html  = '<nav id="' . WPDE()->_token . '-navbar" class="' . WPDE()->_token . '-navbar">';
     
                 $html .= '<a href="admin.php?page=' . WPDE()->_token . '" class="navbar-brand">';
-                    $html .= 'WPDE';
+                    $html .= '<img src="https://cdn.df-barber.cz/apiru/brands/primary.svg" width="100px" height="auto" alt="WPDE Logo">';
                 $html .= '</a>';
     
                 $html .= '<ul class="navbar-collapse">';
-                    $html .= '<li><a href="https://jindrichrucil.com">Website</a></li>';
-                    $html .= '<li><a href="https://github.com/Rucilos/wpde/" class="button">GitHub</a></li>';
+                    $html .= '<li class="nav-item"><a href="https://github.com/Rucilos/wpde/" class="' . WPDE()->_token . '-btn"><img src="'. get_template_directory_uri() .'/img/github.svg" class="ico" />GitHub</a></li>';
                 $html .= '</ul>';
     
             $html .= '</nav>';
