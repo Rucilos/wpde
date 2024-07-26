@@ -1,22 +1,32 @@
 <?php
-$title = get_field('header_title', 'option');
-$description = get_field('header_description', 'option');
-$link_btn = get_field('header_link_btn', 'option');
-$link = get_field('header_link', 'option');
-
-$badge = get_field('header_badge', 'option');
-$badge_link = get_field('header_badge_link', 'option');
-
+$group = get_field('header_metadata', 'option');
+if ($group) {
+    $title = $group['title'];
+    $description = $group['description'];
+    $link = $group['link'];
+    $link_2 = $group['link_2'];
+    $badge_text = $group['badge_text'];
+    $badge_link = $group['badge_link'];
+}
 ?>
 
 <header>
-    <div class="container my-5 py-5">
+    <div class="gradient-wrap">
+        <div class="gradient cyan"></div>
+        <div class="gradient indigo"></div>
+        <div class="gradient teal"></div>
+    </div>
+    <div class="container py-6">
         <div class="row justify-content-center align-items-center text-center">
             <div class="col-md-8">
-                <?php if (!empty($badge) || !empty($badge_link)) { ?>
+                <?php if (!empty($badge_text) || !empty($badge_link)) { ?>
                 <div class="py-1 px-3 mx-auto mb-3 rounded-4 border text-muted" style="max-width: max-content;">
                     <small>
-                        <?php echo $badge; ?> 
+                        <?php 
+                        if(!empty($badge_text)) {
+                            echo $badge_text; 
+                        }
+                        ?> 
                         <?php
                         if( $badge_link ) {
                             $link_url = $badge_link['url'];
@@ -36,26 +46,25 @@ $badge_link = get_field('header_badge_link', 'option');
                     <p><?php echo $description; ?></p>
                 <?php } ?>
 
-                <?php if (!empty($link) || !empty($link_btn)) { ?>
+                <?php if (!empty($link) || !empty($link_2)) { ?>
                 <div class="d-flex justify-content-center align-items-center">
-                <?php
-                if( $link_btn ) {
-                    $link_url = $link_btn['url'];
-                    $link_title = $link_btn['title'];
-                    $link_target = $link_btn['target'] ? $link_btn['target'] : '_self';
-                    ?>
-                    <a class="btn btn-dark me-2" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
-                <?php } ?>
-
                 <?php
                 if( $link ) {
                     $link_url = $link['url'];
                     $link_title = $link['title'];
                     $link_target = $link['target'] ? $link['target'] : '_self';
                     ?>
-                    <a class="btn border-0" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+                    <a class="btn btn-dark me-2" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
                 <?php } ?>
 
+                <?php
+                if( $link_2 ) {
+                    $link_url = $link_2['url'];
+                    $link_title = $link_2['title'];
+                    $link_target = $link_2['target'] ? $link_2['target'] : '_self';
+                    ?>
+                    <a class="btn border-0" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+                <?php } ?>
                 </div>
                 <?php } ?>
 

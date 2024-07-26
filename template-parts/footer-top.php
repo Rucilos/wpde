@@ -1,17 +1,20 @@
+<?php
+$logo = get_field('wpde_logo', 'option');
+if ($logo) {
+    $logo_image = $logo['image'];
+    $logo_width = $logo['width'] ? $logo['width'] : 100;
+    $logo_text = $logo['text'];
+}
+?>
 <div class="container-fluid px-0 pt-5 pb-3">
 	<div class="container">
 		<div class="row">
 		<div class="col-md-4 mb-3">
 			<a class="d-block mb-2" href="<?php echo home_url(); ?>">
-			<?php 
-			$logo = get_field('logo', 'option');
-			$logo_text = get_field('logo_text', 'option');
-			if (!empty($logo)) {
-				$logo_width = get_field('logo_width', 'option') ? get_field('logo_width', 'option') : '100'; 
-			?>
-				<img src="<?php echo esc_url($logo['url']); ?>" alt="Logo" width="<?php echo $logo_width; ?>" height="auto"/>
+			<?php if (!empty($logo_image)) { ?>
+            <img src="<?php echo esc_url($logo_image['url']); ?>" alt="Logo" width="<?php echo $logo_width; ?>" height="auto"/>
 			<?php
-			} elseif(!empty($title)) {
+			} elseif(!empty($logo_text)) {
 				echo $logo_text;
 			} else {
 				echo get_bloginfo('name');

@@ -1,7 +1,12 @@
 <?php
-$navbar = get_field('navbar', 'option'); 
+$navbar = get_field('wpde_navbar', 'option'); 
+if($navbar) {
+    $navbar_layout = $navbar['layout'];
+    $navbar_link = $navbar['navbar_link'];
+    $navbar_btn = $navbar['navbar_btn'];
+}
 
-switch ($navbar) {
+switch ($navbar_layout) {
     case 'Fixed':
         $navbar_class = 'position-fixed top-0 start-0 end-0';
         $helper_div = true;
@@ -10,7 +15,6 @@ switch ($navbar) {
         $navbar_class = 'position-fixed top-0 start-0 end-0 headroom';
         $helper_div = true;
         break;
-    case '':
     case 'Static':
     default:
         $navbar_class = '';
@@ -18,20 +22,28 @@ switch ($navbar) {
         break;
 }
 
-if($helper_div) {
-    echo '<div class="w-100" style="height: 64px;"></div>';
+$logo = get_field('wpde_logo', 'option');
+if ($logo) {
+    $logo_image = $logo['image'];
+    $logo_width = $logo['width'] ? $logo['width'] : 100;
+    $logo_text = $logo['text'];
+}
+
+$options = get_field('wpde_options', 'option');
+if ($options) {
+    $search_form = $options['search_form'];
+    $theme_toggler = $options['theme_toggler'];
 }
 ?>
-<nav class="navbar navbar-expand-lg bg-navbar border-bottom z-3 <?php echo $navbar_class; ?>">
+
+<?php if($helper_div) { ?>
+    <div class="w-100" style="height: 57px;"></div>
+<?php } ?>
+<nav class="navbar navbar-expand-lg bg-blur border-bottom z-3 <?php echo $navbar_class; ?>">
 	<div class="container">
 		<a class="navbar-brand d-flex align-items-center gap-1" href="<?php echo home_url(); ?>">
-        <?php 
-        $logo = get_field('logo', 'option');
-        $logo_text = get_field('logo_text', 'option');
-        if (!empty($logo)) {
-            $logo_width = get_field('logo_width', 'option') ? get_field('logo_width', 'option') : '100'; 
-        ?>
-            <img src="<?php echo esc_url($logo['url']); ?>" alt="Logo" width="<?php echo $logo_width; ?>" height="auto"/>
+        <?php if (!empty($logo_image)) { ?>
+            <img src="<?php echo esc_url($logo_image['url']); ?>" alt="Logo" width="<?php echo $logo_width; ?>" height="auto"/>
         <?php
         } elseif(!empty($logo_text)) {
             echo $logo_text;
@@ -42,13 +54,11 @@ if($helper_div) {
 		</a>
 		<div class="d-lg-none d-flex ms-auto">
             <?php 
-            $theme_toggler = get_field('theme_toggler', 'option');
             if(wp_is_mobile() && empty($theme_toggler)) {
                 WPDE()->theme();
             }
             ?>
             <?php
-            $search_form = get_field('search_form', 'option');
             if (empty($search_form)) {
             ?>
 			<button class="navbar-toggler border-0" type="button" data-bs-toggle="modal" data-bs-target="#modal-searchform">
@@ -91,26 +101,24 @@ if($helper_div) {
 		</div>
 		<div class="d-none d-lg-flex ms-1">
             <?php 
-            $link = get_field('navbar_link_unique', 'option');
-            $link2 = get_field('navbar_link_btn', 'option');
-            if($link || $link2) {
+            if(!empty($navbar_link) || !empty($navbar_btn)) {
             ?>
             <ul class="navbar-nav border-start align-items-center ps-3 ms-3">
             <?php 
-            if( $link ) {
-                $link_url = $link['url'];
-                $link_title = $link['title'];
-                $link_target = $link['target'] ? $link['target'] : '_self';
+            if( $navbar_link ) {
+                $link_url = $navbar_link['url'];
+                $link_title = $navbar_link['title'];
+                $link_target = $navbar_link['target'] ? $navbar_link['target'] : '_self';
                 ?>
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
                 </li>
             <?php } ?>
             <?php
-            if( $link2 ) {
-                $link_url = $link2['url'];
-                $link_title = $link2['title'];
-                $link_target = $link2['target'] ? $link2['target'] : '_self';
+            if( $navbar_btn ) {
+                $link_url = $navbar_btn['url'];
+                $link_title = $navbar_btn['title'];
+                $link_target = $navbar_btn['target'] ? $navbar_btn['target'] : '_self';
                 ?>
                 <li class="nav-item ms-3">
                     <a class="btn btn-dark" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">

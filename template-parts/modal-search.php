@@ -1,3 +1,11 @@
+<?php
+$options = get_field('wpde_options', 'option');
+if ($options) {
+    $search_form = $options['search_form'];
+}
+
+if (empty($search_form)) { 
+?>
 <div class="modal fade" id="modal-searchform" tabindex="-1" aria-labelledby="modal-searchform-label" aria-hidden="true">
 	<div class="modal-dialog">
 		<div class="modal-content">
@@ -11,3 +19,4 @@
 		</div>
 	</div>
 </div>
+<?php } ?>

@@ -1,12 +1,14 @@
-<?php if( have_rows('social_media', 'option') ) { ?>
+<?php if( have_rows('wpde_social_media', 'option') ) { ?>
 	<div class="d-flex align-items-center gap-4">
 		<ul class="list-unstyled d-flex align-items-center flex-wrap flex-md-nowrap column-gap-3 mb-0">
         <?php 
-        while( have_rows('social_media', 'option') ) { the_row();
+        while( have_rows('wpde_social_media', 'option') ) { the_row();
 
             $link = get_sub_field('link');
-            $link_url = $link['url'];
-            $link_target = $link['target'] ? $link['target'] : '_self';
+            if($link) {
+                $link_url = $link['url'];
+                $link_target = $link['target'] ? $link['target'] : '_self';
+            }
             $icon = get_sub_field('icon');
 
             switch ($icon) {

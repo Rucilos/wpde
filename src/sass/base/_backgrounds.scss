@@ -1,4 +1,44 @@
-.bg-navbar {
+.bg-blur {
     backdrop-filter: blur(6px);
-    background-color: var(--wpde-body-bg-blur-rgb);
+    background-color: var(--wpde-bg-blur-rgb);
+}
+
+.gradient-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    overflow: hidden;
+
+    .gradient {
+        width: 300px;
+        height: 2000px;
+        margin-top: -150px;
+        pointer-events: none;
+        transform: rotate(-45deg);
+
+        &:nth-of-type(even) {
+            margin-left: -60px;
+            margin-right: -60px;
+        }
+
+        &.cyan {
+            background: var(--wpde-bg-gradient-cyan);
+        }
+
+        &.indigo {
+            background: var(--wpde-bg-gradient-indigo);
+        }
+
+        &.teal {
+            background: var(--wpde-bg-gradient-teal);
+        }
+    }
 }

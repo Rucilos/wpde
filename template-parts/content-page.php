@@ -19,9 +19,17 @@
         <div class="row">
             <div class="col-md-6">
             <?php
-            $contact_form = get_field('contact_form', 'option');
-            $map = get_field('map', 'option');
-            $map_link = get_field('map_link', 'option');
+            $metadata = get_field('wpde_metadata', 'option');
+            if ($metadata) {
+                $gmap = $metadata['google_map'];
+            }
+
+            $options = get_field('wpde_options', 'option');
+            if ($options) {
+                $contact_form = $options['contact_form'];
+                $google_map = $options['google_map'];
+            }
+
             if(empty($contact_form)) {
                 echo do_shortcode('[contact-form-7 id="2455da2" title="Contact form 1"]');
             }
@@ -29,8 +37,8 @@
             </div>
             <div class="col-md-6">
             <?php
-            if(empty($map)) {
-            echo '<iframe src="' . $map_link . '" width="100%" height="350" class="rounded-4" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>';
+            if(empty($google_map)) {
+            echo '<iframe src="' . $gmap . '" width="100%" height="350" class="rounded-4" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>';
             }
             ?>
             </div>

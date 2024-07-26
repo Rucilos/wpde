@@ -1,13 +1,16 @@
+<?php
+$metadata = get_field('wpde_metadata', 'option');
+if ($metadata) {
+    $email = $metadata['email'];
+    $phone = $metadata['phone'];
+}
+?>
 <div class="container-fluid px-0">
     <div class="container">
         <div class="d-flex align-items-center justify-content-between mt-3">
             <div>
                 <?php WPDE()->breadcrumbs(); ?>
             </div>
-            <?php 
-            $email = get_field('email', 'option');
-            $phone = get_field('phone', 'option');
-            ?>
             <?php if ( !empty($email) && !empty($phone) ) { ?>
             <ul class="navbar-nav list-unstyled d-flex flex-row align-items-center justify-content-end flex-wrap flex-md-nowrap column-gap-3 mb-0">
                 <?php if ( !empty($email) ) { ?>

@@ -511,6 +511,7 @@ class WPDE {
         ]);
 
         // Register custom image sizes
+        add_image_size('avatar', 48, 48, true); 
         add_image_size('header', 1920, 550, true); 
         add_image_size('header-sm', 500, 250, true); 
 
@@ -533,10 +534,11 @@ class WPDE {
             $parent = acf_add_options_page([
                 'page_title' => __('Theme Settings', 'wpde'),
                 'menu_title' => __('Theme Settings', 'wpde'),
-                'menu_slug' => $this->_token,
+                'menu_slug'  => $this->_token,
                 'capability' => 'manage_options',
-                'icon_url' => 'dashicons-admin-settings',
-                'position' => 9999,
+                'icon_url'   => 'dashicons-admin-settings',
+                'position'   => 9999,
+                'layout'     => '1',
             ]);        
         }
     } // END add_options_page
@@ -585,7 +587,7 @@ class WPDE {
      * @return  void
      */
     public function admin_footer_text($text) {
-        echo $text . ' ' . __('Thank you for choosing', 'wpde') . ' <a href="https://github.com/Rucilos/wpde/" target="_blank">WPDE</a>.';
+        echo $text . ' <i>' . __('We appreciate your choice of', 'wpde') . ' <a href="https://github.com/Rucilos/wpde/" target="_blank">WPDE</a>.</i>';
     }
    
    /**
@@ -780,7 +782,7 @@ class WPDE {
             $user_details['name'] = get_the_author_meta('user_nicename', $user_id);
         }
 
-        if (function_exists('get_field')) {
+        if ($this->is_acf()) {
             $user_details['avatar'] = get_field('user_avatar', 'user_' . $user_id);
             $user_details['job'] = get_field('user_job', 'user_' . $user_id);
         }

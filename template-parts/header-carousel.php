@@ -1,20 +1,23 @@
-<?php if (have_rows('carousel', 'option')) { ?>
+<?php if (have_rows('wpde_header_carousel', 'option')) { ?>
 	<div id="carouselExampleCaptions" class="carousel slide m-3 m-md-5">
-		<div class="carousel-indicators">
-			<?php
+		<?php
+		$slide_count = count(get_field('wpde_header_carousel', 'option'));
+		if ($slide_count > 1) {
+			echo '<div class="carousel-indicators">';
 			$slide_index = 0;
-			while (have_rows('carousel', 'option')) {
+			while (have_rows('wpde_header_carousel', 'option')) {
 				the_row(); ?>
 				<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="<?php echo $slide_index; ?>" class="<?php echo $slide_index == 0 ? 'active' : ''; ?>" aria-current="<?php echo $slide_index == 0 ? 'true' : 'false'; ?>" aria-label="Slide <?php echo $slide_index + 1; ?>"></button>
-			<?php 
+				<?php
 				$slide_index++;
 			}
-			?>
-		</div>
+			echo '</div>';
+		}
+		?>
 		<div class="carousel-inner rounded-4 shadow-lg">
 			<?php
 			$slide_index = 0;
-			while (have_rows('carousel', 'option')) {
+			while (have_rows('wpde_header_carousel', 'option')) {
 				the_row();
 				$image = get_sub_field('image');
 				if($image) {

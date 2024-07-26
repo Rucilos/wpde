@@ -106,3 +106,7 @@ Distributed under the **MIT** License. See [LICENSE](https://github.com/rucilos/
 ## Credits
 
 © 2024 Created by [Jindřich Ručil](https://jindrichrucil.com)
+
+## Changelog
+
+See [CHANGELOG](https://github.com/rucilos/wpde/blob/master/changelog.md) for more information.

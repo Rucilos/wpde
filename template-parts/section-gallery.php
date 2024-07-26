@@ -1,24 +1,27 @@
-<?php if (have_rows('icons', 'option')) { ?>
+<?php if (have_rows('wpde_gallery_items', 'option')) { ?>
     <div class="container-fluid px-0 py-6">
         <div class="container">
-            <?php 
-            $section_title = get_field('gallery_title', 'option');
-            $section_subtitle = get_field('gallery_subtitle', 'option');
-            $section_description = get_field('gallery_description', 'option');
+            <?php
+            $gallery = get_field('wpde_gallery', 'option');
+            if ($gallery) {
+                $title = $gallery['title']; 
+                $subtitle = $gallery['subtitle']; 
+                $description = $gallery['description']; 
+                $grid = $gallery['grid']; 
+            } else {
+                $grid = 3;
+            }
             ?>
-            <?php if ( !empty($section_title) || !empty($section_subtitle) || !empty($section_description) ) { ?>
+            <?php if ( !empty($title) || !empty($subtitle) || !empty($description) ) { ?>
                 <div class="pb-5">
-                    <small class="text-primary"><strong><?php echo $section_title; ?></strong></small>	
-                    <h1 class="mb-2"><?php echo $section_subtitle; ?></h1>
-                    <p class="text-muted"><?php echo $section_description; ?></p>
+                    <small class="text-primary"><strong><?php echo $title; ?></strong></small>	
+                    <h1 class="mb-2"><?php echo $subtitle; ?></h1>
+                    <p class="text-muted"><?php echo $description; ?></p>
                 </div>
             <?php } ?>
             <div class="row g-3 mfp-init">
             <?php 
-            $images = get_field('gallery', 'option');
-            $grid = get_field('gallery_grid', 'option');
-            $grid = !empty($grid) ? $grid : 3;
-            
+            $images = get_field('wpde_gallery_items', 'option');
             if( $images ) { ?>
                 <?php foreach( $images as $image ) { ?>
                         <a class="col-md-<?php echo $grid; ?> mfp-item" href="<?php echo esc_url($image['url']); ?>">

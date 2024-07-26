@@ -35,15 +35,18 @@
             if (have_posts()) {
                 while (have_posts()) {
                     the_post();
-                    $grid = get_field('grid_taxonomy', 'option');
-                    $grid = !empty($grid) ? $grid : 4;
-
+                    $grid = get_field('wpde_grid', 'option');
+                    if ($grid) {
+                        $grid = $grid['taxonomy'];
+                    } else {
+                        $grid = 4;
+                    }
                     echo '<div class="col-md-' . $grid . '">';
                         get_template_part('template-parts/content', 'post');
                     echo '</div>';
                 }
-                wp_reset_postdata();
                 get_template_part('template-parts/content', 'pagination');
+                wp_reset_postdata();
             } else {
                 $html = '<div class="col-lg-12">';
                     $html .= '<p class="text-danger mb-0">' . __('Sorry, no data was found in this taxonomy.', 'wpde') . '</p>';
