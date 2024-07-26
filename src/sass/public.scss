@@ -5,19 +5,19 @@
  * Released under the MIT license
  */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-@import 'utils/_bootstrap';
+@import 'utils/bootstrap';
 
-@import 'layout/_carousel';
-@import 'layout/_navbar';
-@import 'layout/_pagination';
-@import 'layout/_toast';
+@import 'layout/carousel';
+@import 'layout/navbar';
+@import 'layout/pagination';
+@import 'layout/toast';
 
-@import 'base/_backgrounds';
-@import 'base/_dropdown';
-@import 'base/_forms';
-@import 'base/_modal';
+@import 'base/backgrounds';
+@import 'base/dropdown';
+@import 'base/forms';
+@import 'base/modal';
 
-@import 'components/_cookies';
-@import 'components/_recaptcha';
+@import 'components/cookies';
+@import 'components/recaptcha';
 
 @import 'admin';
