@@ -2,30 +2,31 @@
 $logo = get_field('wpde_logo', 'option');
 if ($logo) {
     $logo_image = $logo['image'];
-    $logo_width = $logo['width'] ? $logo['width'] : 100;
+    $logo_width = $logo['width'] ? intval($logo['width']) : 100;
     $logo_text = $logo['text'];
+}
+
+$footer = get_field('wpde_footer', 'option');
+if ($footer) {
+    $left_block = $footer['left_block'];
 }
 ?>
 <div class="container-fluid px-0 pt-6 pb-3">
 	<div class="container">
 		<div class="row">
-		<div class="col-md-4 mb-3">
-			<a class="d-block mb-2" href="<?php echo home_url(); ?>">
-			<?php if (!empty($logo_image)) { ?>
-            <img src="<?php echo esc_url($logo_image['url']); ?>" alt="Logo" width="<?php echo $logo_width; ?>" height="auto"/>
-			<?php
-			} elseif(!empty($logo_text)) {
-				echo $logo_text;
-			} else {
-				echo get_bloginfo('name');
-			}
-			?>
-			</a>
-			<?php 
-				$footer_block = get_field('footer_block', 'option');
-				echo '<small class="text-muted">' . $footer_block . '</small>';
-			?>
-		</small>
+			<div class="col-md-4 mb-3">
+				<a class="d-block mb-2" href="<?php echo esc_url(home_url()); ?>">
+					<?php if (!empty($logo_image)) { ?>
+						<img src="<?php echo esc_url($logo_image['url']); ?>" alt="<?php echo esc_attr(get_bloginfo('name')); ?>" width="<?php echo esc_attr($logo_width); ?>" height="auto"/>
+					<?php
+					} elseif (!empty($logo_text)) {
+						echo esc_html($logo_text);
+					} else {
+						echo esc_html(get_bloginfo('name'));
+					}
+					?>
+				</a>
+				<small class="text-muted"><?php echo wp_kses_post($left_block); ?></small>
 			</div>
 
 			<div class="col-md-2 offset-md-2 mb-3">
@@ -75,4 +76,3 @@ if ($logo) {
 		</div>
 	</div>
 </div>
-	

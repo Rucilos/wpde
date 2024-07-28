@@ -14,9 +14,9 @@
             ?>
             <?php if ( !empty($title) || !empty($subtitle) || !empty($description) ) { ?>
                 <div class="pb-5">
-                    <small class="text-primary"><strong><?php echo $title; ?></strong></small>	
-                    <h1 class="mb-2"><?php echo $subtitle; ?></h1>
-                    <p class="text-muted"><?php echo $description; ?></p>
+                    <small class="text-primary"><strong><?php echo esc_html($title); ?></strong></small>	
+                    <h1 class="mb-2"><?php echo esc_html($subtitle); ?></h1>
+                    <p class="mb-0 text-muted"><?php echo esc_html($description); ?></p>
                 </div>
             <?php } ?>
             <div class="row g-3 mfp-init">
@@ -24,9 +24,9 @@
             $images = get_field('wpde_gallery_items', 'option');
             if( $images ) { ?>
                 <?php foreach( $images as $image ) { ?>
-                        <a class="col-md-<?php echo $grid; ?> mfp-item" href="<?php echo esc_url($image['url']); ?>">
-                            <img class="img-fluid rounded-4" src="<?php echo esc_url($image['sizes']['large']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-                        </a>
+                    <a class="col-md-<?php echo esc_attr($grid); ?> mfp-item" href="<?php echo esc_url($image['url']); ?>">
+                        <img class="img-fluid rounded-4" src="<?php echo esc_url($image['sizes']['large']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                    </a>
                 <?php } ?>
             <?php } ?>
             </div>

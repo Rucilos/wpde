@@ -13,7 +13,7 @@
 <?php
 if (!is_404()) {
     $footer = get_field('wpde_footer', 'option');
-    if($footer) {
+    if ($footer) {
         $footer_layout = $footer['layout'];
     } else {
         $footer_layout = 'Simple';
@@ -33,6 +33,7 @@ if (!is_404()) {
     }
 }
 
+// Include the search modal regardless of the footer layout
 get_template_part('template-parts/modal', 'search');
 
 wp_footer();

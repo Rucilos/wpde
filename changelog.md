@@ -147,7 +147,7 @@
 -   ⚠️ **SECURITY** - A vulnerability in some modules has been addressed.
 -   📜 **DOCS** - Documentation has been updated.
 
-## Version 1.2.0 (Sun, June 23 2024)
+## Version 1.2.0 (Sun, February 23 2024)
 
 -   🆕 **NEW** - Editorconfig support
 -   🆕 **NEW** - Prettier support
@@ -168,7 +168,7 @@
 -   ⚠️ **SECURITY** - A vulnerability in some modules has been addressed.
 -   📜 **DOCS** - Documentation has been updated.
 
-## Version 1.1.0 (Sat, June 8 2024)
+## Version 1.1.0 (Sat, February 6 2024)
 
 -   🆕 **NEW** - Cookie consent
 -   🆕 **NEW** - Method for registering post type.
@@ -209,13 +209,13 @@
 -   ⚠️ **SECURITY** - A vulnerability in some modules has been addressed.
 -   📜 **DOCS** - Documentation has been updated.
 
-## Version 1.0.1 (Fri, July 5 2024)
+## Version 1.0.1 (Fri, February 9 2024)
 
 -   ✅ **FIX** - Numerous bugs have been fixed.
 -   🚀 **IMPROVEMENT** - Performance has been enhanced and code reviewed.
 -   ⚠️ **SECURITY** - A vulnerability in some modules has been addressed.
 -   📜 **DOCS** - Documentation has been updated.
 
-## Version 1.0.0 (Sat, June 1 2024)
+## Version 1.0.0 (Sat, February 6 2024)
 
 -   🎉 **INIT** - Public release

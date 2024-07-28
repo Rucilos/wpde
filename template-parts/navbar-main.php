@@ -39,16 +39,16 @@ if ($options) {
 <?php if($helper_div) { ?>
     <div class="w-100" style="height: 57px;"></div>
 <?php } ?>
-<nav class="navbar navbar-expand-lg bg-blur border-bottom z-3 <?php echo $navbar_class; ?>">
+<nav class="navbar navbar-expand-lg bg-blur border-bottom z-3 <?php echo esc_attr($navbar_class); ?>">
 	<div class="container">
-		<a class="navbar-brand d-flex align-items-center gap-1" href="<?php echo home_url(); ?>">
+		<a class="navbar-brand d-flex align-items-center gap-1" href="<?php echo esc_url(home_url()); ?>">
         <?php if (!empty($logo_image)) { ?>
-            <img src="<?php echo esc_url($logo_image['url']); ?>" alt="Logo" width="<?php echo $logo_width; ?>" height="auto"/>
+            <img src="<?php echo esc_url($logo_image['url']); ?>" alt="Logo" width="<?php echo esc_attr($logo_width); ?>" height="auto"/>
         <?php
         } elseif(!empty($logo_text)) {
-            echo $logo_text;
+            echo esc_html($logo_text);
         } else {
-            echo get_bloginfo('name');
+            echo esc_html(get_bloginfo('name'));
         }
         ?>
 		</a>
@@ -111,7 +111,7 @@ if ($options) {
                 $link_target = $navbar_link['target'] ? $navbar_link['target'] : '_self';
                 ?>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+                    <a class="nav-link" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($link_title); ?></a>
                 </li>
             <?php } ?>
             <?php
@@ -121,8 +121,8 @@ if ($options) {
                 $link_target = $navbar_btn['target'] ? $navbar_btn['target'] : '_self';
                 ?>
                 <li class="nav-item ms-3">
-                    <a class="btn btn-dark" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
-                        <?php echo esc_html( $link_title ); ?>
+                    <a class="btn btn-dark" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>">
+                        <?php echo esc_html($link_title); ?>
                         <i class="fa-solid fa-arrow-right ms-1"></i> 
                     </a>
                 </li>

@@ -2,26 +2,26 @@
     <?php if (has_post_thumbnail()) {
         the_post_thumbnail('medium', ['class' => 'card-img-top']);
     } ?>
-    <div class="pb-5 mb-5 border-bottom">
+    <div class="pb-5 mb-6 border-bottom">
         <small class="text-primary">
             <strong>
                 <?php _e('Page', 'wpde'); ?>
             </strong>
         </small>	
         <h1 class="mb-2">
-            <?php echo get_the_title(); ?>
+            <?php echo esc_html(get_the_title()); ?> 
         </h1>
         <p class="mb-0 text-muted">
-            <?php echo get_the_excerpt(); ?>
+            <?php echo esc_html(get_the_excerpt()); ?> 
         </p>
-	</div>
+    </div>
     <?php if(is_page('contacts')) { ?>
         <div class="row">
             <div class="col-md-6">
             <?php
             $metadata = get_field('wpde_metadata', 'option');
             if ($metadata) {
-                $gmap = $metadata['google_map'];
+                $gmap = esc_url($metadata['google_map']); 
             }
 
             $options = get_field('wpde_options', 'option');
@@ -38,7 +38,7 @@
             <div class="col-md-6">
             <?php
             if(empty($google_map)) {
-            echo '<iframe src="' . $gmap . '" width="100%" height="350" class="rounded-4" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>';
+                echo '<iframe src="' . esc_url($gmap) . '" width="100%" height="350" class="rounded-4" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'; // Escapování URL mapy
             }
             ?>
             </div>

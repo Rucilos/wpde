@@ -1,27 +1,24 @@
 <div class="container-fluid px-0 py-6" id="posts">
     <div class="container">
-        <div class="pb-5 mb-4 border-bottom">
+        <div class="pb-5 mb-6 border-bottom">
             <small class="text-primary">
                 <strong>
-                    <?php _e('Category', 'wpde'); ?>
+                    <?php echo esc_html__('Category', 'wpde'); ?>
                 </strong>
             </small>    
             <h1 class="mb-2">
-                <?php _e('News', 'wpde'); ?>
+                <?php echo esc_html__('News', 'wpde'); ?>
             </h1>
             <p class="mb-0 text-muted">
-                <?php _e('Explore our latest articles and resources in this category.', 'wpde'); ?>
+                <?php echo esc_html__('Explore our latest articles and resources in this category.', 'wpde'); ?>
             </p>
-        </div>
-
-        <div class="mb-4">
-            <ul class="list-unstyled d-flex align-items-center gap-3 mb-5">
-                <small><strong><?php _e('Filters:', 'wpde'); ?></strong></small>
+            <ul class="list-unstyled d-flex align-items-center gap-3 mt-3 mb-0">
+                <small><strong><?php echo esc_html__('Filters:', 'wpde'); ?></strong></small>
                 <?php
                 $categories = get_categories();
                 foreach ($categories as $category) {
                     $active_class = (isset($_GET['category']) && $_GET['category'] == $category->term_id) ? 'active' : '';
-                    echo '<li class="' . $active_class . '"><a href="' . add_query_arg('category', $category->term_id) . '#posts"><small>' . esc_html($category->name) . '</small></a></li>';
+                    echo '<li class="' . esc_attr($active_class) . '"><a href="' . esc_url(add_query_arg('category', $category->term_id) . '#posts') . '"><small>' . esc_html($category->name) . '</small></a></li>';
                 }
                 ?>
             </ul>
@@ -40,7 +37,7 @@
                 'order' => 'DESC',
                 'paged' => $paged,
             );
- 
+
             $query = new WP_Query($args);
 
             if ($query->have_posts()) {
@@ -62,7 +59,7 @@
                     ?>
                     <small class="text-muted">
                     <?php 
-                        echo __('Showing', 'wpde') . ' ' . $start . ' ' . __('to', 'wpde') . ' ' . $end . ' ' . __('of', 'wpde') . ' ' . $total_posts . ' ' . __('results', 'wpde'); 
+                        echo esc_html__('Showing', 'wpde') . ' ' . esc_html($start) . ' ' . esc_html__('to', 'wpde') . ' ' . esc_html($end) . ' ' . esc_html__('of', 'wpde') . ' ' . esc_html($total_posts) . ' ' . esc_html__('results', 'wpde'); 
                     ?>
                     </small>
 
@@ -86,7 +83,7 @@
             } else {
             ?>
                 <div class="col-lg-12">
-                    <p class="text-danger mb-0"><?php _e('Sorry, no data was found in this category.', 'wpde'); ?></p>
+                    <p class="text-danger mb-0"><?php echo esc_html__('Sorry, no data was found in this category.', 'wpde'); ?></p>
                 </div>
             <?php } ?>
         </div>

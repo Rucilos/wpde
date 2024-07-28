@@ -34,11 +34,5 @@ get_template_part('template-parts/section', 'logos');
 get_template_part('template-parts/section', 'posts');
 get_template_part('template-parts/section', 'icons');
 get_template_part('template-parts/section', 'gallery');
-?>
-
-
-
-
-<?php
 
 get_footer();

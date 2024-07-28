@@ -14,7 +14,7 @@
 
 <div class="container px-0 py-6">
     <div class="container">
-        <div class="pb-5 mb-4 border-bottom">
+        <div class="pb-5 mb-6 border-bottom">
             <small class="text-primary">
                 <strong>
                     <?php _e('Taxonomy', 'wpde'); ?>
@@ -23,11 +23,11 @@
             <h1 class="mb-2">
                 <?php
                     $current_term = get_queried_object();
-                    echo $current_term->name;
+                    echo esc_html($current_term->name);
                 ?>
             </h1>
             <p class="mb-0 text-muted">
-                <?php echo strip_tags(term_description()); ?>
+                <?php echo wp_kses_post(term_description()); ?>
             </p>
         </div>
         <div class="row row-gap-5">
@@ -37,11 +37,11 @@
                     the_post();
                     $grid = get_field('wpde_grid', 'option');
                     if ($grid) {
-                        $grid = $grid['taxonomy'];
+                        $grid = intval($grid['taxonomy']); 
                     } else {
                         $grid = 4;
                     }
-                    echo '<div class="col-md-' . $grid . '">';
+                    echo '<div class="col-md-' . esc_attr($grid) . '">'; 
                         get_template_part('template-parts/content', 'post');
                     echo '</div>';
                 }
@@ -49,7 +49,7 @@
                 wp_reset_postdata();
             } else {
                 $html = '<div class="col-lg-12">';
-                    $html .= '<p class="text-danger mb-0">' . __('Sorry, no data was found in this taxonomy.', 'wpde') . '</p>';
+                    $html .= '<p class="text-danger mb-0">' . esc_html(__('Sorry, no data was found in this taxonomy.', 'wpde')) . '</p>'; 
                 $html .= '</div>';
 
                 echo $html;

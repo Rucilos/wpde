@@ -10,10 +10,10 @@
             }
             ?>
             <?php if ( !empty($title) || !empty($subtitle) || !empty($description) ) { ?>
-                <div class="pb-5 mb-5 border-bottom text-end">
-                    <small class="text-primary"><strong><?php echo $subtitle; ?></strong></small>	
-                    <h1 class="mb-2"><?php echo $title; ?></h1>
-                    <p class="text-muted"><?php echo $description; ?></p>
+                <div class="pb-5 mb-6 border-bottom text-end">
+                    <small class="text-primary"><strong><?php echo esc_html($subtitle); ?></strong></small>	
+                    <h1 class="mb-2"><?php echo esc_html($title); ?></h1>
+                    <p class="text-muted"><?php echo esc_html($description); ?></p>
                 </div>
             <?php } ?>
             <div class="row justify-content-center align-items-center">
@@ -23,12 +23,12 @@
                     $image = get_sub_field('image');
                     $link = get_sub_field('link');
                     if($link) {
-                        $link_url = $link['url'];
-                        $link_target = $link['target'] ? $link['target'] : '_self';
+                        $link_url = esc_url($link['url']);
+                        $link_target = esc_attr($link['target'] ? $link['target'] : '_self');
                     }
                     ?>
                     <div class="col-md-2 text-center">
-                        <a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
+                        <a href="<?php echo $link_url; ?>" target="<?php echo $link_target; ?>">
                             <img class="mb-3" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" width="135px" height="auto" />
                         </a>
                     </div>

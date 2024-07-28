@@ -14,7 +14,7 @@
 
 <div class="container-fluid px-0 py-6">
     <div class="container">
-        <div class="pb-5 mb-5 border-bottom">
+        <div class="pb-5 mb-6 border-bottom">
             <small class="text-primary">
                 <strong>
                     <?php _e('Search results', 'wpde'); ?>
@@ -36,11 +36,11 @@
                     the_post();
                     $grid = get_field('wpde_grid', 'option');
                     if ($grid) {
-                        $grid = $grid['search'];
+                        $grid = intval($grid['search']); 
                     } else {
                         $grid = 4;
                     }
-                    echo '<div class="col-md-' . $grid . '">';
+                    echo '<div class="col-md-' . esc_attr($grid) . '">';
                         get_template_part('template-parts/content', 'post');
                     echo '</div>';
                 }
@@ -48,7 +48,7 @@
                 wp_reset_postdata();
             } else {
                 $html = '<div class="col-lg-12">';
-                    $html .= '<p class="text-danger mb-0">' . __('Sorry, no data was found matching your search terms. Please try again with different keywords.', 'wpde') . '</p>';
+                    $html .= '<p class="text-danger mb-0">' . esc_html(__('Sorry, no data was found matching your search terms. Please try again with different keywords.', 'wpde')) . '</p>'; 
                 $html .= '</div>';
 
                 echo $html;
@@ -58,4 +58,3 @@
 </div>
 
 <?php get_footer(); ?>
-

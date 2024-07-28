@@ -10,8 +10,8 @@ if (empty($search_form)) {
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h1 class="modal-title fs-5" id="modal-searchform-label"><?php _e('Search', 'wpde'); ?></h1>
-				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				<h1 class="modal-title fs-5" id="modal-searchform-label"><?php echo esc_html__('Search', 'wpde'); ?></h1>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="<?php echo esc_attr__('Close', 'wpde'); ?>"></button>
 			</div>
 			<div class="modal-body">
 				<?php get_search_form(); ?>
