@@ -91,13 +91,13 @@ echo WPDE()->get_title(
 );
 ```
 
-## Requirements ⚙️
+## Requirements ⚡⚙️
 
 -   **WordPress:** 6.0 or higher
 -   **PHP:** 7.0 or higher
 -   **ACF PRO:** 5.7.0 or higher
 
-## Installation 📝📥💡
+## Installation 💡
 
 ### Install from WordPress
 
@@ -112,11 +112,11 @@ echo WPDE()->get_title(
 3. **Visit** Appearance > Themes > Search for `WPDE` > Activate
 4. **Click** on the new menu item `Theme Setting` for better control of theme
 
-## License 📄📜
+## License 📄
 
 Distributed under the **MIT** License. See [LICENSE](https://github.com/rucilos/wpde/blob/master/LICENSE) for more information.
 
-## Credits ✨💼🥇🏅
+## Credits ✨💼
 
 🎉 Public Release v1.0.0 was launched on Saturday, February 6, 2024.
 © 2024 Created by [Jindřich Ručil](https://jindrichrucil.com)
