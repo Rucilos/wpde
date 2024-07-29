@@ -30,6 +30,8 @@
                 <?php echo wp_kses_post(term_description()); ?>
             </p>
         </div>
+
+        <?php echo WPDE()->get_title(esc_html($current_term->name), __('Category', 'wpde'), wp_kses_post(term_description())); ?>
         <div class="row row-gap-5">
             <?php if (have_posts()) {
                 while (have_posts()) {

@@ -8,16 +8,29 @@
                 $subtitle = $icons['subtitle']; 
                 $description = $icons['description']; 
                 $grid = $icons['grid'];
+                $layout = $icons['layout']; 
+                $border = $icons['border'];
+
+                switch ($layout) {
+                    case 'Left':
+                        $title_layout = '';
+                        break;
+                    case 'Center':
+                        $title_layout = 'text-center';
+                        break;
+                    case 'Right':
+                        $title_layout = 'text-end';
+                        break;
+                    default:
+                        $title_layout = '';
+                        break;
+                }
             } else {
                 $grid = 3;
             }
             ?>
             <?php if ( !empty($title) || !empty($subtitle) || !empty($description) ) { ?>
-                <div class="pb-5 mb-6 border-bottom text-center">
-                    <small class="text-primary"><strong><?php echo esc_html($subtitle); ?></strong></small>	
-                    <h1 class="mb-2"><?php echo esc_html($title); ?></h1>
-                    <p class="mb-0 text-muted"><?php echo esc_html($description); ?></p>
-                </div>
+                <?php echo WPDE()->get_title($title, $subtitle, $description, array('layout' => $title_layout, 'border' => $border)); ?>
             <?php } ?>
             <div class="row">
                 <?php 
@@ -26,10 +39,14 @@
                     $item_title = get_sub_field('title');
                     $item_description = get_sub_field('description');
                     $image = get_sub_field('image');
+                    if($image) {
+                        $image_size = wp_get_attachment_image_url($image['ID'], 'small'); 
+                        $alt = get_post_meta($image['ID'], '_wp_attachment_image_alt', true);
+                    }
                     ?>
                     <div class="col-md-<?php echo esc_attr($grid); ?> text-center">
                         <?php if (!empty($image)) { ?>
-                            <img class="mb-3" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" width="35px" height="auto" />
+                            <img src="<?php echo esc_url($image_size); ?>" class="d-block w-100" alt="<?php echo esc_attr($alt); ?>">
                         <?php } ?>
                         <h6 class="mb-0"><?php echo esc_html($item_title); ?></h6>
                         <p class="mx-3"><?php echo esc_html($item_description); ?></p>

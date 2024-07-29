@@ -78,6 +78,19 @@ WPDE()->register_taxonomy(
 );
 ```
 
+```php
+// Register a custom taxonomy
+echo WPDE()->get_title(
+    __('Title', 'wpde'),  // Main title for the section.
+    __('Subtitle', 'wpde'),  // Subtitle for additional context.
+    __('Description', 'wpde'),  // Description of the section.
+    array(
+        'layout' => 'border-bottom', // Replace with your desired layout class.
+        'border' => 'Enabled' // Set to 'Enabled' or 'Disabled' based on your needs.
+    )
+);
+```
+
 ## Requirements
 
 -   **WordPress:** 6.0 or higher

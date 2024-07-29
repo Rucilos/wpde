@@ -32,13 +32,20 @@
             $('.wpcf7-submit').addClass('btn btn-success')
         }
 
-        $('label[for=user_login], label[for="user_pass"]').addClass('d-block mb-2')
-        $('#user_login, #user_pass').removeClass('input').addClass('form-control')
-        $('#wp-submit').removeClass('button button-primary').addClass('btn btn-success mt-3 mb-5 px-5')
-
         $('.navbar-toggler').on('click', function () {
             $(this).find('#navbar-toggler-icon').toggleClass('fa-bars fa-xmark')
         })
+
+        $('a[target="_blank"]:not(.btn)').each(function () {
+            const icon = $('<i>', {
+                class: 'fa-solid fa-up-right-from-square fa-sm ms-2',
+            })
+            $(this).append(icon)
+        })
+
+        if ($(window).width() < 991) {
+            $('#navbar-actions').insertBefore('.navbar-collapse')
+        }
     })
 
     // Headroom
@@ -79,7 +86,7 @@
                 $('html').attr('data-bs-theme', 'light')
                 $('body').removeClass('cc--darkmode').addClass('cc--lightmode')
             }
-            $(toggler).find('.dropdown-toggle').html('<i class="fa-solid fa-circle-half-stroke mx-1"></i>')
+            $(toggler).find('.dropdown-toggle').html('<i class="fa-solid fa-circle-half-stroke"></i>')
             if (theme === null) {
                 localStorage.setItem('theme', 'auto')
             }
@@ -88,13 +95,13 @@
         if (theme === 'light') {
             $('html').attr('data-bs-theme', 'light')
             $('body').removeClass('cc--darkmode').addClass('cc--lightmode')
-            $(toggler).find('.dropdown-toggle').html('<i class="fa-solid fa-sun mx-1"></i>')
+            $(toggler).find('.dropdown-toggle').html('<i class="fa-solid fa-sun"></i>')
         }
 
         if (theme === 'dark') {
             $('html').attr('data-bs-theme', 'dark')
             $('body').removeClass('cc--lightmode').addClass('cc--darkmode')
-            $(toggler).find('.dropdown-toggle').html('<i class="fa-solid fa-moon mx-1"></i>')
+            $(toggler).find('.dropdown-toggle').html('<i class="fa-solid fa-moon"></i>')
         }
 
         toggler.find('.dropdown-menu li a').click(function () {
@@ -111,17 +118,17 @@
                     $('html').attr('data-bs-theme', 'light')
                     $('body').removeClass('cc--darkmode').addClass('cc--lightmode')
                 }
-                $(toggler).find('.dropdown-toggle').html('<i class="fa-solid fa-circle-half-stroke mx-1"></i>')
+                $(toggler).find('.dropdown-toggle').html('<i class="fa-solid fa-circle-half-stroke"></i>')
                 localStorage.setItem('theme', 'auto')
             } else if (selectedValue === 'light') {
                 $('html').attr('data-bs-theme', 'light')
                 $('body').removeClass('cc--darkmode').addClass('cc--lightmode')
-                $(toggler).find('.dropdown-toggle').html('<i class="fa-solid fa-sun mx-1"></i>')
+                $(toggler).find('.dropdown-toggle').html('<i class="fa-solid fa-sun"></i>')
                 localStorage.setItem('theme', 'light')
             } else if (selectedValue === 'dark') {
                 $('html').attr('data-bs-theme', 'dark')
                 $('body').removeClass('cc--lightmode').addClass('cc--darkmode')
-                $(toggler).find('.dropdown-toggle').html('<i class="fa-solid fa-moon mx-1"></i>')
+                $(toggler).find('.dropdown-toggle').html('<i class="fa-solid fa-moon"></i>')
                 localStorage.setItem('theme', 'dark')
             }
         })

@@ -1,16 +1,32 @@
 <?php if (have_rows('wpde_logos_items', 'option')) { ?>
     <div class="container-fluid px-0 py-6">
         <div class="container">
-        <?php
-            $icons = get_field('wpde_logos', 'option');
-            if ($icons) {
-                $title = $icons['title']; 
-                $subtitle = $icons['subtitle']; 
-                $description = $icons['description']; 
+            <?php
+            $logos = get_field('wpde_logos', 'option');
+            if ($logos) {
+                $title = $logos['title']; 
+                $subtitle = $logos['subtitle']; 
+                $description = $logos['description']; 
+                $layout = $logos['layout']; 
+
+                switch ($layout) {
+                    case 'Left':
+                        $title_layout = '';
+                        break;
+                    case 'Center':
+                        $title_layout = 'text-center';
+                        break;
+                    case 'Right':
+                        $title_layout = 'text-end';
+                        break;
+                    default:
+                        $title_layout = '';
+                        break;
+                }
             }
             ?>
             <?php if ( !empty($title) || !empty($subtitle) || !empty($description) ) { ?>
-                <div class="pb-5 mb-6 border-bottom text-end">
+                <div class="pb-5 mb-6 border-bottom <?php echo $title_layout; ?>">
                     <small class="text-primary"><strong><?php echo esc_html($subtitle); ?></strong></small>	
                     <h1 class="mb-2"><?php echo esc_html($title); ?></h1>
                     <p class="text-muted"><?php echo esc_html($description); ?></p>

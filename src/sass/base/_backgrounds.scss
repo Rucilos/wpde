@@ -1,13 +1,13 @@
 .bg-blur {
     backdrop-filter: blur(6px);
-    background-color: var(--wpde-bg-blur-rgb);
+    background-color: rgba(var(--wpde-body-bg-rgb), 0.65);
 }
 
 .gradient-wrap {
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
-    height: 100vh;
+    height: 90vh;
     width: 100%;
     position: absolute;
     left: 0;

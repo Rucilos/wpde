@@ -38,7 +38,7 @@
         ?>
             <li>
             <?php if($link) { ?>
-                <a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
+                <a class="btn p-0 text-muted" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
                     <i class="fa-brands fa-<?php echo esc_attr($icon_type); ?> fa-lg"></i>
                 </a>
             <?php } ?>

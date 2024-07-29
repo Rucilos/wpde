@@ -198,18 +198,55 @@ class WPDE {
     } // END __construct()
 
     /**
+     * Generate and display a formatted title section.
+     *
+     * This method creates an HTML structure for a title section, which includes 
+     * a subtitle, main title, and description. It also applies optional layout 
+     * and border styles based on the provided options array.
+     *
+     * @param   string $title       The main title to be displayed.
+     * @param   string $subtitle    The subtitle to be displayed.
+     * @param   string $description A description to be displayed below the title.
+     * @param   array  $options     Optional parameters for layout and border settings.
+     * @return  string              The generated HTML for the title section.
+     * @access  public
+     * @since   1.0.0
+     */
+    public function get_title($title, $subtitle, $description, $options = array()) {
+        $html = '';
+
+        // Set default values
+        $title_layout = !empty($options['layout']) ? esc_attr($options['layout']) : ''; // Default: empty
+        $border_class = 'border-bottom'; // Default: always apply border-bottom
+
+        // Check if border should be removed
+        if (!empty($options['border']) && $options['border'] !== 'Enabled') {
+            $border_class = ''; // No border if "Enabled" is not set
+        }
+
+        // Build the HTML string
+        $html .= '<div class="pb-5 mb-6 ' . esc_attr($border_class) . ' ' . esc_attr($title_layout) . '">';
+            $html .= '<small class="text-primary"><strong>' . esc_html($subtitle) . '</strong></small>';
+            $html .= '<h1 class="mb-2">' . esc_html($title) . '</h1>';
+            $html .= '<p class="mb-0 text-muted">' . esc_html($description) . '</p>';
+        $html .= '</div>';
+
+        return $html; 
+    }
+
+    /**
      * Display a notice in the WordPress admin area.
      *
      * This method displays an admin notice to indicate that the ACF PRO plugin is required
      * for the theme to function correctly.
      *
+     * @return  void
      * @access  public
      * @since   1.0.0
-     * @return  void
      */
     public function acf_notice() {
-        $html = '<div class="notice notice-error is-dismissible">';
-            $html .= '<p><strong>Notice:</strong> The <a href="https://github.com/Rucilos/wpde/" target="_blank" rel="noopener noreferrer"><strong>WordPress Development Environment (WPDE)</strong></a> theme requires the <a href="https://www.google.com/search?q=ACF+PRO" target="_blank" rel="noopener noreferrer"><strong>ACF PRO</strong></a> plugin to function properly. Please activate the plugin to ensure all features work as intended.</p>';
+        $html = '<div id="wpde-notice" class="notice notice-error is-dismissible">';
+            $html .= '<p>' . __('The', 'wpde') . ' <a href="https://github.com/Rucilos/wpde/" target="_blank" rel="noopener noreferrer"><strong>' . __('WordPress Development Environment (WPDE)', 'wpde') . '</strong></a> ' . __('theme requires the', 'wpde') . ' <a href="https://www.google.com/search?q=ACF+PRO" target="_blank" rel="noopener noreferrer"><strong>' . __('ACF PRO', 'wpde') . '</strong></a> ' . __('plugin, with a minimum version of 5.7.0, to function properly. Please activate the plugin to ensure all features work as intended.', 'wpde') . '</p>';
         $html .= '</div>';
         
         echo $html;
@@ -511,9 +548,9 @@ class WPDE {
         ]);
 
         // Register custom image sizes
-        add_image_size('avatar', 48, 48, true); 
-        add_image_size('header', 1920, 550, true); 
-        add_image_size('header-sm', 500, 250, true); 
+        add_image_size('small', 50, 50, true); 
+        add_image_size('header', 600, 800, true); 
+        add_image_size('header-sm', 500, 350, true); 
 
         // Register bootstrap navwalker
         require_once get_template_directory() . '/inc/class-bootstrap-nav-walker.php';
@@ -536,9 +573,9 @@ class WPDE {
                 'menu_title' => 'WPDE',
                 'menu_slug'  => $this->_token,
                 'capability' => 'manage_options',
-                'icon_url'   => 'dashicons-admin-settings',
-                'position'   => 9999,
-                'layout'     => '1',
+                'icon_url'   => 'dashicons-admin-customizer',
+                'position'   => -1,
+                'layout'     => 1,
             ]);        
         }
     } // END add_options_page
@@ -559,18 +596,32 @@ class WPDE {
         if ( $screen->id === 'toplevel_page_' . WPDE()->_token ) {
     
             $html  = '<nav id="' . WPDE()->_token . '-navbar" class="' . WPDE()->_token . '-navbar">';
-    
                 $html .= '<a href="admin.php?page=' . WPDE()->_token . '" class="navbar-brand">';
                     $html .= '<img src="https://cdn.df-barber.cz/apiru/brands/primary.svg" width="100px" height="auto" alt="WPDE Logo">';
                 $html .= '</a>';
     
                 $html .= '<ul class="navbar-collapse">';
-                    $html .= '<li class="nav-item"><a href="https://github.com/Rucilos/wpde/" class="' . WPDE()->_token . '-btn"><img src="'. get_template_directory_uri() .'/img/github.svg" class="ico" /></a></li>';
-                    $html .= '<li class="nav-item"><a href="https://github.com/Rucilos/wpde/" class="' . WPDE()->_token . '-btn"><img src="'. get_template_directory_uri() .'/img/link.svg" class="ico" /></a></li>';
-                    $html .= '<li class="nav-item"><a href="https://github.com/Rucilos/wpde/" class="' . WPDE()->_token . '-btn"><img src="'. get_template_directory_uri() .'/img/download.svg" class="ico" /></a></li>';
-                    $html .= '<li class="nav-item"><a href="https://github.com/Rucilos/wpde/" class="' . WPDE()->_token . '-btn"><img src="'. get_template_directory_uri() .'/img/demo.svg" class="ico" /></a></li>';
+                    $html .= '<li class="nav-item">';
+                        $html .= '<a href="https://github.com/Rucilos/wpde/" class="nav-link">';
+                            $html .= '<img src="'. get_template_directory_uri() .'/img/github.svg" class="ico" />';
+                        $html .= '</a>';
+                    $html .= '</li>';
+                    $html .= '<li class="nav-item">';
+                        $html .= '<a href="https://github.com/Rucilos/wpde/" class="nav-link">';
+                            $html .= '<img src="'. get_template_directory_uri() .'/img/link.svg" class="ico" />' . __('dsadsada', 'wpde');
+                        $html .= '</a>';
+                    $html .= '</li>';
+                    $html .= '<li class="nav-item">';
+                        $html .= '<a href="https://github.com/Rucilos/wpde/" class="nav-link">';
+                            $html .= '<img src="'. get_template_directory_uri() .'/img/download.svg" class="ico" />';
+                        $html .= '</a>';
+                    $html .= '</li>';
+                    $html .= '<li class="nav-item">';
+                        $html .= '<a href="https://github.com/Rucilos/wpde/" class="nav-link">';
+                            $html .= '<img src="'. get_template_directory_uri() .'/img/demo.svg" class="ico" />';
+                        $html .= '</a>';
+                    $html .= '</li>';
                 $html .= '</ul>';
-    
             $html .= '</nav>';
     
             echo $html;
@@ -803,14 +854,14 @@ class WPDE {
      * @since 1.0.0
      */
     public function theme() {
-        $html = '<div class="dropdown d-flex align-items-center justify-content-center" id="wpde-theme">';
-            $html .= '<button class="navbar-toggler d-flex border-0 dropdown-toggle pe-lg-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">';
-                $html .= '<i class="fa-solid fa-circle-half-stroke me-1"></i> <span class="visually-hidden">Auto</span>';
+        $html = '<div class="dropdown d-flex align-items-center justify-content-center" id="' . $this->_token . '-theme">';
+            $html .= '<button class="navbar-toggler d-flex border-0 dropdown-toggle p-1 text-dark text-muted rounded-circle" type="button" data-bs-toggle="dropdown" aria-expanded="false">';
+                $html .= '<i class="fa-solid fa-circle-half-stroke"></i> <span class="visually-hidden">Auto</span>';
             $html .= '</button>';
-            $html .= '<ul class="dropdown-menu">';
-                $html .= '<li><a class="dropdown-item active" href="#!" data-value="auto"><i class="fa-solid fa-circle-half-stroke me-1"></i> Auto</a></li>';
-                $html .= '<li><a class="dropdown-item" href="#!" data-value="light"><i class="fa-solid fa-sun me-1"></i> ' . __('Light', 'wpde') . '</a></li>';
-                $html .= '<li><a class="dropdown-item" href="#!" data-value="dark"><i class="fa-solid fa-moon mx-1"></i> ' . __('Dark', 'wpde') . '</a></li>';
+            $html .= '<ul class="dropdown-menu shadow-lg border py-0" style="left:-70px;margin-top: 1.3rem;">';
+                $html .= '<li><a class="dropdown-item py-3 active" href="#!" data-value="auto"><i class="fa-solid fa-circle-half-stroke me-1"></i> Auto</a></li>';
+                $html .= '<li><a class="dropdown-item py-3" href="#!" data-value="light"><i class="fa-solid fa-sun me-1"></i> ' . __('Light', 'wpde') . '</a></li>';
+                $html .= '<li><a class="dropdown-item py-3 border" href="#!" data-value="dark"><i class="fa-solid fa-moon me-1"></i> ' . __('Dark', 'wpde') . '</a></li>';
             $html .= '</ul>';
         $html .= '</div>';
     

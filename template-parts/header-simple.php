@@ -1,12 +1,12 @@
 <?php
-$group = get_field('header_metadata', 'option');
-if ($group) {
-    $title = $group['title'];
-    $description = $group['description'];
-    $link = $group['link'];
-    $link_2 = $group['link_2'];
-    $badge_text = $group['badge_text'];
-    $badge_link = $group['badge_link'];
+$metadata = get_field('header_metadata', 'option');
+if ($metadata) {
+    $title = $metadata['title'];
+    $description = $metadata['description'];
+    $link = $metadata['link'];
+    $link_2 = $metadata['link_2'];
+    $badge_text = $metadata['badge_text'];
+    $badge_link = $metadata['badge_link'];
 }
 ?>
 
@@ -40,7 +40,7 @@ if ($group) {
                 <?php } ?>
 
                 <?php if (!empty($title)) { ?>
-                    <h1 class="display-3 fw-bold"><?php echo esc_html($title); ?></h1>
+                    <h1 class="display-3 fw-bold mb-2"><?php echo esc_html($title); ?></h1>
                 <?php } ?>
                 <?php if (!empty($description)) { ?>
                     <p><?php echo esc_html($description); ?></p>

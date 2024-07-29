@@ -6,15 +6,14 @@ if ($options) {
 
 if (empty($search_form)) { 
 ?>
-<div class="modal fade" id="modal-searchform" tabindex="-1" aria-labelledby="modal-searchform-label" aria-hidden="true">
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<div class="modal-header">
-				<h1 class="modal-title fs-5" id="modal-searchform-label"><?php echo esc_html__('Search', 'wpde'); ?></h1>
-				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="<?php echo esc_attr__('Close', 'wpde'); ?>"></button>
-			</div>
-			<div class="modal-body">
-				<?php get_search_form(); ?>
+<div class="modal bg-blur fade" id="modal-searchform" tabindex="-1" aria-labelledby="modal-searchform-label" aria-hidden="true">
+	<div class="modal-dialog mt-6">
+		<div class="modal-content border shadow-lg">
+			<div class="modal-body py-2">
+				<div class="d-flex justify-content-between align-items-center">
+					<?php get_search_form(); ?>
+					<i class="fa-solid fa-magnifying-glass fa-lg text-muted"></i>
+				</div>
 			</div>
 		</div>
 	</div>

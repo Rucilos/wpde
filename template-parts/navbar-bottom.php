@@ -16,7 +16,7 @@ if ($metadata) {
                 <?php if ( !empty($email) ) { ?>
                     <li class="nav-item">
                         <a href="mailto:<?php echo esc_attr($email); ?>" class="link-underline link-underline-opacity-0">
-                            <i class="fa-solid fa-envelope me-1"></i>
+                            <i class="fa-solid fa-envelope"></i>
                             <small><?php echo esc_html($email); ?></small>
                         </a>
                     </li>
@@ -24,7 +24,7 @@ if ($metadata) {
                 <?php if ( !empty($phone) ) { ?>
                     <li class="nav-item">
                         <a href="tel:<?php echo esc_attr($phone); ?>" class="link-underline link-underline-opacity-0">
-                            <i class="fa-solid fa-phone-alt me-1"></i>
+                            <i class="fa-solid fa-phone-alt"></i>
                             <small><?php echo esc_html($phone); ?></small>
                         </a>
                     </li>

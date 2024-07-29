@@ -1,46 +1,71 @@
+<?php
+$cat_id = isset($_GET['category']) ? intval($_GET['category']) : 0;
+$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+
+$args = array(
+    'post_type' => 'post',
+    'posts_per_page' => 3,
+    'cat' => $cat_id,
+    'orderby' => 'date',
+    'order' => 'DESC',
+    'paged' => $paged,
+);
+
+$query = new WP_Query($args);
+
+if ($query->have_posts()) {
+?>
 <div class="container-fluid px-0 py-6" id="posts">
     <div class="container">
-        <div class="pb-5 mb-6 border-bottom">
-            <small class="text-primary">
-                <strong>
-                    <?php echo esc_html__('Category', 'wpde'); ?>
-                </strong>
-            </small>    
-            <h1 class="mb-2">
-                <?php echo esc_html__('News', 'wpde'); ?>
-            </h1>
-            <p class="mb-0 text-muted">
-                <?php echo esc_html__('Explore our latest articles and resources in this category.', 'wpde'); ?>
-            </p>
-            <ul class="list-unstyled d-flex align-items-center gap-3 mt-3 mb-0">
-                <small><strong><?php echo esc_html__('Filters:', 'wpde'); ?></strong></small>
-                <?php
-                $categories = get_categories();
-                foreach ($categories as $category) {
-                    $active_class = (isset($_GET['category']) && $_GET['category'] == $category->term_id) ? 'active' : '';
-                    echo '<li class="' . esc_attr($active_class) . '"><a href="' . esc_url(add_query_arg('category', $category->term_id) . '#posts') . '"><small>' . esc_html($category->name) . '</small></a></li>';
-                }
-                ?>
-            </ul>
-        </div>
+        <?php
+        $posts = get_field('wpde_posts', 'option');
+        if ($posts) {
+            $title = $posts['title']; 
+            $subtitle = $posts['subtitle']; 
+            $description = $posts['description']; 
+            $layout = $posts['layout']; 
+
+            switch ($layout) {
+                case 'Left':
+                    $title_layout = '';
+                    $filters_layout = '';
+                    break;
+                case 'Center':
+                    $title_layout = 'text-center';
+                    $filters_layout = 'justify-content-center';
+                    break;
+                case 'Right':
+                    $title_layout = 'text-end';
+                    $filters_layout = 'justify-content-end';
+                    break;
+                default:
+                    $title_layout = '';
+                    $filters_layout = '';
+                    break;
+            }
+        }
+        ?>
+        <?php if ( !empty($title) || !empty($subtitle) || !empty($description) ) { ?>
+            <div class="pb-5 mb-6 border-bottom <?php echo $title_layout; ?>">
+                <small class="text-primary"><strong><?php echo esc_html($subtitle); ?></strong></small>	
+                <h1 class="mb-2"><?php echo esc_html($title); ?></h1>
+                <p class="text-muted"><?php echo esc_html($description); ?></p>
+
+                <ul class="list-unstyled d-flex align-items-center gap-3 mt-3 mb-0 <?php echo $filters_layout; ?>">
+                    <small><strong><?php echo esc_html__('Filters:', 'wpde'); ?></strong></small>
+                    <?php
+                    $categories = get_categories();
+                    foreach ($categories as $category) {
+                        $active_class = (isset($_GET['category']) && $_GET['category'] == $category->term_id) ? 'active' : '';
+                        echo '<li class="' . esc_attr($active_class) . '"><a href="' . esc_url(add_query_arg('category', $category->term_id) . '#posts') . '"><small>' . esc_html($category->name) . '</small></a></li>';
+                    }
+                    ?>
+                </ul>
+            </div>
+        <?php } ?>
 
         <div class="row row-gap-5">
-            <?php
-            $cat_id = isset($_GET['category']) ? intval($_GET['category']) : 0;
-            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-
-            $args = array(
-                'post_type' => 'post',
-                'posts_per_page' => 3,
-                'cat' => $cat_id,
-                'orderby' => 'date',
-                'order' => 'DESC',
-                'paged' => $paged,
-            );
-
-            $query = new WP_Query($args);
-
-            if ($query->have_posts()) {
+                <?php
                 while ($query->have_posts()) {
                     $query->the_post();
                     echo '<div class="col-md-4">';
@@ -67,7 +92,7 @@
                     <?php        
                     $i = 999999999;
                     echo paginate_links(array(
-                        'base' => str_replace($i, '%#%', esc_url(get_pagenum_link($i))),
+                        'base' => str_replace($i, '%#%', esc_url(get_pagenum_link($i) . '?pt=post')),
                         'format' => '?paged=%#%',
                         'current' => max(1, get_query_var('paged')),
                         'total' => $query->max_num_pages,
@@ -78,14 +103,8 @@
                     ?>
                     </div>
                 </div>
-                <?php
-                wp_reset_postdata();
-            } else {
-            ?>
-                <div class="col-lg-12">
-                    <p class="text-danger mb-0"><?php echo esc_html__('Sorry, no data was found in this category.', 'wpde'); ?></p>
-                </div>
-            <?php } ?>
+                <?php wp_reset_postdata(); ?>
         </div>
     </div>
 </div>
+<?php } ?>

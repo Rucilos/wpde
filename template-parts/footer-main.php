@@ -14,12 +14,12 @@ if ($logo) {
 				<div class="d-flex align-items-center gap-4">
 					<ul class="list-unstyled d-flex align-items-center flex-wrap flex-md-nowrap column-gap-3 mb-0">
 						<li>
-							<a href="#!" class="nav-link" onclick="CookieConsent.showPreferences(); return false;">
+							<a href="#!" class="nav-link text-muted" onclick="CookieConsent.showPreferences(); return false;">
 								<small><?php _e('Privacy settings', 'wpde'); ?></small>
 							</a>
 						</li>
 						<li>
-							<a href="<?php echo esc_url(get_permalink(3)); ?>" class="nav-link">
+							<a href="<?php echo esc_url(get_permalink(3)); ?>" class="nav-link text-muted">
 								<small><?php echo esc_html(get_the_title(3)); ?></small>
 							</a>
 						</li>

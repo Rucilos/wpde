@@ -31,7 +31,7 @@
 			?>
 				<div class="d-flex align-items-center column-gap-3 mt-4">
 					<?php if (isset($user_details['avatar'])) { ?>
-						<img class="rounded-circle" src="<?php echo esc_url($user_details['avatar']['url']); ?>" alt="<?php echo esc_attr($user_details['avatar']['alt']); ?>" width="48" height="auto" /> <!-- Escapování URL a alt textu -->
+						<img class="rounded-circle" src="<?php echo esc_url($user_details['avatar']['sizes']['small']); ?>" alt="<?php echo esc_attr($user_details['avatar']['alt']); ?>" width="48" height="auto" /> <!-- Escapování URL a alt textu -->
 					<?php } ?>
 					<div>
 						<?php if (isset($user_details['name'])) { ?>

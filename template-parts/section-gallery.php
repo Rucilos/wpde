@@ -25,7 +25,7 @@
             if( $images ) { ?>
                 <?php foreach( $images as $image ) { ?>
                     <a class="col-md-<?php echo esc_attr($grid); ?> mfp-item" href="<?php echo esc_url($image['url']); ?>">
-                        <img class="img-fluid rounded-4" src="<?php echo esc_url($image['sizes']['large']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                        <img class="img-fluid rounded-4" src="<?php echo esc_url($image['sizes']['medium']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
                     </a>
                 <?php } ?>
             <?php } ?>

@@ -22,6 +22,9 @@ switch ($header) {
     case 'Reviews':
         get_template_part('template-parts/header', 'reviews');
         break;
+    case 'Image':
+        get_template_part('template-parts/header', 'image');
+        break;
     case 'Carousel':
         get_template_part('template-parts/header', 'carousel');
         break;

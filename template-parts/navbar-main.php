@@ -36,6 +36,14 @@ if ($options) {
 }
 ?>
 
+<?php
+$metadata = get_field('header_metadata', 'option');
+if ($metadata) {
+    $badge_text = $metadata['badge_text'];
+    $badge_link = $metadata['badge_link'];
+}
+?>
+
 <?php if($helper_div) { ?>
     <div class="w-100" style="height: 57px;"></div>
 <?php } ?>
@@ -52,58 +60,64 @@ if ($options) {
         }
         ?>
 		</a>
-		<div class="d-lg-none d-flex ms-auto">
-            <?php 
-            if(wp_is_mobile() && empty($theme_toggler)) {
-                WPDE()->theme();
-            }
-            ?>
-            <?php
-            if (empty($search_form)) {
-            ?>
-			<button class="navbar-toggler border-0" type="button" data-bs-toggle="modal" data-bs-target="#modal-searchform">
-			    <i class="fa-solid fa-magnifying-glass"></i>
-			</button>
-            <?php } ?>
-			<button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation" style="width: 46px;">
-                <i id="navbar-toggler-icon" class="fa-solid fa-bars fa-lg"></i>
-			</button>
-		</div>
-		<div class="d-none d-lg-block">
-			<?php 
-            if (empty($search_form)) {
-                get_search_form(); 
-            }
-            ?>  
-		</div>
+
+        <?php if (!empty($badge_text) || !empty($badge_link)) { ?>
+                <div class="py-1 px-3 rounded-4 border text-muted" style="max-width: max-content;">
+                    <small>
+                    <i class="fa-solid fa-bullhorn"></i>
+                        <?php 
+                        if (!empty($badge_text)) {
+                            echo esc_html($badge_text); 
+                        }
+                        ?> 
+                        <?php
+                        if ($badge_link) {
+                            $link_url = $badge_link['url'];
+                            $link_title = $badge_link['title'];
+                            $link_target = $badge_link['target'] ? $badge_link['target'] : '_self';
+                            ?>
+                            <a class="link-underline link-underline-opacity-0" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($link_title); ?></a>
+                        <?php } ?>
+                    </small>
+                </div>
+                <?php } ?>
+
 		<div class="collapse navbar-collapse" id="navbar">
             <small class="text-primary d-block d-lg-none fw-bold my-4"><?php _e('Navigation', 'wpde'); ?></small>
 		<?php 
         wp_nav_menu([
             'theme_location' => 'menu-1',
             'container' => false,
-            'menu_class' => '',
+            'menu_class' => 'me-3',
             'fallback_cb' => '__return_false',
-            'items_wrap' => '<ul id="%1$s" class="navbar-nav ms-3 ms-lg-auto mb-3 mb-lg-0 %2$s">%3$s</ul>',
+            'items_wrap' => '<ul id="%1$s" class="navbar-nav gap-2 ms-3 ms-lg-auto mb-3 mb-lg-0 %2$s">%3$s</ul>',
             'depth' => 2,
             'walker' => new bootstrap_5_wp_nav_menu_walker(),
         ]); 
         ?>
-        <ul class="navbar-nav align-items-center justify-content-start">
-            <li class="nav-item">
-                <?php 
-                if(!wp_is_mobile() && empty($theme_toggler)) {
-                    WPDE()->theme();
-                }
-                ?>
-            </li>
-        </ul>
 		</div>
-		<div class="d-none d-lg-flex ms-1">
+        <div class="d-flex align-items-center justify-content-center gap-3 ms-auto" id="navbar-actions">
+            <?php 
+            if(empty($theme_toggler)) {
+                WPDE()->theme();
+            }
+            ?>
+            <?php
+            if (empty($search_form)) {
+            ?>
+			<button class="navbar-toggler p-1 d-flex rounded-circle border-0" type="button" data-bs-toggle="modal" data-bs-target="#modal-searchform">
+			    <i class="fa-solid fa-magnifying-glass text-dark text-muted"></i>
+			</button>
+            <?php } ?>
+			<button class="navbar-toggler p-1 rounded-circle border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <i id="navbar-toggler-icon" class="fa-solid fa-bars fa-lg"></i>
+			</button>
+		</div>
+		<div class="d-none d-lg-flex">
             <?php 
             if(!empty($navbar_link) || !empty($navbar_btn)) {
             ?>
-            <ul class="navbar-nav border-start align-items-center ps-3 ms-3">
+            <ul class="navbar-nav border-start align-items-center ps-4 ms-4">
             <?php 
             if( $navbar_link ) {
                 $link_url = $navbar_link['url'];

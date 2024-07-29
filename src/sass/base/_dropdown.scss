@@ -1,3 +1,10 @@
 .navbar-toggler.dropdown-toggle:after {
     content: none;
 }
+
+.navbar-collapse .dropdown-menu {
+    box-shadow: var(--wpde-box-shadow-lg);
+    border-color: var(--wpde-border-color);
+    padding-top: 0;
+    padding-bottom: 0;
+}

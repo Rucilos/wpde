@@ -1,4 +1,5 @@
 .cc--lightmode {
+    --cc-bg: var(--wpde-body-bg) !important;
     --cc-btn-border-radius: var(--wpde-border-radius) !important;
     --cc-btn-gap: 8px !important;
     --cc-btn-primary-bg: var(--wpde-primary) !important;
@@ -6,6 +7,15 @@
 }
 
 .cc--darkmode {
+    --cc-bg: var(--wpde-gray-950) !important;
+    --cc-btn-secondary-bg: var(--wpde-gray-900) !important;
+    --cc-btn-secondary-hover-bg: var(--wpde-gray-800) !important;
+    --cc-cookie-category-block-bg: var(--wpde-gray-900) !important;
+    --cc-section-category-border: var(--wpde-gray-900) !important;
+    --cc-cookie-category-block-hover-bg: var(--wpde-gray-800) !important;
+    --cc-separator-border-color: var(--wpde-gray-900) !important;
+    --cc-toggle-readonly-bg: var(--wpde-gray-800) !important;
+
     --cc-btn-border-radius: var(--wpde-border-radius) !important;
     --cc-btn-gap: 8px !important;
     --cc-btn-primary-bg: var(--wpde-primary) !important;

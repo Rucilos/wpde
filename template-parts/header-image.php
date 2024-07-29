@@ -72,35 +72,15 @@ if ($metadata) {
             </div>
 
             <div class="col-md-5 offset-md-1">
-                <?php
-                if (have_rows('wpde_header_reviews', 'option')) {
-                    $row_index = 0;
-                    while (have_rows('wpde_header_reviews', 'option')) {
-                        the_row();
-
-                        $image = get_sub_field('image');
-                        if ($image) {
-                            $image_size_custom = 'avatar';
-                            $image_size = wp_get_attachment_image_url($image['ID'], $image_size_custom);
-                            $alt = get_post_meta($image['ID'], '_wp_attachment_image_alt', true);
-                        }
-                        $title = get_sub_field('title');
-                        $description = get_sub_field('description');
-                        ?>
-                        <div class="toast border bg-blur mb-3 show <?php echo ($row_index % 2 == 1) ? 'ms-4' : ''; ?>" role="alert" aria-live="assertive" aria-atomic="true">
-                            <div class="toast-header border-bottom shadow-sm">
-                                <img src="<?php echo esc_url($image_size); ?>" class="rounded-circle me-2" alt="<?php echo esc_attr($alt); ?>" width="24px" height="auto">
-                                <strong class="me-auto"><?php echo esc_html($title); ?></strong>
-                                <small>11 mins ago</small>
-                            </div>
-                            <div class="toast-body">
-                                <?php echo esc_html($description); ?>
-                            </div>
-                        </div>
-                        <?php
-                        $row_index++;
-                    } ?>
-                <?php } ?>
+            <?php 
+            $image = get_field('wpde_header_image', 'option');
+            if($image) {
+                $image_size_custom = wp_is_mobile() ? 'header-sm' : 'header';
+                $image_size = wp_get_attachment_image_url($image['ID'], $image_size_custom); 
+                $alt = get_post_meta($image['ID'], '_wp_attachment_image_alt', true);
+            ?>
+                <img src="<?php echo esc_url($image_size); ?>" class="d-block w-100" alt="<?php echo esc_attr($alt); ?>">
+            <?php } ?>
             </div>
         </div>
     </div>
