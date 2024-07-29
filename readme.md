@@ -4,11 +4,11 @@ WordPress Development Environment (WPDE) is a fantastic starting point for creat
 
 ![WPDE - Cover](/.github/cover.png)
 
-## Demo 🌐
+## Demo 🌐🌍
 
 Check out the [WPDE](https://wpde.jindrichrucil.com/) template
 
-## Commands 🛠️
+## Commands 🛠️🔧
 
 ```sh
 # Bundles the application
@@ -21,7 +21,7 @@ npm run format
 npm run clear
 ```
 
-## Libraries 📚
+## Libraries 📚📖
 
 -   Bootstrap
 -   Bootstrap Navbar Walker
@@ -29,13 +29,13 @@ npm run clear
 -   Cookie Consent
 -   Magnific popup
 
-## Development Tools 🖥️
+## Development Tools 🖥️💻
 
 -   SASS
 -   Webpack
 -   Prettier
 
-## Features ✨
+## Features 🚀⚡
 
 ```php
 // Display breadcrumbs
@@ -97,7 +97,7 @@ echo WPDE()->get_title(
 -   **PHP:** 7.0 or higher
 -   **ACF PRO:** 5.7.0 or higher
 
-## Installation 📝
+## Installation 📝📥
 
 ### Install from WordPress
 
@@ -112,11 +112,11 @@ echo WPDE()->get_title(
 3. **Visit** Appearance > Themes > Search for `WPDE` > Activate
 4. **Click** on the new menu item `Theme Setting` for better control of theme
 
-## License 📄
+## License 📄📜
 
 Distributed under the **MIT** License. See [LICENSE](https://github.com/rucilos/wpde/blob/master/LICENSE) for more information.
 
-## Credits 💡
+## Credits 💡✨💼🥇🏅
 
 -   🎉 **INIT** - Public release Version 1.0.0 (Sat, February 6 2024)
 © 2024 Created by [Jindřich Ručil](https://jindrichrucil.com)
