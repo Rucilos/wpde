@@ -2,19 +2,7 @@
     <?php if (has_post_thumbnail()) {
         the_post_thumbnail('medium', ['class' => 'card-img-top']);
     } ?>
-    <div class="pb-5 mb-6 border-bottom">
-        <small class="text-primary">
-            <strong>
-                <?php _e('Page', 'wpde'); ?>
-            </strong>
-        </small>	
-        <h1 class="mb-2">
-            <?php echo esc_html(get_the_title()); ?> 
-        </h1>
-        <p class="mb-0 text-muted">
-            <?php echo esc_html(get_the_excerpt()); ?> 
-        </p>
-    </div>
+    <?php echo WPDE()->get_title(get_the_title(), __('Page', 'wpde'), wp_trim_words(get_the_excerpt(), 15, '')); ?>
     <?php if(is_page('contacts')) { ?>
         <div class="row">
             <div class="col-md-6">

@@ -7,4 +7,8 @@
     border-color: var(--wpde-border-color);
     padding-top: 0;
     padding-bottom: 0;
+
+    .dropdown-item {
+        padding: 16px;
+    }
 }

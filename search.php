@@ -14,22 +14,11 @@
 
 <div class="container-fluid px-0 py-6">
     <div class="container">
-        <div class="pb-5 mb-6 border-bottom">
-            <small class="text-primary">
-                <strong>
-                    <?php _e('Search results', 'wpde'); ?>
-                </strong>
-            </small>	
-            <h1 class="mb-2">
-                <?php 
-                $search_query = get_search_query();
-                printf(__('Content matching your query: "%s"', 'wpde'), esc_html($search_query)); 
-                ?>
-            </h1>
-            <p class="mb-0 text-muted">
-                <?php _e('Explore our latest articles and resources matching your search query.', 'wpde'); ?>
-            </p>
-        </div>
+        <?php 
+        $search_query = get_search_query();
+        $title = sprintf(__('Content matching your query: "%s"', 'wpde'), esc_html($search_query));
+        echo WPDE()->get_title($title, __('Search results', 'wpde'), __('Explore our latest articles and resources matching your search query.', 'wpde')); 
+        ?>
         <div class="row row-gap-5">
             <?php if (have_posts()) {
                 while (have_posts()) {

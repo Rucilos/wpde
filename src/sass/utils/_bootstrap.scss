@@ -105,8 +105,8 @@ $breadcrumb-divider: quote('/'); // quote('/');
 $btn-font-weight: 500; // $font-weight-normal
 
 // Links
-$link-decoration: underline; // underline
-$link-hover-decoration: none; // null
+$link-decoration: none; // underline
+$link-hover-decoration: underline; // null
 
 // Nav link
 $nav-link-font-size: $small-font-size; // null

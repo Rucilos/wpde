@@ -19,23 +19,15 @@ $user_details = WPDE()->get_user($user_id);
 
 <div class="container-fluid px-0 py-6">
     <div class="container">
-        <div class="pb-5 mb-6 border-bottom">
-            <small class="text-primary">
-                <strong>
-                    <?php _e('Author', 'wpde'); ?>
-                </strong>
-            </small>	
-            <h1 class="mb-2">
-                <?php if (isset($user_details['name']) && !empty($user_details['name'])) {
-                    echo esc_html($user_details['name']);
-                } ?>
-            </h1>
-            <p class="mb-0 text-muted">
-                <?php if (isset($user_details['job']) && !empty($user_details['job'])) {
-                    echo esc_html($user_details['job']);
-                } ?>
-            </p>
-        </div>
+        <?php 
+        if (isset($user_details['name']) && !empty($user_details['name'])) {
+            $title = esc_html($user_details['name']);
+        }
+        if (isset($user_details['job']) && !empty($user_details['job'])) {
+            $description = esc_html($user_details['job']);
+        }
+        echo WPDE()->get_title($title, __('Author', 'wpde'), $description); 
+        ?>
         <div class="row row-gap-5">
             <?php if (have_posts()) {
                 while (have_posts()) {

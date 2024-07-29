@@ -1,20 +1,17 @@
 <div class="col-md-12">     
-    <div class="pb-5 mb-6 border-bottom">
-        <small class="text-primary">
-            <strong>
-            <?php 
-            if (has_category()) {
-                $categories = get_the_category();
-                foreach ($categories as $category) {
-                    echo esc_html($category->name) . ' ';
-                }
-            } 
-            ?>
-            </strong>
-        </small>	
-        <h1 class="mb-2"><?php echo esc_html(get_the_title()); ?></h1> 
-        <p class="mb-0 text-muted"><?php echo esc_html(wp_trim_words(get_the_excerpt(), 15, '')); ?></p>
-    </div>
+    <?php 
+    if (has_category()) {
+        $categories = get_the_category();
+        $term_names = []; // Vytvoříme prázdné pole pro uložení názvů kategorií
+        foreach ($categories as $category) {
+            $term_names[] = $category->name; // Přidáme každý název kategorie do pole
+        }
+        $term_name = implode(', ', $term_names); // Spojíme názvy kategorií do jednoho řetězce
+    } else {
+        $term_name = ''; // Pokud žádné kategorie nejsou, nastavíme prázdný řetězec
+    }
+    echo WPDE()->get_title(get_the_title(), $term_name, wp_trim_words(get_the_excerpt(), 15, '')); 
+    ?>
     <?php 
     if (has_post_thumbnail()) {
         echo '<div class="text-center">';

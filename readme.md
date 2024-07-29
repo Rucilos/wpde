@@ -4,11 +4,11 @@ WordPress Development Environment (WPDE) is a fantastic starting point for creat
 
 ![WPDE - Cover](/.github/cover.png)
 
-## Demo
+## Demo 🌐
 
 Check out the [WPDE](https://wpde.jindrichrucil.com/) template
 
-## Commands
+## Commands 🛠️
 
 ```sh
 # Bundles the application
@@ -21,7 +21,7 @@ npm run format
 npm run clear
 ```
 
-## Libraries
+## Libraries 📚
 
 -   Bootstrap
 -   Bootstrap Navbar Walker
@@ -29,13 +29,13 @@ npm run clear
 -   Cookie Consent
 -   Magnific popup
 
-## Development Tools
+## Development Tools 🖥️
 
 -   SASS
 -   Webpack
 -   Prettier
 
-## Features
+## Features ✨
 
 ```php
 // Display breadcrumbs
@@ -79,25 +79,25 @@ WPDE()->register_taxonomy(
 ```
 
 ```php
-// Register a custom taxonomy
+// Get the custom title
 echo WPDE()->get_title(
-    __('Title', 'wpde'),  // Main title for the section.
-    __('Subtitle', 'wpde'),  // Subtitle for additional context.
-    __('Description', 'wpde'),  // Description of the section.
+    __('Title', 'wpde'),  // Title 
+    __('Subtitle', 'wpde'),  // Subtitle 
+    __('Description', 'wpde'),  // Description 
     array(
-        'layout' => 'border-bottom', // Replace with your desired layout class.
-        'border' => 'Enabled' // Set to 'Enabled' or 'Disabled' based on your needs.
+        'layout' => 'text-end', // Layout
+        'border' => 'Enabled' // 'Enabled' or 'Disabled'
     )
 );
 ```
 
-## Requirements
+## Requirements ⚙️
 
 -   **WordPress:** 6.0 or higher
 -   **PHP:** 7.0 or higher
 -   **ACF PRO:** 5.7.0 or higher
 
-## Installation
+## Installation 📝
 
 ### Install from WordPress
 
@@ -112,14 +112,11 @@ echo WPDE()->get_title(
 3. **Visit** Appearance > Themes > Search for `WPDE` > Activate
 4. **Click** on the new menu item `Theme Setting` for better control of theme
 
-## License
+## License 📄
 
 Distributed under the **MIT** License. See [LICENSE](https://github.com/rucilos/wpde/blob/master/LICENSE) for more information.
 
-## Credits
+## Credits 💡
 
+-   🎉 **INIT** - Public release Version 1.0.0 (Sat, February 6 2024)
 © 2024 Created by [Jindřich Ručil](https://jindrichrucil.com)
-
-## Changelog
-
-See [CHANGELOG](https://github.com/rucilos/wpde/blob/master/changelog.md) for more information.

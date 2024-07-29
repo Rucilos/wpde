@@ -33,7 +33,6 @@ if (!is_404()) {
     }
 }
 
-// Include the search modal regardless of the footer layout
 get_template_part('template-parts/modal', 'search');
 
 wp_footer();

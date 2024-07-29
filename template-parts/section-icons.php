@@ -2,14 +2,14 @@
     <div class="container-fluid px-0 py-6">
         <div class="container">
         <?php
-            $icons = get_field('wpde_icons', 'option');
-            if ($icons) {
-                $title = $icons['title']; 
-                $subtitle = $icons['subtitle']; 
-                $description = $icons['description']; 
-                $grid = $icons['grid'];
-                $layout = $icons['layout']; 
-                $border = $icons['border'];
+            $group = get_field('wpde_icons', 'option');
+            if ($group) {
+                $title = $group['title']; 
+                $subtitle = $group['subtitle']; 
+                $description = $group['description']; 
+                $grid = $group['grid'];
+                $layout = $group['layout']; 
+                $border = $group['border'];
 
                 switch ($layout) {
                     case 'Left':
@@ -29,9 +29,7 @@
                 $grid = 3;
             }
             ?>
-            <?php if ( !empty($title) || !empty($subtitle) || !empty($description) ) { ?>
-                <?php echo WPDE()->get_title($title, $subtitle, $description, array('layout' => $title_layout, 'border' => $border)); ?>
-            <?php } ?>
+            <?php echo WPDE()->get_title($title, $subtitle, $description, array('layout' => $title_layout, 'border' => $border)); ?>
             <div class="row">
                 <?php 
                 while (have_rows('wpde_icons_items', 'option')) {
@@ -40,7 +38,8 @@
                     $item_description = get_sub_field('description');
                     $image = get_sub_field('image');
                     if($image) {
-                        $image_size = wp_get_attachment_image_url($image['ID'], 'small'); 
+                        $image_custom_size = 'small-sm';
+                        $image_size = wp_get_attachment_image_url($image['ID'], $image_custom_size); 
                         $alt = get_post_meta($image['ID'], '_wp_attachment_image_alt', true);
                     }
                     ?>

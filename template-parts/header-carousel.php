@@ -18,9 +18,9 @@ if ($metadata) {
     </div>
     <div class="container py-6">
         <div class="row align-items-center">
-            <div class="col-md-6 mb-3">
+            <div class="col-md-6 mb-5 mb-md-0">
                 <?php if (!empty($badge_text) || !empty($badge_link)) { ?>
-                <div class="py-1 px-3 mb-3 rounded-4 border text-muted" style="max-width: max-content;">
+                <div class="py-0 px-3 mb-3 rounded-4 border text-muted" style="max-width: max-content;">
                     <small>
                         <?php 
                         if (!empty($badge_text)) {

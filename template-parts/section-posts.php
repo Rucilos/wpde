@@ -18,12 +18,13 @@ if ($query->have_posts()) {
 <div class="container-fluid px-0 py-6" id="posts">
     <div class="container">
         <?php
-        $posts = get_field('wpde_posts', 'option');
+        $group = get_field('wpde_posts', 'option');
         if ($posts) {
-            $title = $posts['title']; 
-            $subtitle = $posts['subtitle']; 
-            $description = $posts['description']; 
-            $layout = $posts['layout']; 
+            $title = $group['title']; 
+            $subtitle = $group['subtitle']; 
+            $description = $group['description']; 
+            $layout = $group['layout']; 
+            $border = $group['border']; 
 
             switch ($layout) {
                 case 'Left':
@@ -45,24 +46,17 @@ if ($query->have_posts()) {
             }
         }
         ?>
-        <?php if ( !empty($title) || !empty($subtitle) || !empty($description) ) { ?>
-            <div class="pb-5 mb-6 border-bottom <?php echo $title_layout; ?>">
-                <small class="text-primary"><strong><?php echo esc_html($subtitle); ?></strong></small>	
-                <h1 class="mb-2"><?php echo esc_html($title); ?></h1>
-                <p class="text-muted"><?php echo esc_html($description); ?></p>
-
-                <ul class="list-unstyled d-flex align-items-center gap-3 mt-3 mb-0 <?php echo $filters_layout; ?>">
-                    <small><strong><?php echo esc_html__('Filters:', 'wpde'); ?></strong></small>
-                    <?php
-                    $categories = get_categories();
-                    foreach ($categories as $category) {
-                        $active_class = (isset($_GET['category']) && $_GET['category'] == $category->term_id) ? 'active' : '';
-                        echo '<li class="' . esc_attr($active_class) . '"><a href="' . esc_url(add_query_arg('category', $category->term_id) . '#posts') . '"><small>' . esc_html($category->name) . '</small></a></li>';
-                    }
-                    ?>
-                </ul>
-            </div>
-        <?php } ?>
+        <?php echo WPDE()->get_title($title, $subtitle, $description, array('layout' => $title_layout, 'border' => $border)); ?>
+        <ul class="list-unstyled d-flex align-items-center gap-3 mt-3 mb-0 <?php echo $filters_layout; ?>">
+            <small><strong><?php echo esc_html__('Filters:', 'wpde'); ?></strong></small>
+            <?php
+            $categories = get_categories();
+            foreach ($categories as $category) {
+                $active_class = (isset($_GET['category']) && $_GET['category'] == $category->term_id) ? 'active' : '';
+                echo '<li class="' . esc_attr($active_class) . '"><a href="' . esc_url(add_query_arg('category', $category->term_id) . '#posts') . '"><small>' . esc_html($category->name) . '</small></a></li>';
+            }
+            ?>
+        </ul>
 
         <div class="row row-gap-5">
                 <?php
@@ -75,7 +69,6 @@ if ($query->have_posts()) {
                 ?>
                 <div class="d-flex align-items-center justify-content-between gap-2 my-4 pt-3 border-top"> 
                     <?php
-                    global $wp_query;
                     $total_posts = $wp_query->found_posts;
                     $posts_per_page = get_query_var('posts_per_page');
                     $current_page = max(1, get_query_var('paged'));

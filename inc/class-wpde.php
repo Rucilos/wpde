@@ -189,50 +189,11 @@ class WPDE {
             add_action('admin_footer_text', [$this, 'admin_footer_text'], 10, 1);
             add_action('update_footer', [$this, 'admin_footer_version'], 9999, 1);
         }
-
         add_action('wp_before_admin_bar_render', [$this, 'add_adminbar_tabs'], 999);
         add_action('admin_head', [$this, 'add_help_tabs']);
-
         add_action('wp_dashboard_setup', [$this, 'add_dashboard_metabox']);
         add_action('pre_user_query', [$this, 'exclude_users']);
     } // END __construct()
-
-    /**
-     * Generate and display a formatted title section.
-     *
-     * This method creates an HTML structure for a title section, which includes 
-     * a subtitle, main title, and description. It also applies optional layout 
-     * and border styles based on the provided options array.
-     *
-     * @param   string $title       The main title to be displayed.
-     * @param   string $subtitle    The subtitle to be displayed.
-     * @param   string $description A description to be displayed below the title.
-     * @param   array  $options     Optional parameters for layout and border settings.
-     * @return  string              The generated HTML for the title section.
-     * @access  public
-     * @since   1.0.0
-     */
-    public function get_title($title, $subtitle, $description, $options = array()) {
-        $html = '';
-
-        // Set default values
-        $title_layout = !empty($options['layout']) ? esc_attr($options['layout']) : ''; // Default: empty
-        $border_class = 'border-bottom'; // Default: always apply border-bottom
-
-        // Check if border should be removed
-        if (!empty($options['border']) && $options['border'] !== 'Enabled') {
-            $border_class = ''; // No border if "Enabled" is not set
-        }
-
-        // Build the HTML string
-        $html .= '<div class="pb-5 mb-6 ' . esc_attr($border_class) . ' ' . esc_attr($title_layout) . '">';
-            $html .= '<small class="text-primary"><strong>' . esc_html($subtitle) . '</strong></small>';
-            $html .= '<h1 class="mb-2">' . esc_html($title) . '</h1>';
-            $html .= '<p class="mb-0 text-muted">' . esc_html($description) . '</p>';
-        $html .= '</div>';
-
-        return $html; 
-    }
 
     /**
      * Display a notice in the WordPress admin area.
@@ -245,8 +206,8 @@ class WPDE {
      * @since   1.0.0
      */
     public function acf_notice() {
-        $html = '<div id="wpde-notice" class="notice notice-error is-dismissible">';
-            $html .= '<p>' . __('The', 'wpde') . ' <a href="https://github.com/Rucilos/wpde/" target="_blank" rel="noopener noreferrer"><strong>' . __('WordPress Development Environment (WPDE)', 'wpde') . '</strong></a> ' . __('theme requires the', 'wpde') . ' <a href="https://www.google.com/search?q=ACF+PRO" target="_blank" rel="noopener noreferrer"><strong>' . __('ACF PRO', 'wpde') . '</strong></a> ' . __('plugin, with a minimum version of 5.7.0, to function properly. Please activate the plugin to ensure all features work as intended.', 'wpde') . '</p>';
+        $html = '<div id="' . $this->_token . '-notice" class="notice notice-error is-dismissible">';
+            $html .= '<p>' . __('The', 'wpde') . ' <a href="https://github.com/Rucilos/wpde/" target="_blank" rel="noopener noreferrer"><strong>' . __('WordPress Development Environment (WPDE)', 'wpde') . '</strong></a> ' . __('theme requires the', 'wpde') . ' <a href="https://www.google.com/search?q=ACF+PRO" target="_blank" rel="noopener noreferrer"><strong>' . __('ACF PRO', 'wpde') . '</strong></a> ' . __('plugin, with a minimum version of 5.7.0, to function properly.', 'wpde') . '</p>';
         $html .= '</div>';
         
         echo $html;
@@ -548,8 +509,9 @@ class WPDE {
         ]);
 
         // Register custom image sizes
-        add_image_size('small', 50, 50, true); 
-        add_image_size('header', 600, 800, true); 
+        add_image_size('small-sm', 50, 50, true); 
+        add_image_size('medium-md', 450, 250, true); 
+        add_image_size('header', 500, 700, true); 
         add_image_size('header-sm', 500, 350, true); 
 
         // Register bootstrap navwalker
@@ -607,19 +569,7 @@ class WPDE {
                         $html .= '</a>';
                     $html .= '</li>';
                     $html .= '<li class="nav-item">';
-                        $html .= '<a href="https://github.com/Rucilos/wpde/" class="nav-link">';
-                            $html .= '<img src="'. get_template_directory_uri() .'/img/link.svg" class="ico" />' . __('dsadsada', 'wpde');
-                        $html .= '</a>';
-                    $html .= '</li>';
-                    $html .= '<li class="nav-item">';
-                        $html .= '<a href="https://github.com/Rucilos/wpde/" class="nav-link">';
-                            $html .= '<img src="'. get_template_directory_uri() .'/img/download.svg" class="ico" />';
-                        $html .= '</a>';
-                    $html .= '</li>';
-                    $html .= '<li class="nav-item">';
-                        $html .= '<a href="https://github.com/Rucilos/wpde/" class="nav-link">';
-                            $html .= '<img src="'. get_template_directory_uri() .'/img/demo.svg" class="ico" />';
-                        $html .= '</a>';
+                            $html .= __('Version' , 'wpde') . ' ' . $this->_version;
                     $html .= '</li>';
                 $html .= '</ul>';
             $html .= '</nav>';
@@ -926,6 +876,39 @@ class WPDE {
 
             echo $html;
         }
+    }
+
+    /**
+     * Generate and display a formatted title section.
+     *
+     * This method creates an HTML structure for a title section, which includes 
+     * a subtitle, main title, and description. It also applies optional layout 
+     * and custom styles based on the provided options array.
+     *
+     * @param   string $title       The main title to be displayed.
+     * @param   string $subtitle    The subtitle to be displayed.
+     * @param   string $description A description to be displayed below the title.
+     * @param   array  $options     Optional parameters for layout and border settings.
+     * @return  string              The generated HTML for the title section.
+     * @access  public
+     * @since   1.0.0
+     */
+    public function get_title($title, $subtitle, $description, $options = array()) {
+        $html = '';
+        $title_layout = !empty($options['layout']) ? esc_attr($options['layout']) : ''; 
+        $border_class = 'border-bottom'; 
+
+        if (!empty($options['border']) && $options['border'] !== 'Enabled') {
+            $border_class = '';
+        }
+
+        $html .= '<div class="pb-5 mb-6 ' . esc_attr($border_class) . ' ' . esc_attr($title_layout) . '">';
+            $html .= '<small class="text-primary"><strong>' . esc_html($subtitle) . '</strong></small>';
+            $html .= '<h1 class="mb-2">' . esc_html($title) . '</h1>';
+            $html .= '<p class="mb-0 text-muted">' . esc_html($description) . '</p>';
+        $html .= '</div>';
+
+        return $html; 
     }
 
     /**

@@ -14,24 +14,10 @@
 
 <div class="container-fluid px-0 py-6">
     <div class="container">
-        <div class="pb-5 mb-6 border-bottom">
-            <small class="text-primary">
-                <strong>
-                    <?php _e('Archive', 'wpde'); ?>
-                </strong>
-            </small>	
-            <h1 class="mb-2">
-                <?php
-                    $current_term = get_queried_object();
-                    echo esc_html($current_term->name);
-                ?>
-            </h1>
-            <p class="mb-0 text-muted">
-                <?php echo wp_kses_post(term_description()); ?>
-            </p>
-        </div>
-
-        <?php echo WPDE()->get_title(esc_html($current_term->name), __('Category', 'wpde'), wp_kses_post(term_description())); ?>
+        <?php 
+        $current_term = get_queried_object();
+        echo WPDE()->get_title($current_term->name, __('Archive', 'wpde'), wp_kses_post(term_description())); 
+        ?>
         <div class="row row-gap-5">
             <?php if (have_posts()) {
                 while (have_posts()) {

@@ -2,12 +2,13 @@
     <div class="container-fluid px-0 py-6">
         <div class="container">
             <?php
-            $logos = get_field('wpde_logos', 'option');
-            if ($logos) {
-                $title = $logos['title']; 
-                $subtitle = $logos['subtitle']; 
-                $description = $logos['description']; 
-                $layout = $logos['layout']; 
+            $group = get_field('wpde_logos', 'option');
+            if ($group) {
+                $title = $group['title']; 
+                $subtitle = $group['subtitle']; 
+                $description = $group['description']; 
+                $layout = $group['layout']; 
+                $border = $group['border'];
 
                 switch ($layout) {
                     case 'Left':
@@ -25,13 +26,7 @@
                 }
             }
             ?>
-            <?php if ( !empty($title) || !empty($subtitle) || !empty($description) ) { ?>
-                <div class="pb-5 mb-6 border-bottom <?php echo $title_layout; ?>">
-                    <small class="text-primary"><strong><?php echo esc_html($subtitle); ?></strong></small>	
-                    <h1 class="mb-2"><?php echo esc_html($title); ?></h1>
-                    <p class="text-muted"><?php echo esc_html($description); ?></p>
-                </div>
-            <?php } ?>
+            <?php echo WPDE()->get_title($title, $subtitle, $description, array('layout' => $title_layout, 'border' => $border)); ?>
             <div class="row justify-content-center align-items-center">
                 <?php 
                 while (have_rows('wpde_logos_items', 'option')) {

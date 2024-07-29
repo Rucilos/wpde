@@ -62,7 +62,7 @@ if ($metadata) {
 		</a>
 
         <?php if (!empty($badge_text) || !empty($badge_link)) { ?>
-                <div class="py-1 px-3 rounded-4 border text-muted" style="max-width: max-content;">
+                <div class="py-0 px-3 rounded-4 border text-muted" style="max-width: max-content;">
                     <small>
                     <i class="fa-solid fa-bullhorn"></i>
                         <?php 
