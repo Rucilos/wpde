@@ -8,7 +8,7 @@ WordPress Development Environment (WPDE) is a fantastic starting point for creat
 
 Check out the [WPDE](https://wpde.jindrichrucil.com/) template
 
-## Commands 🛠️🔧
+## Commands 🛠️
 
 ```sh
 # Bundles the application
@@ -29,7 +29,7 @@ npm run clear
 -   Cookie Consent
 -   Magnific popup
 
-## Development Tools 🖥️💻
+## Development Tools 🖥️
 
 -   SASS
 -   Webpack
@@ -81,9 +81,9 @@ WPDE()->register_taxonomy(
 ```php
 // Get the custom title
 echo WPDE()->get_title(
-    __('Title', 'wpde'),  // Title 
-    __('Subtitle', 'wpde'),  // Subtitle 
-    __('Description', 'wpde'),  // Description 
+    __('Title', 'wpde'),  // Title
+    __('Subtitle', 'wpde'),  // Subtitle
+    __('Description', 'wpde'),  // Description
     array(
         'layout' => 'text-end', // Layout
         'border' => 'Enabled' // 'Enabled' or 'Disabled'
@@ -91,7 +91,7 @@ echo WPDE()->get_title(
 );
 ```
 
-## Requirements ⚡⚙️
+## Requirements ⚡⚙️🔧
 
 -   **WordPress:** 6.0 or higher
 -   **PHP:** 7.0 or higher

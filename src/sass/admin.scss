@@ -8,7 +8,7 @@
     --wpde-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
     --wpde-shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
     --wpde-shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
-    
+
     --wpde-white: #ffffff;
     --wpde-black: #000000;
 
@@ -37,7 +37,6 @@
 
 // Options page
 .toplevel_page_wpde {
-
     // Navbar
     .wpde-navbar {
         position: relative;
@@ -106,7 +105,6 @@
 
     // Submit postbox
     #postbox-container-1 {
-
         #submitdiv {
             box-shadow: none;
             border: 0;
@@ -146,7 +144,7 @@
                     z-index: 1;
 
                     &:hover {
-                        opacity: .95;
+                        opacity: 0.95;
                     }
 
                     @media only screen and (max-width: 600px) {
@@ -164,11 +162,11 @@
             border-color: var(--wpde-border);
 
             .postbox-header {
-              display: none;
+                display: none;
             }
         }
     }
-    
+
     // Notice
     .notice {
         border-left-width: 1px;
@@ -218,5 +216,4 @@
             color: var(--wpde-notice-dismiss-hover-color);
         }
     }
-
 } // END toplevel_page_wpde
