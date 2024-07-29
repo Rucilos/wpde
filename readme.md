@@ -21,7 +21,7 @@ npm run format
 npm run clear
 ```
 
-## Libraries 📚📖
+## Libraries 📚
 
 -   Bootstrap
 -   Bootstrap Navbar Walker
@@ -35,7 +35,7 @@ npm run clear
 -   Webpack
 -   Prettier
 
-## Features 🚀⚡
+## Features 🚀
 
 ```php
 // Display breadcrumbs
@@ -116,7 +116,6 @@ echo WPDE()->get_title(
 
 Distributed under the **MIT** License. See [LICENSE](https://github.com/rucilos/wpde/blob/master/LICENSE) for more information.
 
-## Credits ✨💼
+## Credits 🎉
 
-🎉 Public Release v1.0.0 was launched on Saturday, February 6, 2024.
-© 2024 Created by [Jindřich Ručil](https://jindrichrucil.com)
+© 2024 Created by [Jindřich Ručil](https://jindrichrucil.com). Public Release v1.0.0 was launched on Saturday, February 6, 2024.
