@@ -97,7 +97,7 @@ echo WPDE()->get_title(
 -   **PHP:** 7.0 or higher
 -   **ACF PRO:** 5.7.0 or higher
 
-## Installation 💡
+## 💡 Installation 
 
 ### Install from WordPress
 
