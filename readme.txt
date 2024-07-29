@@ -39,7 +39,7 @@ It includes responsive and accessibility design, necessary files, and features f
 1. **Visit** Themes > Add new
 2. **Search** for "WPDE"
 3. **Install and Activate**
-4. **Click** on the new menu item "Theme Settings" for better control over the theme
+4. **Click** on the new menu item "WPDE" for better control over the theme
 
 ** Manual install **
 
@@ -48,7 +48,7 @@ It includes responsive and accessibility design, necessary files, and features f
 3. **Extract** "wpde.zip"
 4. **Upload** "wpde" folder to /wp-content/themes/
 5. **Visit** Appearance > Themes > Search for WPDE > Activate
-6. **Click** on the new menu item "Theme Settings" for better control over the theme
+6. **Click** on the new menu item "WPDE" for better control over the theme
 
 == Frequently Asked Questions ==
 1. **What kind of support do you provide?**
