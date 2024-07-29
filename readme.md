@@ -97,7 +97,7 @@ echo WPDE()->get_title(
 -   **PHP:** 7.0 or higher
 -   **ACF PRO:** 5.7.0 or higher
 
-## Installation 📝📥
+## Installation 📝📥💡
 
 ### Install from WordPress
 
@@ -116,7 +116,7 @@ echo WPDE()->get_title(
 
 Distributed under the **MIT** License. See [LICENSE](https://github.com/rucilos/wpde/blob/master/LICENSE) for more information.
 
-## Credits 💡✨💼🥇🏅
+## Credits ✨💼🥇🏅
 
--   🎉 **INIT** - Public release Version 1.0.0 (Sat, February 6 2024)
+🎉 Public Release v1.0.0 was launched on Saturday, February 6, 2024.
 © 2024 Created by [Jindřich Ručil](https://jindrichrucil.com)
