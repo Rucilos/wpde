@@ -106,7 +106,7 @@ WPDE()->register_taxonomy(
 -   **ACF PRO:** 5.7.0 or higher
 
 ### Development
--   **Node.js** 18.x.x or higher (LTS version supported and recommended).
+-   **Node.js** 18.x or higher (LTS version supported and recommended).
 -   **Composer** 1.0 or higher
 
 ## 💡 Installation 
@@ -130,4 +130,4 @@ Distributed under the **MIT** License. See [LICENSE](https://github.com/rucilos/
 
 ## 🎉 Credits
 
-© 2024 Created by [Jindřich Ručil](https://jindrichrucil.com). Public Release v1.0.0 was launched on Saturday, February 6, 2024.
+© 2024 Created by [Jindřich Ručil](https://jindrichrucil.com). Public Release v1.0.0 was launched on Tuesday, February 6, 2024.

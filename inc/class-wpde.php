@@ -210,7 +210,7 @@ class WPDE
     public function acf_notice()
     {
         $html = '<div id="' . $this->_token . '-notice" class="notice notice-error is-dismissible">';
-        $html .= '<p>' . __('The', 'wpde') . ' <a href="https://github.com/Rucilos/wpde/" target="_blank" rel="noopener noreferrer"><strong>' . __('WordPress Development Environment (WPDE)', 'wpde') . '</strong></a> ' . __('theme requires the', 'wpde') . ' <a href="https://www.google.com/search?q=ACF+PRO" target="_blank" rel="noopener noreferrer"><strong>' . __('ACF PRO', 'wpde') . '</strong></a> ' . __('plugin, with a minimum version of 5.7.0, to function properly.', 'wpde') . '</p>';
+            $html .= '<p>' . __('The', 'wpde') . ' <a href="https://github.com/Rucilos/wpde/" target="_blank" rel="noopener noreferrer"><strong>' . __('WordPress Development Environment (WPDE)', 'wpde') . '</strong></a> ' . __('theme requires the', 'wpde') . ' <a href="https://www.google.com/search?q=ACF+PRO" target="_blank" rel="noopener noreferrer"><strong>' . __('ACF PRO', 'wpde') . '</strong></a> ' . __('plugin, with a minimum version of 5.7.0, to function properly.', 'wpde') . '</p>';
         $html .= '</div>';
 
         echo $html;
