@@ -31,7 +31,7 @@ PHP CS Fixer
 npm run phpformat
 ```
 
-## 📚🧪 Libraries
+## 🧪 Libraries
 
 -   Cookie Consent
 -   Bootstrap
@@ -104,7 +104,7 @@ WPDE()->register_taxonomy(
 );
 ```
 
-## ⚙️🎯 Requirements
+## 🎯 Requirements
 
 ### Production
 -   **WordPress:** 6.0 or higher
