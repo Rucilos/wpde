@@ -100,9 +100,14 @@ WPDE()->register_taxonomy(
 
 ## ⚙️ Requirements
 
+### Production
 -   **WordPress:** 6.0 or higher
--   **PHP:** 7.0 or higher
+-   **PHP:** 7.4 or higher
 -   **ACF PRO:** 5.7.0 or higher
+
+### Development
+-   **Node.js** 18.x.x or higher (LTS version supported and recommended).
+-   **Composer** 1.x.x or higher
 
 ## 💡 Installation 
 
