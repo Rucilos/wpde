@@ -6,7 +6,7 @@ $finder = (new PhpCsFixer\Finder())
 
 return (new PhpCsFixer\Config())
     ->setRules([
-        '@PSR2' => true, // Přidání PSR2 setu
+        '@PSR2' => true, 
         '@PHP82Migration' => true,
         
     ])

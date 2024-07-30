@@ -107,7 +107,7 @@ WPDE()->register_taxonomy(
 
 ### Development
 -   **Node.js** 18.x.x or higher (LTS version supported and recommended).
--   **Composer** 1.x.x or higher
+-   **Composer** 1.0 or higher
 
 ## 💡 Installation 
 
