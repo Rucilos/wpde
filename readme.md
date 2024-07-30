@@ -16,7 +16,7 @@ npm install
 composer install
 ```
 
-Run Webpack
+*Run Webpack*
 ```sh
 npm run start
 ```
