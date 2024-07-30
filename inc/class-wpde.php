@@ -511,7 +511,9 @@ class WPDE {
         // Register custom image sizes
         add_image_size('small-sm', 50, 50, true); 
         add_image_size('medium-md', 450, 250, true); 
-        add_image_size('header', 500, 700, true); 
+        add_image_size('large-lg', 1350, 400, true); 
+        add_image_size('logo', 150, 50, true); 
+        add_image_size('header', 400, 600, true); 
         add_image_size('header-sm', 500, 350, true); 
 
         // Register bootstrap navwalker
@@ -805,17 +807,17 @@ class WPDE {
      */
     public function theme() {
         $html = '<div class="dropdown d-flex align-items-center justify-content-center" id="' . $this->_token . '-theme">';
-            $html .= '<button class="navbar-toggler d-flex border-0 dropdown-toggle p-1 text-dark text-muted rounded-circle" type="button" data-bs-toggle="dropdown" aria-expanded="false">';
+            $html .= '<button class="navbar-toggler d-flex border-0 dropdown-toggle p-1 rounded-circle" type="button" data-bs-toggle="dropdown" aria-expanded="false">';
                 $html .= '<i class="fa-solid fa-circle-half-stroke"></i> <span class="visually-hidden">Auto</span>';
             $html .= '</button>';
-            $html .= '<ul class="dropdown-menu shadow-lg border py-0" style="left:-70px;margin-top: 1.3rem;">';
-                $html .= '<li><a class="dropdown-item py-3 active" href="#!" data-value="auto"><i class="fa-solid fa-circle-half-stroke me-1"></i> Auto</a></li>';
-                $html .= '<li><a class="dropdown-item py-3" href="#!" data-value="light"><i class="fa-solid fa-sun me-1"></i> ' . __('Light', 'wpde') . '</a></li>';
-                $html .= '<li><a class="dropdown-item py-3 border" href="#!" data-value="dark"><i class="fa-solid fa-moon me-1"></i> ' . __('Dark', 'wpde') . '</a></li>';
+            $html .= '<ul class="dropdown-menu" style="left:-70px;margin-top: 1.3rem;">';
+                $html .= '<li><a class="dropdown-item active" href="#!" data-value="auto"><i class="fa-solid fa-circle-half-stroke"></i> Auto</a></li>';
+                $html .= '<li><a class="dropdown-item" href="#!" data-value="light"><i class="fa-solid fa-sun"></i> ' . __('Light', 'wpde') . '</a></li>';
+                $html .= '<li><a class="dropdown-item" href="#!" data-value="dark"><i class="fa-solid fa-moon"></i> ' . __('Dark', 'wpde') . '</a></li>';
             $html .= '</ul>';
         $html .= '</div>';
     
-        echo $html;
+        return $html;
     } // END theme()    
 
     /**
@@ -893,7 +895,7 @@ class WPDE {
      * @access  public
      * @since   1.0.0
      */
-    public function get_title($title, $subtitle, $description, $options = array()) {
+    public function the_title($title, $subtitle, $description, $options = array()) {
         $html = '';
         $title_layout = !empty($options['layout']) ? esc_attr($options['layout']) : ''; 
         $border_class = 'border-bottom'; 
@@ -908,7 +910,7 @@ class WPDE {
             $html .= '<p class="mb-0 text-muted">' . esc_html($description) . '</p>';
         $html .= '</div>';
 
-        return $html; 
+        echo $html; 
     }
 
     /**

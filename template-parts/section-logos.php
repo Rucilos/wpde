@@ -26,7 +26,7 @@
                 }
             }
             ?>
-            <?php echo WPDE()->get_title($title, $subtitle, $description, array('layout' => $title_layout, 'border' => $border)); ?>
+            <?php echo WPDE()->the_title($title, $subtitle, $description, array('layout' => $title_layout, 'border' => $border)); ?>
             <div class="row justify-content-center align-items-center">
                 <?php 
                 while (have_rows('wpde_logos_items', 'option')) {
@@ -40,7 +40,7 @@
                     ?>
                     <div class="col-md-2 text-center">
                         <a href="<?php echo $link_url; ?>" target="<?php echo $link_target; ?>">
-                            <img class="mb-3" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" width="135px" height="auto" />
+                            <img class="mb-3" src="<?php echo esc_url($image['sizes']['logo']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" width="135px" height="auto" />
                         </a>
                     </div>
                 <?php

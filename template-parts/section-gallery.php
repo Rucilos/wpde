@@ -29,7 +29,7 @@
                 $grid = 3;
             }
             ?>
-            <?php echo WPDE()->get_title($title, $subtitle, $description, array('layout' => $title_layout, 'border' => $border)); ?>
+            <?php echo WPDE()->the_title($title, $subtitle, $description, array('layout' => $title_layout, 'border' => $border)); ?>
             <div class="row g-3 mfp-init">
             <?php 
             $images = get_field('wpde_gallery_items', 'option');

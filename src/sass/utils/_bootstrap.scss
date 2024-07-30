@@ -45,7 +45,6 @@ $grays: (
 
 // Spacing
 $spacer: 1rem; // 1rem
-$dropdown-spacer: 1rem; // 0.125rem
 $spacers: (
     0: 0,
     1: $spacer * 0.25,
@@ -96,13 +95,22 @@ $body-color-dark: $gray-400; // $gray-300
 // Border
 $border-color: $gray-200; // $gray-400
 $border-color-dark: $gray-900; // $gray-700
+$border-width: 1px; // 1px
 
 // Breadcrumbs
 $breadcrumb-font-size: $small-font-size; // null
 $breadcrumb-divider: quote('/'); // quote('/');
 
-// Buttons
+// Button
 $btn-font-weight: 500; // $font-weight-normal
+
+// Dropdown
+$dropdown-font-size: $small-font-size; // $font-size-base
+$dropdown-spacer: 1rem; // 0.125rem
+$dropdown-item-padding-y: $spacer * .75; // $spacer * .25
+$dropdown-item-padding-x: $spacer * .75; // $spacer
+$dropdown-border-color: var(--#{$prefix}border-color); // var(--#{$prefix}border-color-translucent)
+$dropdown-box-shadow: var(--#{$prefix}box-shadow-lg); // var(--#{$prefix}box-shadow)
 
 // Links
 $link-decoration: none; // underline

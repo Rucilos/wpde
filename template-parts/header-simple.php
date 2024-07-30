@@ -1,12 +1,10 @@
 <?php
-$metadata = get_field('header_metadata', 'option');
+$metadata = get_field('wpde_header_metadata', 'option');
 if ($metadata) {
     $title = $metadata['title'];
     $description = $metadata['description'];
     $link = $metadata['link'];
     $link_2 = $metadata['link_2'];
-    $badge_text = $metadata['badge_text'];
-    $badge_link = $metadata['badge_link'];
 }
 ?>
 
@@ -19,26 +17,6 @@ if ($metadata) {
     <div class="container py-6">
         <div class="row justify-content-center align-items-center text-center">
             <div class="col-md-8">
-                <?php if (!empty($badge_text) || !empty($badge_link)) { ?>
-                <div class="py-1 px-3 mx-auto mb-3 rounded-4 border text-muted" style="max-width: max-content;">
-                    <small>
-                        <?php 
-                        if (!empty($badge_text)) {
-                            echo esc_html($badge_text); 
-                        }
-                        ?> 
-                        <?php
-                        if ($badge_link) {
-                            $link_url = $badge_link['url'];
-                            $link_title = $badge_link['title'];
-                            $link_target = $badge_link['target'] ? $badge_link['target'] : '_self';
-                            ?>
-                            <a class="link-underline link-underline-opacity-0" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($link_title); ?></a>
-                        <?php } ?>
-                    </small>
-                </div>
-                <?php } ?>
-
                 <?php if (!empty($title)) { ?>
                     <h1 class="display-3 fw-bold mb-2"><?php echo esc_html($title); ?></h1>
                 <?php } ?>

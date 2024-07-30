@@ -10,12 +10,12 @@
     } else {
         $term_name = ''; // Pokud žádné kategorie nejsou, nastavíme prázdný řetězec
     }
-    echo WPDE()->get_title(get_the_title(), $term_name, wp_trim_words(get_the_excerpt(), 15, '')); 
+    echo WPDE()->the_title(get_the_title(), $term_name, wp_trim_words(get_the_excerpt(), 15, '')); 
     ?>
     <?php 
     if (has_post_thumbnail()) {
         echo '<div class="text-center">';
-        the_post_thumbnail('header', ['class' => 'img-fluid mb-5 shadow rounded-4']);
+        the_post_thumbnail('large-lg', ['class' => 'img-fluid mb-5 shadow rounded-4']);
         echo '</div>';
     } 
     ?>

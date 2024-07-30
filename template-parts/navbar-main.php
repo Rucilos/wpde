@@ -4,6 +4,8 @@ if($navbar) {
     $navbar_layout = $navbar['layout'];
     $navbar_link = $navbar['navbar_link'];
     $navbar_btn = $navbar['navbar_btn'];
+    $navbar_badge_text = $navbar['badge_text'];
+    $navbar_badge_link = $navbar['badge_link'];
 }
 
 switch ($navbar_layout) {
@@ -36,14 +38,6 @@ if ($options) {
 }
 ?>
 
-<?php
-$metadata = get_field('header_metadata', 'option');
-if ($metadata) {
-    $badge_text = $metadata['badge_text'];
-    $badge_link = $metadata['badge_link'];
-}
-?>
-
 <?php if($helper_div) { ?>
     <div class="w-100" style="height: 57px;"></div>
 <?php } ?>
@@ -51,7 +45,7 @@ if ($metadata) {
 	<div class="container">
 		<a class="navbar-brand d-flex align-items-center gap-1" href="<?php echo esc_url(home_url()); ?>">
         <?php if (!empty($logo_image)) { ?>
-            <img src="<?php echo esc_url($logo_image['url']); ?>" alt="Logo" width="<?php echo esc_attr($logo_width); ?>" height="auto"/>
+            <img src="<?php echo esc_url($logo_image['sizes']['logo']); ?>" alt="Logo" width="<?php echo esc_attr($logo_width); ?>" height="auto"/>
         <?php
         } elseif(!empty($logo_text)) {
             echo esc_html($logo_text);
@@ -60,28 +54,29 @@ if ($metadata) {
         }
         ?>
 		</a>
-
-        <?php if (!empty($badge_text) || !empty($badge_link)) { ?>
-                <div class="py-0 px-3 rounded-4 border text-muted" style="max-width: max-content;">
-                    <small>
-                    <i class="fa-solid fa-bullhorn"></i>
-                        <?php 
-                        if (!empty($badge_text)) {
-                            echo esc_html($badge_text); 
-                        }
-                        ?> 
-                        <?php
-                        if ($badge_link) {
-                            $link_url = $badge_link['url'];
-                            $link_title = $badge_link['title'];
-                            $link_target = $badge_link['target'] ? $badge_link['target'] : '_self';
-                            ?>
-                            <a class="link-underline link-underline-opacity-0" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($link_title); ?></a>
-                        <?php } ?>
-                    </small>
-                </div>
-                <?php } ?>
-
+        <?php 
+        if (!empty($badge_link) && !empty($badge_text)) { 
+            if ($badge_link) {
+                    $link_url = $badge_link['url'];
+                    $link_title = $badge_link['title'];
+                    $link_target = $badge_link['target'] ? $badge_link['target'] : '_self';
+            }
+        ?>
+        <a href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>" class="d-none d-lg-block py-1 px-3 mb-0 rounded-4 border text-muted link-underline link-underline-opacity-0" style="max-width: max-content;">
+            <small>
+            <?php
+            if (!empty($badge_text)) {
+                echo wp_kses($badge_text, array(
+                    'strong' => array(),
+                ));
+            } else {
+                echo esc_html($link_title); 
+            }
+            ?>
+            <i class="fa-solid fa-angle-right ms-1"></i>
+            </small>
+        </a>
+        <?php } ?>
 		<div class="collapse navbar-collapse" id="navbar">
             <small class="text-primary d-block d-lg-none fw-bold my-4"><?php _e('Navigation', 'wpde'); ?></small>
 		<?php 
@@ -106,7 +101,7 @@ if ($metadata) {
             if (empty($search_form)) {
             ?>
 			<button class="navbar-toggler p-1 d-flex rounded-circle border-0" type="button" data-bs-toggle="modal" data-bs-target="#modal-searchform">
-			    <i class="fa-solid fa-magnifying-glass text-dark text-muted"></i>
+			    <i class="fa-solid fa-magnifying-glass"></i>
 			</button>
             <?php } ?>
 			<button class="navbar-toggler p-1 rounded-circle border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">

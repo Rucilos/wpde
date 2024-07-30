@@ -46,7 +46,7 @@ if ($query->have_posts()) {
             }
         }
         ?>
-        <?php echo WPDE()->get_title($title, $subtitle, $description, array('layout' => $title_layout, 'border' => $border)); ?>
+        <?php echo WPDE()->the_title($title, $subtitle, $description, array('layout' => $title_layout, 'border' => $border)); ?>
         <ul class="list-unstyled d-flex align-items-center gap-3 mt-3 mb-0 <?php echo $filters_layout; ?>">
             <small><strong><?php echo esc_html__('Filters:', 'wpde'); ?></strong></small>
             <?php
@@ -81,10 +81,10 @@ if ($query->have_posts()) {
                     ?>
                     </small>
 
-                    <div class="pagination-simple d-flex align-items-center gap-2">
+                    <div class="d-flex align-items-center gap-2">
                     <?php        
                     $i = 999999999;
-                    echo paginate_links(array(
+                    $links = paginate_links(array(
                         'base' => str_replace($i, '%#%', esc_url(get_pagenum_link($i) . '?pt=post')),
                         'format' => '?paged=%#%',
                         'current' => max(1, get_query_var('paged')),
@@ -92,7 +92,17 @@ if ($query->have_posts()) {
                         'prev_text' => '<i class="fa-solid fa-angle-left"></i>',
                         'next_text' => '<i class="fa-solid fa-angle-right"></i>',
                         'add_fragment' => '#posts',
+                        'type' => 'array',
                     ));
+
+                    if ($links) {
+                        echo '<div class="d-flex align-items-center gap-2">';
+                        foreach ($links as $link) {
+                            $link = str_replace('class="', 'class="page-numbers link-underline link-underline-opacity-0 ', $link);
+                            echo $link;
+                        }
+                        echo '</div>';
+                    }
                     ?>
                     </div>
                 </div>

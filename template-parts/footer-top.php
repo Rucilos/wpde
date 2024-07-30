@@ -16,15 +16,15 @@ if ($footer) {
 		<div class="row">
 			<div class="col-md-4 mb-3">
 				<a class="d-block mb-2" href="<?php echo esc_url(home_url()); ?>">
-					<?php if (!empty($logo_image)) { ?>
-						<img src="<?php echo esc_url($logo_image['url']); ?>" alt="<?php echo esc_attr(get_bloginfo('name')); ?>" width="<?php echo esc_attr($logo_width); ?>" height="auto"/>
-					<?php
-					} elseif (!empty($logo_text)) {
-						echo esc_html($logo_text);
-					} else {
-						echo esc_html(get_bloginfo('name'));
-					}
-					?>
+				<?php if (!empty($logo_image)) { ?>
+					<img src="<?php echo esc_url($logo_image['sizes']['logo']); ?>" alt="Logo" width="<?php echo esc_attr($logo_width); ?>" height="auto"/>
+				<?php
+				} elseif(!empty($logo_text)) {
+					echo esc_html($logo_text);
+				} else {
+					echo esc_html(get_bloginfo('name'));
+				}
+				?>
 				</a>
 				<small class="text-muted"><?php echo wp_kses_post($left_block); ?></small>
 			</div>

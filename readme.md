@@ -34,6 +34,8 @@ npm run clear
 -   SASS
 -   Webpack
 -   Prettier
+-   Composer
+-   PHP CS Fixer
 
 ## ⚡ Features
 
@@ -79,8 +81,8 @@ WPDE()->register_taxonomy(
 ```
 
 ```php
-// Get the custom title
-echo WPDE()->get_title(
+// Display the custom title
+WPDE()->the_title(
     __('Title', 'wpde'),  // Title
     __('Subtitle', 'wpde'),  // Subtitle
     __('Description', 'wpde'),  // Description

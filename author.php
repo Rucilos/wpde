@@ -26,7 +26,7 @@ $user_details = WPDE()->get_user($user_id);
         if (isset($user_details['job']) && !empty($user_details['job'])) {
             $description = esc_html($user_details['job']);
         }
-        echo WPDE()->get_title($title, __('Author', 'wpde'), $description); 
+        echo WPDE()->the_title($title, __('Author', 'wpde'), $description); 
         ?>
         <div class="row row-gap-5">
             <?php if (have_posts()) {

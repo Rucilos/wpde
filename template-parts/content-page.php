@@ -2,7 +2,7 @@
     <?php if (has_post_thumbnail()) {
         the_post_thumbnail('medium', ['class' => 'card-img-top']);
     } ?>
-    <?php echo WPDE()->get_title(get_the_title(), __('Page', 'wpde'), wp_trim_words(get_the_excerpt(), 15, '')); ?>
+    <?php echo WPDE()->the_title(get_the_title(), __('Page', 'wpde'), wp_trim_words(get_the_excerpt(), 15, '')); ?>
     <?php if(is_page('contacts')) { ?>
         <div class="row">
             <div class="col-md-6">
@@ -10,6 +10,7 @@
             $metadata = get_field('wpde_metadata', 'option');
             if ($metadata) {
                 $gmap = esc_url($metadata['google_map']); 
+                $cf7_id = esc_url($metadata['cf7_id']); 
             }
 
             $options = get_field('wpde_options', 'option');
@@ -19,7 +20,9 @@
             }
 
             if(empty($contact_form)) {
-                echo do_shortcode('[contact-form-7 id="2455da2" title="Contact form 1"]');
+                if(!empty($cf7_id)) {
+                    echo do_shortcode('[contact-form-7 id="' . $cf7_id . '" title="Contact form"]');
+                }
             }
             ?>
             </div>
