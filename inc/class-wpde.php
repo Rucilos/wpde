@@ -531,7 +531,7 @@ class WPDE
         add_image_size('large-lg', 1350, 400, true);
         add_image_size('logo', 150, 50, true);
         add_image_size('header', 400, 600, true);
-        add_image_size('header-sm', 500, 350, true);
+        add_image_size('header-sm', 500, 300, true);
 
         // Register bootstrap navwalker
         require_once get_template_directory() . '/inc/class-bootstrap-nav-walker.php';
@@ -837,17 +837,17 @@ class WPDE
     public function theme()
     {
         $html = '<div class="dropdown d-flex align-items-center justify-content-center" id="' . $this->_token . '-theme">';
-        $html .= '<button class="navbar-toggler d-flex border-0 dropdown-toggle p-1 rounded-circle" type="button" data-bs-toggle="dropdown" aria-expanded="false">';
-        $html .= '<i class="fa-solid fa-circle-half-stroke"></i> <span class="visually-hidden">Auto</span>';
-        $html .= '</button>';
-        $html .= '<ul class="dropdown-menu" style="left:-70px;margin-top: 1.3rem;">';
-        $html .= '<li><a class="dropdown-item active" href="#!" data-value="auto"><i class="fa-solid fa-circle-half-stroke"></i> Auto</a></li>';
-        $html .= '<li><a class="dropdown-item" href="#!" data-value="light"><i class="fa-solid fa-sun"></i> ' . __('Light', 'wpde') . '</a></li>';
-        $html .= '<li><a class="dropdown-item" href="#!" data-value="dark"><i class="fa-solid fa-moon"></i> ' . __('Dark', 'wpde') . '</a></li>';
-        $html .= '</ul>';
+            $html .= '<button type="button" class="navbar-toggler d-block border-0 dropdown-toggle rounded-circle p-0 shadow-none" data-bs-toggle="dropdown" aria-expanded="false">';
+                $html .= '<i class="fa-solid fa-circle-half-stroke"></i> <span class="visually-hidden">Auto</span>';
+            $html .= '</button>';
+            $html .= '<ul class="dropdown-menu" style="left:-70px;margin-top: 1.3rem;">';
+                $html .= '<li><a class="dropdown-item active" href="#!" data-value="auto"><i class="fa-solid fa-circle-half-stroke"></i> Auto</a></li>';
+                $html .= '<li><a class="dropdown-item" href="#!" data-value="light"><i class="fa-solid fa-sun"></i> ' . __('Light', 'wpde') . '</a></li>';
+                $html .= '<li><a class="dropdown-item" href="#!" data-value="dark"><i class="fa-solid fa-moon"></i> ' . __('Dark', 'wpde') . '</a></li>';
+            $html .= '</ul>';
         $html .= '</div>';
 
-        return $html;
+        echo $html;
     } // END theme()
 
     /**

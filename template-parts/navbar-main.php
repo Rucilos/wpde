@@ -81,37 +81,33 @@ if (!empty($badge_link) && !empty($badge_text)) {
             <small class="text-primary d-block d-lg-none fw-bold my-4"><?php _e('Navigation', 'wpde'); ?></small>
 		<?php
         wp_nav_menu([
-    'theme_location' => 'menu-1',
-    'container' => false,
-    'menu_class' => 'me-3',
-    'fallback_cb' => '__return_false',
-    'items_wrap' => '<ul id="%1$s" class="navbar-nav gap-2 ms-3 ms-lg-auto mb-3 mb-lg-0 %2$s">%3$s</ul>',
-    'depth' => 2,
-    'walker' => new bootstrap_5_wp_nav_menu_walker(),
+            'theme_location' => 'menu-1',
+            'container' => false,
+            'menu_class' => 'me-3',
+            'fallback_cb' => '__return_false',
+            'items_wrap' => '<ul id="%1$s" class="navbar-nav gap-2 ms-3 ms-lg-auto mb-3 mb-lg-0 %2$s">%3$s</ul>',
+            'depth' => 2,
+            'walker' => new bootstrap_5_wp_nav_menu_walker(),
         ]);
 ?>
 		</div>
-        <div class="d-flex align-items-center justify-content-center gap-3 ms-auto" id="navbar-actions">
+        <div class="d-flex align-items-center justify-content-center gap-2 ms-auto" id="navbar-actions">
             <?php
     if(empty($theme_toggler)) {
         WPDE()->theme();
     }
 ?>
-            <?php
-if (empty($search_form)) {
-    ?>
-			<button class="navbar-toggler p-1 d-flex rounded-circle border-0" type="button" data-bs-toggle="modal" data-bs-target="#modal-searchform">
+            <?php if (empty($search_form)) { ?>
+			<button type="button" class="navbar-toggler d-block rounded-circle border-0 p-0 shadow-none" data-bs-toggle="modal" data-bs-target="#modal-searchform">
 			    <i class="fa-solid fa-magnifying-glass"></i>
 			</button>
             <?php } ?>
-			<button class="navbar-toggler p-1 rounded-circle border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+			<button type="button" class="navbar-toggler rounded-circle border-0 p-0 shadow-none" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
                 <i id="navbar-toggler-icon" class="fa-solid fa-bars fa-lg"></i>
 			</button>
 		</div>
 		<div class="d-none d-lg-flex">
-            <?php
-    if(!empty($navbar_link) || !empty($navbar_btn)) {
-        ?>
+            <?php if(!empty($navbar_link) || !empty($navbar_btn)) { ?>
             <ul class="navbar-nav border-start align-items-center ps-4 ms-4">
             <?php
         if($navbar_link) {

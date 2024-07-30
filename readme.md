@@ -14,33 +14,39 @@ Check out the [WPDE](https://wpde.jindrichrucil.com/) template
 # Install dependencies 
 npm install
 composer install
+```
 
+```sh
 # Run webpack
 npm run start
+```
 
+```sh
 # Run Prettier
 npm run format
+```
 
+```sh
 # Run PHP CS Fixer
-npm run phpformat # prod
-npm run phpformat-dev # dev
+npm run phpformat
 ```
 
 ## 📚 Libraries
 
+-   Cookie Consent
 -   Bootstrap
 -   Bootstrap Navbar Walker
 -   Font Awesome
--   Cookie Consent
 -   Magnific popup
+-   Swiper
 
 ## 🖥️ Development Tools
--   Node.js
--   Webpack
--   SASS
--   Prettier
 -   Composer
+-   Node.js
 -   PHP CS Fixer
+-   Prettier
+-   SASS
+-   Webpack
 
 ## ⚡ Features
 

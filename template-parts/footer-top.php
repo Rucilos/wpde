@@ -11,7 +11,7 @@ if ($footer) {
     $left_block = $footer['left_block'];
 }
 ?>
-<div class="container-fluid px-0 pt-6 pb-3">
+<div class="container-fluid px-0 pt-6 pb-5">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-4 mb-3">

@@ -16,7 +16,7 @@ if ($metadata) {
     </div>
     <div class="container py-6">
         <div class="row align-items-center">
-            <div class="col-md-6 mb-3">
+            <div class="col-md-6 mb-5">
                 <?php if (!empty($subtitle)) { ?>
                     <small class="text-primary"><strong><?php echo esc_html($subtitle); ?></strong></small>
                 <?php } ?>
