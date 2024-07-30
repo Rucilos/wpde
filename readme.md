@@ -104,7 +104,7 @@ WPDE()->register_taxonomy(
 );
 ```
 
-## ⚙️ Requirements
+## ⚙️🎯 Requirements
 
 ### Production
 -   **WordPress:** 6.0 or higher
