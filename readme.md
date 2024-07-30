@@ -31,7 +31,7 @@ PHP CS Fixer
 npm run phpformat
 ```
 
-## 📚 Libraries
+## 📚📙 Libraries
 
 -   Cookie Consent
 -   Bootstrap
