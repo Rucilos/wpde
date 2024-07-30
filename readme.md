@@ -93,7 +93,7 @@ WPDE()->register_taxonomy(
     __( 'Location', 'wpde' ), // Singular name
     'events', // Associated post type
     array(
-        'menu_icon' => false, // Does not make the taxonomy available in the REST API.
+        'show_in_rest' => false, // Does not make the taxonomy available in the REST API.
     )
 );
 ```
