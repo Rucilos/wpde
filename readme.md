@@ -11,14 +11,14 @@ Check out the [WPDE](https://wpde.jindrichrucil.com/) template
 ## 🔧 Commands
 
 ```sh
-# Bundles the application
+# Run webpack
 npm run start
 
-# Formats the codebase
+# Run Prettier
 npm run format
 
-# Deletes the build JavaScript and CSS files
-npm run clear
+# Run PHP CS Fixer
+npm run phpformat
 ```
 
 ## 📚 Libraries

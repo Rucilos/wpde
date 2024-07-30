@@ -31,7 +31,6 @@
         "ignore-emit-webpack-plugin": "^2.0.6",
         "mini-css-extract-plugin": "^2.9.0",
         "prettier": "^3.2.5",
-        "rimraf": "^5.0.7",
         "sass": "^1.77.1",
         "sass-loader": "^14.2.1",
         "webpack": "^5.91.0",
@@ -43,8 +42,7 @@
     "scripts": {
         "start": "webpack",
         "format": "prettier --write src/**/*.{js,jsx,ts,tsx,json,css,scss,sass}",
-        "phpformat": "vendor\\bin\\php-cs-fixer fix",
-        "clear": "rimraf ./dist/js && rimraf ./dist/css"
+        "phpformat": "vendor\\bin\\php-cs-fixer fix"
     },
     "repository": {
         "type": "git",

@@ -107,8 +107,8 @@ $btn-font-weight: 500; // $font-weight-normal
 // Dropdown
 $dropdown-font-size: $small-font-size; // $font-size-base
 $dropdown-spacer: 1rem; // 0.125rem
-$dropdown-item-padding-y: $spacer * .75; // $spacer * .25
-$dropdown-item-padding-x: $spacer * .75; // $spacer
+$dropdown-item-padding-y: $spacer * 0.75; // $spacer * .25
+$dropdown-item-padding-x: $spacer * 0.75; // $spacer
 $dropdown-border-color: var(--#{$prefix}border-color); // var(--#{$prefix}border-color-translucent)
 $dropdown-box-shadow: var(--#{$prefix}box-shadow-lg); // var(--#{$prefix}box-shadow)
 
