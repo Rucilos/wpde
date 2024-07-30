@@ -10,24 +10,24 @@ Check out the [WPDE](https://wpde.jindrichrucil.com/) template
 
 ## 🔧 Commands
 
+Install dependencies 
 ```sh
-# Install dependencies 
 npm install
 composer install
 ```
 
+Run Webpack
 ```sh
-# Run webpack
 npm run start
 ```
 
+Run Prettier
 ```sh
-# Run Prettier
 npm run format
 ```
 
+Run PHP CS Fixer
 ```sh
-# Run PHP CS Fixer
 npm run phpformat
 ```
 
@@ -50,23 +50,23 @@ npm run phpformat
 
 ## ⚡ Features
 
+Display breadcrumbs
 ```php
-// Display breadcrumbs
 WPDE()->breadcrumbs();
 ```
 
+Display pagination
 ```php
-// Display pagination
 WPDE()->pagination();
 ```
 
+Display a theme toggler
 ```php
-// Display a theme toggler
 WPDE()->theme();
 ```
 
+Display the custom title
 ```php
-// Display the custom title
 WPDE()->the_title(
     __('Title', 'wpde'),  // Title
     __('Subtitle', 'wpde'),  // Subtitle
@@ -78,8 +78,8 @@ WPDE()->the_title(
 );
 ```
 
+Register a custom post type
 ```php
-// Register a custom post type
 WPDE()->register_post_type(
     'events', // Post type key
     __( 'Events', 'wpde' ), // Plural name
