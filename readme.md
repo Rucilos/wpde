@@ -130,7 +130,7 @@ WPDE()->register_taxonomy(
 3. **Visit** Appearance > Themes > Search for `WPDE` > Activate
 4. **Click** on the new menu item `WPDE` for better control of theme
 
-## 📄 License
+## 🏷️ License
 
 Distributed under the **MIT** License. See [LICENSE](https://github.com/rucilos/wpde/blob/master/LICENSE) for more information.
 
