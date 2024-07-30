@@ -106,7 +106,7 @@ WPDE()->register_taxonomy(
 -   **ACF PRO:** 5.7.0 or higher
 
 ### Development
--   **Node.js** 18.x or higher (LTS version supported and recommended).
+-   **Node.js** 18.x or higher
 -   **Composer** 1.0 or higher
 
 ## 💡 Installation 
