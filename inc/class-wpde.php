@@ -324,7 +324,10 @@ class WPDE
         wp_register_style($this->_token . '-mfp' . $this->onload, esc_url($this->cdn) . 'magnific-popup@1.1.0/dist/' . 'magnific-popup' . $this->script_suffix . '.css', [], $this->_version);
         wp_enqueue_style($this->_token . '-mfp' . $this->onload);
 
-        wp_register_style($this->_token . '-c' . $this->onload, esc_url($this->cdn) . 'vanilla-cookieconsent@3.0.1/dist/' . 'cookieconsent' . $this->script_suffix . '.css', [], $this->_version);
+        wp_register_style($this->_token . '-swiper' . $this->onload, esc_url($this->cdn) . 'magnific-popup@1.1.0/dist/' . 'magnific-popup' . $this->script_suffix . '.css', [], $this->_version);
+        wp_enqueue_style($this->_token . '-swiper' . $this->onload);
+
+        wp_register_style($this->_token . '-c' . $this->onload, esc_url($this->cdn) . 'swiper@11.1.8/' . 'swiper-bundle' . $this->script_suffix . '.css', [], $this->_version);
         wp_enqueue_style($this->_token . '-c' . $this->onload);
     } // END enqueue_styles ()
 
@@ -347,6 +350,9 @@ class WPDE
         wp_enqueue_script($this->_token . '-c' . $this->defer);
 
         wp_register_script($this->_token . '-mfp' . $this->defer, esc_url($this->cdn) . 'magnific-popup@1.1.0/dist/' . 'jquery.magnific-popup' . $this->script_suffix . '.js', ['jquery'], $this->_version, true);
+        wp_enqueue_script($this->_token . '-mfp' . $this->defer);
+
+        wp_register_script($this->_token . '-mfp' . $this->defer, esc_url($this->cdn) . 'swiper@11.1.8/' . 'swiper-bundle' . $this->script_suffix . '.js', ['jquery'], $this->_version, true);
         wp_enqueue_script($this->_token . '-mfp' . $this->defer);
 
         wp_register_script($this->_token . '-icons' . $this->defer, esc_url($this->cdn) . '@fortawesome/fontawesome-free@6.5.2/js/' . 'all' . $this->script_suffix . '.js', ['jquery'], $this->_version, true);

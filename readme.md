@@ -8,7 +8,7 @@ WordPress Development Environment (WPDE) is a fantastic starting point for creat
 
 Check out the [WPDE](https://wpde.jindrichrucil.com/) template
 
-## 🔧 Commands
+## 🔨 Commands
 
 Install dependencies 
 ```sh
@@ -104,7 +104,7 @@ WPDE()->register_taxonomy(
 );
 ```
 
-## ⚙️ Requirements
+## 🔧 Requirements
 
 ### Production
 -   **WordPress:** 6.0 or higher
