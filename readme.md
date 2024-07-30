@@ -16,17 +16,17 @@ npm install
 composer install
 ```
 
-*Run Webpack*
+*Webpack*
 ```sh
 npm run start
 ```
 
-Run Prettier
+**Prettier**
 ```sh
 npm run format
 ```
 
-Run PHP CS Fixer
+***PHP CS Fixer***
 ```sh
 npm run phpformat
 ```
