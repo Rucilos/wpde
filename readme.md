@@ -16,17 +16,17 @@ npm install
 composer install
 ```
 
-*Webpack*
+Webpack
 ```sh
 npm run start
 ```
 
-**Prettier**
+Prettier
 ```sh
 npm run format
 ```
 
-***PHP CS Fixer***
+PHP CS Fixer
 ```sh
 npm run phpformat
 ```
@@ -91,8 +91,8 @@ WPDE()->register_post_type(
 );
 ```
 
+Register a custom taxonomy
 ```php
-// Register a custom taxonomy
 WPDE()->register_taxonomy(
     'location', // Taxonomy key
     __( 'Locations', 'wpde' ), // Plural name
