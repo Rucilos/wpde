@@ -24,8 +24,9 @@ require_once 'inc/class-wpde-taxonomy.php';
  * @return object|WPDE The main instance of the WPDE class.
  * @since  1.0.0
  */
-function WPDE() {
-    $instance = WPDE::instance(__FILE__, '1.9.0');
+function WPDE()
+{
+    $instance = WPDE::instance(__FILE__, '2.0.0');
 
     return $instance;
 } // END WPDE()

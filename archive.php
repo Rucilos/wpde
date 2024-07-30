@@ -14,10 +14,10 @@
 
 <div class="container-fluid px-0 py-6">
     <div class="container">
-        <?php 
+        <?php
         $current_term = get_queried_object();
-        echo WPDE()->the_title($current_term->name, __('Archive', 'wpde'), wp_kses_post(term_description())); 
-        ?>
+echo WPDE()->the_title($current_term->name, __('Archive', 'wpde'), wp_kses_post(term_description()));
+?>
         <div class="row row-gap-5">
             <?php if (have_posts()) {
                 while (have_posts()) {

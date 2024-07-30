@@ -10,7 +10,7 @@
 */
 ?>
 
-<?php 
+<?php
 WPDE()->pagination([ // the_posts_pagination() or WPDE()->pagination()
     'mid_size' => 2,
     'prev_text' => '<i class="fa-solid fa-angle-left"></i>',

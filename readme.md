@@ -11,6 +11,10 @@ Check out the [WPDE](https://wpde.jindrichrucil.com/) template
 ## 🔧 Commands
 
 ```sh
+# Install dependencies 
+npm install
+composer install
+
 # Run webpack
 npm run start
 
@@ -18,7 +22,8 @@ npm run start
 npm run format
 
 # Run PHP CS Fixer
-npm run phpformat
+npm run phpformat # prod
+npm run phpformat-dev # dev
 ```
 
 ## 📚 Libraries
@@ -30,9 +35,9 @@ npm run phpformat
 -   Magnific popup
 
 ## 🖥️ Development Tools
-
--   SASS
+-   Node.js
 -   Webpack
+-   SASS
 -   Prettier
 -   Composer
 -   PHP CS Fixer
@@ -52,6 +57,19 @@ WPDE()->pagination();
 ```php
 // Display a theme toggler
 WPDE()->theme();
+```
+
+```php
+// Display the custom title
+WPDE()->the_title(
+    __('Title', 'wpde'),  // Title
+    __('Subtitle', 'wpde'),  // Subtitle
+    __('Description', 'wpde'),  // Description
+    array(
+        'layout' => 'text-end', // Layout
+        'border' => 'Enabled' // 'Enabled' or 'Disabled'
+    )
+);
 ```
 
 ```php
@@ -76,19 +94,6 @@ WPDE()->register_taxonomy(
     'events', // Associated post type
     array(
         'menu_icon' => false, // Does not make the taxonomy available in the REST API.
-    )
-);
-```
-
-```php
-// Display the custom title
-WPDE()->the_title(
-    __('Title', 'wpde'),  // Title
-    __('Subtitle', 'wpde'),  // Subtitle
-    __('Description', 'wpde'),  // Description
-    array(
-        'layout' => 'text-end', // Layout
-        'border' => 'Enabled' // 'Enabled' or 'Disabled'
     )
 );
 ```

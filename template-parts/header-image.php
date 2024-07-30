@@ -51,13 +51,13 @@ if ($metadata) {
             </div>
 
             <div class="col-md-5 offset-md-1">
-            <?php 
+            <?php
             $image = get_field('wpde_header_image', 'option');
-            if($image) {
-                $image_size_custom = wp_is_mobile() ? 'header-sm' : 'header';
-                $image_size = wp_get_attachment_image_url($image['ID'], $image_size_custom); 
-                $alt = get_post_meta($image['ID'], '_wp_attachment_image_alt', true);
-            ?>
+if($image) {
+    $image_size_custom = wp_is_mobile() ? 'header-sm' : 'header';
+    $image_size = wp_get_attachment_image_url($image['ID'], $image_size_custom);
+    $alt = get_post_meta($image['ID'], '_wp_attachment_image_alt', true);
+    ?>
                 <img src="<?php echo esc_url($image_size); ?>" class="img-fluid rounded-4" alt="<?php echo esc_attr($alt); ?>">
             <?php } ?>
             </div>

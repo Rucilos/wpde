@@ -70,16 +70,16 @@ if ($metadata) {
                 <div class="carousel-inner rounded-4 shadow-lg">
                     <?php
                     $slide_index = 0;
-                    while (have_rows('wpde_header_carousel', 'option')) {
-                        the_row();
-                        $image = get_sub_field('image');
-                        if($image) {
-                            $image_size_custom = wp_is_mobile() ? 'header-sm' : 'header';
-                            $image_size = wp_get_attachment_image_url($image['ID'], $image_size_custom); 
-                            $alt = get_post_meta($image['ID'], '_wp_attachment_image_alt', true);
-                            $title = get_sub_field('title');
-                            $description = get_sub_field('description');
-                            ?>
+                while (have_rows('wpde_header_carousel', 'option')) {
+                    the_row();
+                    $image = get_sub_field('image');
+                    if($image) {
+                        $image_size_custom = wp_is_mobile() ? 'header-sm' : 'header';
+                        $image_size = wp_get_attachment_image_url($image['ID'], $image_size_custom);
+                        $alt = get_post_meta($image['ID'], '_wp_attachment_image_alt', true);
+                        $title = get_sub_field('title');
+                        $description = get_sub_field('description');
+                        ?>
                             <div class="carousel-item <?php echo $slide_index == 0 ? 'active' : ''; ?>">
                                 <img src="<?php echo esc_url($image_size); ?>" class="d-block w-100" alt="<?php echo esc_attr($alt); ?>">
                                 <div class="carousel-caption d-none d-md-block">
@@ -87,11 +87,11 @@ if ($metadata) {
                                     <small class="text-white"><?php echo esc_html($description); ?></small>
                                 </div>
                             </div>
-                        <?php 
-                        }
-                        $slide_index++;
+                        <?php
                     }
-                    ?>
+                    $slide_index++;
+                }
+                ?>
                 </div>
                 <?php if ($slide_index > 1) { ?>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">

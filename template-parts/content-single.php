@@ -1,5 +1,5 @@
 <div class="col-md-12">     
-    <?php 
+    <?php
     if (has_category()) {
         $categories = get_the_category();
         $term_names = []; // Vytvoříme prázdné pole pro uložení názvů kategorií
@@ -10,14 +10,14 @@
     } else {
         $term_name = ''; // Pokud žádné kategorie nejsou, nastavíme prázdný řetězec
     }
-    echo WPDE()->the_title(get_the_title(), $term_name, wp_trim_words(get_the_excerpt(), 15, '')); 
+    echo WPDE()->the_title(get_the_title(), $term_name, wp_trim_words(get_the_excerpt(), 15, ''));
     ?>
-    <?php 
+    <?php
     if (has_post_thumbnail()) {
         echo '<div class="text-center">';
         the_post_thumbnail('large-lg', ['class' => 'img-fluid mb-5 shadow rounded-4']);
         echo '</div>';
-    } 
+    }
     ?>
     <?php the_content(); ?>
 </div>
@@ -29,7 +29,7 @@
     $u_modified_time = get_the_modified_time('U');
     if ($u_modified_time >= $u_time + 86400) {
         $html = "<small class='d-block'><strong>Poslední aktualizace:</strong></small>";
-        $html .= '<small>' . esc_html(get_the_modified_time('F jS, Y')) . '</small>'; 
+        $html .= '<small>' . esc_html(get_the_modified_time('F jS, Y')) . '</small>';
         echo $html;
     } else {
         $html = "<small class='d-block'><strong>Publikováno:</strong></small>";

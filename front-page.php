@@ -10,7 +10,7 @@
 */
 ?>
 
-<?php 
+<?php
 get_header();
 
 $header = get_field('wpde_header', 'option');

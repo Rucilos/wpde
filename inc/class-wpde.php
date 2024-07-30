@@ -11,7 +11,8 @@ if (!defined('ABSPATH')) {
     exit();
 }
 
-class WPDE {
+class WPDE
+{
     /**
      * The single instance of WordPress Development Environment (WPDE).
      *
@@ -133,7 +134,8 @@ class WPDE {
      * @access public
      * @since 1.0.0
      */
-    public function __construct($file = '', $version = '1.8.0') {
+    public function __construct($file = '', $version = '2.0.0')
+    {
         $this->_version = $version;
         $this->_token = 'wpde';
         $this->text_domain = 'wpde';
@@ -205,57 +207,60 @@ class WPDE {
      * @access  public
      * @since   1.0.0
      */
-    public function acf_notice() {
+    public function acf_notice()
+    {
         $html = '<div id="' . $this->_token . '-notice" class="notice notice-error is-dismissible">';
-            $html .= '<p>' . __('The', 'wpde') . ' <a href="https://github.com/Rucilos/wpde/" target="_blank" rel="noopener noreferrer"><strong>' . __('WordPress Development Environment (WPDE)', 'wpde') . '</strong></a> ' . __('theme requires the', 'wpde') . ' <a href="https://www.google.com/search?q=ACF+PRO" target="_blank" rel="noopener noreferrer"><strong>' . __('ACF PRO', 'wpde') . '</strong></a> ' . __('plugin, with a minimum version of 5.7.0, to function properly.', 'wpde') . '</p>';
+        $html .= '<p>' . __('The', 'wpde') . ' <a href="https://github.com/Rucilos/wpde/" target="_blank" rel="noopener noreferrer"><strong>' . __('WordPress Development Environment (WPDE)', 'wpde') . '</strong></a> ' . __('theme requires the', 'wpde') . ' <a href="https://www.google.com/search?q=ACF+PRO" target="_blank" rel="noopener noreferrer"><strong>' . __('ACF PRO', 'wpde') . '</strong></a> ' . __('plugin, with a minimum version of 5.7.0, to function properly.', 'wpde') . '</p>';
         $html .= '</div>';
-        
+
         echo $html;
     }
 
-	/**
-	 * Register post type function.
-	 *
-	 * @param string $post_type Post Type.
-	 * @param string $plural Plural Label.
-	 * @param string $single Single Label.
-	 * @param string $description Description.
-	 * @param array  $options Options array.
-	 *
-	 * @return bool|string|WPDE_Post_Type
-	 */
-	public function register_post_type( $post_type = '', $plural = '', $single = '', $description = '', $options = array() ) {
+    /**
+     * Register post type function.
+     *
+     * @param string $post_type Post Type.
+     * @param string $plural Plural Label.
+     * @param string $single Single Label.
+     * @param string $description Description.
+     * @param array  $options Options array.
+     *
+     * @return bool|string|WPDE_Post_Type
+     */
+    public function register_post_type($post_type = '', $plural = '', $single = '', $description = '', $options = [])
+    {
 
-		if ( ! $post_type || ! $plural || ! $single ) {
-			return false;
-		}
+        if (! $post_type || ! $plural || ! $single) {
+            return false;
+        }
 
-		$post_type = new WPDE_Post_Type( $post_type, $plural, $single, $description, $options );
+        $post_type = new WPDE_Post_Type($post_type, $plural, $single, $description, $options);
 
-		return $post_type;
-	}
+        return $post_type;
+    }
 
-	/**
-	 * Wrapper function to register a new taxonomy.
-	 *
-	 * @param string $taxonomy Taxonomy.
-	 * @param string $plural Plural Label.
-	 * @param string $single Single Label.
-	 * @param array  $post_types Post types to register this taxonomy for.
-	 * @param array  $taxonomy_args Taxonomy arguments.
-	 *
-	 * @return bool|string|WPDE_Taxonomy
-	 */
-	public function register_taxonomy( $taxonomy = '', $plural = '', $single = '', $post_types = array(), $taxonomy_args = array() ) {
+    /**
+     * Wrapper function to register a new taxonomy.
+     *
+     * @param string $taxonomy Taxonomy.
+     * @param string $plural Plural Label.
+     * @param string $single Single Label.
+     * @param array  $post_types Post types to register this taxonomy for.
+     * @param array  $taxonomy_args Taxonomy arguments.
+     *
+     * @return bool|string|WPDE_Taxonomy
+     */
+    public function register_taxonomy($taxonomy = '', $plural = '', $single = '', $post_types = [], $taxonomy_args = [])
+    {
 
-		if ( ! $taxonomy || ! $plural || ! $single ) {
-			return false;
-		}
+        if (! $taxonomy || ! $plural || ! $single) {
+            return false;
+        }
 
-		$taxonomy = new WPDE_Taxonomy( $taxonomy, $plural, $single, $post_types, $taxonomy_args );
+        $taxonomy = new WPDE_Taxonomy($taxonomy, $plural, $single, $post_types, $taxonomy_args);
 
-		return $taxonomy;
-	}
+        return $taxonomy;
+    }
 
     /**
      * Add async or defer attributes to script enqueues.
@@ -271,7 +276,8 @@ class WPDE {
      * @access public
      * @since  1.0.0
      */
-    public function add_asyncdefer_attr($html, $handle) {
+    public function add_asyncdefer_attr($html, $handle)
+    {
         if (strpos($handle, 'async') !== false) {
             return str_replace('<script ', '<script async ', $html);
         } elseif (strpos($handle, 'defer') !== false) {
@@ -293,7 +299,8 @@ class WPDE {
      * @access public
      * @since  1.0.0
      */
-    public function add_defer_attr($html, $handle) {
+    public function add_defer_attr($html, $handle)
+    {
         if (strpos($handle, 'onload') !== false) {
             return str_replace('media=\'all\'', 'media="print" onload="this.media=\'all\'"', $html);
         }
@@ -309,7 +316,8 @@ class WPDE {
      * @access public
      * @since  1.0.0
      */
-    public function enqueue_styles() {
+    public function enqueue_styles()
+    {
         wp_register_style($this->_token . 'public', esc_url($this->dist_url) . 'css/public_styles' . $this->script_suffix . '.css', [], $this->_version);
         wp_enqueue_style($this->_token . 'public');
 
@@ -330,7 +338,8 @@ class WPDE {
      * @access public
      * @since  1.0.0
      */
-    public function enqueue_scripts() {
+    public function enqueue_scripts()
+    {
         wp_register_script($this->_token . '-bs' . $this->defer, esc_url($this->cdn) . 'bootstrap@5.3.3/dist/js/' . 'bootstrap.bundle' . $this->script_suffix . '.js', ['jquery'], $this->_version, true);
         wp_enqueue_script($this->_token . '-bs' . $this->defer);
 
@@ -364,7 +373,8 @@ class WPDE {
      * @access public
      * @since  1.0.0
      */
-    public function admin_enqueue_styles($hook = '') {
+    public function admin_enqueue_styles($hook = '')
+    {
         wp_register_style($this->_token . '-admin', esc_url($this->dist_url) . 'css/admin_styles' . $this->script_suffix . '.css', [], $this->_version);
         wp_enqueue_style($this->_token . '-admin');
     } // END admin_enqueue_styles()
@@ -380,7 +390,8 @@ class WPDE {
      * @access public
      * @since  1.0.0
      */
-    public function admin_enqueue_scripts($hook = '') {
+    public function admin_enqueue_scripts($hook = '')
+    {
         wp_register_script($this->_token . '-admin', esc_url($this->dist_url) . 'js/admin' . $this->script_suffix . '.js', ['jquery'], $this->_version, true);
         wp_enqueue_script($this->_token . '-admin');
 
@@ -397,7 +408,8 @@ class WPDE {
      * @access public
      * @since  1.0.0
      */
-    public function login_enqueue_styles($hook = '') {
+    public function login_enqueue_styles($hook = '')
+    {
         wp_register_style($this->_token . '-login', esc_url($this->dist_url) . 'css/login_styles' . $this->script_suffix . '.css', [], $this->_version);
         wp_enqueue_style($this->_token . '-login');
     } // END login_enqueue_styles()
@@ -413,7 +425,8 @@ class WPDE {
      * @access public
      * @since  1.0.0
      */
-    public function login_enqueue_scripts($hook = '') {
+    public function login_enqueue_scripts($hook = '')
+    {
         wp_register_script($this->_token . '-login', esc_url($this->dist_url) . 'js/login' . $this->script_suffix . '.js', ['jquery'], $this->_version, true);
         wp_enqueue_script($this->_token . '-login');
 
@@ -431,7 +444,8 @@ class WPDE {
      * @access public
      * @since 1.0.0
      */
-    public function public_body_classes($classes) {
+    public function public_body_classes($classes)
+    {
         $classes[] = $this->_token . '-public';
         return $classes;
     } // END public_body_class()
@@ -447,7 +461,8 @@ class WPDE {
      * @access public
      * @since 1.0.0
      */
-    public function admin_body_classes($classes) {
+    public function admin_body_classes($classes)
+    {
         $this->is_wpde() ? ($css = $this->_token . '-settings ' . $this->_token . '-admin') : ($css = $this->_token . '-admin');
         $class = $css . ' ' . $classes;
         return $class;
@@ -463,7 +478,8 @@ class WPDE {
      * @access public
      * @since  1.0.0
      */
-    public function login_body_classes($classes) {
+    public function login_body_classes($classes)
+    {
         $classes[] = $this->_token . '-login';
         return $classes;
     } // END login_body_class()
@@ -479,7 +495,8 @@ class WPDE {
      * @return void
      * @since 1.0.0
      */
-    public function theme_setup() {
+    public function theme_setup()
+    {
         load_theme_textdomain($this->text_domain, $this->lang);
 
         $post_formats = ['aside', 'image', 'gallery', 'video', 'audio', 'link', 'quote', 'status', 'chat', 'code', 'review', 'recipe', 'event', 'poll', 'tutorial', 'faq'];
@@ -509,12 +526,12 @@ class WPDE {
         ]);
 
         // Register custom image sizes
-        add_image_size('small-sm', 50, 50, true); 
-        add_image_size('medium-md', 450, 250, true); 
-        add_image_size('large-lg', 1350, 400, true); 
-        add_image_size('logo', 150, 50, true); 
-        add_image_size('header', 400, 600, true); 
-        add_image_size('header-sm', 500, 350, true); 
+        add_image_size('small-sm', 50, 50, true);
+        add_image_size('medium-md', 450, 250, true);
+        add_image_size('large-lg', 1350, 400, true);
+        add_image_size('logo', 150, 50, true);
+        add_image_size('header', 400, 600, true);
+        add_image_size('header-sm', 500, 350, true);
 
         // Register bootstrap navwalker
         require_once get_template_directory() . '/inc/class-bootstrap-nav-walker.php';
@@ -530,7 +547,8 @@ class WPDE {
      * @since   1.0.0
      * @return  void
      */
-    public function add_options_page() {
+    public function add_options_page()
+    {
         if ($this->is_acf()) {
             $parent = acf_add_options_page([
                 'page_title' => 'WPDE',
@@ -540,7 +558,7 @@ class WPDE {
                 'icon_url'   => 'dashicons-admin-customizer',
                 'position'   => -1,
                 'layout'     => 1,
-            ]);        
+            ]);
         }
     } // END add_options_page
 
@@ -555,27 +573,28 @@ class WPDE {
      * @since   1.0.0
      * @return  void
      */
-    public function add_admin_navbar() {
+    public function add_admin_navbar()
+    {
         $screen = get_current_screen();
-        if ( $screen->id === 'toplevel_page_' . WPDE()->_token ) {
-    
+        if ($screen->id === 'toplevel_page_' . WPDE()->_token) {
+
             $html  = '<nav id="' . WPDE()->_token . '-navbar" class="' . WPDE()->_token . '-navbar">';
-                $html .= '<a href="admin.php?page=' . WPDE()->_token . '" class="navbar-brand">';
-                    $html .= '<img src="https://cdn.df-barber.cz/apiru/brands/primary.svg" width="100px" height="auto" alt="WPDE Logo">';
-                $html .= '</a>';
-    
-                $html .= '<ul class="navbar-collapse">';
-                    $html .= '<li class="nav-item">';
-                        $html .= '<a href="https://github.com/Rucilos/wpde/" class="nav-link">';
-                            $html .= '<img src="'. get_template_directory_uri() .'/img/github.svg" class="ico" />';
-                        $html .= '</a>';
-                    $html .= '</li>';
-                    $html .= '<li class="nav-item">';
-                            $html .= __('Version' , 'wpde') . ' ' . $this->_version;
-                    $html .= '</li>';
-                $html .= '</ul>';
+            $html .= '<a href="admin.php?page=' . WPDE()->_token . '" class="navbar-brand">';
+            $html .= '<img src="https://cdn.df-barber.cz/apiru/brands/primary.svg" width="100px" height="auto" alt="WPDE Logo">';
+            $html .= '</a>';
+
+            $html .= '<ul class="navbar-collapse">';
+            $html .= '<li class="nav-item">';
+            $html .= '<a href="https://github.com/Rucilos/wpde/" class="nav-link">';
+            $html .= '<img src="' . get_template_directory_uri() . '/img/github.svg" class="ico" />';
+            $html .= '</a>';
+            $html .= '</li>';
+            $html .= '<li class="nav-item">';
+            $html .= __('Version', 'wpde') . ' ' . $this->_version;
+            $html .= '</li>';
+            $html .= '</ul>';
             $html .= '</nav>';
-    
+
             echo $html;
         }
     }
@@ -591,21 +610,23 @@ class WPDE {
      * @param   string $text The existing footer text.
      * @return  void
      */
-    public function admin_footer_text($text) {
+    public function admin_footer_text($text)
+    {
         echo $text . ' <i>' . __('We appreciate your choice of', 'wpde') . ' <a href="https://github.com/Rucilos/wpde/" target="_blank">WPDE</a>.</i>';
     }
-   
-   /**
-    * Display custom version information in the admin footer.
-    *
-    * This method outputs custom version information in the WordPress admin footer.
-    * It includes the WordPress version and the plugin's version.
-    *
-    * @access  public
-    * @since   1.0.0
-    * @return  string A formatted string with version information.
-    */
-    public function admin_footer_version() {
+
+    /**
+     * Display custom version information in the admin footer.
+     *
+     * This method outputs custom version information in the WordPress admin footer.
+     * It includes the WordPress version and the plugin's version.
+     *
+     * @access  public
+     * @since   1.0.0
+     * @return  string A formatted string with version information.
+     */
+    public function admin_footer_version()
+    {
         $wp_version = get_bloginfo('version');
         return 'WP ' . $wp_version . ' | WPDE ' . $this->_version;
     }
@@ -622,7 +643,8 @@ class WPDE {
      * @access public
      * @since  1.0.0
      */
-    public function add_adminbar_tabs($wp_admin_bar) {
+    public function add_adminbar_tabs($wp_admin_bar)
+    {
         global $wp_admin_bar;
         global $template;
 
@@ -660,7 +682,8 @@ class WPDE {
      * @return array Empty array.
      * @since 1.0.0
      */
-    public function add_help_tabs() {
+    public function add_help_tabs()
+    {
         $screen = get_current_screen();
 
         $content = '<p><strong>WordPress Development Environment (WPDE) v' . esc_html($this->_version) . '</strong></p>';
@@ -690,14 +713,16 @@ class WPDE {
      * @access public
      * @since  1.0.0
      */
-    public function add_dashboard_metabox() {
+    public function add_dashboard_metabox()
+    {
         add_meta_box($this->_token . '-dashboard-metabox', __('WordPress Development Environment (WPDE)', 'wpde'), 'wpde_dashoard_metabox', 'dashboard', 'side', 'high');
 
-        function wpde_dashoard_metabox() {
+        function wpde_dashoard_metabox()
+        {
             $html = '<div class="main">';
 
             $html .= '</div>';
-            
+
             echo $html;
         } // END wpde_dashoard_metabox()
     } // END add_dashboard_metabox()
@@ -713,7 +738,8 @@ class WPDE {
      * @access public
      * @since  1.0.0
      */
-    public function exclude_users($user_search) {
+    public function exclude_users($user_search)
+    {
         if (!current_user_can('administrator')) {
             global $current_user;
             $username = $current_user->user_login;
@@ -738,7 +764,8 @@ class WPDE {
      * @return bool
      * @since  1.0.0
      */
-    public function is_acf() {
+    public function is_acf()
+    {
         return class_exists('acf_pro');
     }
 
@@ -752,7 +779,8 @@ class WPDE {
      * @access public
      * @since  1.0.0
      */
-    public function is_wpde() {
+    public function is_wpde()
+    {
         if (isset($_GET['page'])) {
             $page = $_GET['page'];
             $token = $this->_token;
@@ -775,7 +803,8 @@ class WPDE {
      * @access public
      * @since  1.0.0
      */
-    public function get_user($user_id) {
+    public function get_user($user_id)
+    {
         $user_details = [];
 
         $user_first_name = get_the_author_meta('first_name', $user_id);
@@ -805,20 +834,21 @@ class WPDE {
      * @access public
      * @since 1.0.0
      */
-    public function theme() {
+    public function theme()
+    {
         $html = '<div class="dropdown d-flex align-items-center justify-content-center" id="' . $this->_token . '-theme">';
-            $html .= '<button class="navbar-toggler d-flex border-0 dropdown-toggle p-1 rounded-circle" type="button" data-bs-toggle="dropdown" aria-expanded="false">';
-                $html .= '<i class="fa-solid fa-circle-half-stroke"></i> <span class="visually-hidden">Auto</span>';
-            $html .= '</button>';
-            $html .= '<ul class="dropdown-menu" style="left:-70px;margin-top: 1.3rem;">';
-                $html .= '<li><a class="dropdown-item active" href="#!" data-value="auto"><i class="fa-solid fa-circle-half-stroke"></i> Auto</a></li>';
-                $html .= '<li><a class="dropdown-item" href="#!" data-value="light"><i class="fa-solid fa-sun"></i> ' . __('Light', 'wpde') . '</a></li>';
-                $html .= '<li><a class="dropdown-item" href="#!" data-value="dark"><i class="fa-solid fa-moon"></i> ' . __('Dark', 'wpde') . '</a></li>';
-            $html .= '</ul>';
+        $html .= '<button class="navbar-toggler d-flex border-0 dropdown-toggle p-1 rounded-circle" type="button" data-bs-toggle="dropdown" aria-expanded="false">';
+        $html .= '<i class="fa-solid fa-circle-half-stroke"></i> <span class="visually-hidden">Auto</span>';
+        $html .= '</button>';
+        $html .= '<ul class="dropdown-menu" style="left:-70px;margin-top: 1.3rem;">';
+        $html .= '<li><a class="dropdown-item active" href="#!" data-value="auto"><i class="fa-solid fa-circle-half-stroke"></i> Auto</a></li>';
+        $html .= '<li><a class="dropdown-item" href="#!" data-value="light"><i class="fa-solid fa-sun"></i> ' . __('Light', 'wpde') . '</a></li>';
+        $html .= '<li><a class="dropdown-item" href="#!" data-value="dark"><i class="fa-solid fa-moon"></i> ' . __('Dark', 'wpde') . '</a></li>';
+        $html .= '</ul>';
         $html .= '</div>';
-    
+
         return $html;
-    } // END theme()    
+    } // END theme()
 
     /**
      * Load pagination with Bootstrap 5 styles.
@@ -839,7 +869,8 @@ class WPDE {
      * @access  public
      * @since   1.0.0
      */
-    public function pagination($args = []) {
+    public function pagination($args = [])
+    {
         $defaults = [
             'mid_size' => 2,
             'prev_text' => __('Previous', 'wpde'),
@@ -883,8 +914,8 @@ class WPDE {
     /**
      * Generate and display a formatted title section.
      *
-     * This method creates an HTML structure for a title section, which includes 
-     * a subtitle, main title, and description. It also applies optional layout 
+     * This method creates an HTML structure for a title section, which includes
+     * a subtitle, main title, and description. It also applies optional layout
      * and custom styles based on the provided options array.
      *
      * @param   string $title       The main title to be displayed.
@@ -895,22 +926,23 @@ class WPDE {
      * @access  public
      * @since   1.0.0
      */
-    public function the_title($title, $subtitle, $description, $options = array()) {
+    public function the_title($title, $subtitle, $description, $options = [])
+    {
         $html = '';
-        $title_layout = !empty($options['layout']) ? esc_attr($options['layout']) : ''; 
-        $border_class = 'border-bottom'; 
+        $title_layout = !empty($options['layout']) ? esc_attr($options['layout']) : '';
+        $border_class = 'border-bottom';
 
         if (!empty($options['border']) && $options['border'] !== 'Enabled') {
             $border_class = '';
         }
 
         $html .= '<div class="pb-5 mb-6 ' . esc_attr($border_class) . ' ' . esc_attr($title_layout) . '">';
-            $html .= '<small class="text-primary"><strong>' . esc_html($subtitle) . '</strong></small>';
-            $html .= '<h1 class="mb-2">' . esc_html($title) . '</h1>';
-            $html .= '<p class="mb-0 text-muted">' . esc_html($description) . '</p>';
+        $html .= '<small class="text-primary"><strong>' . esc_html($subtitle) . '</strong></small>';
+        $html .= '<h1 class="mb-2">' . esc_html($title) . '</h1>';
+        $html .= '<p class="mb-0 text-muted">' . esc_html($description) . '</p>';
         $html .= '</div>';
 
-        echo $html; 
+        echo $html;
     }
 
     /**
@@ -922,7 +954,8 @@ class WPDE {
      * @return string HTML output of the breadcrumb navigation.
      * @access public
      */
-    public function breadcrumbs() {
+    public function breadcrumbs()
+    {
         if (is_front_page()) {
             return;
         }
@@ -1116,7 +1149,8 @@ class WPDE {
      * @see    WPDE()
      * @since  1.0.0
      */
-    public static function instance($version = '1.0.0') {
+    public static function instance($version = '1.0.0')
+    {
         if (is_null(self::$_instance)) {
             self::$_instance = new self($version);
         }
@@ -1134,7 +1168,8 @@ class WPDE {
      * @return void
      * @since 1.0.0
      */
-    public function __clone() {
+    public function __clone()
+    {
         _doing_it_wrong(__FUNCTION__, esc_html(__('Cloning of WordPress Development Environment (WPDE) is forbidden')), esc_attr($this->_version));
     } // END __clone()
 
@@ -1148,7 +1183,8 @@ class WPDE {
      * @return void
      * @since 1.0.0
      */
-    public function __wakeup() {
+    public function __wakeup()
+    {
         _doing_it_wrong(__FUNCTION__, esc_html(__('Unserializing instances of WordPress Development Environment (WPDE) is forbidden')), esc_attr($this->_version));
     } // END __wakeup()
 
@@ -1162,7 +1198,8 @@ class WPDE {
      * @return void
      * @since  1.0.0
      */
-    public function install() {
+    public function install()
+    {
         $this->_log_version_number();
     } // END install()
 
@@ -1176,9 +1213,9 @@ class WPDE {
      * @return void
      * @since  1.0.0
      */
-    private function _log_version_number() {
+    private function _log_version_number()
+    {
         //phpcs:ignore
         update_option($this->_token . '_version', $this->_version);
     } // END _log_version_number()
 } // END WPDE::
-
