@@ -6,7 +6,7 @@ WordPress Development Environment (WPDE) is a fantastic starting point for creat
 
 ## 🔍 Demo
 
-Check out the [WPDE](https://wpde.jindrichrucil.com/) template
+Check out the [WPDE](https://jindrichrucil.com/) template
 
 ## 🔧 Commands
 

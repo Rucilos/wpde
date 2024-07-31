@@ -198,25 +198,6 @@ class WPDE
     } // END __construct()
 
     /**
-     * Display a notice in the WordPress admin area.
-     *
-     * This method displays an admin notice to indicate that the ACF PRO plugin is required
-     * for the theme to function correctly.
-     *
-     * @return  void
-     * @access  public
-     * @since   1.0.0
-     */
-    public function acf_notice()
-    {
-        $html = '<div id="' . $this->_token . '-notice" class="notice notice-error is-dismissible">';
-            $html .= '<p>' . __('The', 'wpde') . ' <a href="https://github.com/Rucilos/wpde/" target="_blank" rel="noopener noreferrer"><strong>' . __('WordPress Development Environment (WPDE)', 'wpde') . '</strong></a> ' . __('theme requires the', 'wpde') . ' <a href="https://www.google.com/search?q=ACF+PRO" target="_blank" rel="noopener noreferrer"><strong>' . __('ACF PRO', 'wpde') . '</strong></a> ' . __('plugin, with a minimum version of 5.7.0, to function properly.', 'wpde') . '</p>';
-        $html .= '</div>';
-
-        echo $html;
-    }
-
-    /**
      * Register post type function.
      *
      * @param string $post_type Post Type.
@@ -324,8 +305,8 @@ class WPDE
         wp_register_style($this->_token . '-mfp' . $this->onload, esc_url($this->cdn) . 'magnific-popup@1.1.0/dist/' . 'magnific-popup' . $this->script_suffix . '.css', [], $this->_version);
         wp_enqueue_style($this->_token . '-mfp' . $this->onload);
 
-        wp_register_style($this->_token . '-swiper' . $this->onload, esc_url($this->cdn) . 'magnific-popup@1.1.0/dist/' . 'magnific-popup' . $this->script_suffix . '.css', [], $this->_version);
-        wp_enqueue_style($this->_token . '-swiper' . $this->onload);
+        wp_register_style($this->_token . '-glide' . $this->onload, esc_url($this->cdn) . 'glidejs@2.1.0/dist/css/' . 'glide.core' . $this->script_suffix . '.css', [], $this->_version);
+        wp_enqueue_style($this->_token . '-glide' . $this->onload);
 
         wp_register_style($this->_token . '-c' . $this->onload, esc_url($this->cdn) . 'swiper@11.1.8/' . 'swiper-bundle' . $this->script_suffix . '.css', [], $this->_version);
         wp_enqueue_style($this->_token . '-c' . $this->onload);
@@ -352,8 +333,8 @@ class WPDE
         wp_register_script($this->_token . '-mfp' . $this->defer, esc_url($this->cdn) . 'magnific-popup@1.1.0/dist/' . 'jquery.magnific-popup' . $this->script_suffix . '.js', ['jquery'], $this->_version, true);
         wp_enqueue_script($this->_token . '-mfp' . $this->defer);
 
-        wp_register_script($this->_token . '-mfp' . $this->defer, esc_url($this->cdn) . 'swiper@11.1.8/' . 'swiper-bundle' . $this->script_suffix . '.js', ['jquery'], $this->_version, true);
-        wp_enqueue_script($this->_token . '-mfp' . $this->defer);
+        wp_register_script($this->_token . '-glide' . $this->defer, esc_url($this->cdn) . 'glidejs@2.1.0/dist/' . 'glide' . $this->script_suffix . '.js', ['jquery'], $this->_version, true);
+        wp_enqueue_script($this->_token . '-glide' . $this->defer);
 
         wp_register_script($this->_token . '-icons' . $this->defer, esc_url($this->cdn) . '@fortawesome/fontawesome-free@6.5.2/js/' . 'all' . $this->script_suffix . '.js', ['jquery'], $this->_version, true);
         wp_enqueue_script($this->_token . '-icons' . $this->defer);
@@ -755,6 +736,25 @@ class WPDE
                 $user_search->query_where = str_replace('WHERE 1=1', "WHERE 1=1 AND {$wpdb->users}.user_login != 'admin'", $user_search->query_where);
             }
         }
+    }
+
+    /**
+     * Display a notice in the WordPress admin area.
+     *
+     * This method displays an admin notice to indicate that the ACF PRO plugin is required
+     * for the theme to function correctly.
+     *
+     * @return  void
+     * @access  public
+     * @since   1.0.0
+     */
+    public function acf_notice()
+    {
+        $html = '<div id="' . $this->_token . '-notice" class="notice notice-error is-dismissible">';
+            $html .= '<p>' . __('The', 'wpde') . ' <a href="https://github.com/Rucilos/wpde/" target="_blank" rel="noopener noreferrer"><strong>' . __('WordPress Development Environment (WPDE)', 'wpde') . '</strong></a> ' . __('theme requires the', 'wpde') . ' <a href="https://www.google.com/search?q=ACF+PRO" target="_blank" rel="noopener noreferrer"><strong>' . __('ACF PRO', 'wpde') . '</strong></a> ' . __('plugin, with a minimum version of 5.7.0, to function properly.', 'wpde') . '</p>';
+        $html .= '</div>';
+
+        echo $html;
     }
 
     /**
