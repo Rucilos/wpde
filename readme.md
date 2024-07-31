@@ -38,7 +38,6 @@ npm run phpformat
 -   Bootstrap Navbar Walker
 -   Font Awesome
 -   Magnific popup
--   Swiper
 
 ## 🖥️ Development Tools
 -   Composer
