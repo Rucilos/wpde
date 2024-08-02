@@ -565,12 +565,12 @@ class WPDE
             
             $html .= '<ul class="navbar-collapse">';
             $html .= '<li class="nav-item">';
-            $html .= '<a href="#!" id="open-about" class="nav-link">';
+            $html .= '<a href="#!" id="open-about" class="nav-link dropdown">';
             $html .= __('Version', 'wpde') . ' ' . $this->_version;
             $html .= '</a>';
             $html .= '</li>';
             $html .= '<li class="nav-item">';
-            $html .= '<a href="https://github.com/Rucilos/wpde/" class="nav-link ico">';
+            $html .= '<a href="https://github.com/Rucilos/wpde/" class="nav-link ico" target="_blank">';
             $html .= '<img src="' . get_template_directory_uri() . '/img/github.svg" />';
             $html .= '</a>';
             $html .= '</li>';

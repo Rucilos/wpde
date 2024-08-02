@@ -9,11 +9,9 @@
         $('#wpcontent').prepend($('#wpde-modal'));
         $('#wpcontent').prepend($('#wpde-navbar'));
 
-        // Add click event for the "Version" link
-        $('#open-about').on('click', function (event) {
-            event.preventDefault(); // Prevent default anchor behavior
-            
-            // Toggle the "show" class on the markdown content
+        $('#open-about').on('click', function (e) {
+            e.preventDefault(); 
+            $(this).toggleClass('active');
             $('#wpde-modal').toggleClass('show');
         });
     });
