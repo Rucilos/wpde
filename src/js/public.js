@@ -4,7 +4,7 @@
  * Author (c) 2024 Jindrich Rucil
  * Released under the MIT license
  */
-;(function ($) {
+(function ($) {
     // Enable bootstrap tooltips
     // Magnific Popup
     // CF7 Button

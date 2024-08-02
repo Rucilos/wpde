@@ -80,21 +80,51 @@
                     display: flex;
                     align-items: center;
                     font-size: 14px;
-                    padding: 6px;
+                    padding: 8px 12px;
                     color: var(--wpde-nav-link-color);
                     text-decoration: none;
-                    border-radius: 100%;
 
-                    &:hover {
-                        background: var(--wpde-nav-link-bg);
-                    }
+                    &.ico {
+                        border-radius: 100%;
+                        padding: 6px;
 
-                    .ico {
-                        width: 26px;
-                        height: auto;
+                        img {
+                            width: 26px;
+                            height: auto;
+                        }
+
+                        &:hover {
+                            background: var(--wpde-nav-link-bg);
+                        }
+                        
                     }
                 }
             }
+        }
+    }
+
+    .wpde-modal {
+        display: none; 
+        background: var(--wpde-white);
+        padding: 0 20px;
+        box-shadow: var(--wpde-shadow-lg);
+        border-bottom: 1px solid var(--wpde-border);
+        max-height: 0; 
+        overflow: hidden; 
+        transition: max-height 0.3s ease, opacity 0.3s ease; 
+        opacity: 0; 
+
+        img {
+            display: none;
+        }
+
+        &.show {
+            display: block;
+            max-height: 500px; 
+            margin-left: -20px;
+            overflow: hidden;
+            overflow-y: scroll;
+            opacity: 1;
         }
     }
 

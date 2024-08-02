@@ -14,10 +14,8 @@
     ?>
     <?php
     if (has_post_thumbnail()) {
-        echo '<div class="text-center">';
         $image_size_custom = wp_is_mobile() ? 'header-sm' : 'large-lg';
         the_post_thumbnail($image_size_custom, ['class' => 'img-fluid mb-5 shadow rounded-4']);
-        echo '</div>';
     }
     ?>
     <?php the_content(); ?>

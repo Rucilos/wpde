@@ -207,6 +207,16 @@ class ComposerStaticInitd830f6742082e9cee608b52f46e47a5f
         ),
     );
 
+    public static $prefixesPsr0 = array (
+        'P' => 
+        array (
+            'Parsedown' => 
+            array (
+                0 => __DIR__ . '/..' . '/erusev/parsedown',
+            ),
+        ),
+    );
+
     public static $classMap = array (
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
         'CURLStringFile' => __DIR__ . '/..' . '/symfony/polyfill-php81/Resources/stubs/CURLStringFile.php',
@@ -240,6 +250,7 @@ class ComposerStaticInitd830f6742082e9cee608b52f46e47a5f
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInitd830f6742082e9cee608b52f46e47a5f::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInitd830f6742082e9cee608b52f46e47a5f::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitd830f6742082e9cee608b52f46e47a5f::$prefixesPsr0;
             $loader->classMap = ComposerStaticInitd830f6742082e9cee608b52f46e47a5f::$classMap;
 
         }, null, ClassLoader::class);

@@ -68,7 +68,7 @@ if ($metadata) {
                         ?>
                         <div class="toast border bg-blur mb-3 show <?php echo ($row_index % 2 == 1) ? 'ms-4' : ''; ?>" role="alert" aria-live="assertive" aria-atomic="true">
                             <div class="toast-header border-bottom shadow-sm">
-                                <img src="<?php echo esc_url($image_size); ?>" class="rounded-circle me-2" alt="<?php echo esc_attr($alt); ?>" width="24px" height="auto">
+                                <img src="<?php echo esc_url($image_size); ?>" class="img-fluid rounded-circle me-2" alt="<?php echo esc_attr($alt); ?>" width="24px" height="auto">
                                 <strong class="me-auto"><?php echo esc_html($title); ?></strong>
                                 <small>11 mins ago</small>
                             </div>

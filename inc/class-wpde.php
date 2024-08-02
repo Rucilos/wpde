@@ -134,7 +134,7 @@ class WPDE
      * @access public
      * @since 1.0.0
      */
-    public function __construct($file = '', $version = '2.0.0')
+    public function __construct($file = '', $version = '2.1.9')
     {
         $this->_version = $version;
         $this->_token = 'wpde';
@@ -176,7 +176,7 @@ class WPDE
             add_action('admin_notices', [$this, 'acf_notice']);
         }
 
-        // Initialize setup
+        // Setup
         add_action('after_setup_theme', [$this, 'theme_setup']);
 
         // Load body classes
@@ -186,8 +186,8 @@ class WPDE
 
         // Load admin components
         add_action('admin_menu', [$this, 'add_options_page']);
-        add_action('admin_head', [$this, 'add_admin_navbar']);
         if($this->is_wpde()) {
+            add_action('admin_head', [$this, 'add_admin_navbar']);
             add_action('admin_footer_text', [$this, 'admin_footer_text'], 10, 1);
             add_action('update_footer', [$this, 'admin_footer_version'], 9999, 1);
         }
@@ -558,23 +558,32 @@ class WPDE
     {
         $screen = get_current_screen();
         if ($screen->id === 'toplevel_page_' . WPDE()->_token) {
-
             $html  = '<nav id="' . WPDE()->_token . '-navbar" class="' . WPDE()->_token . '-navbar">';
             $html .= '<a href="admin.php?page=' . WPDE()->_token . '" class="navbar-brand">';
-            $html .= '<img src="https://cdn.df-barber.cz/apiru/brands/primary.svg" width="100px" height="auto" alt="WPDE Logo">';
+            $html .= '<img src="https://cdn.df-barber.cz/wpde/logo.svg" width="100px" height="auto" alt="WPDE Logo">';
             $html .= '</a>';
-
+            
             $html .= '<ul class="navbar-collapse">';
             $html .= '<li class="nav-item">';
-            $html .= '<a href="https://github.com/Rucilos/wpde/" class="nav-link">';
-            $html .= '<img src="' . get_template_directory_uri() . '/img/github.svg" class="ico" />';
+            $html .= '<a href="#!" id="open-about" class="nav-link">';
+            $html .= __('Version', 'wpde') . ' ' . $this->_version;
             $html .= '</a>';
             $html .= '</li>';
             $html .= '<li class="nav-item">';
-            $html .= __('Version', 'wpde') . ' ' . $this->_version;
+            $html .= '<a href="https://github.com/Rucilos/wpde/" class="nav-link ico">';
+            $html .= '<img src="' . get_template_directory_uri() . '/img/github.svg" />';
+            $html .= '</a>';
             $html .= '</li>';
             $html .= '</ul>';
             $html .= '</nav>';
+            
+            require get_template_directory() . '/vendor/autoload.php';
+
+            $html .= '<div id="' . WPDE()->_token . '-modal" class="wpde-modal">';
+            $markdown = file_get_contents(get_template_directory() . '/README.md');
+            $parsedown = new Parsedown();
+            $html .= $parsedown->text($markdown);
+            $html .= '</div>';
 
             echo $html;
         }

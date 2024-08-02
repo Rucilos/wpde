@@ -17,7 +17,7 @@ if ($footer) {
 			<div class="col-md-4 mb-3">
 				<a class="d-block mb-2" href="<?php echo esc_url(home_url()); ?>">
 				<?php if (!empty($logo_image)) { ?>
-					<img src="<?php echo esc_url($logo_image['sizes']['logo']); ?>" alt="Logo" width="<?php echo esc_attr($logo_width); ?>" height="auto"/>
+					<img class="img-fluid" src="<?php echo esc_url($logo_image['sizes']['logo']); ?>" alt="Logo" width="<?php echo esc_attr($logo_width); ?>" height="auto"/>
 				<?php
 				} elseif(!empty($logo_text)) {
 				    echo esc_html($logo_text);

@@ -45,7 +45,7 @@
             ?>
                     <div class="col-md-<?php echo esc_attr($grid); ?> text-center">
                         <?php if (!empty($image)) { ?>
-                            <img src="<?php echo esc_url($image_size); ?>" class="mb-3" alt="<?php echo esc_attr($alt); ?>" width="48px" height="auto">
+                            <img src="<?php echo esc_url($image_size); ?>" class="img-fluid mb-3" alt="<?php echo esc_attr($alt); ?>" width="48px" height="auto">
                         <?php } ?>
                         <h6 class="mb-0"><?php echo esc_html($item_title); ?></h6>
                         <p class="mx-3"><?php echo esc_html($item_description); ?></p>

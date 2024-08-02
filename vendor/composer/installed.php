@@ -3,7 +3,7 @@
         'name' => '__root__',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => 'acc621399fca4febe89b4f69e0fa226bb564fa3e',
+        'reference' => '4f8bfdb5951948449ca3241a40c60c9f48714417',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         '__root__' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => 'acc621399fca4febe89b4f69e0fa226bb564fa3e',
+            'reference' => '4f8bfdb5951948449ca3241a40c60c9f48714417',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -54,6 +54,15 @@
             'install_path' => __DIR__ . '/./xdebug-handler',
             'aliases' => array(),
             'dev_requirement' => true,
+        ),
+        'erusev/parsedown' => array(
+            'pretty_version' => '1.7.4',
+            'version' => '1.7.4.0',
+            'reference' => 'cb17b6477dfff935958ba01325f2e8a2bfa6dab3',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../erusev/parsedown',
+            'aliases' => array(),
+            'dev_requirement' => false,
         ),
         'evenement/evenement' => array(
             'pretty_version' => 'v3.0.2',

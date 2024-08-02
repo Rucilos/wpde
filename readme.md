@@ -2,11 +2,11 @@
 
 WordPress Development Environment (WPDE) is a fantastic starting point for creating a WordPress template. It includes responsive and accessibility design, necessary files, and features for proper template functioning, as well as a settings page.
 
-![WPDE - Cover](/.github/cover.png)
+![WPDE - Cover](https://cdn.df-barber.cz/wpde/cover.png)
 
 ## 🔍 Demo
 
-Check out the [WPDE](https://jindrichrucil.com/) template
+Check out the [WPDE](https://github.com/rucilos/wpde/) template
 
 ## 🔧 Commands
 
@@ -135,4 +135,4 @@ Distributed under the **MIT** License. See [LICENSE](https://github.com/rucilos/
 
 ## 🎉 Credits
 
-© 2024 Created by [Jindřich Ručil](https://jindrichrucil.com). Public Release v1.0.0 was launched on Tuesday, February 6, 2024.
+[WPDE](https://github.com/rucilos/wpde) was launched on Tuesday, February 6, 2024. © 2024 Created by Jindřich Ručil
