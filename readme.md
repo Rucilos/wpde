@@ -1,4 +1,4 @@
-## 🎨 WordPress Development Environment v2.1.9 (WPDE)
+## 🎨 WordPress Development Environment (WPDE) | v2.1.9
 
 WordPress Development Environment (WPDE) is a fantastic starting point for creating a WordPress template. It includes responsive and accessibility design, necessary files, and features for proper template functioning, as well as a settings page.
 
