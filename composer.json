@@ -1,8 +1,5 @@
 {
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.60"
-    },
-    "require": {
-        "erusev/parsedown": "^1.7"
     }
 }

@@ -6,13 +6,6 @@
  */
 (function ($) {
     $(document).ready(function () {
-        $('#wpcontent').prepend($('#wpde-modal'));
         $('#wpcontent').prepend($('#wpde-navbar'));
-
-        $('#open-about').on('click', function (e) {
-            e.preventDefault(); 
-            $(this).toggleClass('active');
-            $('#wpde-modal').toggleClass('show');
-        });
     });
 })(jQuery);

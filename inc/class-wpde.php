@@ -565,7 +565,7 @@ class WPDE
             
             $html .= '<ul class="navbar-collapse">';
             $html .= '<li class="nav-item">';
-            $html .= '<a href="#!" id="open-about" class="nav-link dropdown">';
+            $html .= '<a href="#!" class="nav-link disabled">';
             $html .= __('Version', 'wpde') . ' ' . $this->_version;
             $html .= '</a>';
             $html .= '</li>';
@@ -576,14 +576,6 @@ class WPDE
             $html .= '</li>';
             $html .= '</ul>';
             $html .= '</nav>';
-            
-            require get_template_directory() . '/vendor/autoload.php';
-
-            $html .= '<div id="' . WPDE()->_token . '-modal" class="wpde-modal">';
-            $markdown = file_get_contents(get_template_directory() . '/README.md');
-            $parsedown = new Parsedown();
-            $html .= $parsedown->text($markdown);
-            $html .= '</div>';
 
             echo $html;
         }
@@ -676,17 +668,15 @@ class WPDE
     {
         $screen = get_current_screen();
 
-        $content = '<p><strong>WordPress Development Environment (WPDE) v' . esc_html($this->_version) . '</strong></p>';
+        $content = '<p><strong>WordPress Development Environment (WPDE)</strong></p>';
         $content .= '<p>';
-        $content .= '<a href="' . esc_url($this->settings_url) . '">' . __('WPDE', 'wpde') . '</a>';
-        $content .= ' &#8212; ';
         $content .= '<a href="' . esc_url($this->settings_url) . '">' . __('GitHub', 'wpde') . '</a>';
         $content .= '</p>';
-        $content .= '<p>' . __("WordPress Development Environment (WPDE) is a fantastic starting point for creating a WordPress template. Includes necessary files and features for proper template functioning.", 'wpde') . '</p>';
+        $content .= '<p>WordPress Development Environment (WPDE) ' . __("is a fantastic starting point for creating a WordPress template. It includes responsive and accessibility design, necessary files, and features for proper template functioning, as well as a settings page.", 'wpde') . '</p>';
 
         $screen->add_help_tab([
             'id' => $this->_token,
-            'title' => 'WPDE',
+            'title' => 'WPDE (v' . esc_html($this->_version) . ')',
             'content' => $content,
             'callback' => '',
             'priority' => 999,

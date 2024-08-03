@@ -5,21 +5,20 @@
  * Released under the MIT license
  */
 :root {
-    --wpde-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-    --wpde-shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
-    --wpde-shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
-
-    --wpde-white: #ffffff;
-    --wpde-black: #000000;
-
+    --wpde-shadow-sm: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
     --wpde-border: #e2e8f0;
-    --wpde-btn-bg: #0f172a;
+    --wpde-border-light: #f0f4f8;
+     
+    --wpde-white: #ffffff;
+
+    --wpde-btn-bg: #0783BE;
+    --wpde-btn-border-color: rgba(16, 24, 40, 0.2);
     --wpde-nav-link-color: #344054;
     --wpde-nav-link-bg: #e2e8f0;
 
     --wpde-success-bg: #edf7ef;
     --wpde-success-color: #344054;
-    --wpde-success-border: #b6deb9;
+    --wpde-success-border-color: #b6deb9;
     --wpde-success-icon-bg: #2ecc71;
     --wpde-notice-dismiss-color: #667085;
     --wpde-notice-dismiss-hover-color: #3c434a;
@@ -27,7 +26,7 @@
 
 // Adminbar item
 #wpadminbar #wp-admin-bar-wpde .ab-icon:before {
-    content: '\f108';
+    content: '\f540';
     width: 18px !important;
     height: 18px !important;
     display: block !important;
@@ -37,6 +36,7 @@
 
 // Options page
 .toplevel_page_wpde {
+
     // Navbar
     .wpde-navbar {
         position: relative;
@@ -68,7 +68,7 @@
             margin: 0;
 
             .nav-item {
-                margin: 0 14px;
+                margin: 0 6px;
                 position: relative;
                 display: inline-block;
 
@@ -80,29 +80,15 @@
                     display: flex;
                     align-items: center;
                     font-size: 14px;
-                    padding: 8px 12px;
+                    padding: 8px 6px;
                     color: var(--wpde-nav-link-color);
                     text-decoration: none;
 
-                    &:focus {
-                        box-shadow: none;
-                    }
+                    &.disabled {
+                        cursor: auto;
 
-                    &.dropdown {
-                        &::after {
-                            content: '';
-                            position: absolute;
-                            top: 50%;
-                            left: 100%;
-                            margin: 2px 0 0 -6px;
-                            border: 5px solid transparent;
-                            border-top-color: var(--wpde-nav-link-color);
-                            transition: transform 0.3s;
-                            transform: translateY(-50%);
-                        }
-                    
-                        &.active::after {
-                            transform: translateY(-50%) rotate(180deg);
+                        &:focus {
+                            box-shadow: none;
                         }
                     }
 
@@ -122,31 +108,6 @@
                     }
                 }
             }
-        }
-    }
-
-    .wpde-modal {
-        display: none; 
-        background: var(--wpde-white);
-        padding: 0 20px;
-        box-shadow: var(--wpde-shadow-lg);
-        border-bottom: 1px solid var(--wpde-border);
-        max-height: 0; 
-        overflow: hidden; 
-        transition: max-height 0.3s ease, opacity 0.3s ease; 
-        opacity: 0; 
-
-        img {
-            display: none;
-        }
-
-        &.show {
-            display: block;
-            max-height: 500px; 
-            margin-left: -20px;
-            overflow: hidden;
-            overflow-y: scroll;
-            opacity: 1;
         }
     }
 
@@ -183,20 +144,14 @@
                 }
 
                 .button {
-                    position: relative;
-                    margin-top: 2px;
-                    padding: 0 25px;
-                    font-size: 15px;
+                    padding: 3px 25px;
                     font-weight: 600;
-                    color: var(--wpde-white);
                     background-color: var(--wpde-btn-bg);
-                    border-color: var(--wpde-btn-bg);
-                    border-color: transparent;
+                    border-color: var(--wpde-btn-border-color);
                     border-radius: 6px;
-                    z-index: 1;
 
                     &:hover {
-                        opacity: 0.95;
+                        opacity: 0.9;
                     }
 
                     @media only screen and (max-width: 600px) {
@@ -210,11 +165,16 @@
     // Main postbox
     #postbox-container-2 {
         .postbox {
+            box-shadow: none;
             box-shadow: var(--wpde-shadow-sm);
             border-color: var(--wpde-border);
 
             .postbox-header {
                 display: none;
+            }
+
+            .acf-field.acf-accordion {
+                //border-color: var(--wpde-border-light);
             }
         }
     }
@@ -222,30 +182,32 @@
     // Notice
     .notice {
         border-left-width: 1px;
-        border-radius: 9px;
-        box-shadow: var(--wpde-shadow-sm);
+        border-radius: 8px;
     }
 
     // Success
     .notice-success {
         background: var(--wpde-success-bg);
-        border-color: var(--wpde-success-border);
+        border-color: var(--wpde-success-border-color);
+        padding: 9px 14px;
 
         p {
             display: flex;
             align-items: center;
+            margin: 0;
+            padding: 0;
             color: var(--wpde-success-color);
 
             &:before {
                 content: '\f147';
-                font: normal 16px / 20px dashicons;
-                margin-right: 10px;
+                font: normal 18px / 20px dashicons;
+                margin-right: 12px;
                 background-color: var(--wpde-success-icon-bg);
                 color: var(--wpde-white);
                 padding: 0px;
-                height: 22px;
-                width: 22px;
-                border-radius: 25px;
+                height: 28px;
+                width: 28px;
+                border-radius: 6px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -256,7 +218,7 @@
 
     // Dismiss
     .notice-dismiss {
-        padding: 10px;
+        padding: 12px;
 
         &:before {
             content: '\f335';
