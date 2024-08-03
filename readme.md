@@ -38,18 +38,18 @@ npm run lint
 
 ## 🧪 Libraries
 
--   Cookie Consent
 -   Bootstrap
 -   Bootstrap Navbar Walker
+-   Cookie Consent
 -   Font Awesome
 -   Magnific popup
 
 ## 🖥️ Development Tools
 -   Composer
+-   ESLint
 -   Node.js
 -   PHP CS Fixer
 -   Prettier
--   ESLint
 -   SASS
 -   Webpack
 
