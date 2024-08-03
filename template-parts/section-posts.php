@@ -19,7 +19,7 @@ if ($query->have_posts()) {
     <div class="container">
         <?php
             $group = get_field('wpde_posts', 'option');
-    if ($posts) {
+    if ($group) {
         $title = $group['title'];
         $subtitle = $group['subtitle'];
         $description = $group['description'];

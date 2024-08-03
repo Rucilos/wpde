@@ -8,9 +8,6 @@
  * @author Jindřich Ručil
  * @since 1.0.0
  */
-?>
-
-<?php
 require_once 'inc/class-wpde.php';
 require_once 'inc/class-wpde-post-type.php';
 require_once 'inc/class-wpde-taxonomy.php';

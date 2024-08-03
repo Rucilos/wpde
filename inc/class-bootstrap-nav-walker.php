@@ -9,9 +9,6 @@
  * @package WordPress Development Environment (WPDE)
  * @since 1.0.0
  */
-?>
-
-<?php
 class bootstrap_5_wp_nav_menu_walker extends Walker_Nav_menu
 {
     private $current_item;

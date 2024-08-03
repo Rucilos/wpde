@@ -27,18 +27,28 @@
     $u_time = get_the_time('U');
     $u_modified_time = get_the_modified_time('U');
     if ($u_modified_time >= $u_time + 86400) {
-        $html = "<small class='d-block'><strong>Poslední aktualizace:</strong></small>";
-        $html .= '<small>' . esc_html(get_the_modified_time('F jS, Y')) . '</small>';
+        $html = '<small class="d-block"><strong>Poslední aktualizace:</strong></small>';
+        $html .= '<small class="text-muted">' . esc_html(get_the_modified_time('F jS, Y')) . '</small>';
         echo $html;
     } else {
-        $html = "<small class='d-block'><strong>Publikováno:</strong></small>";
-        $html .= '<small>' . esc_html(get_the_date('F jS, Y')) . '</small>';
+        $html = '<small class="d-block"><strong>Publikováno:</strong></small>';
+        $html .= '<small class="text-muted">' . esc_html(get_the_date('F jS, Y')) . '</small>';
         echo $html;
     }
     ?> 
     </div>
     <div>
-        <small class="d-block"><strong><?php _e('Související příspěvky:', 'wpde'); ?></strong></small>
-        <small><?php previous_post_link('%link'); ?> / <?php next_post_link('%link'); ?></small> 
-    </div>
+    <small class="d-block"><strong><?php _e('Související příspěvky:', 'wpde'); ?></strong></small>
+    <small class="text-muted">
+        <?php 
+        if (get_adjacent_post(false, '', true) || get_adjacent_post(false, '', false)) {
+            previous_post_link('%link', 'Předchozí příspěvek'); 
+            ?> / <?php 
+            next_post_link('%link', 'Další příspěvek'); 
+        } else {
+            echo '—'; 
+        }
+        ?>
+    </small> 
+</div>
 </div>
