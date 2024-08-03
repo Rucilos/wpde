@@ -27,7 +27,10 @@
     ],
     "main": "index.js",
     "devDependencies": {
+        "@eslint/js": "^9.8.0",
         "css-loader": "^7.1.1",
+        "eslint": "^9.8.0",
+        "globals": "^15.9.0",
         "ignore-emit-webpack-plugin": "^2.0.6",
         "mini-css-extract-plugin": "^2.9.0",
         "prettier": "^3.2.5",
@@ -42,7 +45,8 @@
     "scripts": {
         "start": "webpack",
         "format": "prettier --write src/**/*.{js,jsx,ts,tsx,json,css,scss,sass}",
-        "phpformat": "vendor\\bin\\php-cs-fixer fix"
+        "phpformat": "vendor\\bin\\php-cs-fixer fix",
+        "lint": "eslint src/js/**/*.js"
     },
     "repository": {
         "type": "git",

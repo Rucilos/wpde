@@ -31,6 +31,11 @@ PHP CS Fixer
 npm run phpformat
 ```
 
+ESLint
+```sh
+npm run lint
+```
+
 ## 🧪 Libraries
 
 -   Cookie Consent
@@ -44,6 +49,7 @@ npm run phpformat
 -   Node.js
 -   PHP CS Fixer
 -   Prettier
+-   ESLint
 -   SASS
 -   Webpack
 
@@ -135,5 +141,4 @@ Distributed under the **MIT** License. See [LICENSE](https://github.com/rucilos/
 
 ## 🎉 Credits
 
-© 2024 - present created by Jindřich Ručil and launched this project on Tuesday, February 6, 2024.
-© Tuesday, February 6, 2024 Jindřich Ručil crafted and launched this project
+© 2024 - present Created by Jindřich Ručil and launched this project on Tuesday, February 6, 2024.
