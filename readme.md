@@ -135,4 +135,5 @@ Distributed under the **MIT** License. See [LICENSE](https://github.com/rucilos/
 
 ## 🎉 Credits
 
-© Jindřich Ručil created and launched this project on Tuesday, February 6, 2024.
+© 2024 - present created by Jindřich Ručil and launched this project on Tuesday, February 6, 2024.
+© Tuesday, February 6, 2024 Jindřich Ručil crafted and launched this project
