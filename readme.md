@@ -14,6 +14,7 @@ Install dependencies
 ```sh
 npm install
 composer install
+npm run composer-install-docker # For Docker Container
 ```
 
 Webpack
@@ -28,8 +29,8 @@ npm run format
 
 PHP CS Fixer
 ```sh
-npm run phpformat
-npm run phpformat-docker # For Docker container
+npm run format-php
+npm run format-php-docker # For Docker Container
 ```
 
 ESLint
