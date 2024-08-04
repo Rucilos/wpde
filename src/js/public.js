@@ -4,7 +4,7 @@
  * Author (c) 2024 Jindrich Rucil
  * Released under the MIT license
  */
-(function ($) {
+;(function ($) {
     // Enable bootstrap tooltips
     // Magnific Popup
     // CF7 Button
@@ -38,7 +38,7 @@
 
         $('a[target="_blank"]:not(.btn)').each(function () {
             const icon = $('<i>', {
-                class: 'fa-solid fa-up-right-from-square fa-sm ms-2',
+                class: 'fa-solid fa-up-right-from-square fa-sm ms-1',
             })
             $(this).append(icon)
         })

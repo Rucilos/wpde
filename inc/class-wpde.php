@@ -719,7 +719,7 @@ class WPDE
     public function acf_notice()
     {
         $html = '<div id="' . $this->_token . '-notice" class="notice notice-error is-dismissible">';
-            $html .= '<p>' . __('The', 'wpde') . ' <a href="https://github.com/Rucilos/wpde/" target="_blank" rel="noopener noreferrer"><strong>' . __('WordPress Development Environment (WPDE)', 'wpde') . '</strong></a> ' . __('theme requires the', 'wpde') . ' <a href="https://www.google.com/search?q=ACF+PRO" target="_blank" rel="noopener noreferrer"><strong>' . __('ACF PRO', 'wpde') . '</strong></a> ' . __('plugin, with a minimum version of 5.7.0, to function properly.', 'wpde') . '</p>';
+        $html .= '<p>' . __('The', 'wpde') . ' <a href="https://github.com/Rucilos/wpde/" target="_blank" rel="noopener noreferrer"><strong>' . __('WordPress Development Environment (WPDE)', 'wpde') . '</strong></a> ' . __('theme requires the', 'wpde') . ' <a href="https://www.google.com/search?q=ACF+PRO" target="_blank" rel="noopener noreferrer"><strong>' . __('ACF PRO', 'wpde') . '</strong></a> ' . __('plugin, with a minimum version of 5.7.0, to function properly.', 'wpde') . '</p>';
         $html .= '</div>';
 
         echo $html;
@@ -811,14 +811,14 @@ class WPDE
     public function theme()
     {
         $html = '<div class="dropdown d-flex align-items-center justify-content-center" id="' . $this->_token . '-theme">';
-            $html .= '<button type="button" class="navbar-toggler d-block border-0 dropdown-toggle rounded-circle p-0 shadow-none" data-bs-toggle="dropdown" aria-expanded="false">';
-                $html .= '<i class="fa-solid fa-circle-half-stroke"></i> <span class="visually-hidden">Auto</span>';
-            $html .= '</button>';
-            $html .= '<ul class="dropdown-menu" style="left:-70px;margin-top: 1.3rem;">';
-                $html .= '<li><a class="dropdown-item active" href="#!" data-value="auto"><i class="fa-solid fa-circle-half-stroke"></i> Auto</a></li>';
-                $html .= '<li><a class="dropdown-item" href="#!" data-value="light"><i class="fa-solid fa-sun"></i> ' . __('Light', 'wpde') . '</a></li>';
-                $html .= '<li><a class="dropdown-item" href="#!" data-value="dark"><i class="fa-solid fa-moon"></i> ' . __('Dark', 'wpde') . '</a></li>';
-            $html .= '</ul>';
+        $html .= '<button type="button" class="navbar-toggler d-block border-0 dropdown-toggle rounded-circle p-0 shadow-none" data-bs-toggle="dropdown" aria-expanded="false">';
+        $html .= '<i class="fa-solid fa-circle-half-stroke"></i> <span class="visually-hidden">Auto</span>';
+        $html .= '</button>';
+        $html .= '<ul class="dropdown-menu" style="left:-70px;margin-top: 1.3rem;">';
+        $html .= '<li><a class="dropdown-item active" href="#!" data-value="auto"><i class="fa-solid fa-circle-half-stroke"></i> Auto</a></li>';
+        $html .= '<li><a class="dropdown-item" href="#!" data-value="light"><i class="fa-solid fa-sun"></i> ' . __('Light', 'wpde') . '</a></li>';
+        $html .= '<li><a class="dropdown-item" href="#!" data-value="dark"><i class="fa-solid fa-moon"></i> ' . __('Dark', 'wpde') . '</a></li>';
+        $html .= '</ul>';
         $html .= '</div>';
 
         echo $html;
@@ -947,7 +947,7 @@ class WPDE
         echo '<ul class="breadcrumb mb-0">';
 
         // Creating home link
-        echo "<li class='breadcrumb-item'><a class='link-underline link-underline-opacity-0' href='" . get_home_url() . "'>" . $defaults['home'] . '</a></li>';
+        echo "<li class='breadcrumb-item'><a href='" . get_home_url() . "'>" . $defaults['home'] . '</a></li>';
 
         // Single
         if (is_single()) {
@@ -957,7 +957,7 @@ class WPDE
             if ($post_type != 'post') {
                 $post_type_object = get_post_type_object($post_type);
                 $post_type_link = get_post_type_archive_link($post_type);
-                echo "<li class='breadcrumb-item'><a class='link-underline link-underline-opacity-0' href='" . $post_type_link . "'>" . $post_type_object->labels->name . '</a></li>';
+                echo "<li class='breadcrumb-item'><a href='" . $post_type_link . "'>" . $post_type_object->labels->name . '</a></li>';
             }
 
             // Get categories
@@ -993,7 +993,7 @@ class WPDE
                 echo $display_category;
                 echo "<li class='breadcrumb-item'>" . get_the_title() . '</li>';
             } elseif (!empty($cat_id)) {
-                echo "<li class='breadcrumb-item'><a class='link-underline link-underline-opacity-0' href='" . $cat_link . "'>" . $cat_name . '</a></li>';
+                echo "<li class='breadcrumb-item'><a href='" . $cat_link . "'>" . $cat_name . '</a></li>';
                 echo "<li class='breadcrumb-item'>" . get_the_title() . '</li>';
             } else {
                 echo '<li>' . get_the_title() . '</li>';
@@ -1015,7 +1015,7 @@ class WPDE
                 if ($post_type != 'post') {
                     $post_type_object = get_post_type_object($post_type);
                     $post_type_link = get_post_type_archive_link($post_type);
-                    echo "<li class='breadcrumb-item'><a class='link-underline link-underline-opacity-0' href='" . $post_type_link . "'>" . $post_type_object->labels->name . '</a></li>';
+                    echo "<li class='breadcrumb-item'><a href='" . $post_type_link . "'>" . $post_type_object->labels->name . '</a></li>';
                 }
 
                 $custom_tax_name = get_queried_object()->name;
@@ -1027,7 +1027,7 @@ class WPDE
                 if ($parent !== 0) {
                     $parent_category = get_category($parent);
                     $category_link = get_category_link($parent);
-                    echo "<li class='breadcrumb-item'><a class='link-underline link-underline-opacity-0' href='" . esc_url($category_link) . "'>" . $parent_category->name . '</a></li>';
+                    echo "<li class='breadcrumb-item'><a href='" . esc_url($category_link) . "'>" . $parent_category->name . '</a></li>';
                 }
                 echo "<li class='breadcrumb-item'>" . single_cat_title('', false) . '</li>';
 
@@ -1045,15 +1045,15 @@ class WPDE
             } elseif (is_day()) {
                 // Day archive
                 // Year link
-                echo "<li><a class='link-underline link-underline-opacity-0' href='" . get_year_link(get_the_time('Y')) . "'>" . get_the_time('Y') . ' Archiv</a></li>';
+                echo "<li><a href='" . get_year_link(get_the_time('Y')) . "'>" . get_the_time('Y') . ' Archiv</a></li>';
                 // Month link
-                echo "<li><a class='link-underline link-underline-opacity-0' href='" . get_month_link(get_the_time('Y'), get_the_time('m')) . "'>" . get_the_time('M') . ' Archiv</a></li>';
+                echo "<li><a href='" . get_month_link(get_the_time('Y'), get_the_time('m')) . "'>" . get_the_time('M') . ' Archiv</a></li>';
                 // Day display
                 echo "<li class='breadcrumb-item'>" . get_the_time('jS') . ' ' . get_the_time('M') . ' Archiv</li>';
             } elseif (is_month()) {
                 // Month archive
                 // Year link
-                echo "<li class='breadcrumb-item'><a class='link-underline link-underline-opacity-0' href='" . get_year_link(get_the_time('Y')) . "'>" . get_the_time('Y') . ' Archiv</a></li>';
+                echo "<li class='breadcrumb-item'><a href='" . get_year_link(get_the_time('Y')) . "'>" . get_the_time('Y') . ' Archiv</a></li>';
                 // Month Display
                 echo "<li class='breadcrumb-item'>" . get_the_time('M') . ' Archiv</li>';
             } elseif (is_year()) {
@@ -1085,7 +1085,7 @@ class WPDE
                     $parents = null;
                 }
                 foreach ($anc as $ancestor) {
-                    $parents .= "<li class='breadcrumb-item'><a class='link-underline link-underline-opacity-0' href='" . get_permalink($ancestor) . "'>" . get_the_title($ancestor) . '</a></li>';
+                    $parents .= "<li class='breadcrumb-item'><a href='" . get_permalink($ancestor) . "'>" . get_the_title($ancestor) . '</a></li>';
                 }
                 // Display parent pages
                 echo $parents;

@@ -29,6 +29,7 @@ npm run format
 PHP CS Fixer
 ```sh
 npm run phpformat
+npm run phpformat-docker # Docker support
 ```
 
 ESLint
@@ -42,10 +43,11 @@ npm run lint
 -   Bootstrap Navbar Walker
 -   Cookie Consent
 -   Font Awesome
--   Magnific popup
+-   Magnific Popup
 
 ## 🖥️ Development Tools
 -   Composer
+-   Docker Support
 -   ESLint
 -   Node.js
 -   PHP CS Fixer

@@ -2,24 +2,27 @@
 $logo = get_field('wpde_logo', 'option');
 if ($logo) {
     $logo_text = !empty($logo['text']) ? $logo['text'] : get_bloginfo('name');
+} else {
+    $logo_text = esc_html(get_bloginfo('name'));
 }
 ?>
+</main>
 <footer>
 	<div class="container-fluid px-0">
 		<div class="container">
-			<div class="d-flex flex-column flex-sm-row justify-content-start justify-content-md-between align-items-center py-4 border-top">
+			<div class="d-flex flex-column flex-md-row justify-content-start justify-content-md-between align-items-center gap-3 py-4 border-top">
 				<div>
 					<small class="text-muted">© <?php echo esc_html(date('Y')) . ' ' . esc_html($logo_text) . '. ' . __('All rights reserved.', 'wpde'); ?></small>
 				</div>
 				<div class="d-flex align-items-center gap-4">
-					<ul class="list-unstyled d-flex align-items-center flex-wrap flex-md-nowrap column-gap-3 mb-0">
-						<li>
-							<a href="#!" class="nav-link text-muted" onclick="CookieConsent.showPreferences(); return false;">
+					<ul class="navbar-nav align-items-center flex-column flex-md-row column-gap-3 mb-0">
+						<li class="nav-item">
+							<a href="#!" class="nav-link py-0 py-md-2 text-muted" onclick="CookieConsent.showPreferences(); return false;">
 								<small><?php _e('Privacy settings', 'wpde'); ?></small>
 							</a>
 						</li>
-						<li>
-							<a href="<?php echo esc_url(get_permalink(3)); ?>" class="nav-link text-muted">
+						<li class="nav-item">
+							<a href="<?php echo esc_url(get_permalink(3)); ?>" class="nav-link py-0 py-md-2 text-muted">
 								<small><?php echo esc_html(get_the_title(3)); ?></small>
 							</a>
 						</li>

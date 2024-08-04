@@ -6,22 +6,19 @@ if($navbar) {
     $navbar_btn = $navbar['navbar_btn'];
     $navbar_badge_text = $navbar['badge_text'];
     $navbar_badge_link = $navbar['badge_link'];
-}
 
-switch ($navbar_layout) {
-    case 'Fixed':
-        $navbar_class = 'position-fixed top-0 start-0 end-0';
-        $helper_div = true;
-        break;
-    case 'Headroom':
-        $navbar_class = 'position-fixed top-0 start-0 end-0 headroom';
-        $helper_div = true;
-        break;
-    case 'Static':
-    default:
-        $navbar_class = '';
-        $helper_div = false;
-        break;
+    switch ($navbar_layout) {
+        case 'Fixed':
+            $navbar_class = 'position-fixed top-0 start-0 end-0';
+            break;
+        case 'Headroom':
+            $navbar_class = 'position-fixed top-0 start-0 end-0 headroom';
+            break;
+        case 'Static':
+        default:
+            $navbar_class = '';
+            break;
+    }
 }
 
 $logo = get_field('wpde_logo', 'option');
@@ -38,9 +35,6 @@ if ($options) {
 }
 ?>
 
-<?php if($helper_div) { ?>
-    <div class="w-100" style="height: 57px;"></div>
-<?php } ?>
 <nav class="navbar navbar-expand-lg bg-blur border-bottom z-3 <?php echo esc_attr($navbar_class); ?>">
 	<div class="container">
 		<a class="navbar-brand d-flex align-items-center gap-1" href="<?php echo esc_url(home_url()); ?>">
@@ -62,7 +56,7 @@ if (!empty($badge_link) && !empty($badge_text)) {
         $link_target = $badge_link['target'] ? $badge_link['target'] : '_self';
     }
     ?>
-        <a href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>" class="d-none d-lg-block py-1 px-3 mb-0 rounded-4 border text-muted link-underline link-underline-opacity-0" style="max-width: max-content;">
+        <a href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>" class="d-none d-lg-block py-1 px-3 mb-0 rounded-4 border text-muted" style="max-width: max-content;">
             <small>
             <?php
         if (!empty($badge_text)) {

@@ -7,10 +7,10 @@
 :root {
     --wpde-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
     --wpde-border: #e2e8f0;
-     
+
     --wpde-white: #ffffff;
 
-    --wpde-btn-bg: #0783BE;
+    --wpde-btn-bg: #0783be;
     --wpde-btn-border-color: rgba(16, 24, 40, 0.2);
     --wpde-nav-link-color: #344054;
     --wpde-nav-link-bg: #e2e8f0;
@@ -35,7 +35,6 @@
 
 // Options page
 .toplevel_page_wpde {
-
     // Navbar
     .wpde-navbar {
         position: relative;
@@ -103,7 +102,6 @@
                         &:hover {
                             background: var(--wpde-nav-link-bg);
                         }
-                        
                     }
                 }
             }

@@ -1,4 +1,4 @@
-<a href="<?php echo esc_url(get_permalink()); ?>" class="link-underline link-underline-opacity-0">
+<a href="<?php echo esc_url(get_permalink()); ?>">
 	<div class="card h-100 border-0">
 		<div class="card-body p-0">
 			<div class="d-flex align-items-center column-gap-4 mb-2">

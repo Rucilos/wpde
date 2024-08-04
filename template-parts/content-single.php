@@ -2,11 +2,11 @@
     <?php
     if (has_category()) {
         $categories = get_the_category();
-        $term_names = []; 
+        $term_names = [];
         foreach ($categories as $category) {
             $term_names[] = $category->name;
         }
-        $term_name = implode(', ', $term_names); 
+        $term_name = implode(', ', $term_names);
     } else {
         $term_name = '';
     }
@@ -40,15 +40,15 @@
     <div>
     <small class="d-block"><strong><?php _e('Související příspěvky:', 'wpde'); ?></strong></small>
     <small class="text-muted">
-        <?php 
+        <?php
         if (get_adjacent_post(false, '', true) || get_adjacent_post(false, '', false)) {
-            previous_post_link('%link', 'Předchozí příspěvek'); 
-            ?> / <?php 
-            next_post_link('%link', 'Další příspěvek'); 
+            previous_post_link('%link', 'Předchozí příspěvek');
+            ?> / <?php
+            next_post_link('%link', 'Další příspěvek');
         } else {
-            echo '—'; 
+            echo '—';
         }
-        ?>
+    ?>
     </small> 
 </div>
 </div>

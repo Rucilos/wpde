@@ -114,7 +114,7 @@ $dropdown-box-shadow: var(--#{$prefix}box-shadow-lg); // var(--#{$prefix}box-sha
 
 // Links
 $link-decoration: none; // underline
-$link-hover-decoration: underline; // null
+$link-hover-decoration: none; // null
 
 // Nav link
 $nav-link-font-size: $small-font-size; // null

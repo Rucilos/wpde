@@ -44,9 +44,10 @@ if ($query->have_posts()) {
                 $filters_layout = '';
                 break;
         }
+
+        echo WPDE()->the_title($title, $subtitle, $description, ['layout' => $title_layout, 'border' => $border]);
     }
     ?>
-        <?php echo WPDE()->the_title($title, $subtitle, $description, ['layout' => $title_layout, 'border' => $border]); ?>
         <ul class="list-unstyled d-flex align-items-center gap-3 mt-3 mb-0 <?php echo $filters_layout; ?>">
             <small><strong><?php echo esc_html__('Filters:', 'wpde'); ?></strong></small>
             <?php
@@ -98,7 +99,7 @@ if ($query->have_posts()) {
     if ($links) {
         echo '<div class="d-flex align-items-center gap-2">';
         foreach ($links as $link) {
-            $link = str_replace('class="', 'class="page-numbers link-underline link-underline-opacity-0 ', $link);
+            $link = str_replace('class="', 'class="page-numbers ', $link);
             echo $link;
         }
         echo '</div>';
