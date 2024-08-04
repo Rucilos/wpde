@@ -20,7 +20,7 @@ Install Composer dependencies
 composer install
 ```
 
-Install Composer dependencies inside a Docker container.
+Install Composer dependencies inside a `Docker` container
 ```sh
 npm run composer-install:docker 
 
@@ -42,18 +42,25 @@ npm run format
 PHP CS Fixer
 ```sh
 npm run format-php
+```
 
-npm run format-php:docker # For Docker Container
+PHP CS Fixer inside a `Docker` container
+```sh
+npm run format-php:docker 
+
+# or 
+
+docker-compose run --rm composer run format-php
 ```
 
 ESLint
 ```sh
-npm run lint:scripts
+npm run lint-scripts
 ```
 
 Stylelint
 ```sh
-npm run lint:styles
+npm run lint-styles
 ```
 
 ## 🧪 Libraries
