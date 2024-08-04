@@ -61,6 +61,8 @@ npm run lint
 
 ## ⚡ Features
 
+### Front-end
+
 Display breadcrumbs
 ```php
 WPDE()->breadcrumbs();
@@ -113,6 +115,12 @@ WPDE()->register_taxonomy(
         'show_in_rest' => false, // Does not make the taxonomy available in the REST API.
     )
 );
+```
+
+### Back-end
+Return `true` if the ACF plugin is activated.
+```php
+WPDE()->is_acf();
 ```
 
 ## 🎯 Requirements

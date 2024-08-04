@@ -45,8 +45,8 @@
     "scripts": {
         "start": "webpack",
         "format": "prettier --write src/**/*.{js,jsx,ts,tsx,json,css,scss,sass}",
-        "format-php": "composer run-script phpformat",
-        "format-php-docker": "docker-compose run --rm composer run phpformat",
+        "format-php": "composer run-script format-php",
+        "format-php-docker": "docker-compose run --rm composer run format-php",
         "lint": "eslint src/js/**/*.js",
         "composer-install-docker": "docker-compose run --rm composer install"
     },
