@@ -63,7 +63,7 @@ npm run lint
 
 ### Front-end
 
-Display breadcrumbs
+Display `breadcrumbs`
 ```php
 WPDE()->breadcrumbs();
 ```
