@@ -72,6 +72,11 @@ WPDE()->the_title(
 );
 ```
 
+Get current user info
+```php
+WPDE()->get_user($user_id);
+```
+
 ### Back-end
 
 Register a custom post type
