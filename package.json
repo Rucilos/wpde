@@ -49,12 +49,10 @@
         "start": "webpack",
         "format": "prettier --write src/**/*.{js,jsx,ts,tsx,json,css,scss,sass}",
         "format-php": "composer run-script format-php",
-        "format-php-docker": "docker-compose run --rm composer run format-php",
-        "lint": "eslint src/js/**/*.js",
-        "lint:fix": "eslint src/js/**/*.js --fix",
+        "format-php:docker": "docker-compose run --rm composer run format-php",
+        "lint-scripts": "eslint src/js/**/*.js",
         "lint-styles": "stylelint 'src/scss/**/*.{scss,sass,css}'",
-        "lint-styles-fix": "stylelint 'src/scss/**/*.{scss,sass,css}' --fix",
-        "composer-install-docker": "docker-compose run --rm composer install"
+        "composer-install:docker": "docker-compose run --rm composer install"
     },
     "repository": {
         "type": "git",

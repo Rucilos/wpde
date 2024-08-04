@@ -41,14 +41,19 @@ npm run format
 
 PHP CS Fixer
 ```sh
-npm run format-php
+npm run format:php
 
-npm run format-php-docker # For Docker Container
+npm run format:php-docker # For Docker Container
 ```
 
 ESLint
 ```sh
-npm run lint
+npm run lint:scripts
+```
+
+Stylelint
+```sh
+npm run lint:styles
 ```
 
 ## 🧪 Libraries
