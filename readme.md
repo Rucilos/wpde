@@ -34,7 +34,12 @@ npm run format
 PHP CS Fixer
 ```sh
 npm run format-php
+
 npm run format-php-docker # For Docker Container
+
+# -- or --
+
+docker-compose run --rm composer install
 ```
 
 ESLint
@@ -63,7 +68,7 @@ npm run lint
 
 ### Front-end
 
-Display `breadcrumbs`
+Display breadcrumbs
 ```php
 WPDE()->breadcrumbs();
 ```
