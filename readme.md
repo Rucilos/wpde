@@ -30,7 +30,7 @@ Check out the [WPDE](https://github.com/rucilos/wpde/) template
 -   Font Awesome
 -   Magnific Popup
 
-## 🖥️ Development Tools
+## 🧩 Development Tools
 -   Composer
 -   ESLint
 -   Node.js
