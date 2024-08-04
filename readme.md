@@ -182,29 +182,18 @@ Distributed under the **MIT** License. See [LICENSE](https://github.com/rucilos/
 
 ---
 
-| #  | Command                                   | Description                                |
-|----|-------------------------------------------|--------------------------------------------|
-| 1  | ```sh                                     |
-|    | npm install                               | Install NPM dependencies.                  |
-| 2  | ```sh                                     |
-|    | composer install                          | Install Composer dependencies.              |
-| 3  | ```sh                                     |
-|    | npm run composer-install:docker          | Install Composer dependencies inside a `Docker` container. |
-|    | ```sh                                     |
-|    | docker-compose run --rm composer install  |                                            |
-| 4  | ```sh                                     |
-|    | npm run start                             | Start the Webpack development server.      |
-| 5  | ```sh                                     |
-|    | npm run format                            | Run Prettier to format the code.          |
-| 6  | ```sh                                     |
-|    | npm run format-php                        | Run PHP CS Fixer to format PHP code.      |
-| 7  | ```sh                                     |
-|    | npm run format-php:docker                | Run PHP CS Fixer inside a `Docker` container. |
-|    | ```sh                                     |
-|    | docker-compose run --rm composer run format-php |                                      |
-| 8  | ```sh                                     |
-|    | npm run lint-scripts                     | Run ESLint to lint JavaScript files.      |
-| 9  | ```sh                                     |
-|    | npm run lint-styles                       | Run Stylelint to lint CSS files.          |
+| #  | Command                                               | Description                                       |
+|----|------------------------------------------------------|---------------------------------------------------|
+| 1  | `npm install`                                       | Install NPM dependencies.                         |
+| 2  | `composer install`                                  | Install Composer dependencies.                    |
+| 3  | `npm run composer-install:docker`                  | Install Composer dependencies inside a `Docker` container. |
+|    | `docker-compose run --rm composer install`          |                                                   |
+| 4  | `npm run start`                                     | Start the Webpack development server.             |
+| 5  | `npm run format`                                    | Run Prettier to format the code.                 |
+| 6  | `npm run format-php`                                | Run PHP CS Fixer to format PHP code.             |
+| 7  | `npm run format-php:docker`                         | Run PHP CS Fixer inside a `Docker` container.    |
+|    | `docker-compose run --rm composer run format-php`  |                                                   |
+| 8  | `npm run lint-scripts`                              | Run ESLint to lint JavaScript files.             |
+| 9  | `npm run lint-styles`                               | Run Stylelint to lint CSS files.                 |
 
 ---
