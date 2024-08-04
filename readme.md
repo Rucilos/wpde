@@ -30,7 +30,7 @@ Check out the [WPDE](https://github.com/rucilos/wpde/) template
 -   Font Awesome
 -   Magnific Popup
 
-## 🧩 Development Tools
+## 🖥️ Development Tools
 -   Composer
 -   ESLint
 -   Node.js
@@ -141,7 +141,23 @@ WPDE()->is_acf();
 3. **Visit** Appearance > Themes > Search for `WPDE` > Activate
 4. **Click** on the new menu item `WPDE` for better control of theme
 
-## 🏷️ License
+## 🛡️  Security
+
+Our application aims to ensure the highest level of security for user data and protect it against various types of attacks, including XSS (Cross-Site Scripting). To achieve this level of security, we implement the following measures:
+
+- **Input Escaping**: All user inputs are thoroughly escaped to prevent the insertion of malicious code. This includes converting special characters, such as `<`, `>`, `&`, and others, into their HTML entities.
+
+- **Use of Content Security Policy (CSP)**: We implement CSP, which serves as an additional security layer that helps detect and mitigate certain types of attacks, including XSS and data injection.
+
+- **Input Validation and Sanitization**: All user inputs are validated and sanitized to ensure they meet expected formats and do not contain any malicious code.
+
+- **Secure Libraries and Frameworks**: We use verified libraries and frameworks that have built-in protections against XSS and other security threats.
+
+- **Regular Audits and Updates**: We conduct regular security audits and updates of our code and dependencies to ensure we are protected against new and emerging threats.
+
+These measures help us ensure that your data remains safe and protected against potential attacks.
+
+## 🔑 License
 
 Distributed under the **MIT** License. See [LICENSE](https://github.com/rucilos/wpde/blob/master/LICENSE) for more information.
 
