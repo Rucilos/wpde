@@ -5,7 +5,7 @@ WordPress Development Environment (WPDE) is a fantastic starting point for creat
 ![WPDE - Cover](https://cdn.df-barber.cz/wpde/cover.png)
 
 ## 🔍 Demo
----
+
 Check out the [WPDE](https://github.com/rucilos/wpde/) template
 
 ## 🔧 Commands
