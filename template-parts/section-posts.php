@@ -19,13 +19,15 @@ if ($query->have_posts()) {
     <div class="container">
         <?php
             $group = get_field('wpde_posts', 'option');
+    $grid = 6;
     if ($group) {
         $title = $group['title'];
         $subtitle = $group['subtitle'];
         $description = $group['description'];
         $layout = $group['layout'];
         $border = $group['border'];
-
+        $grid = $group['grid'];
+       
         switch ($layout) {
             case 'Center':
                 $title_layout = 'text-center';
@@ -46,7 +48,7 @@ if ($query->have_posts()) {
         echo WPDE()->the_title($title, $subtitle, $description, ['layout' => $title_layout, 'border' => $border]);
     }
     ?>
-        <ul class="list-unstyled d-flex align-items-center gap-3 mt-3 mb-0 <?php echo $filters_layout; ?>">
+        <ul class="list-unstyled d-flex align-items-center gap-3 mt-3 mb-5 <?php echo $filters_layout; ?>">
             <small><strong><?php echo esc_html__('Filters:', 'wpde'); ?></strong></small>
             <?php
         $categories = get_categories();
@@ -61,7 +63,7 @@ if ($query->have_posts()) {
                 <?php
         while ($query->have_posts()) {
             $query->the_post();
-            echo '<div class="col-md-4">';
+            echo '<div class="col-md-' . esc_attr($grid) . '">';
             get_template_part('template-parts/content', 'post');
             echo '</div>';
         }

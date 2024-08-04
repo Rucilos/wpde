@@ -3,12 +3,15 @@
         <div class="container">
             <?php
             $group = get_field('wpde_logos', 'option');
+    $grid = 2;
+
     if ($group) {
         $title = $group['title'];
         $subtitle = $group['subtitle'];
         $description = $group['description'];
         $layout = $group['layout'];
         $border = $group['border'];
+        $grid = $group['grid'];
 
         switch ($layout) {
             case 'Center':
@@ -37,7 +40,7 @@
                 $link_target = esc_attr($link['target'] ? $link['target'] : '_self');
             }
             ?>
-                    <div class="col-md-2 text-center">
+                    <div class="col-md-<?php echo esc_attr($grid); ?> text-center">
                         <a href="<?php echo $link_url; ?>" target="<?php echo $link_target; ?>">
                             <img class="img-fluid mb-3" src="<?php echo esc_url($image['sizes']['logo']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" width="135px" height="auto" />
                         </a>

@@ -194,6 +194,9 @@ class WPDE
         add_action('wp_before_admin_bar_render', [$this, 'add_adminbar_tabs'], 999);
         add_action('admin_head', [$this, 'add_help_tabs']);
         add_action('wp_dashboard_setup', [$this, 'add_dashboard_metabox']);
+
+        // Load SMTP
+        add_action('phpmailer_init', [$this, 'setup_smtp']);
     } // END __construct()
 
     /**
@@ -517,6 +520,56 @@ class WPDE
         // Register bootstrap navwalker
         require_once get_template_directory() . '/inc/class-bootstrap-nav-walker.php';
     } // END theme_setup()
+
+    /**
+     * SMTP setup for sending emails.
+     *
+     * This method configures PHPMailer's SMTP settings, allowing the theme
+     * to send emails using an external SMTP server. It initializes SMTP
+     * authentication, sets the SMTP host, port, and security settings,
+     * and defines the sender's email address and name for outgoing emails.
+     *
+     * @access public
+     * @param PHPMailer $phpmailer The PHPMailer instance used to send emails.
+     * @return void
+     * @since 1.0.0
+     */
+    public function setup_smtp($phpmailer)
+    {
+        $smtp = get_field('wpde_smtp', 'option');
+    
+        if ($smtp && isset($smtp['host'], $smtp['username'], $smtp['password'])) {
+            $host = $smtp['host'];
+            $username = $smtp['username'];
+            $password = $smtp['password'];
+            $email = !empty($smtp['email']) ? $smtp['email'] : get_option('admin_email');
+            $name = !empty($smtp['name']) ? $smtp['name'] : get_bloginfo('name');
+            
+            $port = !empty($smtp['port']) ? $smtp['port'] : 587;
+            $encryption = !empty($smtp['encryption']) ? $smtp['encryption'] : 'tls';
+    
+            switch ($encryption) {
+                case 'ssl':
+                    $encryption_type = 'ssl';
+                    break;
+                case 'tls':
+                case 'none':
+                default:
+                    $encryption_type = '';
+                    break;
+            }
+    
+            $phpmailer->isSMTP();
+            $phpmailer->Host = $host;
+            $phpmailer->SMTPAuth = true;
+            $phpmailer->Username = $username;
+            $phpmailer->Password = $password;
+            $phpmailer->SMTPSecure = $encryption_type;
+            $phpmailer->Port = $port;
+            $phpmailer->setFrom($email, $name);
+            $phpmailer->addReplyTo($email, $name);
+        }
+    }
 
     /**
      * Add admin options page.
@@ -905,7 +958,7 @@ class WPDE
     {
 
         if (empty($title) || empty($subtitle) || empty($description)) {
-            return; 
+            return;
         }
 
         $html = '';

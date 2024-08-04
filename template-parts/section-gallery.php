@@ -3,7 +3,7 @@
         <div class="container">
             <?php
             $group = get_field('wpde_gallery', 'option');
-            $grid = 3;
+    $grid = 3;
     if ($group) {
         $title = $group['title'];
         $subtitle = $group['subtitle'];
