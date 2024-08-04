@@ -91,6 +91,8 @@ WPDE()->the_title(
 );
 ```
 
+### Back-end
+
 Register a custom post type
 ```php
 WPDE()->register_post_type(
@@ -117,7 +119,6 @@ WPDE()->register_taxonomy(
 );
 ```
 
-### Back-end
 Return `true` if the ACF plugin is activated.
 ```php
 WPDE()->is_acf();
