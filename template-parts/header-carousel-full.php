@@ -1,5 +1,18 @@
+<?php
+$header = get_field('wpde_header', 'option');
+switch ($header) {
+    case 'Carousel Container':
+        $container_class = '';
+        break;
+    case 'Carousel Full':
+    case '':
+    default:
+        $container_class = '-fluid';
+        break;
+}
+?>
 <header>
-    <div class="container-fluid px-0">
+    <div class="container<?php echo $container_class; ?> px-0">
         <?php if (have_rows('wpde_header_carousel', 'option')) { ?>
         <div id="carouselExampleCaptions" class="carousel slide">
             <?php
@@ -56,4 +69,3 @@
         <?php } ?>
     </div>
 </header>
-<div style="height: 500px;"></div>

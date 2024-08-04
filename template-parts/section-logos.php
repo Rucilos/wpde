@@ -11,20 +11,18 @@
         $border = $group['border'];
 
         switch ($layout) {
-            case 'Left':
-                $title_layout = '';
-                break;
             case 'Center':
                 $title_layout = 'text-center';
                 break;
             case 'Right':
                 $title_layout = 'text-end';
                 break;
+            case 'Left':
             default:
                 $title_layout = '';
                 break;
         }
-        
+
         echo WPDE()->the_title($title, $subtitle, $description, ['layout' => $title_layout, 'border' => $border]);
     }
     ?>

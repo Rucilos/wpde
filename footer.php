@@ -20,13 +20,11 @@ if (!is_404()) {
     }
 
     switch ($footer_layout) {
-        case 'Simple':
-            get_template_part('template-parts/footer', 'main');
-            break;
         case 'Advanced':
             get_template_part('template-parts/footer', 'top');
             get_template_part('template-parts/footer', 'main');
             break;
+        case 'Simple':
         case '':
         default:
             get_template_part('template-parts/footer', 'main');

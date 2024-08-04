@@ -29,24 +29,3 @@ function WPDE()
 } // END WPDE()
 
 WPDE();
-
-function add_cors_headers() {
-    // Získání aktuální domény
-    $allowed_origin = get_site_url(); // Vaše vlastní doména
-    $allowed_origin_jsdelivr = 'https://cdn.jsdelivr.net'; // JsDelivr
-
-    // Získání hlavičky 'Origin'
-    $origin = isset($_SERVER['HTTP_ORIGIN']) ? $_SERVER['HTTP_ORIGIN'] : '';
-
-    // Kontrola, zda je origin povolený
-    if ($origin === $allowed_origin || strpos($origin, $allowed_origin_jsdelivr) === 0) {
-        header('Access-Control-Allow-Origin: ' . $origin);
-    }
-
-    // Volitelné: Umožnit další metody a hlavičky
-    header('Access-Control-Allow-Methods: GET, POST, OPTIONS');
-    header('Access-Control-Allow-Headers: Content-Type');
-}
-
-// Přidání akce pro inicializaci hlaviček
-add_action('init', 'add_cors_headers');

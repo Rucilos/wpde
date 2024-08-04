@@ -903,6 +903,11 @@ class WPDE
      */
     public function the_title($title, $subtitle, $description, $options = [])
     {
+
+        if (empty($title) || empty($subtitle) || empty($description)) {
+            return; 
+        }
+
         $html = '';
         $title_layout = !empty($options['layout']) ? esc_attr($options['layout']) : '';
         $border_class = 'border-bottom';
@@ -944,7 +949,7 @@ class WPDE
         ];
 
         // Start breadcrumb with a link to your homepage
-        echo '<nav id="' . $defaults['id'] . '" aria-label="breadcrumb" class="d-none d-md-flex">';
+        echo '<nav id="' . $defaults['id'] . '" aria-label="breadcrumb" class="d-none d-md-flex mt-2 mb-4">';
         echo '<ul class="breadcrumb mb-0">';
 
         // Creating home link

@@ -12,7 +12,7 @@ if ($metadata) {
                 <?php WPDE()->breadcrumbs(); ?>
             </div>
             <?php if (!empty($email) && !empty($phone)) { ?>
-            <ul class="navbar-nav list-unstyled d-flex flex-row align-items-center justify-content-end flex-wrap flex-md-nowrap column-gap-3 mb-0">
+            <ul class="navbar-nav list-unstyled d-flex flex-row align-items-center justify-content-end flex-wrap flex-md-nowrap column-gap-3 mt-2 mb-4">
                 <?php if (!empty($email)) { ?>
                     <li class="nav-item">
                         <a href="mailto:<?php echo esc_attr($email); ?>">

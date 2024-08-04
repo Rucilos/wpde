@@ -29,6 +29,7 @@ switch ($header) {
         get_template_part('template-parts/header', 'carousel');
         break;
     case 'Carousel Full':
+    case 'Carousel Container':
         get_template_part('template-parts/header', 'carousel-full');
         break;
     case '':

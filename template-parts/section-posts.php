@@ -27,10 +27,6 @@ if ($query->have_posts()) {
         $border = $group['border'];
 
         switch ($layout) {
-            case 'Left':
-                $title_layout = '';
-                $filters_layout = '';
-                break;
             case 'Center':
                 $title_layout = 'text-center';
                 $filters_layout = 'justify-content-center';
@@ -39,6 +35,7 @@ if ($query->have_posts()) {
                 $title_layout = 'text-end';
                 $filters_layout = 'justify-content-end';
                 break;
+            case 'Left':
             case '':
             default:
                 $title_layout = '';
