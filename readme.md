@@ -29,7 +29,7 @@ npm run format
 PHP CS Fixer
 ```sh
 npm run phpformat
-npm run phpformat-docker # Docker support
+npm run phpformat-docker # For Docker container
 ```
 
 ESLint
@@ -47,7 +47,6 @@ npm run lint
 
 ## 🖥️ Development Tools
 -   Composer
--   Docker Support
 -   ESLint
 -   Node.js
 -   PHP CS Fixer
