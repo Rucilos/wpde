@@ -145,17 +145,15 @@ WPDE()->is_acf();
 
 Our application aims to ensure the highest level of security for user data and protect it against various types of attacks, including XSS (Cross-Site Scripting). To achieve this level of security, we implement the following measures:
 
-- **Input Escaping**: All user inputs are thoroughly escaped to prevent the insertion of malicious code. This includes converting special characters, such as `<`, `>`, `&`, and others, into their HTML entities.
+- `WPDE`**Input Escaping**: All user inputs are thoroughly escaped to prevent the insertion of malicious code. This includes converting special characters, such as `<`, `>`, `&`, and others, into their HTML entities.
 
-- **Use of Content Security Policy (CSP)**: We implement CSP, which serves as an additional security layer that helps detect and mitigate certain types of attacks, including XSS and data injection.
+- `WPDE`**Use of Content Security Policy (CSP)**: We implement CSP, which serves as an additional security layer that helps detect and mitigate certain types of attacks, including XSS and data injection.
 
-- **Input Validation and Sanitization**: All user inputs are validated and sanitized to ensure they meet expected formats and do not contain any malicious code.
+- `WPDE`**Input Validation and Sanitization**: All user inputs are validated and sanitized to ensure they meet expected formats and do not contain any malicious code.
 
-- **Secure Libraries and Frameworks**: We use verified libraries and frameworks that have built-in protections against XSS and other security threats.
+- `WPDE`**Secure Libraries and Frameworks**: We use verified libraries and frameworks that have built-in protections against XSS and other security threats.
 
-- **Regular Audits and Updates**: We conduct regular security audits and updates of our code and dependencies to ensure we are protected against new and emerging threats.
-
-These measures help us ensure that your data remains safe and protected against potential attacks.
+- `Regular Audits and Updates`: We conduct regular security audits and updates of our code and dependencies to ensure we are protected against new and emerging threats.
 
 ## 🔑 License
 
