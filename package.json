@@ -51,8 +51,7 @@
         "format-php": "composer run-script format-php",
         "format-php:docker": "docker-compose run --rm composer run format-php",
         "lint-scripts": "eslint src/js/**/*.js",
-        "lint-styles": "stylelint 'src/scss/**/*.{scss,sass,css}'",
-        "composer-install:docker": "docker-compose run --rm composer install"
+        "lint-styles": "stylelint 'src/scss/**/*.{scss,sass,css}'"
     },
     "repository": {
         "type": "git",
