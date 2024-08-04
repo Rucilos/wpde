@@ -10,8 +10,6 @@ Check out the [WPDE](https://github.com/rucilos/wpde/) template
 
 ## 🔧 Commands
 
----
-
 | #  | Command                                              | Description                                              |
 |----|------------------------------------------------------|----------------------------------------------------------|
 | 1  | `npm install`                                        | Install NPM dependencies.                                |
@@ -23,8 +21,6 @@ Check out the [WPDE](https://github.com/rucilos/wpde/) template
 | 7  | `npm run format-php:docker`                          | Run PHP CS Fixer inside a Docker container.              |
 | 8  | `npm run lint-scripts`                               | Run ESLint to lint JavaScript files.                     |
 | 9  | `npm run lint-styles`                                | Run Stylelint to lint CSS files.                         |
-
----
 
 ## 🧪 Libraries
 
