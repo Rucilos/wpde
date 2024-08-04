@@ -154,7 +154,7 @@ Our application aims to ensure the highest level of security for user data and p
 - `Secure Libraries and Frameworks`: We use verified libraries and frameworks that have built-in protections against XSS and other security threats.
 
 - `Regular Audits and Updates` 
-We conduct regular security audits and updates of our code and dependencies to ensure we are protected against new and emerging threats.
+- We conduct regular security audits and updates of our code and dependencies to ensure we are protected against new and emerging threats.
 
 ## 🔑 License
 
