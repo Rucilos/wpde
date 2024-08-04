@@ -22,7 +22,7 @@ composer install
 
 Install Composer dependencies inside a Docker container.
 ```sh
-npm run composer-install-docker 
+npm run composer-install:docker 
 
 # or 
 
@@ -41,9 +41,9 @@ npm run format
 
 PHP CS Fixer
 ```sh
-npm run format:php
+npm run format-php
 
-npm run format:php-docker # For Docker Container
+npm run format-php:docker # For Docker Container
 ```
 
 ESLint
