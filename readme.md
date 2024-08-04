@@ -10,58 +10,21 @@ Check out the [WPDE](https://github.com/rucilos/wpde/) template
 
 ## 🔧 Commands
 
-Install NPM dependencies 
-```sh
-npm install
-```
+---
 
-Install Composer dependencies 
-```sh
-composer install
-```
+| #  | Command                                              | Description                                              |
+|----|------------------------------------------------------|----------------------------------------------------------|
+| 1  | `npm install`                                        | Install NPM dependencies.                                |
+| 2  | `composer install`                                   | Install Composer dependencies.                           |
+| 3  | `npm run composer-install:docker`                    | Install Composer dependencies inside a Docker container. |
+| 4  | `npm run start`                                      | Start the Webpack development server.                    |
+| 5  | `npm run format`                                     | Run Prettier to format the code.                         |
+| 6  | `npm run format-php`                                 | Run PHP CS Fixer to format PHP code.                     |
+| 7  | `npm run format-php:docker`                          | Run PHP CS Fixer inside a Docker container.              |
+| 8  | `npm run lint-scripts`                               | Run ESLint to lint JavaScript files.                     |
+| 9  | `npm run lint-styles`                                | Run Stylelint to lint CSS files.                         |
 
-Install Composer dependencies inside a `Docker` container
-```sh
-npm run composer-install:docker 
-
-# or 
-
-docker-compose run --rm composer install
-```
-
-Webpack
-```sh
-npm run start
-```
-
-Prettier
-```sh
-npm run format
-```
-
-PHP CS Fixer
-```sh
-npm run format-php
-```
-
-PHP CS Fixer inside a `Docker` container
-```sh
-npm run format-php:docker 
-
-# or 
-
-docker-compose run --rm composer run format-php
-```
-
-ESLint
-```sh
-npm run lint-scripts
-```
-
-Stylelint
-```sh
-npm run lint-styles
-```
+---
 
 ## 🧪 Libraries
 
@@ -179,19 +142,3 @@ Distributed under the **MIT** License. See [LICENSE](https://github.com/rucilos/
 ## 🎉 Credits
 
 © 2024 - present Created by Jindřich Ručil and launched this project on Tuesday, February 6, 2024.
-
----
-
-| #  | Command                                              | Description                                                |
-|----|------------------------------------------------------|------------------------------------------------------------|
-| 1  | `npm install`                                        | Install NPM dependencies.                                  |
-| 2  | `composer install`                                   | Install Composer dependencies.                             |
-| 3  | `npm run composer-install:docker`                    | Install Composer dependencies inside a `Docker` container. |
-| 4  | `npm run start`                                      | Start the Webpack development server.                      |
-| 5  | `npm run format`                                     | Run Prettier to format the code.                           |
-| 6  | `npm run format-php`                                 | Run PHP CS Fixer to format PHP code.                       |
-| 7  | `npm run format-php:docker`                          | Run PHP CS Fixer inside a `Docker` container.              |
-| 8  | `npm run lint-scripts`                               | Run ESLint to lint JavaScript files.                       |
-| 9  | `npm run lint-styles`                                | Run Stylelint to lint CSS files.                           |
-
----
