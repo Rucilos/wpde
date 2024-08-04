@@ -141,7 +141,7 @@ WPDE()->is_acf();
 3. **Visit** Appearance > Themes > Search for `WPDE` > Activate
 4. **Click** on the new menu item `WPDE` for better control of theme
 
-## 🛡️  Security
+## 🛡️ Security
 
 Our application aims to ensure the highest level of security for user data and protect it against various types of attacks, including XSS (Cross-Site Scripting). To achieve this level of security, we implement the following measures:
 
