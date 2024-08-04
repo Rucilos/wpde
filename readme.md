@@ -180,8 +180,31 @@ Distributed under the **MIT** License. See [LICENSE](https://github.com/rucilos/
 
 © 2024 - present Created by Jindřich Ručil and launched this project on Tuesday, February 6, 2024.
 
-| # | Command                 | Description                  |
-|---|-------------------------|------------------------------|
-| 1 | `npm install`           | Install dependencies.        |
-| 2 | `npm run build`         | Build the project.           |
-| 3 | `npm start`             | Start the development server. |
+---
+
+| #  | Command                                   | Description                                |
+|----|-------------------------------------------|--------------------------------------------|
+| 1  | ```sh                                     |
+|    | npm install                               | Install NPM dependencies.                  |
+| 2  | ```sh                                     |
+|    | composer install                          | Install Composer dependencies.              |
+| 3  | ```sh                                     |
+|    | npm run composer-install:docker          | Install Composer dependencies inside a `Docker` container. |
+|    | ```sh                                     |
+|    | docker-compose run --rm composer install  |                                            |
+| 4  | ```sh                                     |
+|    | npm run start                             | Start the Webpack development server.      |
+| 5  | ```sh                                     |
+|    | npm run format                            | Run Prettier to format the code.          |
+| 6  | ```sh                                     |
+|    | npm run format-php                        | Run PHP CS Fixer to format PHP code.      |
+| 7  | ```sh                                     |
+|    | npm run format-php:docker                | Run PHP CS Fixer inside a `Docker` container. |
+|    | ```sh                                     |
+|    | docker-compose run --rm composer run format-php |                                      |
+| 8  | ```sh                                     |
+|    | npm run lint-scripts                     | Run ESLint to lint JavaScript files.      |
+| 9  | ```sh                                     |
+|    | npm run lint-styles                       | Run Stylelint to lint CSS files.          |
+
+---
