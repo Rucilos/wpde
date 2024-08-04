@@ -11,7 +11,7 @@ Check out the [WPDE](https://github.com/rucilos/wpde/) template
 ## 🔧 Commands
 
 | #  | Command                                                    | Description                                                |
-|----|------------------------------------------------------------|------------------------------------------------------------|
+|----|----------------------------------------------------------------------|----------------------------------------------------------------------|
 | 1  | `npm install`                                              | Install NPM dependencies.                                  |
 | 2  | `composer install`                                         | Install Composer dependencies.                             |
 |    | `docker-compose run --rm composer install`                 | Install Composer dependencies inside a Docker container.   |
