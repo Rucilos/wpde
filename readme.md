@@ -10,9 +10,13 @@ Check out the [WPDE](https://github.com/rucilos/wpde/) template
 
 ## 🔧 Commands
 
-Install dependencies 
+Install NPM dependencies 
 ```sh
 npm install
+```
+
+Install Composer dependencies 
+```sh
 composer install
 npm run composer-install-docker # For Docker Container
 ```
