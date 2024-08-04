@@ -100,7 +100,12 @@ WPDE()->register_taxonomy(
 );
 ```
 
-Return `true` if the ACF plugin is activated.
+Return `true` if the current page is the WPDE options page
+```php
+WPDE()->is_wpde();
+```
+
+Return `true` if the ACF plugin is activated
 ```php
 WPDE()->is_acf();
 ```
