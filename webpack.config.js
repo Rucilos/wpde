@@ -12,9 +12,9 @@ module.exports = {
         cc: './src/js/cc.js',
         login: './src/js/login.js',
         public: './src/js/public.js',
-        admin_styles: './src/sass/admin.scss',
-        login_styles: './src/sass/login.scss',
-        public_styles: './src/sass/public.scss',
+        admin_styles: './src/scss/admin.scss',
+        login_styles: './src/scss/login.scss',
+        public_styles: './src/scss/public.scss',
     },
     output: {
         filename: 'js/[name].min.js',

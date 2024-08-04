@@ -18,8 +18,11 @@ npm install
 Install Composer dependencies 
 ```sh
 composer install
+```
 
-npm run composer-install-docker # For Docker Container
+Install Composer dependencies inside a Docker container.
+```sh
+npm run composer-install-docker 
 
 # or 
 
@@ -63,6 +66,7 @@ npm run lint
 -   PHP CS Fixer
 -   Prettier
 -   SASS
+-   Stylelint
 -   Webpack
 
 ## ⚡ Features
