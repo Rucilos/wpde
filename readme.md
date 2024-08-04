@@ -59,6 +59,11 @@ Display a theme toggler
 WPDE()->theme();
 ```
 
+Get current user info
+```php
+WPDE()->get_user($user_id);
+```
+
 Display the custom title
 ```php
 WPDE()->the_title(
@@ -70,11 +75,6 @@ WPDE()->the_title(
         'border' => 'Enabled' // 'Enabled' or 'Disabled'
     )
 );
-```
-
-Get current user info
-```php
-WPDE()->get_user($user_id);
 ```
 
 ### Back-end
