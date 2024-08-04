@@ -179,3 +179,9 @@ Distributed under the **MIT** License. See [LICENSE](https://github.com/rucilos/
 ## 🎉 Credits
 
 © 2024 - present Created by Jindřich Ručil and launched this project on Tuesday, February 6, 2024.
+
+| # | Command                 | Description                  |
+|---|-------------------------|------------------------------|
+| 1 | `npm install`           | Install dependencies.        |
+| 2 | `npm run build`         | Build the project.           |
+| 3 | `npm start`             | Start the development server. |
