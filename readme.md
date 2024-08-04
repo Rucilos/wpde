@@ -155,6 +155,9 @@ Our application aims to ensure the highest level of security for user data and p
 
 - `Regular Audits and Updates:` We conduct regular security audits and updates of our code and dependencies to ensure we are protected against new and emerging threats.
 
+`Regular Audits and Updates`
+We conduct regular security audits and updates of our code and dependencies to ensure we are protected against new and emerging threats.
+
 ## 🔑 License
 
 Distributed under the **MIT** License. See [LICENSE](https://github.com/rucilos/wpde/blob/master/LICENSE) for more information.
