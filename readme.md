@@ -18,7 +18,12 @@ npm install
 Install Composer dependencies 
 ```sh
 composer install
+
 npm run composer-install-docker # For Docker Container
+
+# or 
+
+docker-compose run --rm composer install
 ```
 
 Webpack
@@ -36,10 +41,6 @@ PHP CS Fixer
 npm run format-php
 
 npm run format-php-docker # For Docker Container
-
-# -- or --
-
-docker-compose run --rm composer install
 ```
 
 ESLint
