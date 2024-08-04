@@ -3,6 +3,7 @@
         <div class="container">
             <?php
             $group = get_field('wpde_gallery', 'option');
+            $grid = 3;
     if ($group) {
         $title = $group['title'];
         $subtitle = $group['subtitle'];
@@ -25,11 +26,9 @@
                 $title_layout = '';
                 break;
         }
-    } else {
-        $grid = 3;
+        echo WPDE()->the_title($title, $subtitle, $description, ['layout' => $title_layout, 'border' => $border]);
     }
     ?>
-            <?php echo WPDE()->the_title($title, $subtitle, $description, ['layout' => $title_layout, 'border' => $border]); ?>
             <div class="row g-3 mfp-init">
             <?php
     $images = get_field('wpde_gallery_items', 'option');

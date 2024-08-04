@@ -23,9 +23,11 @@ $user_details = WPDE()->get_user($user_id);
         if (isset($user_details['name']) && !empty($user_details['name'])) {
             $title = esc_html($user_details['name']);
         }
-if (isset($user_details['job']) && !empty($user_details['job'])) {
-    $description = esc_html($user_details['job']);
-}
+        if (isset($user_details['job']) && !empty($user_details['job'])) {
+            $description = esc_html($user_details['job']);
+        } else {
+            $description = '';
+        }
 echo WPDE()->the_title($title, __('Author', 'wpde'), $description);
 ?>
         <div class="row row-gap-5">

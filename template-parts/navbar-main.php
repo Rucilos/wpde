@@ -10,14 +10,22 @@ if($navbar) {
     switch ($navbar_layout) {
         case 'Fixed':
             $navbar_class = 'position-fixed top-0 start-0 end-0';
+            $helper_div = true;
             break;
         case 'Headroom':
             $navbar_class = 'position-fixed top-0 start-0 end-0 headroom';
+            $helper_div = true;
             break;
         case 'Static':
+        case '':
         default:
             $navbar_class = '';
+            $helper_div = false;
             break;
+    }
+
+    if($helper_div) {
+        echo '<div style="height: 57px;"></div>';
     }
 }
 
@@ -34,7 +42,6 @@ if ($options) {
     $theme_toggler = $options['theme_toggler'];
 }
 ?>
-
 <nav class="navbar navbar-expand-lg bg-blur border-bottom z-3 <?php echo esc_attr($navbar_class); ?>">
 	<div class="container">
 		<a class="navbar-brand d-flex align-items-center gap-1" href="<?php echo esc_url(home_url()); ?>">

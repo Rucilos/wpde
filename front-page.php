@@ -28,6 +28,10 @@ switch ($header) {
     case 'Carousel':
         get_template_part('template-parts/header', 'carousel');
         break;
+    case 'Carousel Full':
+        get_template_part('template-parts/header', 'carousel-full');
+        break;
+    case '':
     default:
         get_template_part('template-parts/header', 'simple');
         break;

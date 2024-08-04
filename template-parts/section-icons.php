@@ -3,6 +3,7 @@
         <div class="container">
         <?php
             $group = get_field('wpde_icons', 'option');
+            $grid = 3;
     if ($group) {
         $title = $group['title'];
         $subtitle = $group['subtitle'];
@@ -25,11 +26,10 @@
                 $title_layout = '';
                 break;
         }
-    } else {
-        $grid = 3;
+       
+        echo WPDE()->the_title($title, $subtitle, $description, ['layout' => $title_layout, 'border' => $border]);
     }
     ?>
-            <?php echo WPDE()->the_title($title, $subtitle, $description, ['layout' => $title_layout, 'border' => $border]); ?>
             <div class="row">
                 <?php
         while (have_rows('wpde_icons_items', 'option')) {

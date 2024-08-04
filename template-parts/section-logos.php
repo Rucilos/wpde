@@ -24,9 +24,10 @@
                 $title_layout = '';
                 break;
         }
+        
+        echo WPDE()->the_title($title, $subtitle, $description, ['layout' => $title_layout, 'border' => $border]);
     }
     ?>
-            <?php echo WPDE()->the_title($title, $subtitle, $description, ['layout' => $title_layout, 'border' => $border]); ?>
             <div class="row justify-content-center align-items-center">
                 <?php
         while (have_rows('wpde_logos_items', 'option')) {

@@ -27,6 +27,7 @@ if (!is_404()) {
             get_template_part('template-parts/footer', 'top');
             get_template_part('template-parts/footer', 'main');
             break;
+        case '':
         default:
             get_template_part('template-parts/footer', 'main');
             break;

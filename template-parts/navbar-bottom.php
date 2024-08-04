@@ -7,7 +7,7 @@ if ($metadata) {
 ?>
 <div class="container-fluid px-0">
     <div class="container">
-        <div class="d-flex align-items-center justify-content-between mt-3">
+        <div class="d-flex align-items-center justify-content-between">
             <div>
                 <?php WPDE()->breadcrumbs(); ?>
             </div>

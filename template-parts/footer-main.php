@@ -18,12 +18,12 @@ if ($logo) {
 					<ul class="navbar-nav align-items-center flex-column flex-md-row column-gap-3 mb-0">
 						<li class="nav-item">
 							<a href="#!" class="nav-link py-0 py-md-2 text-muted" onclick="CookieConsent.showPreferences(); return false;">
-								<small><?php _e('Privacy settings', 'wpde'); ?></small>
+								<?php _e('Privacy settings', 'wpde'); ?>
 							</a>
 						</li>
 						<li class="nav-item">
 							<a href="<?php echo esc_url(get_permalink(3)); ?>" class="nav-link py-0 py-md-2 text-muted">
-								<small><?php echo esc_html(get_the_title(3)); ?></small>
+								<?php echo esc_html(get_the_title(3)); ?>
 							</a>
 						</li>
 					</ul>

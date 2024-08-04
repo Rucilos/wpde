@@ -510,7 +510,8 @@ class WPDE
         add_image_size('medium-md', 450, 250, true);
         add_image_size('large-lg', 1350, 400, true);
         add_image_size('logo', 150, 50, true);
-        add_image_size('header', 400, 600, true);
+        add_image_size('header', 450, 600, true);
+        add_image_size('header-full', 1920, 600, true);
         add_image_size('header-sm', 500, 300, true);
 
         // Register bootstrap navwalker

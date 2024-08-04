@@ -50,7 +50,7 @@ if ($metadata) {
                 <?php } ?>
             </div>
 
-            <div class="col-md-5 offset-md-1">
+            <div class="col-md-4 offset-md-1">
             <?php if (have_rows('wpde_header_carousel', 'option')) { ?>
             <div id="carouselExampleCaptions" class="carousel slide">
                 <?php
@@ -81,7 +81,7 @@ if ($metadata) {
                         $description = get_sub_field('description');
                         ?>
                             <div class="carousel-item <?php echo $slide_index == 0 ? 'active' : ''; ?>">
-                                <img src="<?php echo esc_url($image_size); ?>" class="img-fluid rounded-4 shadow-lg" alt="<?php echo esc_attr($alt); ?>">
+                                <img src="<?php echo esc_url($image_size); ?>" class="img-fluid rounded-4" alt="<?php echo esc_attr($alt); ?>">
                                 <div class="carousel-caption d-none d-md-block">
                                     <h1 class="text-white"><?php echo esc_html($title); ?></h1>
                                     <small class="text-white"><?php echo esc_html($description); ?></small>

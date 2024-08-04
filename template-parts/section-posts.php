@@ -39,6 +39,7 @@ if ($query->have_posts()) {
                 $title_layout = 'text-end';
                 $filters_layout = 'justify-content-end';
                 break;
+            case '':
             default:
                 $title_layout = '';
                 $filters_layout = '';
