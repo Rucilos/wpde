@@ -18,7 +18,7 @@ Check out the [WPDE](https://github.com/rucilos/wpde/) template
 | 3  | `npm run start`                                      | Start the Webpack development server.                    |
 | 4  | `npm run format`                                     | Run Prettier to format the code.                         |
 | 5  | `npm run format-php`                                 | Run PHP CS Fixer to format PHP code.                     |
-|    | `npm run format-php:docker`                          | Run PHP CS Fixer inside a Docker container.              |
+|    | `npm run format-php:docker`                          | Run PHP CS Fixer to format PHP code inside a Docker container.              |
 | 6  | `npm run lint-scripts`                               | Run ESLint to lint JavaScript files.                     |
 | 7  | `npm run lint-styles`                                | Run Stylelint to lint CSS/SCSS/SASS files.               |
 
