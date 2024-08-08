@@ -70,11 +70,9 @@ WPDE()->the_title(
     __('Title', 'wpde'),  
     __('Subtitle', 'wpde'),  
     __('Description', 'wpde'),  
-    array(
-        'layout' => 'text-end', // Text position
-        'border' => true ,
+    [
         'class' => 'custom-class-name'
-    )
+    ]
 );
 ```
 
@@ -87,9 +85,9 @@ WPDE()->register_post_type(
     __( 'Events', 'wpde' ), // Plural name
     __( 'Event', 'wpde' ), // Singular name
     __( 'Custom post type "Events"', 'wpde' ), // Description
-    array(
+    [
         'menu_icon' => 'dashicons-location', // Change the menu icon
-    )
+    ]
 );
 ```
 
@@ -100,9 +98,9 @@ WPDE()->register_taxonomy(
     __( 'Locations', 'wpde' ), // Plural name
     __( 'Location', 'wpde' ), // Singular name
     'events', // Associated post type
-    array(
+    [
         'show_in_rest' => false, // Does not make the taxonomy available in the REST API.
-    )
+    ]
 );
 ```
 
