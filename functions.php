@@ -23,9 +23,9 @@ require_once 'inc/class-wpde-taxonomy.php';
  */
 function WPDE()
 {
-    $instance = WPDE::instance(__FILE__, '2.1.9');
+	$instance = WPDE::instance(__FILE__, '2.1.9');
 
-    return $instance;
+	return $instance;
 } // END WPDE()
 
 WPDE();

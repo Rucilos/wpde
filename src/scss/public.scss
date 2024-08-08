@@ -4,14 +4,14 @@
  * Author (c) 2024 Jindrich Rucil
  * Released under the MIT license
  */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-@import 'utils/bootstrap';
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+@import "utils/bootstrap";
 
-@import 'layout/carousel';
-@import 'layout/navbar';
+@import "layout/carousel";
+@import "layout/navbar";
 
-@import 'base/backgrounds';
-@import 'base/dropdown';
+@import "base/backgrounds";
+@import "base/dropdown";
 
-@import 'components/cookies';
-@import 'components/recaptcha';
+@import "components/cookies";
+@import "components/recaptcha";

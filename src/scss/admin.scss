@@ -25,7 +25,7 @@
 
 // Adminbar item
 #wpadminbar #wp-admin-bar-wpde .ab-icon:before {
-    content: '\f540';
+    content: "\f540";
     width: 18px !important;
     height: 18px !important;
     display: block !important;
@@ -192,7 +192,7 @@
             color: var(--wpde-success-color);
 
             &:before {
-                content: '\f147';
+                content: "\f147";
                 font: normal 18px / 20px dashicons;
                 margin-right: 12px;
                 background-color: var(--wpde-success-icon-bg);
@@ -214,7 +214,7 @@
         padding: 12px;
 
         &:before {
-            content: '\f335';
+            content: "\f335";
             font: normal 24px / 22px dashicons;
             color: var(--wpde-notice-dismiss-color);
         }

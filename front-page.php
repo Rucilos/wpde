@@ -16,26 +16,26 @@ get_header();
 $header = get_field('wpde_header', 'option');
 
 switch ($header) {
-    case 'Simple':
-        get_template_part('template-parts/header', 'simple');
-        break;
-    case 'Reviews':
-        get_template_part('template-parts/header', 'reviews');
-        break;
-    case 'Image':
-        get_template_part('template-parts/header', 'image');
-        break;
-    case 'Carousel':
-        get_template_part('template-parts/header', 'carousel');
-        break;
-    case 'Carousel Full':
-    case 'Carousel Container':
-        get_template_part('template-parts/header', 'carousel-full');
-        break;
-    case '':
-    default:
-        get_template_part('template-parts/header', 'simple');
-        break;
+	case 'Simple':
+		get_template_part('template-parts/header', 'simple');
+		break;
+	case 'Reviews':
+		get_template_part('template-parts/header', 'reviews');
+		break;
+	case 'Image':
+		get_template_part('template-parts/header', 'image');
+		break;
+	case 'Carousel':
+		get_template_part('template-parts/header', 'carousel');
+		break;
+	case 'Carousel Full':
+	case 'Carousel Container':
+		get_template_part('template-parts/header', 'carousel-full');
+		break;
+	case '':
+	default:
+		get_template_part('template-parts/header', 'simple');
+		break;
 }
 
 get_template_part('template-parts/section', 'logos');

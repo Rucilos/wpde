@@ -1,10 +1,10 @@
 <?php
 $metadata = get_field('wpde_header_metadata', 'option');
 if ($metadata) {
-    $title = $metadata['title'];
-    $description = $metadata['description'];
-    $link = $metadata['link'];
-    $link_2 = $metadata['link_2'];
+	$title = $metadata['title'];
+	$description = $metadata['description'];
+	$link = $metadata['link'];
+	$link_2 = $metadata['link_2'];
 }
 ?>
 
@@ -30,20 +30,20 @@ if ($metadata) {
                 <?php if (!empty($link) || !empty($link_2)) { ?>
                     <div class="d-flex align-items-center">
                         <?php
-                        if ($link) {
-                            $link_url = $link['url'];
-                            $link_title = $link['title'];
-                            $link_target = $link['target'] ? $link['target'] : '_self';
-                            ?>
+						if ($link) {
+							$link_url = $link['url'];
+							$link_title = $link['title'];
+							$link_target = $link['target'] ? $link['target'] : '_self';
+							?>
                             <a class="btn btn-dark me-2" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($link_title); ?></a>
                         <?php } ?>
 
                         <?php
-                        if ($link_2) {
-                            $link_url = $link_2['url'];
-                            $link_title = $link_2['title'];
-                            $link_target = $link_2['target'] ? $link_2['target'] : '_self';
-                            ?>
+						if ($link_2) {
+							$link_url = $link_2['url'];
+							$link_title = $link_2['title'];
+							$link_target = $link_2['target'] ? $link_2['target'] : '_self';
+							?>
                             <a class="btn border-0" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($link_title); ?></a>
                         <?php } ?>
                     </div>
@@ -52,20 +52,20 @@ if ($metadata) {
 
             <div class="col-md-5 offset-md-1">
                 <?php
-                if (have_rows('wpde_header_reviews', 'option')) {
-                    $row_index = 0;
-                    while (have_rows('wpde_header_reviews', 'option')) {
-                        the_row();
+				if (have_rows('wpde_header_reviews', 'option')) {
+					$row_index = 0;
+					while (have_rows('wpde_header_reviews', 'option')) {
+						the_row();
 
-                        $image = get_sub_field('image');
-                        if ($image) {
-                            $image_size_custom = 'small-sm';
-                            $image_size = wp_get_attachment_image_url($image['ID'], $image_size_custom);
-                            $alt = get_post_meta($image['ID'], '_wp_attachment_image_alt', true);
-                        }
-                        $title = get_sub_field('title');
-                        $description = get_sub_field('description');
-                        ?>
+						$image = get_sub_field('image');
+						if ($image) {
+							$image_size_custom = 'small-sm';
+							$image_size = wp_get_attachment_image_url($image['ID'], $image_size_custom);
+							$alt = get_post_meta($image['ID'], '_wp_attachment_image_alt', true);
+						}
+						$title = get_sub_field('title');
+						$description = get_sub_field('description');
+						?>
                         <div class="toast border bg-blur mb-3 show <?php echo ($row_index % 2 == 1) ? 'ms-4' : ''; ?>" role="alert" aria-live="assertive" aria-atomic="true">
                             <div class="toast-header border-bottom shadow-sm">
                                 <img src="<?php echo esc_url($image_size); ?>" class="img-fluid rounded-circle me-2" alt="<?php echo esc_attr($alt); ?>" width="24px" height="auto">
@@ -77,8 +77,8 @@ if ($metadata) {
                             </div>
                         </div>
                         <?php
-                        $row_index++;
-                    } ?>
+						$row_index++;
+					} ?>
                 <?php } ?>
             </div>
         </div>

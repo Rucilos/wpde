@@ -4,8 +4,8 @@
  * Author (c) 2024 Jindrich Rucil
  * Released under the MIT license
  */
-;(function ($) {
+(function ($) {
     $(document).ready(function () {
-        $('#wpcontent').prepend($('#wpde-navbar'))
-    })
-})(jQuery)
+        $("#wpcontent").prepend($("#wpde-navbar"));
+    });
+})(jQuery);

@@ -23,8 +23,8 @@
 
 <?php
 if (!is_404()) {
-    get_template_part('template-parts/navbar', 'main');
-    get_template_part('template-parts/navbar', 'bottom');
+	get_template_part('template-parts/navbar', 'main');
+	get_template_part('template-parts/navbar', 'bottom');
 }
 ?>
 

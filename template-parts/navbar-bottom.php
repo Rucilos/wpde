@@ -1,8 +1,8 @@
 <?php
 $metadata = get_field('wpde_metadata', 'option');
 if ($metadata) {
-    $email = $metadata['email'];
-    $phone = $metadata['phone'];
+	$email = $metadata['email'];
+	$phone = $metadata['phone'];
 }
 ?>
 <div class="container-fluid px-0">

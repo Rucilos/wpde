@@ -1,9 +1,9 @@
 <?php
 $logo = get_field('wpde_logo', 'option');
 if ($logo) {
-    $logo_text = !empty($logo['text']) ? $logo['text'] : get_bloginfo('name');
+	$logo_text = !empty($logo['text']) ? $logo['text'] : get_bloginfo('name');
 } else {
-    $logo_text = esc_html(get_bloginfo('name'));
+	$logo_text = esc_html(get_bloginfo('name'));
 }
 ?>
 </main>
