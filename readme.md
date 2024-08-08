@@ -81,12 +81,12 @@ WPDE()->the_title(
 Register a custom post type
 ```php
 WPDE()->register_post_type(
-    'events',                                  // Post type key
-    __( 'Events', 'wpde' ),                    // Plural name
-    __( 'Event', 'wpde' ),                     // Singular name
-    __( 'Custom post type "Events"', 'wpde' ), // Description
-    [
-        'menu_icon' => 'dashicons-location',   // Change the menu icon
+    'events',                                     // Post type key
+    __( 'Events', 'wpde' ),                       // Plural name
+    __( 'Event', 'wpde' ),                        // Singular name
+    __( 'Custom post type "Events"', 'wpde' ),    // Description
+    [   
+        'menu_icon' => 'dashicons-location',      // Change the menu icon
     ]
 );
 ```
@@ -94,12 +94,12 @@ WPDE()->register_post_type(
 Register a custom taxonomy
 ```php
 WPDE()->register_taxonomy(
-    'location',                  // Taxonomy key
-    __( 'Locations', 'wpde' ),   // Plural name
-    __( 'Location', 'wpde' ),    // Singular name
-    'events',                    // Associated post type
-    [
-        'show_in_rest' => false, // Does not make the taxonomy available in the REST API.
+    'location',                     // Taxonomy key
+    __( 'Locations', 'wpde' ),      // Plural name
+    __( 'Location', 'wpde' ),       // Singular name
+    'events',                       // Associated post type
+    [   
+        'show_in_rest' => false,    // Does not make the taxonomy available in the REST API.
     ]
 );
 ```
