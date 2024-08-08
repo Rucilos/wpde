@@ -591,7 +591,6 @@ class WPDE
                 'capability' => 'manage_options',
                 'icon_url'   => 'dashicons-admin-customizer',
                 'position'   => -1,
-                'layout'     => 1,
             ]);
         }
     } // END add_options_page
