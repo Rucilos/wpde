@@ -9,9 +9,9 @@ module.exports = {
     mode: 'production',
     entry: {
         admin: './src/js/admin.js',
-        cc: './src/js/cc.js',
         login: './src/js/login.js',
         public: './src/js/public.js',
+        cc: './src/js/cc.js',
         admin_styles: './src/scss/admin.scss',
         login_styles: './src/scss/login.scss',
         public_styles: './src/scss/public.scss',
