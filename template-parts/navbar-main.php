@@ -127,7 +127,7 @@ if (!empty($badge_link) && !empty($badge_text)) {
 				$link_target = $navbar_btn['target'] ? $navbar_btn['target'] : '_self';
 				?>
                 <li class="nav-item ms-3">
-                    <a class="btn btn-dark" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>">
+                    <a class="btn btn-secondary" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>">
                         <?php echo esc_html($link_title); ?>
                         <i class="fa-solid fa-arrow-right ms-1"></i> 
                     </a>

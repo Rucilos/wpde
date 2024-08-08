@@ -15,7 +15,7 @@
 <div class="container-fluid px-0 py-6">
     <div class="container">
         <?php echo WPDE()->the_title(single_tag_title('', false), __('Tag', 'wpde'), wp_kses_post(tag_description())); ?>
-        <div class="row row-gap-5">
+        <div class="row gx-5">
             <?php
 			if (have_posts()) {
 				while (have_posts()) {

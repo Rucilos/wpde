@@ -7,28 +7,26 @@ if ($logo) {
 }
 ?>
 </main>
-<footer>
-	<div class="container-fluid px-0">
-		<div class="container">
-			<div class="d-flex flex-column flex-md-row justify-content-start justify-content-md-between align-items-center gap-3 py-4 border-top">
-				<div>
-					<small class="text-muted">© <?php echo esc_html(date('Y')) . ' ' . esc_html($logo_text) . '. ' . __('All rights reserved.', 'wpde'); ?></small>
-				</div>
-				<div class="d-flex align-items-center gap-4">
-					<ul class="navbar-nav align-items-center flex-column flex-md-row column-gap-3 mb-0">
-						<li class="nav-item">
-							<a href="#!" class="nav-link py-0 py-md-2 text-muted" onclick="CookieConsent.showPreferences(); return false;">
-								<?php _e('Privacy settings', 'wpde'); ?>
-							</a>
-						</li>
-						<li class="nav-item">
-							<a href="<?php echo esc_url(get_permalink(3)); ?>" class="nav-link py-0 py-md-2 text-muted">
-								<?php echo esc_html(get_the_title(3)); ?>
-							</a>
-						</li>
-					</ul>
-					<?php get_template_part('template-parts/social', 'media'); ?>
-				</div>
+<footer class="container-fluid px-0">
+	<div class="container">
+		<div class="d-flex flex-column-reverse flex-md-row justify-content-start justify-content-md-between gap-3 py-4 border-top">
+			<div>
+				<small class="text-muted">© <?php echo esc_html(date('Y')) . ' ' . esc_html($logo_text) . '. ' . __('All rights reserved.', 'wpde'); ?></small>
+			</div>
+			<div class="d-flex align-items-center gap-4">
+				<ul class="navbar-nav align-items-center flex-row column-gap-3 mb-0">
+					<li class="nav-item">
+						<a href="#!" class="nav-link py-0 py-md-2 text-muted" onclick="CookieConsent.showPreferences(); return false;">
+							<?php _e('Privacy settings', 'wpde'); ?>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="<?php echo esc_url(get_permalink(3)); ?>" class="nav-link py-0 py-md-2 text-muted">
+							<?php echo esc_html(get_the_title(3)); ?>
+						</a>
+					</li>
+				</ul>
+				<?php get_template_part('template-parts/social', 'media'); ?>
 			</div>
 		</div>
 	</div>

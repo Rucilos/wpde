@@ -11,7 +11,7 @@
 ?>
 
 <!DOCTYPE html>
-<html <?php language_attributes(); ?> data-bs-theme="light" class="cc--lightmode">
+<html id="<?php echo esc_attr(WPDE()->_token); ?>" <?php language_attributes(); ?> data-bs-theme="light" class="cc--lightmode">
 <head>
 	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,12 +19,11 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?> id="#home">
+<body <?php body_class(); ?>>
 
 <?php
 if (!is_404()) {
 	get_template_part('template-parts/navbar', 'main');
-	get_template_part('template-parts/navbar', 'bottom');
 }
 ?>
 

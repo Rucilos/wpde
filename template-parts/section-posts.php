@@ -15,7 +15,7 @@ $query = new WP_Query($args);
 
 if ($query->have_posts()) {
 	?>
-<div class="container-fluid px-0 py-6" id="posts">
+<div class="container-fluid px-0 py-6 bg-body-secondary" id="posts">
     <div class="container">
         <?php
 			$group = get_field('wpde_posts', 'option');
@@ -24,28 +24,9 @@ if ($query->have_posts()) {
 		$title = $group['title'];
 		$subtitle = $group['subtitle'];
 		$description = $group['description'];
-		$layout = $group['layout'];
-		$border = $group['border'];
 		$grid = $group['grid'];
 	   
-		switch ($layout) {
-			case 'Center':
-				$title_layout = 'text-center';
-				$filters_layout = 'justify-content-center';
-				break;
-			case 'Right':
-				$title_layout = 'text-end';
-				$filters_layout = 'justify-content-end';
-				break;
-			case 'Left':
-			case '':
-			default:
-				$title_layout = '';
-				$filters_layout = '';
-				break;
-		}
-
-		echo WPDE()->the_title($title, $subtitle, $description, ['layout' => $title_layout, 'border' => $border]);
+		echo WPDE()->the_title($title, $subtitle, $description, ['class' => 'mb-6']);
 	}
 	?>
         <ul class="list-unstyled d-flex align-items-center gap-3 mt-3 mb-5 <?php echo $filters_layout; ?>">
@@ -59,12 +40,12 @@ if ($query->have_posts()) {
 	?>
         </ul>
 
-        <div class="row row-gap-5">
+        <div class="row gx-5">
                 <?php
 		while ($query->have_posts()) {
 			$query->the_post();
 			echo '<div class="col-md-' . esc_attr($grid) . '">';
-			get_template_part('template-parts/content', 'post');
+			get_template_part('template-parts/content', 'post-horizontal');
 			echo '</div>';
 		}
 	?>

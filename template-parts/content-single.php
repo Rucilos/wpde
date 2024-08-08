@@ -1,5 +1,5 @@
 <div class="col-md-12">     
-    <?php
+	<?php
 	if (has_category()) {
 		$categories = get_the_category();
 		$term_names = [];
@@ -10,15 +10,18 @@
 	} else {
 		$term_name = '';
 	}
+
     echo WPDE()->the_title(get_the_title(), $term_name, wp_trim_words(get_the_excerpt(), 15, ''));
-    ?>
-    <?php
-    if (has_post_thumbnail()) {
+	
+	get_template_part('template-parts/content', 'breadcrumbs');
+
+	if (has_post_thumbnail()) {
     	$image_size_custom = wp_is_mobile() ? 'header-sm' : 'large-lg';
-    	the_post_thumbnail($image_size_custom, ['class' => 'img-fluid mb-5 shadow rounded-4']);
+    	the_post_thumbnail($image_size_custom, ['class' => 'img-fluid mb-6 shadow-lg rounded-3']);
     }
-    ?>
-    <?php the_content(); ?>
+
+    the_content(); 
+	?>
 </div>
     
 <div class="d-flex justify-content-between align-items-center mt-4 pt-3 border-top">

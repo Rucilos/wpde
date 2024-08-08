@@ -67,12 +67,13 @@ WPDE()->get_user($user_id);
 Display the custom title
 ```php
 WPDE()->the_title(
-    __('Title', 'wpde'),  // Title
-    __('Subtitle', 'wpde'),  // Subtitle
-    __('Description', 'wpde'),  // Description
+    __('Title', 'wpde'),  
+    __('Subtitle', 'wpde'),  
+    __('Description', 'wpde'),  
     array(
-        'layout' => 'text-end', // Layout
-        'border' => 'Enabled' // 'Enabled' or 'Disabled'
+        'layout' => 'text-end', // Text position
+        'border' => true ,
+        'class' => 'custom-class-name'
     )
 );
 ```

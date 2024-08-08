@@ -7,7 +7,7 @@
 			$link = get_sub_field('link');
 			if($link) {
 				$link_url = $link['url'];
-				$link_target = $link['target'] ? $link['target'] : '_self';
+				$link_target = $link['target'] ? $link['target'] : '_blank';
 			}
 			$icon = get_sub_field('icon');
 			switch ($icon) {
@@ -38,7 +38,7 @@
 			?>
             <li>
             <?php if($link) { ?>
-                <a class="btn p-0 text-muted" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>">
+                <a class="btn p-0 text-muted" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>" data-bs-toggle="tooltip" title="<?php echo esc_attr($icon); ?>">
                     <i class="fa-brands fa-<?php echo esc_attr($icon_type); ?> fa-lg"></i>
                 </a>
             <?php } ?>

@@ -15,7 +15,7 @@
 <div class="container-fluid px-0 py-6">
     <div class="container">
         <?php echo WPDE()->the_title(single_cat_title('', false), __('Category', 'wpde'), strip_tags(category_description())); ?>
-        <div class="row row-gap-5">
+        <div class="row gx-5">
             <?php if (have_posts()) {
             	while (have_posts()) {
             		the_post();

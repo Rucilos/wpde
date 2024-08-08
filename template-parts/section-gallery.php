@@ -9,24 +9,8 @@
 		$subtitle = $group['subtitle'];
 		$description = $group['description'];
 		$grid = $group['grid'];
-		$layout = $group['layout'];
-		$border = $group['border'];
 
-		switch ($layout) {
-			case 'Left':
-				$title_layout = '';
-				break;
-			case 'Center':
-				$title_layout = 'text-center';
-				break;
-			case 'Right':
-				$title_layout = 'text-end';
-				break;
-			default:
-				$title_layout = '';
-				break;
-		}
-		echo WPDE()->the_title($title, $subtitle, $description, ['layout' => $title_layout, 'border' => $border]);
+		echo WPDE()->the_title($title, $subtitle, $description, ['class' => 'mb-6']);
 	}
 	?>
             <div class="row g-3 mfp-init">

@@ -30,7 +30,7 @@ if (isset($user_details['job']) && !empty($user_details['job'])) {
 }
 echo WPDE()->the_title($title, __('Author', 'wpde'), $description);
 ?>
-        <div class="row row-gap-5">
+        <div class="row gx-5">
             <?php if (have_posts()) {
             	while (have_posts()) {
             		the_post();

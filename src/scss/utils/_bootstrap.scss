@@ -4,7 +4,7 @@
 // 2. Include any default variable overrides here
 $prefix: wpde-;
 $primary: #0ea5e9; // Nová základní barva
-$secondary: #818cf8; // Nová základní barva
+$secondary: #8540F5; // Nová základní barva
 
 $enable-caret: true; // true
 $enable-rounded: true; // true
@@ -172,6 +172,7 @@ $focus-ring-opacity: 0.75; // 0.25
 @import "~bootstrap/scss/pagination";
 @import "~bootstrap/scss/tables";
 @import "~bootstrap/scss/toasts";
+@import "~bootstrap/scss/tooltip";
 @import "~bootstrap/scss/transitions";
 @import "~bootstrap/scss/type";
 
@@ -190,18 +191,4 @@ $focus-ring-opacity: 0.75; // 0.25
     --#{$prefix}bg-gradient-cyan: radial-gradient(47.84% 61.25% at 50% 0%, rgba(29, 161, 242, 0) 0%, rgba(29, 161, 242, 0) 100%), radial-gradient(28.37% 15.33% at 50% 42.67%, rgba(29, 161, 242, 0.15) 0%, rgba(29, 161, 242, 0) 100%);
     --#{$prefix}bg-gradient-indigo: radial-gradient(47.84% 61.25% at 50% 0%, rgba(113, 61, 255, 0) 0%, rgba(113, 61, 255, 0) 100%), radial-gradient(28.37% 15.33% at 50% 42.67%, rgba(113, 61, 255, 0.15) 0%, rgba(113, 61, 255, 0) 100%);
     --#{$prefix}bg-gradient-teal: radial-gradient(47.84% 61.25% at 50% 0%, rgba(64, 224, 208, 0) 0%, rgba(64, 224, 208, 0) 100%), radial-gradient(28.37% 15.33% at 50% 42.67%, rgba(64, 224, 208, 0.15) 0%, rgba(64, 224, 208, 0) 100%);
-
-    .btn-dark {
-        --wpde-btn-color: #{$gray-950};
-        --wpde-btn-bg: #{$gray-100};
-        --wpde-btn-border-color: #{$gray-100};
-
-        --wpde-btn-hover-color: #{$gray-950};
-        --wpde-btn-hover-bg: #{$gray-300};
-        --wpde-btn-hover-border-color: #{$gray-300};
-
-        --wpde-btn-active-color: #{$gray-950};
-        --wpde-btn-active-bg: #{$gray-100};
-        --wpde-btn-active-border-color: #{$gray-100};
-    }
 }

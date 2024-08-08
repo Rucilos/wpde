@@ -1,12 +1,15 @@
 <div class="container py-6">
-    <?php
+    <?php 
+	echo WPDE()->the_title(get_the_title(), __('Page', 'wpde'), wp_trim_words(get_the_excerpt(), 15, ''));
+	WPDE()->breadcrumbs();
+
 	if (has_post_thumbnail()) {
 		$image_size_custom = wp_is_mobile() ? 'header-sm' : 'large-lg';
-		the_post_thumbnail($image_size_custom, ['class' => 'img-fluid mb-5 shadow rounded-4']);
+		the_post_thumbnail($image_size_custom, ['class' => 'img-fluid mb-6 shadow-lg rounded-3']);
 	}
-    ?>
-    <?php echo WPDE()->the_title(get_the_title(), __('Page', 'wpde'), wp_trim_words(get_the_excerpt(), 15, '')); ?>
-    <?php if(is_page('contacts')) { ?>
+
+    if(is_page('contacts')) { 
+	?>
         <div class="row">
             <div class="col-md-6">
             <?php

@@ -505,16 +505,15 @@ class WPDE
 			'menu-2' => esc_html__('Footer 1', 'wpde'),
 			'menu-3' => esc_html__('Footer 2', 'wpde'),
 			'menu-4' => esc_html__('Footer 3', 'wpde'),
-			'menu-5' => esc_html__('Footer 4', 'wpde'),
 		]);
 
 		// Register custom image sizes
-		add_image_size('small-sm', 50, 50, true);
-		add_image_size('medium-md', 450, 250, true);
-		add_image_size('large-lg', 1350, 400, true);
+		add_image_size('small-sm', 50, 50, true); // avatars / icons
+		add_image_size('medium-md', 450, 250, true); // gallery
+		add_image_size('large-lg', 1350, 400, true); // post-single
 		add_image_size('logo', 150, 50, true);
-		add_image_size('header', 450, 600, true);
-		add_image_size('header-full', 1920, 600, true);
+		add_image_size('header', 450, 600, true); 
+		add_image_size('header-full', 1920, 600, true); // header full carousel
 		add_image_size('header-sm', 500, 300, true);
 
 		// Register bootstrap navwalker
@@ -955,25 +954,19 @@ class WPDE
 	 */
 	public function the_title($title, $subtitle, $description, $options = [])
 	{
-
 		if (empty($title) || empty($subtitle) || empty($description)) {
 			return;
 		}
-
+	
 		$html = '';
-		$title_layout = !empty($options['layout']) ? esc_attr($options['layout']) : '';
-		$border_class = 'border-bottom';
-
-		if (!empty($options['border']) && $options['border'] !== 'Enabled') {
-			$border_class = '';
-		}
-
-		$html .= '<div class="pb-5 mb-6 ' . esc_attr($border_class) . ' ' . esc_attr($title_layout) . '">';
+		$custom_class = !empty($options['class']) ? esc_attr($options['class']) : '';
+	
+		$html .= '<div class="pb-5 mb-3 border-bottom ' . esc_attr($custom_class) . '">';
 		$html .= '<small class="text-primary"><strong>' . esc_html($subtitle) . '</strong></small>';
 		$html .= '<h1 class="mb-2">' . esc_html($title) . '</h1>';
 		$html .= '<p class="mb-0 text-muted">' . esc_html($description) . '</p>';
 		$html .= '</div>';
-
+	
 		echo $html;
 	}
 
@@ -1001,7 +994,7 @@ class WPDE
 		];
 
 		// Start breadcrumb with a link to your homepage
-		echo '<nav id="' . $defaults['id'] . '" aria-label="breadcrumb" class="d-none d-md-flex mt-2 mb-4">';
+		echo '<nav id="' . $defaults['id'] . '" aria-label="breadcrumb" class="d-none d-md-flex mb-6">';
 		echo '<ul class="breadcrumb mb-0">';
 
 		// Creating home link
