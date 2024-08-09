@@ -3,14 +3,14 @@
         <div class="container">
         <?php
 			$group = get_field('wpde_icons', 'option');
-			if ($group) {
-				$title = $group['title'];
-				$subtitle = $group['subtitle'];
-				$description = $group['description'];
+	if ($group) {
+		$title = $group['title'];
+		$subtitle = $group['subtitle'];
+		$description = $group['description'];
 
-				echo WPDE()->the_title($title, $subtitle, $description, ['class' => 'mb-6']);
-			}
-		?>
+		WPDE()->the_title($title, $subtitle, $description, ['class' => 'mb-6']);
+	}
+	?>
             <div class="row">
                 <?php
 		while (have_rows('wpde_icons_items', 'option')) {

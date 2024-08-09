@@ -24,7 +24,6 @@ Check out the [WPDE](https://github.com/rucilos/wpde/) template
 
 ## 🧪 Libraries
 
--   AOS
 -   Bootstrap
 -   Bootstrap Navbar Walker
 -   Cookie Consent
@@ -58,11 +57,6 @@ WPDE()->pagination();
 Display a theme toggler
 ```php
 WPDE()->theme();
-```
-
-Get current user info
-```php
-WPDE()->get_user($user_id);
 ```
 
 Display the custom title

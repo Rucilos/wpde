@@ -15,7 +15,7 @@
 <div class="container-fluid px-0 py-6 bg-body-secondary">
     <div class="container">
 	<?php
-		echo WPDE()->the_title(single_cat_title('', false), __('Category', 'wpde'), strip_tags(category_description()));
+		WPDE()->the_title(single_cat_title('', false), __('Category', 'wpde'), strip_tags(category_description()));
 WPDE()->breadcrumbs();
 ?>
 

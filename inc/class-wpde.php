@@ -306,9 +306,6 @@ class WPDE
 
 		wp_register_style($this->_token . '-mfp' . $this->onload, esc_url($this->cdn) . 'magnific-popup@1.1.0/dist/' . 'magnific-popup' . $this->script_suffix . '.css', [], $this->_version);
 		wp_enqueue_style($this->_token . '-mfp' . $this->onload);
-
-		wp_register_style($this->_token . '-aos' . $this->onload, esc_url($this->cdn) . 'aos@2.3.4/dist/' . 'aos' . $this->script_suffix . '.css', [], $this->_version);
-		wp_enqueue_style($this->_token . '-aos' . $this->onload);
 		
 		wp_register_style($this->_token . '-c' . $this->onload, esc_url($this->cdn) . 'vanilla-cookieconsent@3.0.1/dist/' . 'cookieconsent' . $this->script_suffix . '.css', [], $this->_version);
 		wp_enqueue_style($this->_token . '-c' . $this->onload);
@@ -337,9 +334,6 @@ class WPDE
 
 		wp_register_script($this->_token . '-icons' . $this->defer, esc_url($this->cdn) . '@fortawesome/fontawesome-free@6.5.2/js/' . 'all' . $this->script_suffix . '.js', ['jquery'], $this->_version, true);
 		wp_enqueue_script($this->_token . '-icons' . $this->defer);
-
-		wp_register_script($this->_token . '-aos' . $this->defer, esc_url($this->cdn) . 'aos@2.3.4/dist/' . 'aos' . $this->script_suffix . '.js', ['jquery'], $this->_version, true);
-		wp_enqueue_script($this->_token . '-aos' . $this->defer);
 
 		wp_register_script($this->_token . $this->defer, esc_url($this->dist_url) . 'js/public' . $this->script_suffix . '.js', ['jquery'], $this->_version, true);
 		wp_enqueue_script($this->_token . $this->defer);
@@ -514,10 +508,9 @@ class WPDE
 		]);
 
 		// Register custom image sizes
-		add_image_size('small-sm', 50, 50, true); // avatars
 		add_image_size('medium-md', 500, 250, true); // gallery / post card (vertical)
 		add_image_size('large-lg', 1920, 600, true); // post/page single
-		add_image_size('thumb', 500, 500, true); // gallery / post card (vertical)
+		add_image_size('thumb', 400, 400, true); // gallery / post card (vertical)
 
 		add_image_size('header', 450, 600, true); // header image or header carousel in column
 		add_image_size('header-sm', 500, 300, true); // header mobile
@@ -823,40 +816,6 @@ class WPDE
 	} // END is_wpde()
 
 	/**
-	 * Retrieves user information based on the provided user ID.
-	 *
-	 * This function fetches details such as user's full name, avatar, and job title based on the given user ID.
-	 * If the user's first and last names are available, it constructs the full name. Otherwise, it uses the user's
-	 * nicename. If the WordPress Development Environment (WPDE) plugin is active and Advanced Custom Fields (ACF) is
-	 * enabled, it retrieves additional information such as the user's avatar and job title.
-	 *
-	 * @param int $user_id The ID of the user.
-	 * @return array An array containing user information including name, avatar, and job title.
-	 * @access public
-	 * @since  1.0.0
-	 */
-	public function get_user($user_id)
-	{
-		$user_details = [];
-
-		$user_first_name = get_the_author_meta('first_name', $user_id);
-		$user_last_name = get_the_author_meta('last_name', $user_id);
-
-		if (!empty($user_first_name) || !empty($user_last_name)) {
-			$user_details['name'] = $user_first_name . ' ' . $user_last_name;
-		} else {
-			$user_details['name'] = get_the_author_meta('user_nicename', $user_id);
-		}
-
-		if ($this->is_acf()) {
-			$user_details['avatar'] = get_field('user_avatar', 'user_' . $user_id);
-			$user_details['job'] = get_field('user_job', 'user_' . $user_id);
-		}
-
-		return $user_details;
-	} // END get_userinfo()
-
-	/**
 	 * Generate theme selector dropdown with Bootstrap 5 styles.
 	 *
 	 * This function generates a dropdown menu for selecting themes with Bootstrap 5 styles.
@@ -1122,7 +1081,7 @@ class WPDE
 				global $author;
 				$userdata = get_userdata($author);
 				// Display author name
-				echo "<li class='breadcrumb-item'>" . 'Autor: ' . $userdata->display_name . '</li>';
+				echo "<li class='breadcrumb-item'>" . $userdata->display_name . '</li>';
 			} else {
 				echo "<li class='breadcrumb-item'>" . post_type_archive_title() . '</li>';
 			}

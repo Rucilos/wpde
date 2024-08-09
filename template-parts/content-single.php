@@ -11,7 +11,7 @@
 		$term_name = '';
 	}
 
-	echo WPDE()->the_title(get_the_title(), $term_name, wp_trim_words(get_the_excerpt(), 15, ''));
+	WPDE()->the_title(get_the_title(), $term_name, wp_trim_words(get_the_excerpt(), 15, ''));
 	
 	WPDE()->breadcrumbs();
 

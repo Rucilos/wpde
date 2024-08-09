@@ -16,7 +16,7 @@
     <div class="container">
         <?php
 		$current_term = get_queried_object();
-echo WPDE()->the_title($current_term->name, __('Taxonomy', 'wpde'), wp_kses_post(term_description()));
+WPDE()->the_title($current_term->name, __('Taxonomy', 'wpde'), wp_kses_post(term_description()));
 ?>
         <div class="row gx-5">
             <?php

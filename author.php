@@ -14,22 +14,25 @@
 
 <?php
 $user_id = get_query_var('author');
-$user_details = WPDE()->get_user($user_id);
-?>
+$user_info = get_userdata($user_id);
 
+if ($user_info) {
+    $first_name = !empty($user_info->first_name) ? $user_info->first_name : '';
+    $last_name = !empty($user_info->last_name) ? $user_info->last_name : '';
+    $description = !empty($user_info->description) ? $user_info->description : '';
+    
+    if (empty($first_name) && empty($last_name)) {
+        $title = esc_html($user_info->display_name);
+    } else {
+        $title = esc_html(trim($first_name . ' ' . $last_name));
+    }
+}
+?>
 <div class="container-fluid px-0 py-6 bg-body-secondary">
     <div class="container">
-        <?php
-		if (isset($user_details['name']) && !empty($user_details['name'])) {
-			$title = esc_html($user_details['name']);
-		
-		}
-		if (!empty($user_details['job'])) {
-			$description = esc_html($user_details['job']);
-		} else {
-			$description = '';
-		}
-		echo WPDE()->the_title($title, __('Author', 'wpde'), $description);
+        <?php 
+		WPDE()->the_title($title, __('Author', 'wpde'), $description); 
+		WPDE()->breadcrumbs();	
 		?>
         <div class="row gx-5">
             <?php if (have_posts()) {

@@ -1,6 +1,6 @@
 <div class="container py-6">
     <?php
-	echo WPDE()->the_title(get_the_title(), __('Page', 'wpde'), wp_trim_words(get_the_excerpt(), 15, ''));
+	WPDE()->the_title(get_the_title(), __('Page', 'wpde'), wp_trim_words(get_the_excerpt(), 15, ''));
     WPDE()->breadcrumbs();
 
     if (has_post_thumbnail()) {

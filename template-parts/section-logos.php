@@ -8,7 +8,7 @@
 		$subtitle = $group['subtitle'];
 		$description = $group['description'];
 
-		echo WPDE()->the_title($title, $subtitle, $description, ['class' => 'mb-6']);
+		WPDE()->the_title($title, $subtitle, $description, ['class' => 'mb-6']);
 	}
 	?>
             <div class="row justify-content-center align-items-center">

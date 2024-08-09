@@ -26,7 +26,7 @@ if ($query->have_posts()) {
 		$description = $group['description'];
 		$grid = $group['grid'];
 			
-		echo WPDE()->the_title($title, $subtitle, $description, ['class' => 'mb-6']);
+		WPDE()->the_title($title, $subtitle, $description, ['class' => 'mb-6']);
 	}
 	?>
         <ul class="list-unstyled d-flex align-items-center gap-3 mt-3 mb-5 <?php echo $filters_layout; ?>">
