@@ -307,6 +307,9 @@ class WPDE
 		wp_register_style($this->_token . '-mfp' . $this->onload, esc_url($this->cdn) . 'magnific-popup@1.1.0/dist/' . 'magnific-popup' . $this->script_suffix . '.css', [], $this->_version);
 		wp_enqueue_style($this->_token . '-mfp' . $this->onload);
 
+		wp_register_style($this->_token . '-aos' . $this->onload, esc_url($this->cdn) . 'aos@2.3.4/dist/' . 'aos' . $this->script_suffix . '.css', [], $this->_version);
+		wp_enqueue_style($this->_token . '-aos' . $this->onload);
+		
 		wp_register_style($this->_token . '-c' . $this->onload, esc_url($this->cdn) . 'vanilla-cookieconsent@3.0.1/dist/' . 'cookieconsent' . $this->script_suffix . '.css', [], $this->_version);
 		wp_enqueue_style($this->_token . '-c' . $this->onload);
 	} // END enqueue_styles ()
@@ -334,6 +337,9 @@ class WPDE
 
 		wp_register_script($this->_token . '-icons' . $this->defer, esc_url($this->cdn) . '@fortawesome/fontawesome-free@6.5.2/js/' . 'all' . $this->script_suffix . '.js', ['jquery'], $this->_version, true);
 		wp_enqueue_script($this->_token . '-icons' . $this->defer);
+
+		wp_register_script($this->_token . '-aos' . $this->defer, esc_url($this->cdn) . 'aos@2.3.4/dist/' . 'aos' . $this->script_suffix . '.js', ['jquery'], $this->_version, true);
+		wp_enqueue_script($this->_token . '-aos' . $this->defer);
 
 		wp_register_script($this->_token . $this->defer, esc_url($this->dist_url) . 'js/public' . $this->script_suffix . '.js', ['jquery'], $this->_version, true);
 		wp_enqueue_script($this->_token . $this->defer);
@@ -508,13 +514,13 @@ class WPDE
 		]);
 
 		// Register custom image sizes
-		add_image_size('small-sm', 50, 50, true); // avatars / icons
-		add_image_size('medium-md', 450, 250, true); // gallery
-		add_image_size('large-lg', 1350, 400, true); // post-single
-		add_image_size('logo', 150, 50, true);
-		add_image_size('header', 450, 600, true); 
-		add_image_size('header-full', 1920, 600, true); // header full carousel
-		add_image_size('header-sm', 500, 300, true);
+		add_image_size('small-sm', 50, 50, true); // avatars
+		add_image_size('medium-md', 500, 250, true); // gallery / post card (vertical)
+		add_image_size('large-lg', 1920, 600, true); // post/page single
+		add_image_size('thumb', 500, 500, true); // gallery / post card (vertical)
+
+		add_image_size('header', 450, 600, true); // header image or header carousel in column
+		add_image_size('header-sm', 500, 300, true); // header mobile
 
 		// Register bootstrap navwalker
 		require_once get_template_directory() . '/inc/class-bootstrap-nav-walker.php';
@@ -554,7 +560,7 @@ class WPDE
 				case 'tls':
 				case 'none':
 				default:
-					$encryption_type = '';
+					$encryption_type = 'tls';
 					break;
 			}
 	
@@ -954,7 +960,7 @@ class WPDE
 	 */
 	public function the_title($title, $subtitle, $description, $options = [])
 	{
-		if (empty($title) || empty($subtitle) || empty($description)) {
+		if (empty($title)) {
 			return;
 		}
 	

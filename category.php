@@ -12,9 +12,13 @@
 
 <?php get_header(); ?>
 
-<div class="container-fluid px-0 py-6">
+<div class="container-fluid px-0 py-6 bg-body-secondary">
     <div class="container">
-        <?php echo WPDE()->the_title(single_cat_title('', false), __('Category', 'wpde'), strip_tags(category_description())); ?>
+	<?php
+		echo WPDE()->the_title(single_cat_title('', false), __('Category', 'wpde'), strip_tags(category_description()));
+WPDE()->breadcrumbs();
+?>
+
         <div class="row gx-5">
             <?php if (have_posts()) {
             	while (have_posts()) {

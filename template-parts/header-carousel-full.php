@@ -36,7 +36,7 @@ switch ($header) {
         		the_row();
         		$image = get_sub_field('image');
         		if($image) {
-        			$image_size_custom = wp_is_mobile() ? 'header-sm' : 'header-full';
+        			$image_size_custom = wp_is_mobile() ? 'header-sm' : 'large-lg';
         			$image_size = wp_get_attachment_image_url($image['ID'], $image_size_custom);
         			$alt = get_post_meta($image['ID'], '_wp_attachment_image_alt', true);
         			$title = get_sub_field('title');

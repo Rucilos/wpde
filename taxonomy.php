@@ -12,7 +12,7 @@
 
 <?php get_header(); ?>
 
-<div class="container px-0 py-6">
+<div class="container px-0 py-6 bg-body-secondary">
     <div class="container">
         <?php
 		$current_term = get_queried_object();

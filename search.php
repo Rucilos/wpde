@@ -12,13 +12,13 @@
 
 <?php get_header(); ?>
 
-<div class="container-fluid px-0 py-6">
+<div class="container-fluid px-0 py-6 bg-body-secondary">
     <div class="container">
         <?php
 		$search_query = get_search_query();
-		$title = sprintf(__('Content matching your query: "%s"', 'wpde'), esc_html($search_query));
-		echo WPDE()->the_title($title, __('Search results', 'wpde'), __('Explore our latest articles and resources matching your search query.', 'wpde'));
-		?>
+$title = sprintf(__('Content matching your query: "%s"', 'wpde'), esc_html($search_query));
+echo WPDE()->the_title($title, __('Search results', 'wpde'), __('Explore our latest articles and resources matching your search query.', 'wpde'));
+?>
         <div class="row gx-5">
             <?php if (have_posts()) {
             	while (have_posts()) {

@@ -25,14 +25,14 @@ if ($query->have_posts()) {
 		$subtitle = $group['subtitle'];
 		$description = $group['description'];
 		$grid = $group['grid'];
-	   
+			
 		echo WPDE()->the_title($title, $subtitle, $description, ['class' => 'mb-6']);
 	}
 	?>
         <ul class="list-unstyled d-flex align-items-center gap-3 mt-3 mb-5 <?php echo $filters_layout; ?>">
             <small><strong><?php echo esc_html__('Filters:', 'wpde'); ?></strong></small>
             <?php
-		$categories = get_categories();
+	$categories = get_categories();
 	foreach ($categories as $category) {
 		$active_class = (isset($_GET['category']) && $_GET['category'] == $category->term_id) ? 'active' : '';
 		echo '<li class="' . esc_attr($active_class) . '"><a href="' . esc_url(add_query_arg('category', $category->term_id) . '#posts') . '"><small>' . esc_html($category->name) . '</small></a></li>';

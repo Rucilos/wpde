@@ -12,11 +12,12 @@
 
 <?php get_header(); ?>
 
-<div class="container-fluid px-0 py-6">
+<div class="container-fluid px-0 py-6 bg-body-secondary">
     <div class="container">
         <?php
 		$current_term = get_queried_object();
-echo WPDE()->the_title($current_term->name, __('Archive', 'wpde'), wp_kses_post(term_description()));
+WPDE()->the_title($current_term->name, __('Archive', 'wpde'), wp_kses_post(term_description()));
+WPDE()->breadcrumbs();
 ?>
         <div class="row gx-5">
             <?php if (have_posts()) {

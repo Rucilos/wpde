@@ -17,19 +17,20 @@ $user_id = get_query_var('author');
 $user_details = WPDE()->get_user($user_id);
 ?>
 
-<div class="container-fluid px-0 py-6">
+<div class="container-fluid px-0 py-6 bg-body-secondary">
     <div class="container">
         <?php
 		if (isset($user_details['name']) && !empty($user_details['name'])) {
 			$title = esc_html($user_details['name']);
+		
 		}
-if (isset($user_details['job']) && !empty($user_details['job'])) {
-	$description = esc_html($user_details['job']);
-} else {
-	$description = '';
-}
-echo WPDE()->the_title($title, __('Author', 'wpde'), $description);
-?>
+		if (!empty($user_details['job'])) {
+			$description = esc_html($user_details['job']);
+		} else {
+			$description = '';
+		}
+		echo WPDE()->the_title($title, __('Author', 'wpde'), $description);
+		?>
         <div class="row gx-5">
             <?php if (have_posts()) {
             	while (have_posts()) {

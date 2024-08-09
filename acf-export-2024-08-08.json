@@ -140,6 +140,187 @@
                 ]
             },
             {
+                "key": "field_66afd93a8378a",
+                "label": "SMTP",
+                "name": "",
+                "aria-label": "",
+                "type": "accordion",
+                "instructions": "Add contact information and\/or social media links and other.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "open": 0,
+                "multi_expand": 1,
+                "endpoint": 0
+            },
+            {
+                "key": "field_66afd9448378b",
+                "label": "",
+                "name": "wpde_smtp",
+                "aria-label": "",
+                "type": "group",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "layout": "block",
+                "sub_fields": [
+                    {
+                        "key": "field_66afd9448378e",
+                        "label": "Host",
+                        "name": "host",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "Configure the SMTP host settings.",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "33",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": ""
+                    },
+                    {
+                        "key": "field_66afdb208378f",
+                        "label": "Username",
+                        "name": "username",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "Configure the SMTP username.",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "33",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": ""
+                    },
+                    {
+                        "key": "field_66afd9448378d",
+                        "label": "Password",
+                        "name": "password",
+                        "aria-label": "",
+                        "type": "password",
+                        "instructions": "Configure the SMTP password.",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "33",
+                            "class": "",
+                            "id": ""
+                        },
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": ""
+                    },
+                    {
+                        "key": "field_66afdb85a2ca4",
+                        "label": "Encryption",
+                        "name": "encryption",
+                        "aria-label": "",
+                        "type": "radio",
+                        "instructions": "Configure the SMTP encryption.",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "50",
+                            "class": "",
+                            "id": ""
+                        },
+                        "choices": {
+                            "none": "None",
+                            "ssl": "SSL",
+                            "tls": "TLS"
+                        },
+                        "default_value": "",
+                        "return_format": "value",
+                        "allow_null": 0,
+                        "other_choice": 0,
+                        "layout": "vertical",
+                        "save_other_choice": 0
+                    },
+                    {
+                        "key": "field_66afdf7bcee99",
+                        "label": "Port",
+                        "name": "port",
+                        "aria-label": "",
+                        "type": "number",
+                        "instructions": "Configure the SMTP encryption port.",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "50",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "min": "",
+                        "max": "",
+                        "placeholder": "",
+                        "step": "",
+                        "prepend": "",
+                        "append": ""
+                    },
+                    {
+                        "key": "field_66afd9448378c",
+                        "label": "Email",
+                        "name": "email",
+                        "aria-label": "",
+                        "type": "email",
+                        "instructions": "Configure the 'From' email address that will be used to send emails.",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "50",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": ""
+                    },
+                    {
+                        "key": "field_66afdb75a2ca3",
+                        "label": "Name",
+                        "name": "name",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "Configure the name that will appear as the sender of the email.",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "50",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": ""
+                    }
+                ]
+            },
+            {
                 "key": "field_669ae3ee76404",
                 "label": "Grid",
                 "name": "",
@@ -402,7 +583,7 @@
                         "name": "width",
                         "aria-label": "",
                         "type": "number",
-                        "instructions": "Set the optimal logo width based on the size of your image. Default: 100px.",
+                        "instructions": "Set the optimal logo width based on the size of your image.",
                         "required": 0,
                         "conditional_logic": 0,
                         "wrapper": {
@@ -479,7 +660,7 @@
                         "label": "Email",
                         "name": "email",
                         "aria-label": "",
-                        "type": "text",
+                        "type": "email",
                         "instructions": "Display your email in the bottom navigation bar.",
                         "required": 0,
                         "conditional_logic": 0,
@@ -489,7 +670,6 @@
                             "id": ""
                         },
                         "default_value": "",
-                        "maxlength": "",
                         "placeholder": "",
                         "prepend": "",
                         "append": ""
@@ -856,7 +1036,9 @@
                     "Simple": "Simple",
                     "Reviews": "Reviews",
                     "Image": "Image",
-                    "Carousel": "Carousel"
+                    "Carousel": "Carousel",
+                    "Carousel Full": "Carousel Full",
+                    "Carousel Container": "Carousel Container"
                 },
                 "default_value": "",
                 "return_format": "value",
@@ -873,7 +1055,20 @@
                 "type": "group",
                 "instructions": "Define the metadata for the section.",
                 "required": 0,
-                "conditional_logic": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_669bf42136726",
+                            "operator": "!=",
+                            "value": "Carousel Full"
+                        },
+                        {
+                            "field": "field_669bf42136726",
+                            "operator": "!=",
+                            "value": "Carousel Container"
+                        }
+                    ]
+                ],
                 "wrapper": {
                     "width": "",
                     "class": "",
@@ -989,6 +1184,20 @@
                             "field": "field_669bf42136726",
                             "operator": "==",
                             "value": "Carousel"
+                        }
+                    ],
+                    [
+                        {
+                            "field": "field_669bf42136726",
+                            "operator": "==",
+                            "value": "Carousel Full"
+                        }
+                    ],
+                    [
+                        {
+                            "field": "field_669bf42136726",
+                            "operator": "==",
+                            "value": "Carousel Container"
                         }
                     ]
                 ],
@@ -1243,57 +1452,6 @@
                 "layout": "block",
                 "sub_fields": [
                     {
-                        "key": "field_66a7b96079228",
-                        "label": "Layout",
-                        "name": "layout",
-                        "aria-label": "",
-                        "type": "radio",
-                        "instructions": "Configure the title position behavior.",
-                        "required": 0,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": "50",
-                            "class": "",
-                            "id": ""
-                        },
-                        "choices": {
-                            "Left": "Left",
-                            "Center": "Center",
-                            "Right": "Right"
-                        },
-                        "default_value": "",
-                        "return_format": "value",
-                        "allow_null": 0,
-                        "other_choice": 0,
-                        "layout": "horizontal",
-                        "save_other_choice": 0
-                    },
-                    {
-                        "key": "field_66a7bc38b1fdb",
-                        "label": "Border",
-                        "name": "border",
-                        "aria-label": "",
-                        "type": "radio",
-                        "instructions": "Enable border to enhance design.",
-                        "required": 0,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": "50",
-                            "class": "",
-                            "id": ""
-                        },
-                        "choices": {
-                            "Enabled": "Enabled",
-                            "Disabled": "Disabled"
-                        },
-                        "default_value": "",
-                        "return_format": "value",
-                        "allow_null": 0,
-                        "other_choice": 0,
-                        "layout": "horizontal",
-                        "save_other_choice": 0
-                    },
-                    {
                         "key": "field_66a2ce0ea27e7",
                         "label": "Title",
                         "name": "title",
@@ -1352,34 +1510,6 @@
                         "rows": 1,
                         "placeholder": "",
                         "new_lines": ""
-                    },
-                    {
-                        "key": "field_66a2ce0ea27ea",
-                        "label": "Grid",
-                        "name": "grid",
-                        "aria-label": "",
-                        "type": "select",
-                        "instructions": "You can configure the grid layout for these blocks.",
-                        "required": 0,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": "",
-                            "class": "",
-                            "id": ""
-                        },
-                        "choices": {
-                            "2": "5 blocks",
-                            "3": "4 blocks",
-                            "4": "3 blocks",
-                            "6": "2 blocks"
-                        },
-                        "default_value": false,
-                        "return_format": "value",
-                        "multiple": 0,
-                        "allow_null": 0,
-                        "ui": 0,
-                        "ajax": 0,
-                        "placeholder": ""
                     }
                 ]
             },
@@ -1510,57 +1640,6 @@
                 "layout": "block",
                 "sub_fields": [
                     {
-                        "key": "field_66a7ef574179a",
-                        "label": "Layout",
-                        "name": "layout",
-                        "aria-label": "",
-                        "type": "radio",
-                        "instructions": "Configure the title position behavior.",
-                        "required": 0,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": "50",
-                            "class": "",
-                            "id": ""
-                        },
-                        "choices": {
-                            "Left": "Left",
-                            "Center": "Center",
-                            "Right": "Right"
-                        },
-                        "default_value": "",
-                        "return_format": "value",
-                        "allow_null": 0,
-                        "other_choice": 0,
-                        "layout": "horizontal",
-                        "save_other_choice": 0
-                    },
-                    {
-                        "key": "field_66a7eeed417ae",
-                        "label": "Border",
-                        "name": "border",
-                        "aria-label": "",
-                        "type": "radio",
-                        "instructions": "Enable border to enhance design.",
-                        "required": 0,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": "50",
-                            "class": "",
-                            "id": ""
-                        },
-                        "choices": {
-                            "Enabled": "Enabled",
-                            "Disabled": "Disabled"
-                        },
-                        "default_value": "",
-                        "return_format": "value",
-                        "allow_null": 0,
-                        "other_choice": 0,
-                        "layout": "horizontal",
-                        "save_other_choice": 0
-                    },
-                    {
                         "key": "field_66a2ca4413242",
                         "label": "Title",
                         "name": "title",
@@ -1619,33 +1698,6 @@
                         "rows": 1,
                         "placeholder": "",
                         "new_lines": ""
-                    },
-                    {
-                        "key": "field_669b0630b3cfa",
-                        "label": "Grid",
-                        "name": "grid",
-                        "aria-label": "",
-                        "type": "select",
-                        "instructions": "You can configure the grid layout for these blocks.",
-                        "required": 0,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": "",
-                            "class": "",
-                            "id": ""
-                        },
-                        "choices": {
-                            "2": "5 blocks",
-                            "3": "4 blocks",
-                            "4": "3 blocks"
-                        },
-                        "default_value": false,
-                        "return_format": "value",
-                        "multiple": 0,
-                        "allow_null": 0,
-                        "ui": 0,
-                        "ajax": 0,
-                        "placeholder": ""
                     }
                 ]
             },
@@ -1711,57 +1763,6 @@
                 },
                 "layout": "block",
                 "sub_fields": [
-                    {
-                        "key": "field_66a7b90b9c171",
-                        "label": "Layout",
-                        "name": "layout",
-                        "aria-label": "",
-                        "type": "radio",
-                        "instructions": "Configure the title position behavior.",
-                        "required": 0,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": "50",
-                            "class": "",
-                            "id": ""
-                        },
-                        "choices": {
-                            "Left": "Left",
-                            "Center": "Center",
-                            "Right": "Right"
-                        },
-                        "default_value": "",
-                        "return_format": "value",
-                        "allow_null": 0,
-                        "other_choice": 0,
-                        "layout": "horizontal",
-                        "save_other_choice": 0
-                    },
-                    {
-                        "key": "field_66a7f04819af3",
-                        "label": "Border",
-                        "name": "border",
-                        "aria-label": "",
-                        "type": "radio",
-                        "instructions": "Enable border to enhance design.",
-                        "required": 0,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": "50",
-                            "class": "",
-                            "id": ""
-                        },
-                        "choices": {
-                            "Enabled": "Enabled",
-                            "Disabled": "Disabled"
-                        },
-                        "default_value": "",
-                        "return_format": "value",
-                        "allow_null": 0,
-                        "other_choice": 0,
-                        "layout": "horizontal",
-                        "save_other_choice": 0
-                    },
                     {
                         "key": "field_66a3ac138a70f",
                         "label": "Title",
@@ -1926,57 +1927,6 @@
                 "layout": "block",
                 "sub_fields": [
                     {
-                        "key": "field_66a6b21941e75",
-                        "label": "Layout",
-                        "name": "layout",
-                        "aria-label": "",
-                        "type": "radio",
-                        "instructions": "Configure the title position behavior.",
-                        "required": 0,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": "50",
-                            "class": "",
-                            "id": ""
-                        },
-                        "choices": {
-                            "Left": "Left",
-                            "Center": "Center",
-                            "Right": "Right"
-                        },
-                        "default_value": "",
-                        "return_format": "value",
-                        "allow_null": 0,
-                        "other_choice": 0,
-                        "layout": "horizontal",
-                        "save_other_choice": 0
-                    },
-                    {
-                        "key": "field_66a7f04719af2",
-                        "label": "Border",
-                        "name": "border",
-                        "aria-label": "",
-                        "type": "radio",
-                        "instructions": "Enable border to enhance design.",
-                        "required": 0,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": "50",
-                            "class": "",
-                            "id": ""
-                        },
-                        "choices": {
-                            "Enabled": "Enabled",
-                            "Disabled": "Disabled"
-                        },
-                        "default_value": "",
-                        "return_format": "value",
-                        "allow_null": 0,
-                        "other_choice": 0,
-                        "layout": "horizontal",
-                        "save_other_choice": 0
-                    },
-                    {
                         "key": "field_66a6b174e5991",
                         "label": "Title",
                         "name": "title",
@@ -2035,6 +1985,33 @@
                         "rows": 1,
                         "placeholder": "",
                         "new_lines": ""
+                    },
+                    {
+                        "key": "field_66afe3bb2d1c1",
+                        "label": "Grid",
+                        "name": "grid",
+                        "aria-label": "",
+                        "type": "select",
+                        "instructions": "You can configure the grid layout for these blocks.",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "choices": {
+                            "6": "2 blocks",
+                            "4": "3 blocks",
+                            "3": "4 blocks"
+                        },
+                        "default_value": false,
+                        "return_format": "value",
+                        "multiple": 0,
+                        "allow_null": 0,
+                        "ui": 0,
+                        "ajax": 0,
+                        "placeholder": ""
                     }
                 ]
             }

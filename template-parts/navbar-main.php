@@ -46,7 +46,7 @@ if ($options) {
 	<div class="container">
 		<a class="navbar-brand d-flex align-items-center gap-1" href="<?php echo esc_url(home_url()); ?>">
         <?php if (!empty($logo_image)) { ?>
-            <img class="img-fluid" src="<?php echo esc_url($logo_image['sizes']['logo']); ?>" alt="Logo" width="<?php echo esc_attr($logo_width); ?>" height="auto"/>
+            <img class="img-fluid" src="<?php echo esc_url($logo_image['url']); ?>" alt="Logo" width="<?php echo esc_attr($logo_width); ?>" height="auto"/>
         <?php
         } elseif(!empty($logo_text)) {
         	echo esc_html($logo_text);

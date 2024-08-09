@@ -3,16 +3,14 @@
         <div class="container">
         <?php
 			$group = get_field('wpde_icons', 'option');
-	$grid = 3;
-	if ($group) {
-		$title = $group['title'];
-		$subtitle = $group['subtitle'];
-		$description = $group['description'];
-		$grid = $group['grid'];
+			if ($group) {
+				$title = $group['title'];
+				$subtitle = $group['subtitle'];
+				$description = $group['description'];
 
-		echo WPDE()->the_title($title, $subtitle, $description, ['class' => 'mb-6']);
-	}
-	?>
+				echo WPDE()->the_title($title, $subtitle, $description, ['class' => 'mb-6']);
+			}
+		?>
             <div class="row">
                 <?php
 		while (have_rows('wpde_icons_items', 'option')) {
@@ -26,7 +24,7 @@
 				$alt = get_post_meta($image['ID'], '_wp_attachment_image_alt', true);
 			}
 			?>
-                    <div class="col-md-<?php echo esc_attr($grid); ?> text-center">
+                    <div class="col-md-3 text-center">
                         <?php if (!empty($image)) { ?>
                             <img src="<?php echo esc_url($image_size); ?>" class="img-fluid mb-3" alt="<?php echo esc_attr($alt); ?>" width="48px" height="auto">
                         <?php } ?>

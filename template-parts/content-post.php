@@ -1,6 +1,14 @@
 <a href="<?php echo esc_url(get_permalink()); ?>">
-	<div class="card h-100 border-0">
-		<div class="card-body p-0">
+	<div class="card h-100 border-0 shadow-sm">
+	<?php
+	if (has_post_thumbnail()) {
+		the_post_thumbnail('medium-md', ['class' => 'card-img-top h-100']);
+	} else {
+		$default_image_url = get_template_directory_uri() . '/img/post-thumb.jpg';
+		echo '<img src="' . esc_url($default_image_url) . '" class="card-img-top" alt="Default Image">';
+	}
+?>
+		<div class="card-body">
 			<div class="d-flex align-items-center column-gap-4 mb-2">
 				<div class="mb-0">
 					<?php

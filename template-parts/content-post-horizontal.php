@@ -1,10 +1,10 @@
 <a href="<?php echo esc_url(get_permalink()); ?>">
-	<div class="card border shadow-sm mb-3">
+	<div class="card border-0 shadow-sm mb-3">
 		<div class="row gx-2">
-			<div class="col-md-5">
+			<div class="col-md-5 overflow-hidden">
 				<?php
 				if (has_post_thumbnail()) {
-					the_post_thumbnail('medium-md', ['class' => 'img-fluid rounded-start']);
+					the_post_thumbnail('thumb', ['class' => 'w-100 h-100 rounded-start']);
 				}
 ?>
 			</div>
